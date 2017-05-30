@@ -1,0 +1,548 @@
+<div class="col-sm-3">
+  <h3> Subcutaneous </h3>
+  <div><span><strong>Fat: </strong><%=@description.internal.fat%></span></div>
+  <div><span><strong>Hydration: </strong><%=@description.internal.hydration%></span></div>
+  <div><span><strong>Subcutaneous other: </strong><%=@description.internal.subcutaneous_other%></span></div>
+</div>
+
+<div class="col-sm-3">
+  <h3> Peritoneal-cavity </h3>
+  <div><span><strong>Peritoneal serosal surfaces: </strong><%=@description.internal.peritoneal_serosal_surfaces%></span></div>
+  <div><span><%=@description.internal.peritoneal_serosal_surfaces_specify%></span></div>
+  <div><span><strong>Fluid: </strong><%=@description.internal.fluid%></span></div>
+  <div><span><strong>Fluid quantity: </strong><%=@description.internal.fluid_quantity%></span></div>
+  <div><span><strong>Peritoneal nature of fluid: </strong><%=@description.internal.peritoneal_nature_of_fluid%></span></div>
+  <div><span><%=@description.internal.peritoneal_nature_of_fluid_specify%></span></div>
+  <div><span><strong>Peritoneal cavity organ relations: </strong><%=@description.internal.peritoneal_cavity_organ_relations%></span></div>
+  <div><span><%=@description.internal.peritoneal_cavity_organ_relations_specify%></span></div>
+  <div><span><strong>Retrroperitoneum: </strong><%=@description.internal.retrroperitoneum%></span></div>
+  <div><span><%=@description.internal.retrroperitoneum_specify%></span></div>
+  <div><span><strong>Umbilical vessels: </strong><%=@description.internal.umbilical_vessels%></span></div>
+  <div><span><%=@description.internal.umbilical_vessels_specify%></span></div>
+  <div><span><strong>No of umbilical arteries: </strong><%=@description.internal.no_of_umbilical_arteries%></span></div>
+  <div><span><strong>Peritoneal cavity other: </strong><%=@description.internal.peritoneal_cavity_other%></span></div>
+</div>
+
+<div class="col-sm-3">
+  <h3> Pleural-cavities </h3>
+  <div><span><strong>Pleural serosal surfaces: </strong><%=@description.internal.pleural_serosal_surfaces%></span></div>
+  <div><span><%=@description.internal.pleural_serosal_surfaces_specify%></span></div>
+  <div><span><strong>Pneumothorax: </strong><%=@description.internal.pneumothorax%></span></div>
+  <div><span><%=@description.internal.pneumothorax_specify%></span></div>
+  <div><span><strong>Pleural cavities amount of fluid: </strong><%=@description.internal.pleural_cavities_amount_of_fluid%></span></div>
+  <div><span><%=@description.internal.pleural_cavities_amount_of_fluid_specify%></span></div>
+  <div><span><strong>Pleural nature of fluid: </strong><%=@description.internal.pleural_nature_of_fluid%></span></div>
+  <div><span><%=@description.internal.pleural_nature_of_fluid_specify%></span></div>
+  <div><span><strong>Pleural cavity organ relations: </strong><%=@description.internal.pleural_cavity_organ_relations%></span></div>
+  <div><span><%=@description.internal.pleural_cavity_organ_relations_specify%></span></div>
+  <div><span><strong>Diaphragm: </strong><%=@description.internal.diaphragm%></span></div>
+  <div><span><%=@description.internal.diaphragm_specify%></span></div>
+  <div><span><strong>Pleural cavities other: </strong><%=@description.internal.pleural_cavities_other%></span></div>
+</div>
+
+<div class="col-sm-3">
+  <h3> Mediastinum </h3>
+  <div><span><strong>Mediastinum position configuration: </strong><%=@description.internal.mediastinum_position_configuration%></span></div>
+  <div><span><%=@description.internal.mediastinum_position_configuration_specify%></span></div>
+  <div><span><strong>Mediastinum nodes masses: </strong><%=@description.internal.mediastinum_nodes_masses%></span></div>
+  <div><span><%=@description.internal.mediastinum_nodes_masses_specify%></span></div>
+  <div><span><strong>Pneumomediastinum: </strong><%=@description.internal.pneumomediastinum%></span></div>
+  <div><span><strong>Mediastinum other: </strong><%=@description.internal.mediastinum_other%></span></div>
+</div>
+
+<div class="col-sm-3">
+  <h3> Pericardial-sac </h3>
+  <div><span><strong>Serosal sarfaces: </strong><%=@description.internal.serosal_sarfaces%></span></div>
+  <div><span><%=@description.internal.serosal_sarfaces_specify%></span></div>
+  <div><span><strong>Pericardial sac contents: </strong><%=@description.internal.pericardial_sac_contents%></span></div>
+  <div><span><%=@description.internal.pericardial_sac_contents_specify%></span></div>
+  <div><span><strong>Pericardial sac amount of fluid: </strong><%=@description.internal.pericardial_sac_amount_of_fluid%></span></div>
+  <div><span><%=@description.internal.pericardial_sac_amount_of_fluid_specify%></span></div>
+</div>
+
+<div class="col-sm-3">
+  <h3> Heart,-general-and-external </h3>
+  <div><span><strong>Heart position: </strong><%=@description.internal.heart_position%></span></div>
+  <div><span><%=@description.internal.heart_position_specify%></span></div>
+  <div><span><strong>Epicardium: </strong><%=@description.internal.epicardium%></span></div>
+  <div><span><%=@description.internal.epicardium_specify%></span></div>
+  <div><span><strong>Heart shape: </strong><%=@description.internal.heart_shape%></span></div>
+  <div><span><%=@description.internal.heart_shape_specify%></span></div>
+  <div><span><strong>Heart size: </strong><%=@description.internal.heart_size%></span></div>
+  <div><span><%=@description.internal.heart_size_specify%></span></div>
+  <div><span><strong>Heart only weight: </strong><%=@description.internal.heart_only_weight%></span></div>
+  <div><span><strong>Combined heart and lungs weight: </strong><%=@description.internal.combined_heart_and_lungs_weight%></span></div>
+</div>
+
+<div class="col-sm-3">
+  <h3> Heart,-chambers-and-septa </h3>
+  <div><span><strong>Configuration and contents: </strong><%=@description.internal.configuration_and_contents%></span></div>
+  <div><span><%=@description.internal.configuration_and_contents_specify%></span></div>
+  <div><span><strong>Atrial situs: </strong><%=@description.internal.atrial_situs%></span></div>
+  <div><span><%=@description.internal.atrial_situs_specify%></span></div>
+  <div><span><strong>Ventricular situs: </strong><%=@description.internal.ventricular_situs%></span></div>
+  <div><span><%=@description.internal.ventricular_situs_specify%></span></div>
+  <div><span><strong>Atrial septum: </strong><%=@description.internal.atrial_septum%></span></div>
+  <div><span><%=@description.internal.atrial_septum_specify%></span></div>
+  <div><span><strong>Ventricular septum: </strong><%=@description.internal.ventricular_septum%></span></div>
+  <div><span><%=@description.internal.ventricular_septum_specify%></span></div>
+  <div><span><strong>Endocardium: </strong><%=@description.internal.endocardium%></span></div>
+  <div><span><%=@description.internal.endocardium_specify%></span></div>
+  <div><span><strong>Myocardium: </strong><%=@description.internal.myocardium%></span></div>
+  <div><span><%=@description.internal.myocardium_specify%></span></div>
+  <div><span><strong>Right ventricular wall thickness: </strong><%=@description.internal.right_ventricular_wall_thickness%></span></div>
+  <div><span><strong>Left ventricular wall thickness: </strong><%=@description.internal.left_ventricular_wall_thickness%></span></div>
+</div>
+
+<div class="col-sm-3">
+  <h3> Valves </h3>
+  <div><span><strong>Tricuspid valve: </strong><%=@description.internal.tricuspid_valve%></span></div>
+  <div><span><%=@description.internal.tricuspid_valve_specify%></span></div>
+  <div><span><strong>Tricuspid valve circumference: </strong><%=@description.internal.tricuspid_valve_circumference%></span></div>
+  <div><span><strong>Pulmonic valve: </strong><%=@description.internal.pulmonic_valve%></span></div>
+  <div><span><%=@description.internal.pulmonic_valve_specify%></span></div>
+  <div><span><strong>Pulmonic valave circumference: </strong><%=@description.internal.pulmonic_valave_circumference%></span></div>
+  <div><span><strong>Mitral valve: </strong><%=@description.internal.mitral_valve%></span></div>
+  <div><span><%=@description.internal.mitral_valve_specify%></span></div>
+  <div><span><strong>Mitral valve circumference: </strong><%=@description.internal.mitral_valve_circumference%></span></div>
+  <div><span><strong>Aortic valve: </strong><%=@description.internal.aortic_valve%></span></div>
+  <div><span><%=@description.internal.aortic_valve_specify%></span></div>
+  <div><span><strong>Aortic valve circumference: </strong><%=@description.internal.aortic_valve_circumference%></span></div>
+</div>
+
+<div class="col-sm-3">
+  <h3> Great-vessels-and-ducts </h3>
+  <div><span><strong>Origins of aorta and pulmonary artery: </strong><%=@description.internal.origins_of_aorta_and_pulmonary_artery%></span></div>
+  <div><span><%=@description.internal.origins_of_aorta_and_pulmonary_artery_specify%></span></div>
+  <div><span><strong>Arch configuartion: </strong><%=@description.internal.arch_configuartion%></span></div>
+  <div><span><%=@description.internal.arch_configuartion_specify%></span></div>
+  <div><span><strong>Coronary arteries: </strong><%=@description.internal.coronary_arteries%></span></div>
+  <div><span><%=@description.internal.coronary_arteries_specify%></span></div>
+  <div><span><strong>Arch branches: </strong><%=@description.internal.arch_branches%></span></div>
+  <div><span><%=@description.internal.arch_branches_specify%></span></div>
+  <div><span><strong>Thoracic and abdominal branches: </strong><%=@description.internal.thoracic_and_abdominal_branches%></span></div>
+  <div><span><%=@description.internal.thoracic_and_abdominal_branches_specify%></span></div>
+  <div><span><strong>Intima and wall: </strong><%=@description.internal.intima_and_wall%></span></div>
+  <div><span><%=@description.internal.intima_and_wall_specify%></span></div>
+  <div><span><strong>Pulmonary arteries: </strong><%=@description.internal.pulmonary_arteries%></span></div>
+  <div><span><%=@description.internal.pulmonary_arteries_specify%></span></div>
+  <div><span><strong>Ductus: </strong><%=@description.internal.ductus%></span></div>
+  <div><span><%=@description.internal.ductus_specify%></span></div>
+</div>
+
+<div class="col-sm-3">
+  <h3> Venous-system </h3>
+  <div><span><strong>Venous system anomalies: </strong><%=@description.internal.venous_system_anomalies%></span></div>
+  <div><span><%=@description.internal.venous_system_anomalies_specify%></span></div>
+  <div><span><strong>Venous system state of distension: </strong><%=@description.internal.venous_system_state_of_distension%></span></div>
+  <div><span><%=@description.internal.venous_system_state_of_distension_specify%></span></div>
+  <div><span><strong>Venous system contents: </strong><%=@description.internal.venous_system_contents%></span></div>
+  <div><span><strong>Cardiovascular other: </strong><%=@description.internal.cardiovascular_other%></span></div>
+</div>
+
+<div class="col-sm-3">
+  <h3> Larynx-and-trachea </h3>
+  <div><span><strong>Epiglottis: </strong><%=@description.internal.epiglottis%></span></div>
+  <div><span><%=@description.internal.epiglottis_specify%></span></div>
+  <div><span><strong>Foreign material in lumen: </strong><%=@description.internal.foreign_material_in_lumen%></span></div>
+  <div><span><%=@description.internal.foreign_material_in_lumen_specify%></span></div>
+  <div><span><strong>Larynx trachea configuration position: </strong><%=@description.internal.larynx_trachea_configuration_position%></span></div>
+  <div><span><%=@description.internal.larynx_trachea_configuration_position_specify%></span></div>
+  <div><span><strong>Vocal cords: </strong><%=@description.internal.vocal_cords%></span></div>
+  <div><span><%=@description.internal.vocal_cords_specify%></span></div>
+  <div><span><strong>Tracheastomy: </strong><%=@description.internal.tracheastomy%></span></div>
+  <div><span><strong>Mucosal surfaces: </strong><%=@description.internal.mucosal_surfaces%></span></div>
+  <div><span><%=@description.internal.mucosal_surfaces_specify%></span></div>
+  <div><span><strong>Tracheal rings: </strong><%=@description.internal.tracheal_rings%></span></div>
+  <div><span><strong>Larynx other: </strong><%=@description.internal.larynx_other%></span></div>
+</div>
+
+<div class="col-sm-3">
+  <h3> Lungs </h3>
+  <div><span><strong>Right lungs weight: </strong><%=@description.internal.right_lungs_weight%></span></div>
+  <div><span><strong>Left lung weight: </strong><%=@description.internal.left_lung_weight%></span></div>
+  <div><span><strong>Bilateral: </strong><%=@description.internal.bilateral%></span></div>
+  <div><span><strong>Combined heart and lungs weight: </strong><%=@description.internal.combined_heart_and_lungs_weight%></span></div>
+  <div><span><strong>Lung to body weight ratio: </strong><%=@description.internal.lung_to_body_weight_ratio%></span></div>
+  <div><span><strong>Lobar pattern: </strong><%=@description.internal.lobar_pattern%></span></div>
+  <div><span><%=@description.internal.lobar_pattern_specify%></span></div>
+  <div><span><strong>State of expansion: </strong><%=@description.internal.state_of_expansion%></span></div>
+  <div><span><%=@description.internal.state_of_expansion_specify%></span></div>
+  <div><span><strong>Lungs consistency: </strong><%=@description.internal.lungs_consistency%></span></div>
+  <div><span><%=@description.internal.lungs_consistency_specify%></span></div>
+  <div><span><strong>Bronchial tree: </strong><%=@description.internal.bronchial_tree%></span></div>
+  <div><span><%=@description.internal.bronchial_tree_specify%></span></div>
+  <div><span><strong>Vessels: </strong><%=@description.internal.vessels%></span></div>
+  <div><span><%=@description.internal.vessels_specify%></span></div>
+  <div><span><strong>Parenchyma color: </strong><%=@description.internal.parenchyma_color%></span></div>
+  <div><span><%=@description.internal.parenchyma_color_specify%></span></div>
+  <div><span><strong>Congestion: </strong><%=@description.internal.congestion%></span></div>
+  <div><span><strong>Interstitial emphysema: </strong><%=@description.internal.interstitial_emphysema%></span></div>
+  <div><span><strong>Hilar nodes: </strong><%=@description.internal.hilar_nodes%></span></div>
+  <div><span><%=@description.internal.hilar_nodes_specify%></span></div>
+  <div><span><strong>Visceral pleura: </strong><%=@description.internal.visceral_pleura%></span></div>
+  <div><span><%=@description.internal.visceral_pleura_specify%></span></div>
+  <div><span><strong>Pleural petechiae: </strong><%=@description.internal.pleural_petechiae%></span></div>
+  <div><span><strong>Fixed by perfusion: </strong><%=@description.internal.fixed_by_perfusion%></span></div>
+  <div><span><%=@description.internal.fixed_by_perfusion_specify%></span></div>
+</div>
+
+<div class="col-sm-3">
+  <h3> Esophagus </h3>
+  <div><span><strong>Esophagus size position configuration: </strong><%=@description.internal.esophagus_size_position_configuration%></span></div>
+  <div><span><%=@description.internal.esophagus_size_position_configuration_specify%></span></div>
+  <div><span><strong>Esophagus mucosa and wall: </strong><%=@description.internal.esophagus_mucosa_and_wall%></span></div>
+  <div><span><%=@description.internal.esophagus_mucosa_and_wall_specify%></span></div>
+</div>
+
+<div class="col-sm-3">
+  <h3> Stomach-and-duodenum </h3>
+  <div><span><strong>Stomach size position configuration: </strong><%=@description.internal.stomach_size_position_configuration%></span></div>
+  <div><span><%=@description.internal.stomach_size_position_configuration_specify%></span></div>
+  <div><span><strong>Stomach mucosa and wall: </strong><%=@description.internal.stomach_mucosa_and_wall%></span></div>
+  <div><span><%=@description.internal.stomach_mucosa_and_wall_specify%></span></div>
+  <div><span><strong>Stomach and duodenum contents: </strong><%=@description.internal.stomach_and_duodenum_contents%></span></div>
+  <div><span><strong>Ampulla: </strong><%=@description.internal.ampulla%></span></div>
+  <div><span><%=@description.internal.ampulla_specify%></span></div>
+</div>
+
+<div class="col-sm-3">
+  <h3> Small-intestine </h3>
+  <div><span><strong>Small intestine size position configuration: </strong><%=@description.internal.small_intestine_size_position_configuration%></span></div>
+  <div><span><%=@description.internal.small_intestine_size_position_configuration_specify%></span></div>
+  <div><span><strong>Small intestine rotation: </strong><%=@description.internal.small_intestine_rotation%></span></div>
+  <div><span><%=@description.internal.small_intestine_rotation_specify%></span></div>
+  <div><span><strong>Small intestine mucosa and wall: </strong><%=@description.internal.small_intestine_mucosa_and_wall%></span></div>
+  <div><span><%=@description.internal.small_intestine_mucosa_and_wall_specify%></span></div>
+  <div><span><strong>Small intestine state of distension: </strong><%=@description.internal.small_intestine_state_of_distension%></span></div>
+  <div><span><%=@description.internal.small_intestine_state_of_distension_specify%></span></div>
+  <div><span><strong>Small intestine contents: </strong><%=@description.internal.small_intestine_contents%></span></div>
+  <div><span><strong>Mecekel diverticulum: </strong><%=@description.internal.mecekel_diverticulum%></span></div>
+  <div><span><%=@description.internal.mecekel_diverticulum_specify%></span></div>
+</div>
+
+<div class="col-sm-3">
+  <h3> Large-intestine--and-appendix </h3>
+  <div><span><strong>Large intestine size position configuration: </strong><%=@description.internal.large_intestine_size_position_configuration%></span></div>
+  <div><span><%=@description.internal.large_intestine_size_position_configuration_specify%></span></div>
+  <div><span><strong>Large intestine rotation: </strong><%=@description.internal.large_intestine_rotation%></span></div>
+  <div><span><%=@description.internal.large_intestine_rotation_specify%></span></div>
+  <div><span><strong>Large intestine mucosa and wall: </strong><%=@description.internal.large_intestine_mucosa_and_wall%></span></div>
+  <div><span><%=@description.internal.large_intestine_mucosa_and_wall_specify%></span></div>
+  <div><span><strong>Large intestine state of distension: </strong><%=@description.internal.large_intestine_state_of_distension%></span></div>
+  <div><span><%=@description.internal.large_intestine_state_of_distension_specify%></span></div>
+  <div><span><strong>Large intestine contents: </strong><%=@description.internal.large_intestine_contents%></span></div>
+</div>
+
+<div class="col-sm-3">
+  <h3> Mesentary </h3>
+  <div><span><strong>Configuration: </strong><%=@description.internal.configuration%></span></div>
+  <div><span><%=@description.internal.configuration_specify%></span></div>
+</div>
+
+<div class="col-sm-3">
+  <h3> Liver-and-biiary-system </h3>
+  <div><span><strong>Liver weight: </strong><%=@description.internal.liver_weight%></span></div>
+  <div><span><strong>Liver size shape: </strong><%=@description.internal.liver_size_shape%></span></div>
+  <div><span><%=@description.internal.liver_size_shape_specify%></span></div>
+  <div><span><strong>Liver and billiary system external surface: </strong><%=@description.internal.liver_and_billiary_system_external_surface%></span></div>
+  <div><span><%=@description.internal.liver_and_billiary_system_external_surface_specify%></span></div>
+  <div><span><strong>Cut surface: </strong><%=@description.internal.cut_surface%></span></div>
+  <div><span><%=@description.internal.cut_surface_specify%></span></div>
+  <div><span><strong>Gallbladder: </strong><%=@description.internal.gallbladder%></span></div>
+  <div><span><%=@description.internal.gallbladder_specify%></span></div>
+  <div><span><strong>Bile ducts: </strong><%=@description.internal.bile_ducts%></span></div>
+  <div><span><%=@description.internal.bile_ducts_specify%></span></div>
+  <div><span><strong>Bile: </strong><%=@description.internal.bile%></span></div>
+  <div><span><%=@description.internal.bile_specify%></span></div>
+  <div><span><strong>Stones: </strong><%=@description.internal.stones%></span></div>
+  <div><span><%=@description.internal.stones_specify%></span></div>
+  <div><span><strong>Vessels portal vein hepatic artery: </strong><%=@description.internal.vessels_portal_vein_hepatic_artery%></span></div>
+  <div><span><%=@description.internal.vessels_portal_vein_hepatic_artery_specify%></span></div>
+</div>
+
+<div class="col-sm-3">
+  <h3> Pancreas </h3>
+  <div><span><strong>Pancreas weight: </strong><%=@description.internal.pancreas_weight%></span></div>
+  <div><span><strong>Size configuration: </strong><%=@description.internal.size_configuration%></span></div>
+  <div><span><%=@description.internal.size_configuration_specify%></span></div>
+  <div><span><strong>Pancreas parenchyma or cut surface: </strong><%=@description.internal.pancreas_parenchyma_or_cut_surface%></span></div>
+  <div><span><%=@description.internal.pancreas_parenchyma_or_cut_surface_specify%></span></div>
+  <div><span><strong>Ducts: </strong><%=@description.internal.ducts%></span></div>
+  <div><span><%=@description.internal.ducts_specify%></span></div>
+</div>
+
+<div class="col-sm-3">
+  <h3> Anomalies </h3>
+  <div><span><strong>Genitourinary anomalies: </strong><%=@description.internal.genitourinary_anomalies%></span></div>
+  <div><span><%=@description.internal.genitourinary_anomalies_specify%></span></div>
+</div>
+
+<div class="col-sm-3">
+  <h3> Right-kidneys-and-ureter </h3>
+  <div><span><strong>Right kidnes weight: </strong><%=@description.internal.right_kidnes_weight%></span></div>
+  <div><span><strong>Right kidney configuration position: </strong><%=@description.internal.right_kidney_configuration_position%></span></div>
+  <div><span><%=@description.internal.right_kidney_configuration_position_specify%></span></div>
+  <div><span><strong>Right kidney external surface: </strong><%=@description.internal.right_kidney_external_surface%></span></div>
+  <div><span><%=@description.internal.right_kidney_external_surface_specify%></span></div>
+  <div><span><strong>Right kidney parenchyma or cut surface: </strong><%=@description.internal.right_kidney_parenchyma_or_cut_surface%></span></div>
+  <div><span><%=@description.internal.right_kidney_parenchyma_or_cut_surface_specify%></span></div>
+  <div><span><strong>Right kidney cortical thickness: </strong><%=@description.internal.right_kidney_cortical_thickness%></span></div>
+  <div><span><strong>Right kidney medulla depth: </strong><%=@description.internal.right_kidney_medulla_depth%></span></div>
+  <div><span><strong>Right kidney pelves and calyces: </strong><%=@description.internal.right_kidney_pelves_and_calyces%></span></div>
+  <div><span><%=@description.internal.right_kidney_pelves_and_calyces_specify%></span></div>
+  <div><span><strong>Right kidney peripelvic fat and lymph nodes: </strong><%=@description.internal.right_kidney_peripelvic_fat_and_lymph_nodes%></span></div>
+  <div><span><%=@description.internal.right_kidney_peripelvic_fat_and_lymph_nodes_specify%></span></div>
+  <div><span><strong>Right kidney renal vessels: </strong><%=@description.internal.right_kidney_renal_vessels%></span></div>
+  <div><span><%=@description.internal.right_kidney_renal_vessels_specify%></span></div>
+  <div><span><strong>Right kidney ureter: </strong><%=@description.internal.right_kidney_ureter%></span></div>
+  <div><span><%=@description.internal.right_kidney_ureter_specify%></span></div>
+</div>
+
+<div class="col-sm-3">
+  <h3> Left-kidneys-and-ureter </h3>
+  <div><span><strong>Left kidney weight: </strong><%=@description.internal.left_kidney_weight%></span></div>
+  <div><span><strong>Left kidney configuration position: </strong><%=@description.internal.left_kidney_configuration_position%></span></div>
+  <div><span><%=@description.internal.left_kidney_configuration_position_specify%></span></div>
+  <div><span><strong>Left kidney external surface: </strong><%=@description.internal.left_kidney_external_surface%></span></div>
+  <div><span><%=@description.internal.left_kidney_external_surface_specify%></span></div>
+  <div><span><strong>Left kidney parenchyma or cut surface: </strong><%=@description.internal.left_kidney_parenchyma_or_cut_surface%></span></div>
+  <div><span><%=@description.internal.left_kidney_parenchyma_or_cut_surface_specify%></span></div>
+  <div><span><strong>Left kidney cortical thickness: </strong><%=@description.internal.left_kidney_cortical_thickness%></span></div>
+  <div><span><strong>Left kidney medulla depth: </strong><%=@description.internal.left_kidney_medulla_depth%></span></div>
+  <div><span><strong>Left kidney pelves and calyces: </strong><%=@description.internal.left_kidney_pelves_and_calyces%></span></div>
+  <div><span><%=@description.internal.left_kidney_pelves_and_calyces_specify%></span></div>
+  <div><span><strong>Left kideny peripelvic fat and lymph nodes: </strong><%=@description.internal.left_kideny_peripelvic_fat_and_lymph_nodes%></span></div>
+  <div><span><%=@description.internal.left_kideny_peripelvic_fat_and_lymph_nodes_specify%></span></div>
+  <div><span><strong>Left panel renal vessels: </strong><%=@description.internal.left_panel_renal_vessels%></span></div>
+  <div><span><%=@description.internal.left_panel_renal_vessels_specify%></span></div>
+  <div><span><strong>Left kidney ureter: </strong><%=@description.internal.left_kidney_ureter%></span></div>
+  <div><span><%=@description.internal.left_kidney_ureter_specify%></span></div>
+</div>
+
+<div class="col-sm-3">
+  <h3> Bladder-and-urethra </h3>
+  <div><span><strong>Size and configuration: </strong><%=@description.internal.size_and_configuration%></span></div>
+  <div><span><%=@description.internal.size_and_configuration_specify%></span></div>
+  <div><span><strong>Wall and mucosa: </strong><%=@description.internal.wall_and_mucosa%></span></div>
+  <div><span><%=@description.internal.wall_and_mucosa_specify%></span></div>
+  <div><span><strong>Perivesical tissue: </strong><%=@description.internal.perivesical_tissue%></span></div>
+  <div><span><%=@description.internal.perivesical_tissue_specify%></span></div>
+  <div><span><strong>Bladder contents: </strong><%=@description.internal.bladder_contents%></span></div>
+  <div><span><%=@description.internal.bladder_contents_specify%></span></div>
+  <div><span><strong>Urethra: </strong><%=@description.internal.urethra%></span></div>
+  <div><span><%=@description.internal.urethra_specify%></span></div>
+</div>
+
+<div class="col-sm-3">
+  <h3> Internal-genitalia-male </h3>
+  <div><span><strong>Prostate: </strong><%=@description.internal.prostate%></span></div>
+  <div><span><%=@description.internal.prostate_specify%></span></div>
+  <div><span><strong>Epididymis: </strong><%=@description.internal.epididymis%></span></div>
+  <div><span><%=@description.internal.epididymis_specify%></span></div>
+  <div><span><strong>Testes: </strong><%=@description.internal.testes%></span></div>
+  <div><span><%=@description.internal.testes_specify%></span></div>
+  <div><span><strong>Male genetalia other: </strong><%=@description.internal.male_genetalia_other%></span></div>
+</div>
+
+<div class="col-sm-3">
+  <h3> Internal-genitalia-female </h3>
+  <div><span><strong>Vagina: </strong><%=@description.internal.vagina%></span></div>
+  <div><span><%=@description.internal.vagina_specify%></span></div>
+  <div><span><strong>Uterus: </strong><%=@description.internal.uterus%></span></div>
+  <div><span><%=@description.internal.uterus_specify%></span></div>
+  <div><span><strong>Right fallopian tubes: </strong><%=@description.internal.right_fallopian_tubes%></span></div>
+  <div><span><%=@description.internal.right_fallopian_tubes_specify%></span></div>
+  <div><span><strong>Right ovary: </strong><%=@description.internal.right_ovary%></span></div>
+  <div><span><%=@description.internal.right_ovary_specify%></span></div>
+  <div><span><strong>Left fallopian tube: </strong><%=@description.internal.left_fallopian_tube%></span></div>
+  <div><span><%=@description.internal.left_fallopian_tube_specify%></span></div>
+  <div><span><strong>Left ovary: </strong><%=@description.internal.left_ovary%></span></div>
+  <div><span><%=@description.internal.left_ovary_specify%></span></div>
+  <div><span><strong>Female genetalia other: </strong><%=@description.internal.female_genetalia_other%></span></div>
+</div>
+
+<div class="col-sm-3">
+  <h3> Right-adrenal-gland </h3>
+  <div><span><strong>Right adrenal gland weight: </strong><%=@description.internal.right_adrenal_gland_weight%></span></div>
+  <div><span><strong>Right adrenal pos config shape: </strong><%=@description.internal.right_adrenal_pos_config_shape%></span></div>
+  <div><span><%=@description.internal.right_adrenal_pos_config_shape_specify%></span></div>
+  <div><span><strong>Right adrenal gland external surface: </strong><%=@description.internal.right_adrenal_gland_external_surface%></span></div>
+  <div><span><%=@description.internal.right_adrenal_gland_external_surface_specify%></span></div>
+  <div><span><strong>Right adrenal gland parenchyma or cut surface: </strong><%=@description.internal.right_adrenal_gland_parenchyma_or_cut_surface%></span></div>
+  <div><span><%=@description.internal.right_adrenal_gland_parenchyma_or_cut_surface_specify%></span></div>
+  <div><span><strong>Right adrenal cortex: </strong><%=@description.internal.right_adrenal_cortex%></span></div>
+  <div><span><%=@description.internal.right_adrenal_cortex_specify%></span></div>
+  <div><span><strong>Right adrenal fetal cortex: </strong><%=@description.internal.right_adrenal_fetal_cortex%></span></div>
+  <div><span><%=@description.internal.right_adrenal_fetal_cortex_specify%></span></div>
+  <div><span><strong>Right adrenal medulla: </strong><%=@description.internal.right_adrenal_medulla%></span></div>
+  <div><span><%=@description.internal.right_adrenal_medulla_specify%></span></div>
+  <div><span><strong>Right adrenal other: </strong><%=@description.internal.right_adrenal_other%></span></div>
+</div>
+
+<div class="col-sm-3">
+  <h3> Left-adrenal-gland </h3>
+  <div><span><strong>Left adrenal gland weight: </strong><%=@description.internal.left_adrenal_gland_weight%></span></div>
+  <div><span><strong>Left adrenal pos config shape: </strong><%=@description.internal.left_adrenal_pos_config_shape%></span></div>
+  <div><span><%=@description.internal.left_adrenal_pos_config_shape_specify%></span></div>
+  <div><span><strong>Left adrenal gland external surface: </strong><%=@description.internal.left_adrenal_gland_external_surface%></span></div>
+  <div><span><%=@description.internal.left_adrenal_gland_external_surface_specify%></span></div>
+  <div><span><strong>Left adrenal gland parenchyma or cut surface: </strong><%=@description.internal.left_adrenal_gland_parenchyma_or_cut_surface%></span></div>
+  <div><span><%=@description.internal.left_adrenal_gland_parenchyma_or_cut_surface_specify%></span></div>
+  <div><span><strong>Left adrenal cortex: </strong><%=@description.internal.left_adrenal_cortex%></span></div>
+  <div><span><%=@description.internal.left_adrenal_cortex_specify%></span></div>
+  <div><span><strong>Left adrenal fetal cortex: </strong><%=@description.internal.left_adrenal_fetal_cortex%></span></div>
+  <div><span><%=@description.internal.left_adrenal_fetal_cortex_specify%></span></div>
+  <div><span><strong>Left adrenal medulla: </strong><%=@description.internal.left_adrenal_medulla%></span></div>
+  <div><span><%=@description.internal.left_adrenal_medulla_specify%></span></div>
+  <div><span><strong>Left adrenal other: </strong><%=@description.internal.left_adrenal_other%></span></div>
+</div>
+
+<div class="col-sm-3">
+  <h3> Thyroid </h3>
+  <div><span><strong>Thyroid weight: </strong><%=@description.internal.thyroid_weight%></span></div>
+  <div><span><strong>Thyroid pos config shape: </strong><%=@description.internal.thyroid_pos_config_shape%></span></div>
+  <div><span><%=@description.internal.thyroid_pos_config_shape_specify%></span></div>
+  <div><span><strong>Thyroid external surface: </strong><%=@description.internal.thyroid_external_surface%></span></div>
+  <div><span><%=@description.internal.thyroid_external_surface_specify%></span></div>
+  <div><span><strong>Thyroid parenchyma or cut surface: </strong><%=@description.internal.thyroid_parenchyma_or_cut_surface%></span></div>
+  <div><span><%=@description.internal.thyroid_parenchyma_or_cut_surface_specify%></span></div>
+  <div><span><strong>Thyroid other: </strong><%=@description.internal.thyroid_other%></span></div>
+</div>
+
+<div class="col-sm-3">
+  <h3> Pituitary </h3>
+  <div><span><strong>Pituitary weight: </strong><%=@description.internal.pituitary_weight%></span></div>
+  <div><span><strong>Pituitary pos config shape: </strong><%=@description.internal.pituitary_pos_config_shape%></span></div>
+  <div><span><%=@description.internal.pituitary_pos_config_shape_specify%></span></div>
+  <div><span><strong>Pituitary external surface: </strong><%=@description.internal.pituitary_external_surface%></span></div>
+  <div><span><%=@description.internal.pituitary_external_surface_specify%></span></div>
+  <div><span><strong>Pituitary parenchyma or cut surface: </strong><%=@description.internal.pituitary_parenchyma_or_cut_surface%></span></div>
+  <div><span><%=@description.internal.pituitary_parenchyma_or_cut_surface_specify%></span></div>
+</div>
+
+<div class="col-sm-3">
+  <h3> Parathyroid-glands </h3>
+  <div><span><strong>Parathyroid gland: </strong><%=@description.internal.parathyroid_gland%></span></div>
+</div>
+
+<div class="col-sm-3">
+  <h3> Thymus- </h3>
+  <div><span><strong>Weight: </strong><%=@description.internal.weight%></span></div>
+  <div><span><strong>Thymus pos config shape: </strong><%=@description.internal.thymus_pos_config_shape%></span></div>
+  <div><span><%=@description.internal.thymus_pos_config_shape_specify%></span></div>
+  <div><span><strong>Petechiae on external surface: </strong><%=@description.internal.petechiae_on_external_surface%></span></div>
+  <div><span><strong>Thymus parenchyma or cut surface: </strong><%=@description.internal.thymus_parenchyma_or_cut_surface%></span></div>
+  <div><span><%=@description.internal.thymus_parenchyma_or_cut_surface_specify%></span></div>
+  <div><span><strong>Thymus other: </strong><%=@description.internal.thymus_other%></span></div>
+</div>
+
+<div class="col-sm-3">
+  <h3> Spleen </h3>
+  <div><span><strong>Spleen weight: </strong><%=@description.internal.spleen_weight%></span></div>
+  <div><span><strong>Spleen shape position configuration: </strong><%=@description.internal.spleen_shape_position_configuration%></span></div>
+  <div><span><%=@description.internal.spleen_shape_position_configuration_specify%></span></div>
+  <div><span><strong>Capsular surface: </strong><%=@description.internal.capsular_surface%></span></div>
+  <div><span><%=@description.internal.capsular_surface_specify%></span></div>
+  <div><span><strong>Spleen consistency: </strong><%=@description.internal.spleen_consistency%></span></div>
+  <div><span><%=@description.internal.spleen_consistency_specify%></span></div>
+  <div><span><strong>Spleen parenchyma or cut surface: </strong><%=@description.internal.spleen_parenchyma_or_cut_surface%></span></div>
+  <div><span><%=@description.internal.spleen_parenchyma_or_cut_surface_specify%></span></div>
+  <div><span><strong>Accessory spleens: </strong><%=@description.internal.accessory_spleens%></span></div>
+  <div><span><%=@description.internal.accessory_spleens_specify%></span></div>
+  <div><span><strong>Spleen other: </strong><%=@description.internal.spleen_other%></span></div>
+</div>
+
+<div class="col-sm-3">
+  <h3> Lymph-nodes </h3>
+  <div><span><strong>Cervical: </strong><%=@description.internal.cervical%></span></div>
+  <div><span><strong>Axillary: </strong><%=@description.internal.axillary%></span></div>
+  <div><span><strong>Mediastinal: </strong><%=@description.internal.mediastinal%></span></div>
+  <div><span><strong>Hilar: </strong><%=@description.internal.hilar%></span></div>
+  <div><span><strong>Celiac peripancreatic: </strong><%=@description.internal.celiac_peripancreatic%></span></div>
+  <div><span><strong>Mesenteric: </strong><%=@description.internal.mesenteric%></span></div>
+  <div><span><strong>Periaortic: </strong><%=@description.internal.periaortic%></span></div>
+  <div><span><strong>Iliac: </strong><%=@description.internal.iliac%></span></div>
+  <div><span><strong>Inguinal: </strong><%=@description.internal.inguinal%></span></div>
+  <div><span><strong>Lymph nodes other: </strong><%=@description.internal.lymph_nodes_other%></span></div>
+</div>
+
+<div class="col-sm-3">
+  <h3> Rib-vertebrae </h3>
+  <div><span><strong>Hardness: </strong><%=@description.internal.hardness%></span></div>
+  <div><span><%=@description.internal.hardness_specify%></span></div>
+  <div><span><strong>Bone anomalies: </strong><%=@description.internal.bone_anomalies%></span></div>
+  <div><span><%=@description.internal.bone_anomalies_specify%></span></div>
+  <div><span><strong>Marrow: </strong><%=@description.internal.marrow%></span></div>
+  <div><span><%=@description.internal.marrow_specify%></span></div>
+  <div><span><strong>Bones other: </strong><%=@description.internal.bones_other%></span></div>
+</div>
+
+<div class="col-sm-3">
+  <h3> Skeletal-muscles </h3>
+  <div><span><strong>Skeletal muscle color consistency: </strong><%=@description.internal.skeletal_muscle_color_consistency%></span></div>
+  <div><span><%=@description.internal.skeletal_muscle_color_consistency_specify%></span></div>
+  <div><span><strong>Skeletal muscle size: </strong><%=@description.internal.skeletal_muscle_size%></span></div>
+  <div><span><%=@description.internal.skeletal_muscle_size_specify%></span></div>
+  <div><span><strong>Skeletal muscle other: </strong><%=@description.internal.skeletal_muscle_other%></span></div>
+</div>
+<div class="col-sm-3">
+  <h3> Cranium </h3>
+  <div><span><strong>Bones: </strong><%=@description.internal.bones%></span></div>
+  <div><span><%=@description.internal.bones_specify%></span></div>
+  <div><span><strong>Sutures fontanelles: </strong><%=@description.internal.sutures_fontanelles%></span></div>
+  <div><span><%=@description.internal.sutures_fontanelles_specify%></span></div>
+  <div><span><strong>Skull base: </strong><%=@description.internal.skull_base%></span></div>
+  <div><span><%=@description.internal.skull_base_specify%></span></div>
+  <div><span><strong>Sella: </strong><%=@description.internal.sella%></span></div>
+  <div><span><%=@description.internal.sella_specify%></span></div>
+  <div><span><strong>Petrous pyramids opened and cultured: </strong><%=@description.internal.petrous_pyramids_opened_and_cultured%></span></div>
+  <div><span><%=@description.internal.petrous_pyramids_opened_and_cultured_specify%></span></div>
+  <div><span><strong>Ears removed: </strong><%=@description.internal.ears_removed%></span></div>
+  <div><span><%=@description.internal.ears_removed_specify%></span></div>
+  <div><span><strong>Foramen magnum antero-posterior dimension: </strong><%=@description.internal.foramen_magnum_antero-posterior_dimension%></span></div>
+  <div><span><strong>Foramen magnum antero-lateral dimension: </strong><%=@description.internal.foramen_magnum_antero-lateral_dimension%></span></div>
+  <div><span><strong>Cranium other: </strong><%=@description.internal.cranium_other%></span></div>
+</div>
+<div class="col-sm-3">
+  <h3> Dura-and-venous-sinuses </h3>
+  <div><span><strong>Dura falx tentorium: </strong><%=@description.internal.dura_falx_tentorium%></span></div>
+  <div><span><%=@description.internal.dura_falx_tentorium_specify%></span></div>
+  <div><span><strong>Subdural epidural: </strong><%=@description.internal.subdural_epidural%></span></div>
+  <div><span><%=@description.internal.subdural_epidural_specify%></span></div>
+  <div><span><strong>Venous sinuses: </strong><%=@description.internal.venous_sinuses%></span></div>
+  <div><span><%=@description.internal.venous_sinuses_specify%></span></div>
+  <div><span><strong>Sinuses other: </strong><%=@description.internal.sinuses_other%></span></div>
+</div>
+
+<div class="col-sm-3">
+  <h3> Brain,-preliminary-examination </h3>
+  <div><span><strong>Brain weight: </strong><%=@description.internal.brain_weight%></span></div>
+  <div><span><strong>Configuration lobar pattern: </strong><%=@description.internal.configuration_lobar_pattern%></span></div>
+  <div><span><%=@description.internal.configuration_lobar_pattern_specify%></span></div>
+  <div><span><strong>Brain consistency: </strong><%=@description.internal.brain_consistency%></span></div>
+  <div><span><%=@description.internal.brain_consistency_specify%></span></div>
+  <div><span><strong>Pachymeninges: </strong><%=@description.internal.pachymeninges%></span></div>
+  <div><span><%=@description.internal.pachymeninges_specify%></span></div>
+  <div><span><strong>Blood vessels: </strong><%=@description.internal.blood_vessels%></span></div>
+  <div><span><%=@description.internal.blood_vessels_specify%></span></div>
+  <div><span><strong>Cranial nerves: </strong><%=@description.internal.cranial_nerves%></span></div>
+  <div><span><%=@description.internal.cranial_nerves_specify%></span></div>
+  <div><span><strong>Kernicterus: </strong><%=@description.internal.kernicterus%></span></div>
+  <div><span><%=@description.internal.kernicterus_specify%></span></div>
+</div>
+
+<div class="col-sm-3">
+  <h3> Spinal-cord </h3>
+  <div><span><strong>Extradural space: </strong><%=@description.internal.extradural_space%></span></div>
+  <div><span><%=@description.internal.extradural_space_specify%></span></div>
+  <div><span><strong>Meninges: </strong><%=@description.internal.meninges%></span></div>
+  <div><span><%=@description.internal.meninges_specify%></span></div>
+  <div><span><strong>Cord proper: </strong><%=@description.internal.cord_proper%></span></div>
+  <div><span><%=@description.internal.cord_proper_specify%></span></div>
+</div>
+
+<div class="col-sm-3">
+  <h3> Peripheral-nervous-system </h3>
+  <div><span><strong>Peripheral nervous system: </strong><%=@description.internal.peripheral_nervous_system%></span></div>
+</div>

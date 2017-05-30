@@ -1,0 +1,10 @@
+Right kidneys and ureter	right kidnes weight	number		
+Right kidneys and ureter	right kidney configuration position	select	"Normal","Abnormal"	Abnormal, specify
+Right kidneys and ureter	right kidney external surface	select	"Normal","Abnormal"	Abnormal, specify
+Right kidneys and ureter	right kidney parenchyma or cut surface	select	"Normal","Abnormal"	Abnormal, specify
+Right kidneys and ureter	right kidney cortical thickness	number		
+Right kidneys and ureter	right kidney medulla depth	number		
+Right kidneys and ureter	right kidney pelves and calyces	select	"Normal","Abnormal"	Abnormal, specify
+Right kidneys and ureter	right kidney peripelvic fat and lymph nodes	select	"Normal","Abnormal"	Abnormal, specify
+Right kidneys and ureter	right kidney renal vessels	select	"Normal","Abnormal"	Abnormal, specify
+Right kidneys and ureter	right kidney ureter	select	"Normal","Abnormal"	Abnormal, specify

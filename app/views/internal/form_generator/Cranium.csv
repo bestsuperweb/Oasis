@@ -1,0 +1,9 @@
+Cranium	bones	select	"Normal","Abnormal"	Abnormal, specify
+Cranium	sutures fontanelles	select	"Normal","Abnormal"	Abnormal, specify
+Cranium	skull base	select	"Normal","Abnormal"	Abnormal, specify
+Cranium	sella	select	"Normal","Abnormal"	Abnormal, specify
+Cranium	petrous pyramids opened and cultured	select	"yes","no"	yes, specify
+Cranium	ears removed	select	"yes","no"	yes, specify
+Cranium	foramen magnum antero-posterior dimension	number		
+Cranium	foramen magnum antero-lateral dimension	number		
+Cranium	cranium other	text		

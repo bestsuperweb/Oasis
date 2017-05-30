@@ -1,0 +1,7 @@
+pleural cavities normal	checkbox			
+pleural serosal surfaces	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+pneumothorax	select	"yes","no"	yes, specify	If yes, an empty box will box saying specify side
+pleural cavities amount of fluid	select	"Minimal","More than minimal"	More than minimal, specify	If more than minimal is selected, two boxes will appear saying right….ml and left ….ml.
+pleural nature of fluid	select	"Clear","Serosanguineous","Bloody","Exudative","Chylous","Other"	Other, specify	If other is selected, a box will appear saying specify
+pleural cavity organ relations	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+pleural cavities other	text			Empty box

@@ -1,0 +1,41 @@
+Subcutaneous	subcutaneous normal	checkbox			
+Subcutaneous	fat	select	"Normal","Increased","Decreased","Not examined"		
+Subcutaneous	hydration	select	"Normal","Edema","Dehydration"		
+Subcutaneous	subcutaneous other	text			Empty box
+Bone	bones normal	checkbox			
+Bone	hardness	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+Bone	bone anomalies	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+Bone	marrow	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+Bone	bones other	text			Empty box
+Skeletal muscles	skeletal muscle normal	checkbox			
+Skeletal muscles	skeletal muscle color	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+Skeletal muscles	skeletal muscle consistency	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+Skeletal muscles	skeletal muscle size	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+Skeletal muscles	skeletal muscle other	text			Empty box
+Lymph nodes	lymphnodes normal	checkbox			
+Lymph nodes	cervical	select	"Normal","Abnormal","Not examined"	Abnormal, specify	If abnormal, a box will appear saying specify
+Lymph nodes	axillary	select	"Normal","Abnormal","Not examined"	Abnormal, specify	If abnormal, a box will appear saying specify
+Lymph nodes	mediastinal	select	"Normal","Abnormal","Not examined"	Abnormal, specify	If abnormal, a box will appear saying specify
+Lymph nodes	hilar	select	"Normal","Abnormal","Not examined"	Abnormal, specify	If abnormal, a box will appear saying specify
+Lymph nodes	celiac peripancreatic	select	"Normal","Abnormal","Not examined"	Abnormal, specify	If abnormal, a box will appear saying specify
+Lymph nodes	mesenteric	select	"Normal","Abnormal","Not examined"	Abnormal, specify	If abnormal, a box will appear saying specify
+Lymph nodes	periaortic	select	"Normal","Abnormal","Not examined"	Abnormal, specify	If abnormal, a box will appear saying specify
+Lymph nodes	iliac	select	"Normal","Abnormal","Not examined"	Abnormal, specify	If abnormal, a box will appear saying specify
+Lymph nodes	inguinal	select	"Normal","Abnormal","Not examined"	Abnormal, specify	If abnormal, a box will appear saying specify
+Lymph nodes	lymph nodes other	text			
+Peripheral nervous system	peripheral nervous system	select	"Normal","Abnormal","Not examined"		
+Venous system	venous system normal	checkbox			
+Venous system	venous system state of distension	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+Venous system	venous system contents	select	"Fluid","Clots","Thrombi"		
+Venous system	venous system anomalies	select	"Present","Absent"	Present, specify	If present is selected, a box will appear saying specify
+Venous system	venous system other	text			Empty box
+Arterial system	arterial system normal	checkbox			
+Arterial system	arterial system state of distension	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+Arterial system	arterial system contents	select	"Fluid","Clots","Thrombi"		
+Arterial system	arterial system anomalies	select	"Present","Absent"	Present, specify	If present is selected, a box will appear saying specify
+Arterial system	arterial system other	text			Empty box
+Lymphatic system	lymphatic system normal	checkbox			
+Lymphatic system	lymphatic system state of distension	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+Lymphatic system	lymphatic system contents	select	"Fluid","Clots","Thrombi"		
+Lymphatic system	lymphatic system anomalies	select	"Present","Absent"	Present, specify	If present is selected, a box will appear saying specify
+Lymphatic system	lymphatic system other	text			Empty box

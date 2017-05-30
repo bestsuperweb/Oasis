@@ -1,0 +1,80 @@
+ 
+	      <div class="col-sm-6 no-pad small custom-prop">
+                     <%= f.label  :Normal, class: "small" %><br>
+              </div>		     
+              <div class="col-sm-6 no-pad custom-val">
+                 <%= f.check_box :bones_normal, { class: "form-control input-sm" , :onchange => "makeNormal(this, 'bones')" } %>
+	      </div>
+	     
+<div class="row" style="width:100%">
+		   <div class="col-sm-6 drop-down">
+		      <%= f.label  :hardness %><br>
+		      <%= f.select :hardness, [:Normal, :Abnormal, :"Not examined"], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+		   </div>
+
+		   <div class="col-sm-6">
+                   <% if !@description.internal.nil?  %>
+                    <% if @description.internal.hardness == "Abnormal" %>
+	  	      <%= f.label  :please_specify, { id:"label_internal_hardness_specify" } %><br>
+		      <%= f.text_field :hardness_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+                    <% else %>
+	  	      <%= f.label  :please_specify, { id:"label_internal_hardness_specify" } %><br>
+		      <%= f.text_field :hardness_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+                    <% end %>
+                    <% else %>
+	  	      <%= f.label  :please_specify, { id:"label_internal_hardness_specify" } %><br>
+		      <%= f.text_field :hardness_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+                   <% end %>
+		  </div>
+		</div>
+      
+<div class="row" style="width:100%">
+		   <div class="col-sm-6 drop-down">
+		      <%= f.label  :bone_anomalies %><br>
+		      <%= f.select :bone_anomalies, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+		   </div>
+
+		   <div class="col-sm-6">
+                   <% if !@description.internal.nil?  %>
+                    <% if @description.internal.bone_anomalies == "Abnormal" %>
+	  	      <%= f.label  :please_specify, { id:"label_internal_bone_anomalies_specify" } %><br>
+		      <%= f.text_field :bone_anomalies_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+                    <% else %>
+	  	      <%= f.label  :please_specify, { id:"label_internal_bone_anomalies_specify" } %><br>
+		      <%= f.text_field :bone_anomalies_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+                    <% end %>
+                    <% else %>
+	  	      <%= f.label  :please_specify, { id:"label_internal_bone_anomalies_specify" } %><br>
+		      <%= f.text_field :bone_anomalies_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+                   <% end %>
+		  </div>
+		</div>
+      
+<div class="row" style="width:100%">
+		   <div class="col-sm-6 drop-down">
+		      <%= f.label  :marrow %><br>
+		      <%= f.select :marrow, [:Normal, :Abnormal, :"Not examined"], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+		   </div>
+
+		   <div class="col-sm-6">
+                   <% if !@description.internal.nil?  %>
+                    <% if @description.internal.marrow == "Abnormal" %>
+	  	      <%= f.label  :please_specify, { id:"label_internal_marrow_specify" } %><br>
+		      <%= f.text_field :marrow_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+                    <% else %>
+	  	      <%= f.label  :please_specify, { id:"label_internal_marrow_specify" } %><br>
+		      <%= f.text_field :marrow_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+                    <% end %>
+                    <% else %>
+	  	      <%= f.label  :please_specify, { id:"label_internal_marrow_specify" } %><br>
+		      <%= f.text_field :marrow_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+                   <% end %>
+		  </div>
+		</div>
+      
+
+	     <div class="row" style="width:100%">
+		<div class="field col-sm-4">
+		    <%= f.label :bones_other %><br>
+		    <%= f.text_field :bones_other, class: "form-control" %>
+	     </div> </div>

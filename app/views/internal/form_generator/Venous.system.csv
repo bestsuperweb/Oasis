@@ -1,0 +1,4 @@
+Venous system	venous system anomalies	select	"Present","Absent"	Present, specify
+Venous system	venous system state of distension	select	"Normal","Abnormal"	Abnormal, specify
+Venous system	venous system contents	select	"Fluid","Clots","Thrombi"	
+Venous system	cardiovascular other	text		

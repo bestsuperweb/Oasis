@@ -1,0 +1,27 @@
+<div class="panel panel-primary">
+        <div class="panel-heading">
+           <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#Subcutaneous">Subcutaneous</a>
+           </h4>
+        </div>
+      <div id="Subcutaneous" class="panel-collapse collapse in"> 
+ <div class="row" style="width:100%">
+		  <div class="col-sm-4 drop-down">
+		     <%= f.label  :fat %><br>
+		     <%= f.select :fat, [:Normal, :Increased, :Decreased, :"Not examined"], { :prompt => "Select One" },{ class: "form-control"} %>
+		 </div> 
+		 </div>
+ <div class="row" style="width:100%">
+		  <div class="col-sm-4 drop-down">
+		     <%= f.label  :hydration %><br>
+		     <%= f.select :hydration, [:Normal, :Edema, :Dehydration], { :prompt => "Select One" },{ class: "form-control"} %>
+		 </div> 
+		 </div>
+
+	     <div class="row" style="width:100%">
+		<div class="field col-sm-4">
+		    <%= f.label :subcutaneous_other %><br>
+		    <%= f.text_field :subcutaneous_other, class: "form-control" %>
+	     </div> </div>
+</div>
+</div>

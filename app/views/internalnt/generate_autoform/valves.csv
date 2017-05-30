@@ -1,0 +1,9 @@
+valves normal	checkbox			
+tricuspid valve	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+tricuspid valve circumference	number			
+pulmonic valve	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+pulmonic valave circumference	number			
+mitral valve	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+mitral valve circumference	number			
+aortic valve	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+aortic valve circumference	number			

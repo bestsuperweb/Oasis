@@ -1,0 +1,38 @@
+<div>
+  <br>
+  <div class="row">
+    <div class="panel panel-mother">
+      <div class="panel-heading"><span class="fa fa-heart-o pull-left"></span>Mother's Vitals</div>
+      <div class="panel-body-mother">
+	<div class="col-sm-2">
+	  <strong>Age:</strong>
+	  <div class="label label-success"> <%= "#{@description.mother_datum.mother_age} Years" %></div> <br> 
+	</div>
+	<div class="col-sm-2">
+	  <strong>Prenatal Care:</strong>
+	  <div class="label label-success"> <%= @description.mother_datum.prenatal_care %></div><br>
+	</div>
+	<div class="col-sm-2">
+	  <strong>Gravida:</strong>
+	  <div class="label label-success">  <%= @description.mother_datum.gravida %></div><br>
+	</div>
+	<div class="col-sm-1">
+	  <strong>Para:</strong>
+	  <div class="label label-success">  <%= @description.mother_datum.para %></div><br>
+	</div>
+	<div class="col-sm-2">
+	  <strong>Abortus:</strong>
+	  <div class="label label-success"> <%= @description.mother_datum.abortus %></div><br>
+	</div>
+	<div class="col-sm-1">
+	  <strong>Term:</strong>
+	  <div class="label label-success"> <%= @description.mother_datum.term %></div><br>
+	</div>
+	<div class="col-sm-2">
+	  <strong>Living:</strong>
+	  <div class="label label-success"> <%= @description.mother_datum.living %></div><br>
+	</div>
+      </div>
+    </div>
+  </div>
+</div>

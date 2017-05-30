@@ -1,0 +1,4 @@
+subcutaneous normal	checkbox			
+fat	select	"Normal","Increased","Decreased","Not examined"		
+hydration	select	"Normal","Edema","Dehydration"		
+subcutaneous other	text			Empty box

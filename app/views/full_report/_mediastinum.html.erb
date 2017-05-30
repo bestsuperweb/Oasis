@@ -1,0 +1,12 @@
+<div>
+  <h3>Mediastinum</h3>
+  <table>
+    <%
+      @names_array = ["Position Configuration","Nodes masses","Pneumomediastinum","Other","Microscopic description"]
+      @prop_array = ["mediastinum_position_configuration","mediastinum_nodes_masses","pneumomediastinum","mediastinum_other","mediastinum_md"]
+      @specify_array = ["mediastinum_position_configuration_specify","mediastinum_nodes_masses_specify","","",""]
+    %>
+    <%= render :partial => "internal_loop"%>
+</table>
+</div>
+

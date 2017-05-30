@@ -1,0 +1,6 @@
+pituitary normal	checkbox			
+pituitary weight	number			
+pituitary pos config shape	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+pituitary external surface	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+pituitary parenchyma or cut surface	select	"Normal","Abnormal","Not examined"	Abnormal, specify	If abnormal, a box will appear saying specify
+pituitary other	text			

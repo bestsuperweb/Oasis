@@ -1,0 +1,121 @@
+<div class="panel panel-primary">
+        <div class="panel-heading">
+           <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#Valves">Valves</a>
+           </h4>
+        </div>
+      <div id="Valves" class="panel-collapse collapse in"> 
+<div class="row" style="width:100%">
+		   <div class="col-sm-6 drop-down">
+		      <%= f.label  :tricuspid_valve %><br>
+		      <%= f.select :tricuspid_valve, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+		   </div>
+
+		   <div class="col-sm-6">
+		   <% if !@description.internal.nil?  %>
+		    <% if @description.internal.tricuspid_valve == "Abnormal" %>
+		      <%= f.label  :please_specify, { id:"label_internal_tricuspid_valve_specify" } %><br>
+		      <%= f.text_field :tricuspid_valve_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_tricuspid_valve_specify" } %><br>
+		      <%= f.text_field :tricuspid_valve_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		    <% end %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_tricuspid_valve_specify" } %><br>
+		      <%= f.text_field :tricuspid_valve_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		   <% end %>
+		  </div>
+		</div>
+      
+
+	     <div class="row" style="width:100%">
+		<div class="field col-sm-4">
+		    <%= f.label :tricuspid_valve_circumference %><br>
+		<%= f.number_field :tricuspid_valve_circumference, class: "form-control" %>
+	     </div> </div>
+<div class="row" style="width:100%">
+		   <div class="col-sm-6 drop-down">
+		      <%= f.label  :pulmonic_valve %><br>
+		      <%= f.select :pulmonic_valve, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+		   </div>
+
+		   <div class="col-sm-6">
+		   <% if !@description.internal.nil?  %>
+		    <% if @description.internal.pulmonic_valve == "Abnormal" %>
+		      <%= f.label  :please_specify, { id:"label_internal_pulmonic_valve_specify" } %><br>
+		      <%= f.text_field :pulmonic_valve_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_pulmonic_valve_specify" } %><br>
+		      <%= f.text_field :pulmonic_valve_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		    <% end %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_pulmonic_valve_specify" } %><br>
+		      <%= f.text_field :pulmonic_valve_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		   <% end %>
+		  </div>
+		</div>
+      
+
+	     <div class="row" style="width:100%">
+		<div class="field col-sm-4">
+		    <%= f.label :pulmonic_valave_circumference %><br>
+		<%= f.number_field :pulmonic_valave_circumference, class: "form-control" %>
+	     </div> </div>
+<div class="row" style="width:100%">
+		   <div class="col-sm-6 drop-down">
+		      <%= f.label  :mitral_valve %><br>
+		      <%= f.select :mitral_valve, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+		   </div>
+
+		   <div class="col-sm-6">
+		   <% if !@description.internal.nil?  %>
+		    <% if @description.internal.mitral_valve == "Abnormal" %>
+		      <%= f.label  :please_specify, { id:"label_internal_mitral_valve_specify" } %><br>
+		      <%= f.text_field :mitral_valve_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_mitral_valve_specify" } %><br>
+		      <%= f.text_field :mitral_valve_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		    <% end %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_mitral_valve_specify" } %><br>
+		      <%= f.text_field :mitral_valve_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		   <% end %>
+		  </div>
+		</div>
+      
+
+	     <div class="row" style="width:100%">
+		<div class="field col-sm-4">
+		    <%= f.label :mitral_valve_circumference %><br>
+		<%= f.number_field :mitral_valve_circumference, class: "form-control" %>
+	     </div> </div>
+<div class="row" style="width:100%">
+		   <div class="col-sm-6 drop-down">
+		      <%= f.label  :aortic_valve %><br>
+		      <%= f.select :aortic_valve, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+		   </div>
+
+		   <div class="col-sm-6">
+		   <% if !@description.internal.nil?  %>
+		    <% if @description.internal.aortic_valve == "Abnormal" %>
+		      <%= f.label  :please_specify, { id:"label_internal_aortic_valve_specify" } %><br>
+		      <%= f.text_field :aortic_valve_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_aortic_valve_specify" } %><br>
+		      <%= f.text_field :aortic_valve_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		    <% end %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_aortic_valve_specify" } %><br>
+		      <%= f.text_field :aortic_valve_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		   <% end %>
+		  </div>
+		</div>
+      
+
+	     <div class="row" style="width:100%">
+		<div class="field col-sm-4">
+		    <%= f.label :aortic_valve_circumference %><br>
+		<%= f.number_field :aortic_valve_circumference, class: "form-control" %>
+	     </div> </div>
+</div>
+</div>

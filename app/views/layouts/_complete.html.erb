@@ -1,0 +1,263 @@
+<div class="row" id="tabs">
+  <ul class="nav nav-tabs">
+    <li id="homet"  class="active"><a href="#home" data-toggle="tab"><span>Patient<br/>Information</span></a></li>
+    <li id="mothert"><a href="#mother" data-toggle="tab"><span>Mother's<br/>Information</span></a></li>
+    <li id="placentat"><a href="#placenta" data-toggle="tab"><span>Placenta</span></a></li>
+    <li id="externalt"><a href="#external" data-toggle="tab"><span>External<br/>Examination</span></a></li>
+    <li id="testst"><a href="#tests" data-toggle="tab"><span>Ancilliary<br/>Tests</span></a></li>
+    <li id="internalt"><a href="#internal" data-toggle="tab"><span>Internal<br/>Examination</span></a></li>
+    <li id="blockcodest"><a href="#blockcodes" data-toggle="tab"><span>Block<br/>Codes</span></a></li>
+    <li id="provisionalt"><a href="#provisional" data-toggle="tab"><span>Provisional<br/>Diagnosis</span></a></li>
+    <li id="specialt"><a href="#special" data-toggle='tab'>Special<br>Reports</a></li>
+    <li id="finalt"><a href="#final" data-toggle="tab"><span>Final<br/>Diagnosis</span></a></li>
+    <li id="clinpatht"><a href="#clinpath" data-toggle="tab"><span>Clinicopathological<br/>summary</span></a></li>
+    <li id="qat"><a href="#qa" data-toggle="tab"><span>Autopsy<br/>Q/A</span></a></li>    
+  </ul>
+</div>
+
+
+<div class="tab-content">
+  <div id="home" class="tab-pane active">
+       <% if @description.patient.nil? %>
+	 <%= render partial: 'patients/form' %>
+       <% else %> 
+	 <%= render partial: 'patients/show' %>
+      <% end %>
+    <%= yield %>
+  </div>
+
+  <div id="mother" class="tab-pane">
+    <% if @description.mother_datum.nil? %>
+      <%= render partial: 'mother_data/form' %>
+    <% else %> 
+      <%= render partial: 'mother_data/show' %>
+    <% end %>
+    <%= yield %>
+  </div>
+
+  <div id="external" class="tab-pane">    
+    <% if @description.external.nil? %>
+      <%= render partial: 'external/form' %>
+    <% else %> 
+      <%= render partial: 'external/show' %>
+    <% end %>
+    <%= yield %>
+  </div>
+
+  <div id="internal" class="tab-pane">
+    <div class="tabbable">
+      <div class="row" style="width:100%;margin:auto" id="tabs2">
+        <ul class="nav nav-tabs text-center sub-panels">
+          <li id="internalgnt"  class="active"><a href="#internalgn" data-toggle="tab"><span>General</span></a></li>
+          <li id="internalhnt"><a href="#internalhn" data-toggle="tab"><span>Head and nervous system</span></a></li>
+          <li id="internalntt"><a href="#internalnt" data-toggle="tab"><span>Neck and thorax</span></a></li>
+          <li id="internalapt"><a href="#internalap" data-toggle="tab"><span>Abdomen and pelvis</span></a></li>
+        </ul>
+       <div class="tab-content">
+         <div id="internalgn" class="tab-pane active">
+           <% if @description.internal.nil? %>
+                <%= render partial: 'internal/internalgn_form' %>
+	   <% else %> 
+		<%= render partial: 'internal/internalgn_show' %>
+	   <% end %>
+         </div>
+         <div id="internalhn" class="tab-pane">
+           <% if @description.internal.nil? %>
+                <%= render partial: 'internalhn/internalhn_form' %>
+	   <% else %> 
+		<%= render partial: 'internalhn/internalhn_show' %>
+	   <% end %>
+         </div>
+         <div id="internalnt" class="tab-pane">
+           <% if @description.internal.nil? %>
+                <%= render partial: 'internalnt/internalnt_form' %>
+	   <% else %> 
+		<%= render partial: 'internalnt/internalnt_show' %>
+	   <% end %>
+         </div>
+         <div id="internalap" class="tab-pane">
+           <% if @description.internal.nil? %>
+                <%= render partial: 'internalap/internalap_form' %>
+	   <% else %> 
+		<%= render partial: 'internalap/internalap_show' %>
+	   <% end %>
+         </div>
+       </div>
+  </div>
+</div>
+</div>
+
+<div id="blockcodes" class="tab-pane">
+  <% if @description.external.nil? %>
+    <%= render partial: 'block_codes/manage' %>
+  <% else %> 
+    <%= render partial: 'block_codes/manage' %>
+  <% end %>
+  <%= yield %>
+</div>
+
+<div id="tests" class="tab-pane">
+  <% if @description.ancillary_testing.nil? %>
+    <%= render partial: 'ancillary_testings/form' %>
+  <% else %> 
+      <%= render partial: 'ancillary_testings/show' %>
+    <% end %>
+    <%= yield %>
+  </div>
+
+  <div id="placenta" class="tab-pane">
+    <br>
+    <div class="tabbable">
+      <div class="row" style="width:100%;margin:auto" >
+        <ul class="nav nav-tabs text-center sub-panels">
+          <li id="placentagmdt" ><a href="#placentagmd" data-toggle="tab"><span>Gross and microscopic description</span></a></li>
+          <li id="placentafdt" class="active" ><a href="#placentafd" data-toggle="tab"><span>Final Diagnosis</span></a></li>
+        </ul>
+
+       <div class="tab-content">
+        <div id="placentagmd" class="tab-pane">
+          <% if @description.placenta.nil? %>
+            <%= render partial: 'placenta/form' %>
+          <% else %> 
+            <%= render partial: 'placenta/show' %>
+          <% end %>
+        </div>
+        
+        <div id="placentafd" class="tab-pane active">
+          <% if @description.final_report.nil? %>
+            <%= render partial: 'placenta/final_diagnosis/form' %>
+          <% elsif @description.final_report.lock.nil? %>
+            <%= render partial: 'placenta/final_diagnosis/edit' %>
+          <% else %> 
+            <%= render partial: 'placenta/final_diagnosis/show' %>
+          <% end %>
+        </div>
+       </div>
+
+      </div>
+    </div>    
+    <%= yield %>
+  </div>
+
+  <div id="provisional" class="tab-pane">
+    <% if @description.provisional_diagnosis.nil? %>
+      <%= render partial: 'provisional_diagnosis/form' %>
+    <% else %> 
+      <%= render partial: 'provisional_diagnosis/show' %>
+    <% end %>
+    <%= yield %>
+  </div>
+  <!-- add tab content code by Tom Salinger -->
+  <div id = "special" class="tab-pane">
+    <%= render partial: 'special_report/index_of_report' %>
+    <%= yield %>    
+  </div>
+  <!-- end -->
+
+  <div id="final" class="tab-pane">
+    <% if @description.final_diagnosis.nil? %>
+      <%= render partial: 'final_diagnosis/form' %>
+    <% else %> 
+      <%= render partial: 'final_diagnosis/show' %>
+    <% end %>
+    <%= yield %>
+  </div>
+
+  <div id="clinpath" class="tab-pane">
+    <% if @description.clinico_pathological_summary.nil? %>
+      <%= render partial: 'clinico_pathological_summary/form' %>
+    <% else %> 
+      <%= render partial: 'clinico_pathological_summary/show' %>
+    <% end %>
+    <%= yield %>
+  </div>
+
+  <div id="qa" class="tab-pane">
+    <% if @description.question_answer.nil? %>
+      <%= render partial: 'question_answer/form' %>
+    <% else %> 
+      <%= render partial: 'question_answer/show' %>
+    <% end %>
+    <%= yield %>
+  </div>
+</div>
+
+
+
+<br>
+
+<script>
+  var url = document.location.toString();
+  console.log(url)
+  var splitUrl = url.split('#')[1]
+  console.log(splitUrl)
+
+  if(typeof splitUrl != 'undefined'){
+
+    $('.active').removeClass('active')
+
+    if(splitUrl.match(/internal/)){
+      document.getElementById('internalt').className += (' active') 
+      document.getElementById('internal').className += (' active') 
+      if(splitUrl == "internal"){
+	splitUrl = splitUrl+"gn"
+        document.getElementById(splitUrl+'t').className += (' active') 
+        document.getElementById(splitUrl).className += (' active') 
+      }
+    }
+    else {
+     document.getElementById(splitUrl+'t').className += (' active') 
+     document.getElementById(splitUrl).className += (' active') 
+    }
+  }
+
+  $(function(){
+    var hash = window.location.hash;
+    hash && $('ul.nav a[href="' + hash + '"]').tab('show');
+
+    $('.nav-tabs a').click(function (e) {
+      $(this).tab('show');
+      var scrollmem = $('body').scrollTop() || $('html').scrollTop();
+      window.location.hash = this.hash;
+      $('html,body').scrollTop(scrollmem);
+    });
+  });
+
+
+</script>
+
+<style>
+  .nav-tabs>li {
+    height:60px;
+    text-align: center;
+  }
+  .nav-tabs>li>a, .nav-tabs>li>a>div {
+    height:100%;
+    display:table;
+  }
+  .nav-tabs>li>a span {
+    display:table-cell;
+    vertical-align:middle;
+  }
+  .sub-panels>li {
+    height: 0%;
+    padding-top: 0px;
+  }
+  .sub-panels {
+    width: 52%;
+    margin: auto;
+    background: #f5fdf7;
+  }
+  .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    background-color: #A2AB58;
+    border: 0px solid black;
+    border-bottom-color: transparent;
+    color: white;
+  }
+  .sub-panels > li.active > a, .sub-panels > li.active > a:hover, .sub-panels > li.active > a:focus, .sub-panels > li.active {
+    background: #A2AB58;
+    color: white;
+  }
+</style>
+<%= tinymce %>
+<%= render 'layouts/back' %>

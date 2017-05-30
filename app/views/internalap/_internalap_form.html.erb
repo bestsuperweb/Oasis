@@ -1,0 +1,1955 @@
+<br>
+<br>
+
+<% if @description.internal.nil? 
+  @internal = Internal.new()
+end %>
+
+<%= form_for @internal, url: internalap_path do |f| %>
+  <% if @internal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@internal.errors.count, "error") %> prohibited this internal from being saved:</h2>
+      <ul>
+	<% @internal.errors.full_messages.each do |message| %>
+	  <li><%= message %></li>
+	<% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <div class="well">
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="panel panel-internal squarish">
+            <div class="panel-heading panel-heading-internal small-heading squarish">
+              Peritoneal cavity
+            </div>
+            <div class="panel-body panel-body-internal squarish">
+        
+              <div class="row">
+        	<div class="col-sm-6 no-pad small custom-prop">
+        	  <%= f.label  :Normal, class: "small" %><br>
+        	</div>		     
+        	<div class="col-sm-6 no-pad custom-val">
+        	  <%= f.check_box :peritoneal_cavity_normal, { class: "form-control input-sm" , :onchange => "makeNormal(this, '.peritoneal_cavity')" } %>
+        	</div>
+              </div>
+        
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :peritoneal_serosal_surfaces, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :peritoneal_serosal_surfaces, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent peritoneal_cavity" , "dependent-selector" => "#peritoneal_serosal_surfaces-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="peritoneal_serosal_surfaces-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :peritoneal_serosal_surfaces_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :peritoneal_serosal_surfaces_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+        
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small">
+        	  <%= f.label :fluid , class: "small" %>
+        	</div> 
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :fluid, class: "form-control input-sm" %>
+        	</div>
+	      </div>
+        
+        	<div class="row">
+        	  <div class="col-sm-6 nopad custom-prop small">
+        	    <%= f.label :fluid_quantity, class: "small" %>
+        	  </div> 
+        	  <div class="col-sm-6 nopad custom-val">
+        	    <%= f.number_field :fluid_quantity, class: "form-control input-sm" %>
+        	  </div>
+        	</div>
+        	<div class="row">
+        	  <div class="col-sm-6 nopad custom-prop small drop-down">
+        	    <%= f.label  :peritoneal_nature_of_fluid, class: "small"%>
+        	  </div>
+        	  <div class="col-sm-6 nopad custom-val">
+        	    <%= f.select :peritoneal_nature_of_fluid, [:Clear, :Serosanguineous, :Bloody, :Exudative, :Chylous, :Other], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent peritoneal_cavity" , "dependent-selector" => "#peritoneal_nature_of_fluid-dependent", "when-value" => "Other", "dependent-action" => "show-hide"} %>
+        	  </div>
+        	</div>
+        	<div class="row" id="peritoneal_nature_of_fluid-dependent">
+        	  <div class="col-sm-6 nopad custom-prop small drop-down">
+        	    <%= f.label  :peritoneal_nature_of_fluid_specify, class: "small" %><br>
+        	  </div>
+        	  <div class="col-sm-6 nopad custom-val">
+        	    <%= f.text_field :peritoneal_nature_of_fluid_specify, { class: "form-control input-sm", placeholder: "If Other, explain" } %>
+        	  </div>
+        	</div>
+        	<div class="row">
+        	  <div class="col-sm-6 nopad custom-prop small drop-down">
+        	    <%= f.label  :peritoneal_cavity_organ_relations, class: "small"%>
+        	  </div>
+        	  <div class="col-sm-6 nopad custom-val">
+        	    <%= f.select :peritoneal_cavity_organ_relations, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent peritoneal_cavity" , "dependent-selector" => "#peritoneal_cavity_organ_relations-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	  </div>
+        	</div>
+        	<div class="row" id="peritoneal_cavity_organ_relations-dependent">
+        	  <div class="col-sm-6 nopad custom-prop small drop-down">
+        	    <%= f.label  :peritoneal_cavity_organ_relations_specify, class: "small" %><br>
+        	  </div>
+        	  <div class="col-sm-6 nopad custom-val">
+        	    <%= f.text_field :peritoneal_cavity_organ_relations_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	  </div>
+        	</div>
+        	<div class="row">
+        	  <div class="col-sm-6 nopad custom-prop small drop-down">
+        	    <%= f.label  :retrroperitoneum, class: "small"%>
+        	  </div>
+        	  <div class="col-sm-6 nopad custom-val">
+        	    <%= f.select :retrroperitoneum, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent peritoneal_cavity" , "dependent-selector" => "#retrroperitoneum-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	  </div>
+        	</div>
+        	<div class="row" id="retrroperitoneum-dependent">
+        	  <div class="col-sm-6 nopad custom-prop small drop-down">
+        	    <%= f.label  :retrroperitoneum_specify, class: "small" %><br>
+        	  </div>
+        	  <div class="col-sm-6 nopad custom-val">
+        	    <%= f.text_field :retrroperitoneum_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	  </div>
+        	</div>
+        	<div class="row">
+        	  <div class="col-sm-6 nopad custom-prop small drop-down">
+        	    <%= f.label  :umbilical_vessels, class: "small"%>
+        	  </div>
+        	  <div class="col-sm-6 nopad custom-val">
+        	    <%= f.select :umbilical_vessels, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent peritoneal_cavity" , "dependent-selector" => "#umbilical_vessels-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	  </div>
+        	</div>
+        	<div class="row" id="umbilical_vessels-dependent">
+        	  <div class="col-sm-6 nopad custom-prop small drop-down">
+        	    <%= f.label  :umbilical_vessels_specify, class: "small" %><br>
+        	  </div>
+        	  <div class="col-sm-6 nopad custom-val">
+        	    <%= f.text_field :umbilical_vessels_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	  </div>
+        	</div>
+        	<div class="row">
+        	  <div class="col-sm-6 nopad custom-prop small drop-down">
+        	    <%= f.label  :no_of_umbilical_arteries, class: "small" %><br>
+        	  </div> 
+        	  <div class="col-sm-6 nopad custom-val">
+        	    <%= f.select :no_of_umbilical_arteries, [:"1", :"2"], { :prompt => "Select One" },{ class: "form-control input-sm peritoneal_cavity"} %>
+        	  </div>
+        	</div>
+        
+        	<div class="row">
+        	  <div class="col-sm-6 nopad custom-prop small">
+        	    <%= f.label :peritoneal_cavity_other, "Other" , class: "small" %>
+        	  </div> 
+        	  <div class="col-sm-6 nopad custom-val">
+        	    <%= f.text_field :peritoneal_cavity_other, class: "form-control input-sm" %>
+        	  </div>
+        	</div>
+		<div class="row">
+		  <div class="col-sm-6 nopad custom-prop small">
+		    <%= f.label :peritoneal_cavity_md, "Microscopic description" , class: "small" %>
+		  </div> 
+		  <div class="col-sm-6 nopad custom-val">
+		    <%= f.text_field :peritoneal_cavity_md, class: "form-control input-sm" %>
+		  </div>
+		</div>
+	    </div>
+	  </div>
+          </div>
+        <div class="col-sm-3">
+          <div class="panel panel-internal squarish">
+            <div class="panel-heading panel-heading-internal small-heading squarish">
+              Stomach and duodenum
+            </div>
+            <div class="panel-body panel-body-internal squarish">
+        
+              <div class="row">
+        	<div class="col-sm-6 no-pad small custom-prop">
+        	  <%= f.label  :Normal, class: "small" %><br>
+        	</div>		     
+        	<div class="col-sm-6 no-pad custom-val">
+        	  <%= f.check_box :stomach_and_duodenum_normal, { class: "form-control input-sm" , :onchange => "makeNormal(this, '.stomach_and_duodenum')" } %>
+        	</div>
+              </div>
+        
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :stomach_size_position_configuration, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :stomach_size_position_configuration, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent stomach_and_duodenum" , "dependent-selector" => "#stomach_size_position_configuration-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="stomach_size_position_configuration-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :stomach_size_position_configuration_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :stomach_size_position_configuration_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :stomach_mucosa_and_wall, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :stomach_mucosa_and_wall, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent stomach_and_duodenum" , "dependent-selector" => "#stomach_mucosa_and_wall-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="stomach_mucosa_and_wall-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :stomach_mucosa_and_wall_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :stomach_mucosa_and_wall_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+        
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small">
+        	  <%= f.label :stomach_and_duodenum_contents , class: "small" %>
+        	</div> 
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :stomach_and_duodenum_contents, class: "form-control input-sm" %>
+        	</div>
+	      </div>
+        	<div class="row">
+        	  <div class="col-sm-6 nopad custom-prop small drop-down">
+        	    <%= f.label  :ampulla, class: "small"%>
+        	  </div>
+        	  <div class="col-sm-6 nopad custom-val">
+        	    <%= f.select :ampulla, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent stomach_and_duodenum" , "dependent-selector" => "#ampulla-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	  </div>
+        	</div>
+        	<div class="row" id="ampulla-dependent">
+        	  <div class="col-sm-6 nopad custom-prop small drop-down">
+        	    <%= f.label  :ampulla_specify, class: "small" %><br>
+        	  </div>
+        	  <div class="col-sm-6 nopad custom-val">
+        	    <%= f.text_field :ampulla_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	  </div>
+        	</div>
+        
+        	<div class="row">
+        	  <div class="col-sm-6 nopad custom-prop small">
+        	    <%= f.label :stomach_and_duodenum_other, "Other" , class: "small" %>
+        	  </div> 
+        	  <div class="col-sm-6 nopad custom-val">
+        	    <%= f.text_field :stomach_and_duodenum_other, class: "form-control input-sm" %>
+        	  </div>
+        	</div>
+		<div class="row">
+		  <div class="col-sm-6 nopad custom-prop small">
+		    <%= f.label :stomach_and_duodenum_md, "Microscopic description" , class: "small" %>
+		  </div> 
+		  <div class="col-sm-6 nopad custom-val">
+		    <%= f.text_field :stomach_and_duodenum_md, class: "form-control input-sm" %>
+		  </div>
+		</div>
+	    </div>
+	  </div>
+          </div>
+
+        <div class="col-sm-3">
+          <div class="panel panel-internal squarish">
+            <div class="panel-heading panel-heading-internal small-heading squarish">
+              Small intestine
+            </div>
+            <div class="panel-body panel-body-internal squarish">
+        
+              <div class="row">
+        	<div class="col-sm-6 no-pad small custom-prop">
+        	  <%= f.label  :Normal, class: "small" %><br>
+        	</div>		     
+        	<div class="col-sm-6 no-pad custom-val">
+        	  <%= f.check_box :small_intestine_normal, { class: "form-control input-sm" , :onchange => "makeNormal(this, '.small_intestine')" } %>
+        	</div>
+              </div>
+        
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :small_intestine_size_position_configuration, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :small_intestine_size_position_configuration, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent small_intestine" , "dependent-selector" => "#small_intestine_size_position_configuration-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="small_intestine_size_position_configuration-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :small_intestine_size_position_configuration_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :small_intestine_size_position_configuration_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :small_intestine_mucosa_and_wall, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :small_intestine_mucosa_and_wall, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent small_intestine" , "dependent-selector" => "#small_intestine_mucosa_and_wall-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="small_intestine_mucosa_and_wall-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :small_intestine_mucosa_and_wall_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :small_intestine_mucosa_and_wall_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :small_intestine_state_of_distension, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :small_intestine_state_of_distension, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent small_intestine" , "dependent-selector" => "#small_intestine_state_of_distension-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="small_intestine_state_of_distension-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :small_intestine_state_of_distension_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :small_intestine_state_of_distension_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+        
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small">
+        	  <%= f.label :small_intestine_contents , class: "small" %>
+        	</div> 
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :small_intestine_contents, class: "form-control input-sm" %>
+        	</div>
+	      </div>
+        	<div class="row">
+        	  <div class="col-sm-6 nopad custom-prop small drop-down">
+        	    <%= f.label  :meckel_diverticulum, class: "small"%>
+        	  </div>
+        	  <div class="col-sm-6 nopad custom-val">
+        	    <%= f.select :meckel_diverticulum, [:yes, :no], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent small_intestine" , "dependent-selector" => "#meckel_diverticulum-dependent", "when-value" => "yes", "dependent-action" => "show-hide"} %>
+        	  </div>
+        	</div>
+        	<div class="row" id="meckel_diverticulum-dependent">
+        	  <div class="col-sm-6 nopad custom-prop small drop-down">
+        	    <%= f.label  :meckel_diverticulum_specify, class: "small" %><br>
+        	  </div>
+        	  <div class="col-sm-6 nopad custom-val">
+        	    <%= f.text_field :meckel_diverticulum_specify, { class: "form-control input-sm", placeholder: "If yes, explain" } %>
+        	  </div>
+        	</div>
+        	<div class="row">
+        	  <div class="col-sm-6 nopad custom-prop small drop-down">
+        	    <%= f.label  :small_intestine_mesentery, class: "small"%>
+        	  </div>
+        	  <div class="col-sm-6 nopad custom-val">
+        	    <%= f.select :small_intestine_mesentery, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent small_intestine" , "dependent-selector" => "#small_intestine_mesentery-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	  </div>
+        	</div>
+        	<div class="row" id="small_intestine_mesentery-dependent">
+        	  <div class="col-sm-6 nopad custom-prop small drop-down">
+        	    <%= f.label  :small_intestine_mesentery_specify, class: "small" %><br>
+        	  </div>
+        	  <div class="col-sm-6 nopad custom-val">
+        	    <%= f.text_field :small_intestine_mesentery_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	  </div>
+        	</div>
+        
+        	<div class="row">
+        	  <div class="col-sm-6 nopad custom-prop small">
+        	    <%= f.label :small_intestine_other, "Other" , class: "small" %>
+        	  </div> 
+        	  <div class="col-sm-6 nopad custom-val">
+        	    <%= f.text_field :small_intestine_other, class: "form-control input-sm" %>
+        	  </div>
+        	</div>
+
+		<div class="row">
+		  <div class="col-sm-6 nopad custom-prop small">
+		    <%= f.label :small_intesting_md, "Microscopic description" , class: "small" %>
+		  </div> 
+		  <div class="col-sm-6 nopad custom-val">
+		    <%= f.text_field :small_intesting_md, class: "form-control input-sm" %>
+		  </div>
+		</div>
+	    </div>
+	  </div>
+	</div>
+	<div class="col-sm-3">
+          <div class="panel panel-internal squarish">
+            <div class="panel-heading panel-heading-internal small-heading squarish">
+              Large intestine and appendix
+            </div>
+            <div class="panel-body panel-body-internal squarish">
+
+              <div class="row">
+        	<div class="col-sm-6 no-pad small custom-prop">
+        	  <%= f.label  :Normal, class: "small" %><br>
+        	</div>		     
+        	<div class="col-sm-6 no-pad custom-val">
+        	  <%= f.check_box :large_instestine_normal, { class: "form-control input-sm" , :onchange => "makeNormal(this, '.large_intestine_and_appendix')" } %>
+        	</div>
+              </div>
+        
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :large_intestine_size_position_configuration, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :large_intestine_size_position_configuration, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent large_intestine_and_appendix" , "dependent-selector" => "#large_intestine_size_position_configuration-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+
+              <div class="row" id="large_intestine_size_position_configuration-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :large_intestine_size_position_configuration_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :large_intestine_size_position_configuration_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :large_intestine_mucosa_and_wall, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :large_intestine_mucosa_and_wall, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent large_intestine_and_appendix" , "dependent-selector" => "#large_intestine_mucosa_and_wall-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+
+              <div class="row" id="large_intestine_mucosa_and_wall-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :large_intestine_mucosa_and_wall_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :large_intestine_mucosa_and_wall_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :large_intestine_state_of_distension, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :large_intestine_state_of_distension, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent large_intestine_and_appendix" , "dependent-selector" => "#large_intestine_state_of_distension-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+
+              <div class="row" id="large_intestine_state_of_distension-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :large_intestine_state_of_distension_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :large_intestine_state_of_distension_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+        
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small">
+        	  <%= f.label :large_intestine_contents , class: "small" %>
+        	</div> 
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :large_intestine_contents, class: "form-control input-sm" %>
+        	</div>
+	      </div>
+
+        	<div class="row">
+        	  <div class="col-sm-6 nopad custom-prop small drop-down">
+        	    <%= f.label  :large_intestine_mesentery, class: "small"%>
+        	  </div>
+        	  <div class="col-sm-6 nopad custom-val">
+        	    <%= f.select :large_intestine_mesentery, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent large_intestine_and_appendix" , "dependent-selector" => "#large_intestine_mesentery-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	  </div>
+        	</div>
+
+        	<div class="row" id="large_intestine_mesentery-dependent">
+        	  <div class="col-sm-6 nopad custom-prop small drop-down">
+        	    <%= f.label  :large_intestine_mesentery_specify, class: "small" %><br>
+        	  </div>
+        	  <div class="col-sm-6 nopad custom-val">
+        	    <%= f.text_field :large_intestine_mesentery_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	  </div>
+        	</div>
+        
+        	<div class="row">
+        	  <div class="col-sm-6 nopad custom-prop small">
+        	    <%= f.label :large_intestine_other, "Other" , class: "small" %>
+        	  </div> 
+        	  <div class="col-sm-6 nopad custom-val">
+        	    <%= f.text_field :large_intestine_other, class: "form-control input-sm" %>
+        	  </div>
+        	</div>
+
+		<div class="row">
+		  <div class="col-sm-6 nopad custom-prop small">
+		    <%= f.label :large_intestine_md, "Microscopic description" , class: "small" %>
+		  </div> 
+		  <div class="col-sm-6 nopad custom-val">
+		    <%= f.text_field :large_intestine_md, class: "form-control input-sm" %>
+		  </div>
+		</div>
+	    </div>
+	  </div>
+	</div>
+      </div>
+      <div class="row">
+
+        <div class="col-sm-3">
+          <div class="panel panel-internal squarish">
+            <div class="panel-heading panel-heading-internal small-heading squarish">
+              Liver and biliary system
+            </div>
+            <div class="panel-body panel-body-internal squarish">
+        
+              <div class="row">
+        	<div class="col-sm-6 no-pad small custom-prop">
+        	  <%= f.label  :Normal, class: "small" %><br>
+        	</div>		     
+        	<div class="col-sm-6 no-pad custom-val">
+        	  <%= f.check_box :liver_and_biliary_system_normal, { class: "form-control input-sm" , :onchange => "makeNormal(this, '.liver_and_biiary_system')" } %>
+        	</div>
+              </div>
+        
+        
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small">
+        	  <%= f.label :liver_weight, class: "small" %>
+        	</div> 
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.number_field :liver_weight, class: "form-control input-sm" %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :liver_size_shape, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :liver_size_shape, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent liver_and_biiary_system" , "dependent-selector" => "#liver_size_shape-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="liver_size_shape-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :liver_size_shape_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :liver_size_shape_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :liver_and_billiary_system_external_surface, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :liver_and_billiary_system_external_surface, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent liver_and_biiary_system" , "dependent-selector" => "#liver_and_billiary_system_external_surface-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="liver_and_billiary_system_external_surface-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :liver_and_billiary_system_external_surface_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :liver_and_billiary_system_external_surface_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :cut_surface, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :cut_surface, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent liver_and_biiary_system" , "dependent-selector" => "#cut_surface-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="cut_surface-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :cut_surface_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :cut_surface_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :gallbladder, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :gallbladder, [:Normal, :Abnormal, :Absent], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent liver_and_biiary_system" , "dependent-selector" => "#gallbladder-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="gallbladder-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :gallbladder_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :gallbladder_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :bile_ducts, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :bile_ducts, [:Normal, :Abnormal, :Absent], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent liver_and_biiary_system" , "dependent-selector" => "#bile_ducts-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="bile_ducts-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :bile_ducts_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :bile_ducts_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :bile, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :bile, [:Colorless, :Golden, :Green, :Other], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent liver_and_biiary_system" , "dependent-selector" => "#bile-dependent", "when-value" => "Other", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="bile-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :bile_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :bile_specify, { class: "form-control input-sm", placeholder: "If Other, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :stones, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :stones, [:Present, :Absent], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent liver_and_biiary_system" , "dependent-selector" => "#stones-dependent", "when-value" => "Present", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="stones-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :stones_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :stones_specify, { class: "form-control input-sm", placeholder: "If Present, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :hilar_vessels_portal_vein_hepatic_artery, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :hilar_vessels_portal_vein_hepatic_artery, [:Normal, :Abnormal, :"Not examined"], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent liver_and_biiary_system" , "dependent-selector" => "#hilar_vessels_portal_vein_hepatic_artery-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="hilar_vessels_portal_vein_hepatic_artery-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :hilar_vessels_portal_vein_hepatic_artery_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :hilar_vessels_portal_vein_hepatic_artery_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+        
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small">
+        	  <%= f.label :liver_and_biiary_system_other, "Other" , class: "small" %>
+        	</div> 
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :liver_and_biiary_system_other, class: "form-control input-sm" %>
+        	</div>
+              </div>
+	      <div class="row">
+		<div class="col-sm-6 nopad custom-prop small">
+		  <%= f.label :liver_and_biliary_system_md, "Microscopic description" , class: "small" %>
+		</div> 
+		<div class="col-sm-6 nopad custom-val">
+		  <%= f.text_field :liver_and_biliary_system_md, class: "form-control input-sm" %>
+		</div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+        <div class="col-sm-3">
+          <div class="panel panel-internal squarish">
+            <div class="panel-heading panel-heading-internal small-heading squarish">
+              Pancreas
+            </div>
+            <div class="panel-body panel-body-internal squarish">
+        
+              <div class="row">
+        	<div class="col-sm-6 no-pad small custom-prop">
+        	  <%= f.label  :Normal, class: "small" %><br>
+        	</div>		     
+        	<div class="col-sm-6 no-pad custom-val">
+        	  <%= f.check_box :pancreas_normal, { class: "form-control input-sm" , :onchange => "makeNormal(this, '.pancreas')" } %>
+        	</div>
+              </div>
+        
+        
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small">
+        	  <%= f.label :pancreas_weight, class: "small" %>
+        	</div> 
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.number_field :pancreas_weight, class: "form-control input-sm" %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :pancreas_size_configuration, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :pancreas_size_configuration, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent pancreas" , "dependent-selector" => "#pancreas_size_configuration-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="pancreas_size_configuration-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :pancreas_size_configuration_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :pancreas_size_configuration_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :pancreas_external_surface , class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :pancreas_external_surface , [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent pancreas" , "dependent-selector" => "#pancreas_external_surface:-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="pancreas_external_surface:-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :pancreas_external_surface_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :pancreas_external_surface_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :pancreas_parenchyma_or_cut_surface, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :pancreas_parenchyma_or_cut_surface, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent pancreas" , "dependent-selector" => "#pancreas_parenchyma_or_cut_surface-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="pancreas_parenchyma_or_cut_surface-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :pancreas_parenchyma_or_cut_surface_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :pancreas_parenchyma_or_cut_surface_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :ducts, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :ducts, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent pancreas" , "dependent-selector" => "#ducts-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="ducts-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :ducts_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :ducts_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+        
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small">
+        	  <%= f.label :pancreas_other, "Other" , class: "small" %>
+        	</div> 
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :pancreas_other, class: "form-control input-sm" %>
+        	</div>
+              </div>
+	      <div class="row">
+		<div class="col-sm-6 nopad custom-prop small">
+		  <%= f.label :pancreas_md, "Microscopic description" , class: "small" %>
+		</div> 
+		<div class="col-sm-6 nopad custom-val">
+		  <%= f.text_field :pancreas_md, class: "form-control input-sm" %>
+		</div>
+	      </div>
+	    </div>
+	  </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="panel panel-internal squarish">
+            <div class="panel-heading panel-heading-internal small-heading squarish">
+              Right adrenal gland
+            </div>
+            <div class="panel-body panel-body-internal squarish">
+        
+              <div class="row">
+        	<div class="col-sm-6 no-pad small custom-prop">
+        	  <%= f.label  :Normal, class: "small" %><br>
+        	</div>		     
+        	<div class="col-sm-6 no-pad custom-val">
+        	  <%= f.check_box :right_adrenal_gland_normal, { class: "form-control input-sm" , :onchange => "makeNormal(this, '.right_adrenal_gland')" } %>
+        	</div>
+              </div>
+        
+        
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small">
+        	  <%= f.label :right_adrenal_gland_weight, class: "small" %>
+        	</div> 
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.number_field :right_adrenal_gland_weight, class: "form-control input-sm" %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :right_adrenal_pos_config_shape, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :right_adrenal_pos_config_shape, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent right_adrenal_gland" , "dependent-selector" => "#right_adrenal_pos_config_shape-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="right_adrenal_pos_config_shape-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :right_adrenal_pos_config_shape_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :right_adrenal_pos_config_shape_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :right_adrenal_gland_external_surface, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :right_adrenal_gland_external_surface, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent right_adrenal_gland" , "dependent-selector" => "#right_adrenal_gland_external_surface-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="right_adrenal_gland_external_surface-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :right_adrenal_gland_external_surface_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :right_adrenal_gland_external_surface_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :right_adrenal_gland_parenchyma_or_cut_surface, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :right_adrenal_gland_parenchyma_or_cut_surface, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent right_adrenal_gland" , "dependent-selector" => "#right_adrenal_gland_parenchyma_or_cut_surface-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="right_adrenal_gland_parenchyma_or_cut_surface-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :right_adrenal_gland_parenchyma_or_cut_surface_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :right_adrenal_gland_parenchyma_or_cut_surface_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :right_adrenal_cortex, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :right_adrenal_cortex, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent right_adrenal_gland" , "dependent-selector" => "#right_adrenal_cortex-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="right_adrenal_cortex-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :right_adrenal_cortex_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :right_adrenal_cortex_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :right_adrenal_fetal_cortex, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :right_adrenal_fetal_cortex, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent right_adrenal_gland" , "dependent-selector" => "#right_adrenal_fetal_cortex-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="right_adrenal_fetal_cortex-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :right_adrenal_fetal_cortex_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :right_adrenal_fetal_cortex_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :right_adrenal_medulla, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :right_adrenal_medulla, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent right_adrenal_gland" , "dependent-selector" => "#right_adrenal_medulla-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="right_adrenal_medulla-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :right_adrenal_medulla_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :right_adrenal_medulla_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+        
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small">
+        	  <%= f.label :right_adrenal_other, "Other" , class: "small" %>
+        	</div> 
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :right_adrenal_other, class: "form-control input-sm" %>
+        	</div>
+              </div>
+	      <div class="row">
+		<div class="col-sm-6 nopad custom-prop small">
+		  <%= f.label :right_adrenal_gland_md, "Microscopic description" , class: "small" %>
+		</div> 
+		<div class="col-sm-6 nopad custom-val">
+		  <%= f.text_field :right_adrenal_gland_md, class: "form-control input-sm" %>
+		</div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+        <div class="col-sm-3">
+          <div class="panel panel-internal squarish">
+            <div class="panel-heading panel-heading-internal small-heading squarish">
+              Left adrenal gland
+            </div>
+            <div class="panel-body panel-body-internal squarish">
+        
+              <div class="row">
+        	<div class="col-sm-6 no-pad small custom-prop">
+        	  <%= f.label  :Normal, class: "small" %><br>
+        	</div>		     
+        	<div class="col-sm-6 no-pad custom-val">
+        	  <%= f.check_box :left_adrenal_gland_normal, { class: "form-control input-sm" , :onchange => "makeNormal(this, '.left_adrenal_gland')" } %>
+        	</div>
+              </div>
+        
+        
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small">
+        	  <%= f.label :left_adrenal_gland_weight, class: "small" %>
+        	</div> 
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.number_field :left_adrenal_gland_weight, class: "form-control input-sm" %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :left_adrenal_pos_config_shape, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :left_adrenal_pos_config_shape, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent left_adrenal_gland" , "dependent-selector" => "#left_adrenal_pos_config_shape-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="left_adrenal_pos_config_shape-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :left_adrenal_pos_config_shape_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :left_adrenal_pos_config_shape_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :left_adrenal_gland_external_surface, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :left_adrenal_gland_external_surface, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent left_adrenal_gland" , "dependent-selector" => "#left_adrenal_gland_external_surface-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="left_adrenal_gland_external_surface-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :left_adrenal_gland_external_surface_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :left_adrenal_gland_external_surface_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :left_adrenal_gland_parenchyma_or_cut_surface, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :left_adrenal_gland_parenchyma_or_cut_surface, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent left_adrenal_gland" , "dependent-selector" => "#left_adrenal_gland_parenchyma_or_cut_surface-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="left_adrenal_gland_parenchyma_or_cut_surface-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :left_adrenal_gland_parenchyma_or_cut_surface_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :left_adrenal_gland_parenchyma_or_cut_surface_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :left_adrenal_cortex, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :left_adrenal_cortex, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent left_adrenal_gland" , "dependent-selector" => "#left_adrenal_cortex-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="left_adrenal_cortex-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :left_adrenal_cortex_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :left_adrenal_cortex_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :left_adrenal_fetal_cortex, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :left_adrenal_fetal_cortex, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent left_adrenal_gland" , "dependent-selector" => "#left_adrenal_fetal_cortex-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="left_adrenal_fetal_cortex-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :left_adrenal_fetal_cortex_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :left_adrenal_fetal_cortex_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :left_adrenal_medulla, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :left_adrenal_medulla, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent left_adrenal_gland" , "dependent-selector" => "#left_adrenal_medulla-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="left_adrenal_medulla-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :left_adrenal_medulla_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :left_adrenal_medulla_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+        
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small">
+        	  <%= f.label :left_adrenal_other, "Other" , class: "small" %>
+        	</div> 
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :left_adrenal_other, class: "form-control input-sm" %>
+        	</div>
+              </div>
+
+	      <div class="row">
+		<div class="col-sm-6 nopad custom-prop small">
+		  <%= f.label :left_adrenal_gland_md, "Microscopic description" , class: "small" %>
+		</div> 
+		<div class="col-sm-6 nopad custom-val">
+		  <%= f.text_field :left_adrenal_gland_md, class: "form-control input-sm" %>
+		</div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="panel panel-internal squarish">
+            <div class="panel-heading panel-heading-internal small-heading squarish">
+              Spleen
+            </div>
+            <div class="panel-body panel-body-internal squarish">
+        
+              <div class="row">
+        	<div class="col-sm-6 no-pad small custom-prop">
+        	  <%= f.label  :Normal, class: "small" %><br>
+        	</div>		     
+        	<div class="col-sm-6 no-pad custom-val">
+        	  <%= f.check_box :spleen_normal, { class: "form-control input-sm" , :onchange => "makeNormal(this, '.spleen')" } %>
+        	</div>
+              </div>
+        
+        
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small">
+        	  <%= f.label :spleen_weight, class: "small" %>
+        	</div> 
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.number_field :spleen_weight, class: "form-control input-sm" %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :spleen_shape_position_configuration, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :spleen_shape_position_configuration, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent spleen" , "dependent-selector" => "#spleen_shape_position_configuration-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="spleen_shape_position_configuration-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :spleen_shape_position_configuration_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :spleen_shape_position_configuration_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :capsular_surface, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :capsular_surface, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent spleen" , "dependent-selector" => "#capsular_surface-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="capsular_surface-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :capsular_surface_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :capsular_surface_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :spleen_consistency, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :spleen_consistency, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent spleen" , "dependent-selector" => "#spleen_consistency-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="spleen_consistency-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :spleen_consistency_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :spleen_consistency_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :spleen_cut_surface, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :spleen_cut_surface, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent spleen" , "dependent-selector" => "#spleen_cut_surface-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="spleen_cut_surface-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :spleen_cut_surface_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :spleen_cut_surface_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :accessory_spleens, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :accessory_spleens, [:yes, :no], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent spleen" , "dependent-selector" => "#accessory_spleens-dependent", "when-value" => "yes", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="accessory_spleens-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :accessory_spleens_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :accessory_spleens_specify, { class: "form-control input-sm", placeholder: "If yes, explain" } %>
+        	</div>
+              </div>
+	      <div class="row">
+		<div class="col-sm-6 nopad custom-prop small">
+		  <%= f.label :spleen_md, "Microscopic description" , class: "small" %>
+		</div> 
+		<div class="col-sm-6 nopad custom-val">
+		  <%= f.text_field :spleen_md, class: "form-control input-sm" %>
+		</div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+        <div class="col-sm-3">
+          <div class="panel panel-internal squarish">
+            <div class="panel-heading panel-heading-internal small-heading squarish">
+              Right kidneys and ureter
+            </div>
+            <div class="panel-body panel-body-internal squarish">
+        
+              <div class="row">
+        	<div class="col-sm-6 no-pad small custom-prop">
+        	  <%= f.label  :Normal, class: "small" %><br>
+        	</div>		     
+        	<div class="col-sm-6 no-pad custom-val">
+        	  <%= f.check_box :right_kidney_and_ureter_normal, { class: "form-control input-sm" , :onchange => "makeNormal(this, '.right_kidneys_and_ureter')" } %>
+        	</div>
+              </div>
+        
+        
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small">
+        	  <%= f.label :right_kidney_weight, class: "small" %>
+        	</div> 
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.number_field :right_kidney_weight, class: "form-control input-sm" %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :right_kidney_configuration_position, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :right_kidney_configuration_position, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent right_kidneys_and_ureter" , "dependent-selector" => "#right_kidney_configuration_position-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="right_kidney_configuration_position-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :right_kidney_configuration_position_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :right_kidney_configuration_position_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :right_kidney_external_surface, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :right_kidney_external_surface, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent right_kidneys_and_ureter" , "dependent-selector" => "#right_kidney_external_surface-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="right_kidney_external_surface-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :right_kidney_external_surface_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :right_kidney_external_surface_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :right_kidney_cut_surface, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :right_kidney_cut_surface, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent right_kidneys_and_ureter" , "dependent-selector" => "#right_kidney_cut_surface-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="right_kidney_cut_surface-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :right_kidney_cut_surface_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :right_kidney_cut_surface_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+        
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small">
+        	  <%= f.label :right_kidney_cortical_thickness, class: "small" %>
+        	</div> 
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.number_field :right_kidney_cortical_thickness, class: "form-control input-sm" %>
+        	</div>
+              </div>
+        
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small">
+        	  <%= f.label :right_kidney_medulla_depth, class: "small" %>
+        	</div> 
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.number_field :right_kidney_medulla_depth, class: "form-control input-sm" %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :right_kidney_pelves_and_calyces, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :right_kidney_pelves_and_calyces, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent right_kidneys_and_ureter" , "dependent-selector" => "#right_kidney_pelves_and_calyces-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="right_kidney_pelves_and_calyces-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :right_kidney_pelves_and_calyces_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :right_kidney_pelves_and_calyces_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :right_kidney_peripelvic_fat_and_lymph_nodes, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :right_kidney_peripelvic_fat_and_lymph_nodes, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent right_kidneys_and_ureter" , "dependent-selector" => "#right_kidney_peripelvic_fat_and_lymph_nodes-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="right_kidney_peripelvic_fat_and_lymph_nodes-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :right_kidney_peripelvic_fat_and_lymph_nodes_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :right_kidney_peripelvic_fat_and_lymph_nodes_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :right_kidney_renal_vessels, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :right_kidney_renal_vessels, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent right_kidneys_and_ureter" , "dependent-selector" => "#right_kidney_renal_vessels-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="right_kidney_renal_vessels-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :right_kidney_renal_vessels_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :right_kidney_renal_vessels_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :right_kidney_ureter, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :right_kidney_ureter, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent right_kidneys_and_ureter" , "dependent-selector" => "#right_kidney_ureter-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="right_kidney_ureter-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :right_kidney_ureter_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :right_kidney_ureter_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+        
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small">
+        	  <%= f.label :right_kidney_other, "Other" , class: "small" %>
+        	</div> 
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :right_kidney_other, class: "form-control input-sm" %>
+        	</div>
+              </div>
+	      <div class="row">
+		<div class="col-sm-6 nopad custom-prop small">
+		  <%= f.label :right_kidney_and_ureter_md, "Microscopic description" , class: "small" %>
+		</div> 
+		<div class="col-sm-6 nopad custom-val">
+		  <%= f.text_field :right_kidney_and_ureter_md, class: "form-control input-sm" %>
+		</div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+        <div class="col-sm-3">
+          <div class="panel panel-internal squarish">
+            <div class="panel-heading panel-heading-internal small-heading squarish">
+              Left kidneys and ureter
+            </div>
+            <div class="panel-body panel-body-internal squarish">
+        
+              <div class="row">
+        	<div class="col-sm-6 no-pad small custom-prop">
+        	  <%= f.label  :Normal, class: "small" %><br>
+        	</div>		     
+        	<div class="col-sm-6 no-pad custom-val">
+        	  <%= f.check_box :left_kidney_and_ureter_normal, { class: "form-control input-sm" , :onchange => "makeNormal(this, '.left_kidneys_and_ureter')" } %>
+        	</div>
+              </div>
+        
+        
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small">
+        	  <%= f.label :left_kidney_weight, class: "small" %>
+        	</div> 
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.number_field :left_kidney_weight, class: "form-control input-sm" %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :left_kidney_configuration_position, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :left_kidney_configuration_position, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent left_kidneys_and_ureter" , "dependent-selector" => "#left_kidney_configuration_position-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="left_kidney_configuration_position-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :left_kidney_configuration_position_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :left_kidney_configuration_position_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :left_kidney_external_surface, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :left_kidney_external_surface, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent left_kidneys_and_ureter" , "dependent-selector" => "#left_kidney_external_surface-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="left_kidney_external_surface-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :left_kidney_external_surface_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :left_kidney_external_surface_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :left_kidney_parenchyma_or_cut_surface, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :left_kidney_parenchyma_or_cut_surface, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent left_kidneys_and_ureter" , "dependent-selector" => "#left_kidney_parenchyma_or_cut_surface-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="left_kidney_parenchyma_or_cut_surface-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :left_kidney_parenchyma_or_cut_surface_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :left_kidney_parenchyma_or_cut_surface_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+        
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small">
+        	  <%= f.label :left_kidney_cortical_thickness, class: "small" %>
+        	</div> 
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.number_field :left_kidney_cortical_thickness, class: "form-control input-sm" %>
+        	</div>
+              </div>
+        
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small">
+        	  <%= f.label :left_kidney_medulla_depth, class: "small" %>
+        	</div> 
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.number_field :left_kidney_medulla_depth, class: "form-control input-sm" %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :left_kidney_pelves_and_calyces, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :left_kidney_pelves_and_calyces, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent left_kidneys_and_ureter" , "dependent-selector" => "#left_kidney_pelves_and_calyces-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="left_kidney_pelves_and_calyces-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :left_kidney_pelves_and_calyces_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :left_kidney_pelves_and_calyces_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :left_kideny_peripelvic_fat_and_lymph_nodes, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :left_kideny_peripelvic_fat_and_lymph_nodes, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent left_kidneys_and_ureter" , "dependent-selector" => "#left_kideny_peripelvic_fat_and_lymph_nodes-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="left_kideny_peripelvic_fat_and_lymph_nodes-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :left_kideny_peripelvic_fat_and_lymph_nodes_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :left_kideny_peripelvic_fat_and_lymph_nodes_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :left_panel_renal_vessels, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :left_panel_renal_vessels, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent left_kidneys_and_ureter" , "dependent-selector" => "#left_panel_renal_vessels-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="left_panel_renal_vessels-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :left_panel_renal_vessels_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :left_panel_renal_vessels_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :left_kidney_ureter, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :left_kidney_ureter, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent left_kidneys_and_ureter" , "dependent-selector" => "#left_kidney_ureter-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="left_kidney_ureter-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :left_kidney_ureter_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :left_kidney_ureter_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+        
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small">
+        	  <%= f.label :left_kidney_other, "Other" , class: "small" %>
+        	</div> 
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :left_kidney_other, class: "form-control input-sm" %>
+        	</div>
+              </div>
+	      <div class="row">
+		<div class="col-sm-6 nopad custom-prop small">
+		  <%= f.label :left_kidney_ureter_md, "Microscopic description" , class: "small" %>
+		</div> 
+		<div class="col-sm-6 nopad custom-val">
+		  <%= f.text_field :left_kidney_ureter_md, class: "form-control input-sm" %>
+		</div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+        <div class="col-sm-3">
+          <div class="panel panel-internal squarish">
+            <div class="panel-heading panel-heading-internal small-heading squarish">
+              Bladder and urethra
+            </div>
+            <div class="panel-body panel-body-internal squarish">
+        
+              <div class="row">
+        	<div class="col-sm-6 no-pad small custom-prop">
+        	  <%= f.label  :Normal, class: "small" %><br>
+        	</div>		     
+        	<div class="col-sm-6 no-pad custom-val">
+        	  <%= f.check_box :bladder_and_urethra_normal, { class: "form-control input-sm" , :onchange => "makeNormal(this, '.bladder_and_urethra')" } %>
+        	</div>
+              </div>
+        
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :size_and_configuration, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :size_and_configuration, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent bladder_and_urethra" , "dependent-selector" => "#size_and_configuration-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="size_and_configuration-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :size_and_configuration_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :size_and_configuration_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :wall_and_mucosa, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :wall_and_mucosa, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent bladder_and_urethra" , "dependent-selector" => "#wall_and_mucosa-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="wall_and_mucosa-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :wall_and_mucosa_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :wall_and_mucosa_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :perivesical_tissue, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :perivesical_tissue, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent bladder_and_urethra" , "dependent-selector" => "#perivesical_tissue-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="perivesical_tissue-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :perivesical_tissue_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :perivesical_tissue_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :bladder_contents, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :bladder_contents, [:Present, :Absent], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent bladder_and_urethra" , "dependent-selector" => "#bladder_contents-dependent", "when-value" => "Present", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="bladder_contents-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :bladder_contents_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :bladder_contents_specify, { class: "form-control input-sm", placeholder: "If Present, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :urethra, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :urethra, [:Normal, :Abnormal, :"Not examined"], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent bladder_and_urethra" , "dependent-selector" => "#urethra-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="urethra-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :urethra_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :urethra_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+        
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small">
+        	  <%= f.label :bladder_and_urethra_other, "Other" , class: "small" %>
+        	</div> 
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :bladder_and_urethra_other, class: "form-control input-sm" %>
+        	</div>
+              </div>
+	      <div class="row">
+		<div class="col-sm-6 nopad custom-prop small">
+		  <%= f.label :bladder_and_urethra_md, "Microscopic description" , class: "small" %>
+		</div> 
+		<div class="col-sm-6 nopad custom-val">
+		  <%= f.text_field :bladder_and_urethra_md, class: "form-control input-sm" %>
+		</div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+      </div>
+
+      <% if @description.patient.respond_to?('sex')%>
+      <div class="row">
+	<% if @description.patient.sex == "Male" %>
+        <div class="col-sm-3">
+          <div class="panel panel-internal squarish">
+            <div class="panel-heading panel-heading-internal small-heading squarish">
+              Internal genitalia male
+            </div>
+            <div class="panel-body panel-body-internal squarish">
+        
+              <div class="row">
+        	<div class="col-sm-6 no-pad small custom-prop">
+        	  <%= f.label  :Normal, class: "small" %><br>
+        	</div>		     
+        	<div class="col-sm-6 no-pad custom-val">
+        	  <%= f.check_box :internal_genitalia_male_normal, { class: "form-control input-sm" , :onchange => "makeNormal(this, '.internal_genitalia_male')" } %>
+        	</div>
+              </div>
+        
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :prostate, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :prostate, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent internal_genitalia_male" , "dependent-selector" => "#prostate-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="prostate-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :prostate_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :prostate_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :epididymis, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :epididymis, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent internal_genitalia_male" , "dependent-selector" => "#epididymis-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="epididymis-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :epididymis_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :epididymis_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :testes, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :testes, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent internal_genitalia_male" , "dependent-selector" => "#testes-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="testes-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :testes_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :testes_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+        
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small">
+        	  <%= f.label :male_genetalia_other, "Other" , class: "small" %>
+        	</div> 
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :male_genetalia_other, class: "form-control input-sm" %>
+        	</div>
+              </div>
+	      <div class="row">
+		<div class="col-sm-6 nopad custom-prop small">
+		  <%= f.label :male_genetalia_md, "Microscopic description" , class: "small" %>
+		</div> 
+		<div class="col-sm-6 nopad custom-val">
+		  <%= f.text_field :male_genetalia_md, class: "form-control input-sm" %>
+		</div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+      <% end %>
+
+	<% if @description.patient.sex == "Female" %>
+        <div class="col-sm-3">
+          <div class="panel panel-internal squarish">
+            <div class="panel-heading panel-heading-internal small-heading squarish">
+              Internal genitalia female
+            </div>
+            <div class="panel-body panel-body-internal squarish">
+        
+              <div class="row">
+        	<div class="col-sm-6 no-pad small custom-prop">
+        	  <%= f.label  :Normal, class: "small" %><br>
+        	</div>		     
+        	<div class="col-sm-6 no-pad custom-val">
+        	  <%= f.check_box :internal_genitalia_female_normal, { class: "form-control input-sm" , :onchange => "makeNormal(this, '.internal_genitalia_female')" } %>
+        	</div>
+              </div>
+        
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :vagina, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :vagina, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent internal_genitalia_female" , "dependent-selector" => "#vagina-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="vagina-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :vagina_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :vagina_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :uterus, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :uterus, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent internal_genitalia_female" , "dependent-selector" => "#uterus-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="uterus-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :uterus_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :uterus_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :right_fallopian_tubes, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :right_fallopian_tubes, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent internal_genitalia_female" , "dependent-selector" => "#right_fallopian_tubes-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="right_fallopian_tubes-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :right_fallopian_tubes_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :right_fallopian_tubes_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :right_ovary, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :right_ovary, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent internal_genitalia_female" , "dependent-selector" => "#right_ovary-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="right_ovary-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :right_ovary_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :right_ovary_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :left_fallopian_tube, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :left_fallopian_tube, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent internal_genitalia_female" , "dependent-selector" => "#left_fallopian_tube-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="left_fallopian_tube-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :left_fallopian_tube_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :left_fallopian_tube_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :left_ovary, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :left_ovary, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent internal_genitalia_female" , "dependent-selector" => "#left_ovary-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="left_ovary-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :left_ovary_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :left_ovary_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+        
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small">
+        	  <%= f.label :female_genetalia_other, "Other" , class: "small" %>
+        	</div> 
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :female_genetalia_other, class: "form-control input-sm" %>
+        	</div>
+              </div>
+	      <div class="row">
+		<div class="col-sm-6 nopad custom-prop small">
+		  <%= f.label :female_genetalia_md, "Microscopic description" , class: "small" %>
+		</div> 
+		<div class="col-sm-6 nopad custom-val">
+		  <%= f.text_field :female_genetalia_md, class: "form-control input-sm" %>
+		</div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+      <% end %>
+	</div>
+      <% end %>
+    </div>
+
+   <% if can? :create, Internal %>
+    <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+	    <i class="icon-ok icon-white"></i> Save
+    <% end %>
+   <% end %>
+
+    <script>
+      function makeNormal(given_item, match_string){
+	  var x = given_item.checked;
+	  if(x == true) {
+	    $(match_string).each(function(index) {
+	         $(this).val('Normal');
+	    });
+	  }
+	  if(x == false){
+	    $(match_string).each(function(index) {
+	         $(this).val('');
+	    });
+	  }
+      }
+
+      $(document).ready(function(){
+        $('.has-dependent').bind('change', function () {
+          var depSelector = this.getAttribute('dependent-selector')
+            var whenValue = this.getAttribute('when-value')
+            var dAction = this.getAttribute('dependent-action')
+            if(this.value == whenValue){
+      	if(dAction == "show-hide"){
+      	    $(depSelector).show()
+      	}
+            }
+            else {
+      	if(dAction == "show-hide"){
+      	    $(depSelector).hide()
+      	}
+            }
+        });
+        $('.has-dependent').trigger('change');
+      });
+    </script>
+            
+<% end %>
+<br>
+<div class="row">
+ <div class="col-sm-12">
+  <% if can? :update, Internal %>
+   <button class="btn btn-danger" data-toggle="modal" data-target="#todo-notes">
+     Manage Block Codes
+   </button>
+  <% end %>
+ </div>
+   <!-- Modal -->
+   <div class="modal fade" id="todo-notes" tabindex="1" role="dialog" aria-labelledby="todo-label" aria-hidden="true">
+     <div class="modal-dialog">
+       <div class="modal-content">
+         <div class="modal-header">
+   	<h4 class="modal-title" id="todo-label">Manage codes</h4>
+         </div>
+         <div class="modal-body">
+   	     <%= render 'block_codes/manage' %>
+         </div>
+         <div class="modal-footer">
+   	    <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+         </div>
+       </div>
+     </div>
+   </div>
+</div>
+<br>

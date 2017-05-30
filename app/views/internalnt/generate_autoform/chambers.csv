@@ -1,0 +1,9 @@
+chambers and septae normal	checkbox			
+atrial situs	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+ventricular situs	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+atrial septum	select	"Obliquely probe patent","Closed","Open"	Open, specify	If open is selected, a box will appear specify size and nature.
+ventricular septum	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+endocardium	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+myocardium	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+right ventricular wall thickness	number			
+left ventricular wall thickness	number			

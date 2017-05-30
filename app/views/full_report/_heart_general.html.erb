@@ -1,0 +1,12 @@
+<div>
+  <h3>Heart General</h3>
+  <table>
+    <%
+      @names_array = ["Position","Epicardium","Shape","Size","Heart only weight","Configuration","Content","Microscopic description"]
+      @prop_array = ["heart_position","epicardium","heart_shape","heart_size","heart_only_weight","heart_configuration","heart_content","heart_md"]
+      @specify_array = ["heart_position_specify","epicardium_specify","heart_shape_specify","heart_size_specify","heart_only_weight","heart_configuration_specify","heart_content_specify",""]
+    %>
+    <%= render :partial => "internal_loop"%>
+</table>
+</div>
+

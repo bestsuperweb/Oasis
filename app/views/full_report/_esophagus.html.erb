@@ -1,0 +1,12 @@
+<div>
+  <h3>Esophagus</h3>
+  <table>
+    <%
+      @names_array = ["Position configuration","Esophagus mucosa and wall","Other","Microscopic description"]
+      @prop_array = ["esophagus_size_position_configuration","esophagus_mucosa_and_wall","esophagus_other","esophagus_md"]
+      @specify_array = ["esophagus_size_position_configuration_specify","esophagus_mucosa_and_wall_specify","",""] 
+    %>
+    <%= render :partial => "internal_loop"%>
+</table>
+</div>
+

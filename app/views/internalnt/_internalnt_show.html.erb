@@ -1,0 +1,1176 @@
+<br>
+<div class="row" style="width:100%">
+   <div class="col-sm-3">
+     <div class="panel panel-internal squarish">
+       <div class="panel-heading panel-heading-internal small-heading squarish">
+         Larynx and trachea
+       </div>
+       <div class="panel-body panel-body-internal squarish">
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Epiglottis: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.epiglottis_specify.nil? or @description.internal.epiglottis_specify == "" ) ?  @description.internal.epiglottis :  @description.internal.epiglottis_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Foreign material in lumen: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.foreign_material_in_lumen_specify.nil? or @description.internal.foreign_material_in_lumen_specify == "" ) ?  @description.internal.foreign_material_in_lumen :  @description.internal.foreign_material_in_lumen_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Configuration position: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.larynx_trachea_configuration_position_specify.nil? or @description.internal.larynx_trachea_configuration_position_specify == "" ) ?  @description.internal.larynx_trachea_configuration_position :  @description.internal.larynx_trachea_configuration_position_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Vocal cords: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.vocal_cords_specify.nil? or @description.internal.vocal_cords_specify == "" ) ?  @description.internal.vocal_cords :  @description.internal.vocal_cords_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Tracheastomy : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.tracheastomy%>               
+   	</div>
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Mucosal surfaces: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.mucosal_surfaces_specify.nil? or @description.internal.mucosal_surfaces_specify == "" ) ?  @description.internal.mucosal_surfaces :  @description.internal.mucosal_surfaces_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Tracheal rings : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.tracheal_rings%>               
+   	</div>
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Other : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.larynx_other%>               
+   	</div>
+         </div>
+   
+	 <div class="row">
+	   <div class="col-sm-6 custom-prop">
+	     <strong>Microscopic description: </strong>
+	   </div>
+	   <div class="col-sm-6 custom-val">
+	     <%= @description.internal.larynx_md%>               
+	   </div>
+	 </div>
+       </div>
+     </div>
+   </div>
+   <div class="col-sm-3">
+     <div class="panel panel-internal squarish">
+       <div class="panel-heading panel-heading-internal small-heading squarish">
+         Pleural cavities
+       </div>
+       <div class="panel-body panel-body-internal squarish">
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Pleural serosal surfaces: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.pleural_serosal_surfaces_specify.nil? or @description.internal.pleural_serosal_surfaces_specify == "" ) ?  @description.internal.pleural_serosal_surfaces :  @description.internal.pleural_serosal_surfaces_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Pneumothorax: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.pneumothorax_specify.nil? or @description.internal.pneumothorax_specify == "" ) ?  @description.internal.pneumothorax :  @description.internal.pneumothorax_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Amount of fluid: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.pleural_cavities_amount_of_fluid_specify.nil? or @description.internal.pleural_cavities_amount_of_fluid_specify == "" ) ?  @description.internal.pleural_cavities_amount_of_fluid :  @description.internal.pleural_cavities_amount_of_fluid_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Nature of fluid: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.pleural_nature_of_fluid_specify.nil? or @description.internal.pleural_nature_of_fluid_specify == "" ) ?  @description.internal.pleural_nature_of_fluid :  @description.internal.pleural_nature_of_fluid_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Organ relations: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.pleural_cavity_organ_relations_specify.nil? or @description.internal.pleural_cavity_organ_relations_specify == "" ) ?  @description.internal.pleural_cavity_organ_relations :  @description.internal.pleural_cavity_organ_relations_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Other : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.pleural_cavities_other%>               
+   	</div>
+         </div>
+   
+	 <div class="row">
+	   <div class="col-sm-6 custom-prop">
+	     <strong>Microscopic description: </strong>
+	   </div>
+	   <div class="col-sm-6 custom-val">
+	     <%= @description.internal.pleural_cavities_md%>               
+	   </div>
+	 </div>
+       </div>
+     </div>
+   </div>
+   <div class="col-sm-3">
+     <div class="panel panel-internal squarish">
+       <div class="panel-heading panel-heading-internal small-heading squarish">
+         Mediastinum
+       </div>
+       <div class="panel-body panel-body-internal squarish">
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Position Configuration: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.mediastinum_position_configuration_specify.nil? or @description.internal.mediastinum_position_configuration_specify == "" ) ?  @description.internal.mediastinum_position_configuration :  @description.internal.mediastinum_position_configuration_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Nodes masses: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.mediastinum_nodes_masses_specify.nil? or @description.internal.mediastinum_nodes_masses_specify == "" ) ?  @description.internal.mediastinum_nodes_masses :  @description.internal.mediastinum_nodes_masses_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Pneumomediastinum : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.pneumomediastinum%>               
+   	</div>
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Other : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.mediastinum_other%>               
+   	</div>
+         </div>
+   
+	 <div class="row">
+	   <div class="col-sm-6 custom-prop">
+	     <strong>Microscopic description: </strong>
+	   </div>
+	   <div class="col-sm-6 custom-val">
+	     <%= @description.internal.mediastinum_md%>               
+	   </div>
+	 </div>
+       </div>
+     </div>
+   </div>
+   <div class="col-sm-3">
+     <div class="panel panel-internal squarish">
+       <div class="panel-heading panel-heading-internal small-heading squarish">
+         Lungs
+       </div>
+       <div class="panel-body panel-body-internal squarish">
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Right lungs weight : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.right_lungs_weight%>               
+   	</div>
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Left lung weight : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.left_lung_weight%>               
+   	</div>
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Bilateral : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.bilateral%>               
+   	</div>
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Combined heart and lungs weight : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.combined_heart_and_lungs_weight%>               
+   	</div>
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Lung to body weight ratio : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.lung_to_body_weight_ratio%>               
+   	</div>
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Lobar pattern: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.lobar_pattern_specify.nil? or @description.internal.lobar_pattern_specify == "" ) ?  @description.internal.lobar_pattern :  @description.internal.lobar_pattern_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>State of expansion: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.state_of_expansion_specify.nil? or @description.internal.state_of_expansion_specify == "" ) ?  @description.internal.state_of_expansion :  @description.internal.state_of_expansion_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Lungs consistency: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.lungs_consistency_specify.nil? or @description.internal.lungs_consistency_specify == "" ) ?  @description.internal.lungs_consistency :  @description.internal.lungs_consistency_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Bronchial tree: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.bronchial_tree_specify.nil? or @description.internal.bronchial_tree_specify == "" ) ?  @description.internal.bronchial_tree :  @description.internal.bronchial_tree_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Vessels: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.vessels_specify.nil? or @description.internal.vessels_specify == "" ) ?  @description.internal.vessels :  @description.internal.vessels_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Parenchyma color: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.parenchyma_color_specify.nil? or @description.internal.parenchyma_color_specify == "" ) ?  @description.internal.parenchyma_color :  @description.internal.parenchyma_color_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Congestion : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.congestion%>               
+   	</div>
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Interstitial emphysema : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.interstitial_emphysema%>               
+   	</div>
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Hilar nodes: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.hilar_nodes_specify.nil? or @description.internal.hilar_nodes_specify == "" ) ?  @description.internal.hilar_nodes :  @description.internal.hilar_nodes_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Visceral pleura: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.visceral_pleura_specify.nil? or @description.internal.visceral_pleura_specify == "" ) ?  @description.internal.visceral_pleura :  @description.internal.visceral_pleura_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Pleural petechiae : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.pleural_petechiae%>               
+   	</div>
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Fixed by perfusion: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.fixed_by_perfusion_specify.nil? or @description.internal.fixed_by_perfusion_specify == "" ) ?  @description.internal.fixed_by_perfusion :  @description.internal.fixed_by_perfusion_specify 
+   	%>  
+         </div> 
+         </div>
+   
+	 <div class="row">
+	   <div class="col-sm-6 custom-prop">
+	     <strong>Microscopic description: </strong>
+	   </div>
+	   <div class="col-sm-6 custom-val">
+	     <%= @description.internal.lungs_md%>               
+	   </div>
+	 </div>
+       </div>
+     </div>
+   </div>
+   <div class="col-sm-3">
+     <div class="panel panel-internal squarish">
+       <div class="panel-heading panel-heading-internal small-heading squarish">
+         Diaphragm
+       </div>
+       <div class="panel-body panel-body-internal squarish">
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Diaphragm position configuration: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.diaphragm_position_configuration_specify.nil? or @description.internal.diaphragm_position_configuration_specify == "" ) ?  @description.internal.diaphragm_position_configuration :  @description.internal.diaphragm_position_configuration_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Diaphragm defect : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.diphragm_defect%>               
+   	</div>
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Other : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.diaphragm_other%>               
+   	</div>
+         </div>
+   
+	 <div class="row">
+	   <div class="col-sm-6 custom-prop">
+	     <strong>Microscopic description: </strong>
+	   </div>
+	   <div class="col-sm-6 custom-val">
+	     <%= @description.internal.diaphragm_md%>               
+	   </div>
+	 </div>
+       </div>
+     </div>
+   </div>
+   <div class="col-sm-3">
+     <div class="panel panel-internal squarish">
+       <div class="panel-heading panel-heading-internal small-heading squarish">
+         Thymus
+       </div>
+       <div class="panel-body panel-body-internal squarish">
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Weight : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.weight%>               
+   	</div>
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Position configuration: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.thymus_pos_config_shape_specify.nil? or @description.internal.thymus_pos_config_shape_specify == "" ) ?  @description.internal.thymus_pos_config_shape :  @description.internal.thymus_pos_config_shape_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Petechiae on external surface : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.petechiae_on_external_surface%>               
+   	</div>
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Cut surface: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.cut_surface_specify.nil? or @description.internal.cut_surface_specify == "" ) ?  @description.internal.cut_surface :  @description.internal.cut_surface_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Other : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.thymus_other%>               
+   	</div>
+         </div>
+   
+      <div class="row">
+	<div class="col-sm-6 custom-prop">
+	  <strong>Microscopic description: </strong>
+	</div>
+	<div class="col-sm-6 custom-val">
+	  <%= @description.internal.thymus_md%>               
+	</div>
+      </div>
+       </div>
+     </div>
+   </div>
+   <div class="col-sm-3">
+     <div class="panel panel-internal squarish">
+       <div class="panel-heading panel-heading-internal small-heading squarish">
+         Pericardial sac
+       </div>
+       <div class="panel-body panel-body-internal squarish">
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Serosal surfaces: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.serosal_sarfaces_specify.nil? or @description.internal.serosal_sarfaces_specify == "" ) ?  @description.internal.serosal_sarfaces :  @description.internal.serosal_sarfaces_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Contents: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.pericardial_sac_contents_specify.nil? or @description.internal.pericardial_sac_contents_specify == "" ) ?  @description.internal.pericardial_sac_contents :  @description.internal.pericardial_sac_contents_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Amount of fluid: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.pericardial_sac_amount_of_fluid_specify.nil? or @description.internal.pericardial_sac_amount_of_fluid_specify == "" ) ?  @description.internal.pericardial_sac_amount_of_fluid :  @description.internal.pericardial_sac_amount_of_fluid_specify 
+   	%>  
+         </div> 
+         </div>
+   
+	 <div class="row">
+	   <div class="col-sm-6 custom-prop">
+	     <strong>Microscopic description: </strong>
+	   </div>
+	   <div class="col-sm-6 custom-val">
+	     <%= @description.internal.pericardial_sac_md%>               
+	   </div>
+	 </div>
+       </div>
+     </div>
+   </div>
+   <div class="col-sm-3">
+     <div class="panel panel-internal squarish">
+       <div class="panel-heading panel-heading-internal small-heading squarish">
+         Thyroid and parathyroid
+       </div>
+       <div class="panel-body panel-body-internal squarish">
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Thyroid weight : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.thyroid_weight%>               
+   	</div>
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Thyroid position configuration: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.thyroid_pos_config_shape_specify.nil? or @description.internal.thyroid_pos_config_shape_specify == "" ) ?  @description.internal.thyroid_pos_config_shape :  @description.internal.thyroid_pos_config_shape_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Thyroid external surface: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.thyroid_external_surface_specify.nil? or @description.internal.thyroid_external_surface_specify == "" ) ?  @description.internal.thyroid_external_surface :  @description.internal.thyroid_external_surface_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Thyroid parenchyma or cut surface: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.thyroid_parenchyma_or_cut_surface_specify.nil? or @description.internal.thyroid_parenchyma_or_cut_surface_specify == "" ) ?  @description.internal.thyroid_parenchyma_or_cut_surface :  @description.internal.thyroid_parenchyma_or_cut_surface_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Other : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.thyroid_other%>               
+   	</div>
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Parathyroid gland: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.parathyroid_gland_specify.nil? or @description.internal.parathyroid_gland_specify == "" ) ?  @description.internal.parathyroid_gland :  @description.internal.parathyroid_gland_specify 
+   	%>  
+         </div> 
+         </div>
+   
+	 <div class="row">
+	   <div class="col-sm-6 custom-prop">
+	     <strong>Microscopic description: </strong>
+	   </div>
+	   <div class="col-sm-6 custom-val">
+	     <%= @description.internal.thyroid_pt_md%>               
+	   </div>
+	 </div>
+       </div>
+     </div>
+   </div>
+   <div class="col-sm-3">
+     <div class="panel panel-internal squarish">
+       <div class="panel-heading panel-heading-internal small-heading squarish">
+         Esophagus
+       </div>
+       <div class="panel-body panel-body-internal squarish">
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Position configuration: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.esophagus_size_position_configuration_specify.nil? or @description.internal.esophagus_size_position_configuration_specify == "" ) ?  @description.internal.esophagus_size_position_configuration :  @description.internal.esophagus_size_position_configuration_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Esophagus mucosa and wall: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.esophagus_mucosa_and_wall_specify.nil? or @description.internal.esophagus_mucosa_and_wall_specify == "" ) ?  @description.internal.esophagus_mucosa_and_wall :  @description.internal.esophagus_mucosa_and_wall_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Other : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.esophagus_other%>               
+   	</div>
+         </div>
+   
+	 <div class="row">
+	   <div class="col-sm-6 custom-prop">
+	     <strong>Microscopic description: </strong>
+	   </div>
+	   <div class="col-sm-6 custom-val">
+	     <%= @description.internal.esophagus_md%>               
+	   </div>
+	 </div>
+       </div>
+     </div>
+   </div>
+   <div class="col-sm-3">
+     <div class="panel panel-internal squarish">
+       <div class="panel-heading panel-heading-internal small-heading squarish">
+         Heart general
+       </div>
+       <div class="panel-body panel-body-internal squarish">
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Position: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.heart_position_specify.nil? or @description.internal.heart_position_specify == "" ) ?  @description.internal.heart_position :  @description.internal.heart_position_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Epicardium: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.epicardium_specify.nil? or @description.internal.epicardium_specify == "" ) ?  @description.internal.epicardium :  @description.internal.epicardium_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Shape: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.heart_shape_specify.nil? or @description.internal.heart_shape_specify == "" ) ?  @description.internal.heart_shape :  @description.internal.heart_shape_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Size: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.heart_size_specify.nil? or @description.internal.heart_size_specify == "" ) ?  @description.internal.heart_size :  @description.internal.heart_size_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Heart only weight : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.heart_only_weight%>               
+   	</div>
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Configuration: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.heart_configuration_specify.nil? or @description.internal.heart_configuration_specify == "" ) ?  @description.internal.heart_configuration :  @description.internal.heart_configuration_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Content: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.heart_content_specify.nil? or @description.internal.heart_content_specify == "" ) ?  @description.internal.heart_content :  @description.internal.heart_content_specify 
+   	%>  
+         </div> 
+         </div>
+   
+	 <div class="row">
+	   <div class="col-sm-6 custom-prop">
+	     <strong>Microscopic description: </strong>
+	   </div>
+	   <div class="col-sm-6 custom-val">
+	     <%= @description.internal.heart_md%>               
+	   </div>
+	 </div>
+       </div>
+     </div>
+   </div>
+   <div class="col-sm-3">
+     <div class="panel panel-internal squarish">
+       <div class="panel-heading panel-heading-internal small-heading squarish">
+         Chambers and septae
+       </div>
+       <div class="panel-body panel-body-internal squarish">
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Atrial situs: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.atrial_situs_specify.nil? or @description.internal.atrial_situs_specify == "" ) ?  @description.internal.atrial_situs :  @description.internal.atrial_situs_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Ventricular situs: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.ventricular_situs_specify.nil? or @description.internal.ventricular_situs_specify == "" ) ?  @description.internal.ventricular_situs :  @description.internal.ventricular_situs_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Atrial septum: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.atrial_septum_specify.nil? or @description.internal.atrial_septum_specify == "" ) ?  @description.internal.atrial_septum :  @description.internal.atrial_septum_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Ventricular septum: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.ventricular_septum_specify.nil? or @description.internal.ventricular_septum_specify == "" ) ?  @description.internal.ventricular_septum :  @description.internal.ventricular_septum_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Endocardium: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.endocardium_specify.nil? or @description.internal.endocardium_specify == "" ) ?  @description.internal.endocardium :  @description.internal.endocardium_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Myocardium: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.myocardium_specify.nil? or @description.internal.myocardium_specify == "" ) ?  @description.internal.myocardium :  @description.internal.myocardium_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Right ventricular wall thickness : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.right_ventricular_wall_thickness%>               
+   	</div>
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Left ventricular wall thickness : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.left_ventricular_wall_thickness%>               
+   	</div>
+         </div>
+   
+	 <div class="row">
+	   <div class="col-sm-6 custom-prop">
+	     <strong>Microscopic description: </strong>
+	   </div>
+	   <div class="col-sm-6 custom-val">
+	     <%= @description.internal.chambers_and_septae_md%>               
+	   </div>
+	 </div>
+       </div>
+     </div>
+   </div>
+   <div class="col-sm-3">
+     <div class="panel panel-internal squarish">
+       <div class="panel-heading panel-heading-internal small-heading squarish">
+         Valves
+       </div>
+       <div class="panel-body panel-body-internal squarish">
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Tricuspid valve: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.tricuspid_valve_specify.nil? or @description.internal.tricuspid_valve_specify == "" ) ?  @description.internal.tricuspid_valve :  @description.internal.tricuspid_valve_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Tricuspid valve circumference : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.tricuspid_valve_circumference%>               
+   	</div>
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Pulmonic valve: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.pulmonic_valve_specify.nil? or @description.internal.pulmonic_valve_specify == "" ) ?  @description.internal.pulmonic_valve :  @description.internal.pulmonic_valve_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Pulmonic valave circumference : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.pulmonic_valave_circumference%>               
+   	</div>
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Mitral valve: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.mitral_valve_specify.nil? or @description.internal.mitral_valve_specify == "" ) ?  @description.internal.mitral_valve :  @description.internal.mitral_valve_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Mitral valve circumference : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.mitral_valve_circumference%>               
+   	</div>
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Aortic valve: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.aortic_valve_specify.nil? or @description.internal.aortic_valve_specify == "" ) ?  @description.internal.aortic_valve :  @description.internal.aortic_valve_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Aortic valve circumference : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.aortic_valve_circumference%>               
+   	</div>
+         </div>
+	 <div class="row">
+	   <div class="col-sm-6 custom-prop">
+	     <strong>Microscopic description: </strong>
+	   </div>
+	   <div class="col-sm-6 custom-val">
+	     <%= @description.internal.valves_md%>               
+	   </div>
+	 </div>
+       </div>
+     </div>
+   </div>
+   <div class="col-sm-3">
+     <div class="panel panel-internal squarish">
+       <div class="panel-heading panel-heading-internal small-heading squarish">
+         Vessels and ducts
+       </div>
+       <div class="panel-body panel-body-internal squarish">
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Origins of aorta and pulmonary artery: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.origins_of_aorta_and_pulmonary_artery_specify.nil? or @description.internal.origins_of_aorta_and_pulmonary_artery_specify == "" ) ?  @description.internal.origins_of_aorta_and_pulmonary_artery :  @description.internal.origins_of_aorta_and_pulmonary_artery_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Arch configuartion: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.arch_configuartion_specify.nil? or @description.internal.arch_configuartion_specify == "" ) ?  @description.internal.arch_configuartion :  @description.internal.arch_configuartion_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Arch branches: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.arch_branches_specify.nil? or @description.internal.arch_branches_specify == "" ) ?  @description.internal.arch_branches :  @description.internal.arch_branches_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Thoracic branches: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.thoracic_branches_specify.nil? or @description.internal.thoracic_branches_specify == "" ) ?  @description.internal.thoracic_branches :  @description.internal.thoracic_branches_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Intima and wall: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.intima_and_wall_specify.nil? or @description.internal.intima_and_wall_specify == "" ) ?  @description.internal.intima_and_wall :  @description.internal.intima_and_wall_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Superior vena cava: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.superior_vena_cava_specify.nil? or @description.internal.superior_vena_cava_specify == "" ) ?  @description.internal.superior_vena_cava :  @description.internal.superior_vena_cava_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Inferior vena cava: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.inferior_vena_cava_specify.nil? or @description.internal.inferior_vena_cava_specify == "" ) ?  @description.internal.inferior_vena_cava :  @description.internal.inferior_vena_cava_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Pulmonary arteries: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.pulmonary_arteries_specify.nil? or @description.internal.pulmonary_arteries_specify == "" ) ?  @description.internal.pulmonary_arteries :  @description.internal.pulmonary_arteries_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Pulmonary veins: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.pulmonary_veins_specify.nil? or @description.internal.pulmonary_veins_specify == "" ) ?  @description.internal.pulmonary_veins :  @description.internal.pulmonary_veins_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Ductus: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.ductus_specify.nil? or @description.internal.ductus_specify == "" ) ?  @description.internal.ductus :  @description.internal.ductus_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Coronary arteries: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.coronary_arteries_specify.nil? or @description.internal.coronary_arteries_specify == "" ) ?  @description.internal.coronary_arteries :  @description.internal.coronary_arteries_specify 
+   	%>  
+         </div> 
+         </div>
+   
+	 <div class="row">
+	   <div class="col-sm-6 custom-prop">
+	     <strong>Microscopic description: </strong>
+	   </div>
+	   <div class="col-sm-6 custom-val">
+	     <%= @description.internal.vessels_and_ducts_md%>               
+	   </div>
+	 </div>
+       </div>
+     </div>
+   </div>
+</div>
+<% if can? :update, Internal %>
+ <%= link_to 'Edit Internal Organ Data', edit_internalnt_path(@description), class: 'btn btn-primary' %>
+<% end %>

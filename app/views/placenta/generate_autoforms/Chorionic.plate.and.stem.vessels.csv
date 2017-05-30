@@ -1,0 +1,6 @@
+Chorionic plate and stem vessels	chorionic_plate_and_stem_vessels_normal	select	"yes","no"	
+Chorionic plate and stem vessels	normal_no_acute_vasculitis	select	"yes","no"	
+Chorionic plate and stem vessels	normal_no_thrombosis	select	"yes","no"	
+Chorionic plate and stem vessels	normal_no_hemorrhagic_endovasculosis	select	"yes","no"	
+Chorionic plate and stem vessels	normal_no_cushion_lesions_with_or_without_fibrin	select	"yes","no"	
+Chorionic plate and stem vessels	chorionic_plate_and_stem_vessels_normal_no_other	text		

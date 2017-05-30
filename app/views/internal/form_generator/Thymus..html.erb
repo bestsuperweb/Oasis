@@ -1,0 +1,71 @@
+<div class="panel panel-primary">
+        <div class="panel-heading">
+           <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#Thymus-">Thymus-</a>
+           </h4>
+        </div>
+      <div id="Thymus-" class="panel-collapse collapse in"> 
+
+	     <div class="row" style="width:100%">
+		<div class="field col-sm-4">
+		    <%= f.label :weight %><br>
+		<%= f.number_field :weight, class: "form-control" %>
+	     </div> </div>
+<div class="row" style="width:100%">
+		   <div class="col-sm-6 drop-down">
+		      <%= f.label  :thymus_pos_config_shape %><br>
+		      <%= f.select :thymus_pos_config_shape, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+		   </div>
+
+		   <div class="col-sm-6">
+		   <% if !@description.internal.nil?  %>
+		    <% if @description.internal.thymus_pos_config_shape == "Abnormal" %>
+		      <%= f.label  :please_specify, { id:"label_internal_thymus_pos_config_shape_specify" } %><br>
+		      <%= f.text_field :thymus_pos_config_shape_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_thymus_pos_config_shape_specify" } %><br>
+		      <%= f.text_field :thymus_pos_config_shape_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		    <% end %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_thymus_pos_config_shape_specify" } %><br>
+		      <%= f.text_field :thymus_pos_config_shape_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		   <% end %>
+		  </div>
+		</div>
+      
+ <div class="row" style="width:100%">
+		  <div class="col-sm-4 drop-down">
+		     <%= f.label  :petechiae_on_external_surface %><br>
+		     <%= f.select :petechiae_on_external_surface, [:None, :Few, :"Many (greater than 2 per sq cm)"], { :prompt => "Select One" },{ class: "form-control"} %>
+		 </div> 
+		 </div>
+<div class="row" style="width:100%">
+		   <div class="col-sm-6 drop-down">
+		      <%= f.label  :thymus_parenchyma_or_cut_surface %><br>
+		      <%= f.select :thymus_parenchyma_or_cut_surface, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+		   </div>
+
+		   <div class="col-sm-6">
+		   <% if !@description.internal.nil?  %>
+		    <% if @description.internal.thymus_parenchyma_or_cut_surface == "Abnormal" %>
+		      <%= f.label  :please_specify, { id:"label_internal_thymus_parenchyma_or_cut_surface_specify" } %><br>
+		      <%= f.text_field :thymus_parenchyma_or_cut_surface_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_thymus_parenchyma_or_cut_surface_specify" } %><br>
+		      <%= f.text_field :thymus_parenchyma_or_cut_surface_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		    <% end %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_thymus_parenchyma_or_cut_surface_specify" } %><br>
+		      <%= f.text_field :thymus_parenchyma_or_cut_surface_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		   <% end %>
+		  </div>
+		</div>
+      
+
+	     <div class="row" style="width:100%">
+		<div class="field col-sm-4">
+		    <%= f.label :thymus_other %><br>
+		    <%= f.text_field :thymus_other, class: "form-control" %>
+	     </div> </div>
+</div>
+</div>

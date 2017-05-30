@@ -1,0 +1,5 @@
+Bladder and urethra	size and configuration	select	"Normal","Abnormal"	Abnormal, specify
+Bladder and urethra	wall and mucosa	select	"Normal","Abnormal"	Abnormal, specify
+Bladder and urethra	perivesical tissue	select	"Normal","Abnormal"	Abnormal, specify
+Bladder and urethra	bladder contents	select	"Present","Absent"	Present, specify
+Bladder and urethra	urethra	select	"Normal","Abnormal","Not examined"	Abnormal, specify

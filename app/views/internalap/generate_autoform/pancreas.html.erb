@@ -1,0 +1,73 @@
+ <div class="col-sm-3">
+         <div class="panel panel-internal squarish">
+             <div class="panel-heading panel-heading-internal small-heading squarish">
+               Pancreas
+             </div>
+         <div class="panel-body panel-body-internal squarish">
+
+            <div class="row">
+              <div class="col-sm-6 custom-prop">
+                <strong>Pancreas_weight : </strong>
+              </div>
+              <div class="col-sm-6 custom-val">
+                 <%= @description.internal.pancreas_weight%>               
+              </div>
+	    </div>
+         
+
+            <div class="row">
+               <div class="col-sm-6 custom-prop">
+                  <strong>Pancreas_size_configuration: </strong>
+               </div>
+               <div class="col-sm-6 custom-val">
+                  <%= ( @description.internal.pancreas_size_configuration_specify.nil? or @description.internal.pancreas_size_configuration_specify == "" ) ?  @description.internal.pancreas_size_configuration :  @description.internal.pancreas_size_configuration_specify 
+                  %>  
+               </div> 
+             </div>
+           
+
+            <div class="row">
+               <div class="col-sm-6 custom-prop">
+                  <strong>Pancreas_external_surface:: </strong>
+               </div>
+               <div class="col-sm-6 custom-val">
+                  <%= ( @description.internal.pancreas_external_surface:_specify.nil? or @description.internal.pancreas_external_surface:_specify == "" ) ?  @description.internal.pancreas_external_surface: :  @description.internal.pancreas_external_surface:_specify 
+                  %>  
+               </div> 
+             </div>
+           
+
+            <div class="row">
+               <div class="col-sm-6 custom-prop">
+                  <strong>Pancreas_parenchyma_or_cut_surface: </strong>
+               </div>
+               <div class="col-sm-6 custom-val">
+                  <%= ( @description.internal.pancreas_parenchyma_or_cut_surface_specify.nil? or @description.internal.pancreas_parenchyma_or_cut_surface_specify == "" ) ?  @description.internal.pancreas_parenchyma_or_cut_surface :  @description.internal.pancreas_parenchyma_or_cut_surface_specify 
+                  %>  
+               </div> 
+             </div>
+           
+
+            <div class="row">
+               <div class="col-sm-6 custom-prop">
+                  <strong>Ducts: </strong>
+               </div>
+               <div class="col-sm-6 custom-val">
+                  <%= ( @description.internal.ducts_specify.nil? or @description.internal.ducts_specify == "" ) ?  @description.internal.ducts :  @description.internal.ducts_specify 
+                  %>  
+               </div> 
+             </div>
+           
+
+            <div class="row">
+              <div class="col-sm-6 custom-prop">
+                <strong>Pancreas_other : </strong>
+              </div>
+              <div class="col-sm-6 custom-val">
+                 <%= @description.internal.pancreas_other%>               
+              </div>
+	    </div>
+	 
+</div>
+</div>
+</div>

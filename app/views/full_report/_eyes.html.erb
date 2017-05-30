@@ -1,0 +1,12 @@
+<div>
+  <h3>Eyes</h3>
+  <table>
+    <%
+      @names_array = ["Size / Shape / Position","Lids/Periorbital soft tissue","Conjunctiva","Sclera / Cornea / Lens","Iris color","Pupils"," Eyes removed","Other"]
+      @prop_array = ["size_shape_position","lids_periorbital_soft_tissue","conjunctiva","sclera_cornea_lens","iris_color","pupils","eyes_removed","eyes_other"]
+      @specify_array = ["size_shape_position_specify","lids_periorbital_soft_tissue_specify","conjunctiva_specify","sclera_cornea_lens_specify","","pupils_specify","",""] 
+    %>
+    <%= render :partial => "external_loop"%>
+</table>
+</div>
+

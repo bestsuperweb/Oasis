@@ -1,0 +1,9 @@
+<div>
+    <h2 style="text-align:center">Special reports</h2>
+    <% @description.special_reports.each do |sr|  %>
+      <h3><%= sr.title %></h3>
+      <p><%=  sr.final_diagnosis.html_safe %></p>
+      <p><%=  sr.gross_description.html_safe %></p>
+      <p><%=  sr.microscopic_description.html_safe %></p>
+    <% end %>
+</div>

@@ -1,0 +1,67 @@
+        <div class="col-sm-3">
+          <div class="panel panel-internal squarish">
+            <div class="panel-heading panel-heading-internal small-heading squarish">
+              Spinal_cord
+            </div>
+            <div class="panel-body panel-body-internal squarish">
+        
+              <div class="row">
+        	<div class="col-sm-6 no-pad small custom-prop">
+        	  <%= f.label  :Normal, class: "small" %><br>
+        	</div>		     
+        	<div class="col-sm-6 no-pad custom-val">
+        	  <%= f.check_box :spinal_cord_normal, { class: "form-control input-sm" , :onchange => "makeNormal(this, '.spinal_cord')" } %>
+        	</div>
+              </div>
+        
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :extradural_space, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :extradural_space, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent spinal_cord" , "dependent-selector" => "#extradural_space-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="extradural_space-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :extradural_space_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :extradural_space_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :meninges, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :meninges, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent spinal_cord" , "dependent-selector" => "#meninges-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="meninges-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :meninges_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :meninges_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :cord_proper, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :cord_proper, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent spinal_cord" , "dependent-selector" => "#cord_proper-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="cord_proper-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :cord_proper_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :cord_proper_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+            </div>
+          </div>
+        </div>

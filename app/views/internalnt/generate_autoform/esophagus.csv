@@ -1,0 +1,4 @@
+esophagus normal	checkbox			
+esophagus size position configuration	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+esophagus mucosa and wall	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+esophagus other	text			

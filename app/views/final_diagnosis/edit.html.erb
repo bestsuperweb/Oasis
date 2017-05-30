@@ -1,0 +1,10 @@
+<h1>Editing Final Diagnosis</h1>
+
+<%= render 'form' %>
+<%#= render 'layouts/back' %>
+
+<%= tinymce %>
+
+<div class="text-left">
+  <%= link_to 'Discard', "#{description_path}#final" , class: 'btn btn-warning' %>
+</div>

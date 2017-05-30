@@ -1,0 +1,12 @@
+<div>
+  <h3>Thymus</h3>
+  <table>
+    <%
+      @names_array = ["Weight","Position configuration","Petechiae on external surface","Cut surface","Other","Microscopic description"]
+      @prop_array = ["weight","thymus_pos_config_shape","petechiae_on_external_surface","cut_surface","thymus_other","thymus_md"]
+      @specify_array = ["","thymus_pos_config_shape_specify","","cut_surface_specify","",""]
+    %>
+    <%= render :partial => "internal_loop"%>
+</table>
+</div>
+

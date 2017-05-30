@@ -1,0 +1,141 @@
+<script>
+$( document ).ready(function() {
+  addBlockCode = function() {
+    abc = $('#form-block')
+      abc.append('<div class="row"> <div class="col-sm-3"> <input type="text" name="block_code[block_number][]" class="form-control block-ids"> </div> <div class="col-sm-4"> <input type="text" name="block_code[block_description][]" class="form-control"> </div> <div class="col-sm-3"> <input type="text" name="block_code[microscopic_description][]" class="form-control"> </div> <div class="col-sm-2"> <div class="btn btn-warning" onClick="deleteRow(this)"> Delete </div> </div> </div>')
+      addIds()
+  }
+
+  deleteRow = function(thisElement) {
+    $(thisElement).parent().parent().remove()
+  }
+
+  addIds = function(){
+    //var elementList = $("#form-block > .row");
+    var i = 1;
+    $("#form-block > .row").each(function(){
+      $(this).attr("id","menu"+i)
+	i = i + 1;
+    });
+  }
+
+});
+
+</script>
+
+<br>
+<div class="well">
+  <div class="row">
+    <div class="col-sm-3">
+      <h3>Block Number<h3>
+    </div>
+    <div class="col-sm-4">
+      <h3>Description</h3>
+    </div>
+    <div class="col-sm-3">
+      <h3>Special stains</h3>
+    </div>
+  </div>
+
+  <%= form_tag :block_codes do %>
+    <% if parse_text == "" %>
+      <div id="form-block">
+	<div class="row">
+	  <div class="col-sm-3">
+	    <%= text_field_tag 'block_code[block_number][]' , nil, { class: "form-control block-ids" } %>
+	  </div>
+	  <div class="col-sm-4">
+	    <%= text_field_tag 'block_code[block_description][]' , nil, { class: "form-control" } %>
+	  </div>
+	  <div class="col-sm-3">
+	    <%= text_field_tag 'block_code[microscopic_description][]' , nil, { class: "form-control" } %>
+	  </div>
+	  <div class="col-sm-2">
+	    <div class="btn btn-warning" onclick="deleteRow(this)">
+	      Delete
+	    </div>
+	  </div>
+	</div>
+      </div>
+    <% else %>
+      <div id="form-block">
+	<% parse_text.each do |i| %>
+	  <div class="row">
+	    <div class="col-sm-3">
+	      <%= text_field_tag 'block_code[block_number][]' , i[0], { class: "form-control block-ids" } %>
+	    </div>
+	    <div class="col-sm-4">
+	      <%= text_field_tag 'block_code[block_description][]' , i[1], { class: "form-control" } %>
+	    </div>
+	    <div class="col-sm-3">
+	      <%= text_field_tag 'block_code[microscopic_description][]' , i[2], { class: "form-control" } %>
+	    </div>
+	    <div class="col-sm-2">
+	      <div class="btn btn-warning" onclick="deleteRow(this)">
+		Delete
+	      </div>
+	    </div>
+	  </div>
+	<% end %>
+      </div>
+    <% end %>
+
+    <br>
+
+    <div class="row">
+      <div class="col-sm-12">
+	<div class="btn btn-primary" onclick="addBlockCode()">
+	  Add New Block Code
+	</div>
+      </div>
+    </div>
+
+    <br>
+
+    <% current_uri = request.env['PATH_INFO'] %>
+    <%= hidden_field_tag 'originating_uri', current_uri %>
+    <%= submit_tag "Save block codes",  class: "btn btn-primary" %>
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+  </div>
+</div>
+<% end %>
+
+
+<style>
+.table-comp > thead > tr > th, 
+.table-comp > thead > tr > td, 
+.table-comp > tbody > tr > th, 
+.table-comp > tbody > tr > td, 
+.table-comp > tfoot > tr > th, 
+.table-comp > tfoot > tr > td {
+  padding: 3px;
+  line-height: 1em;
+  border-top: 0px;
+}
+</style>
+
+<script>
+$('#form-block').change(function() {
+  var blockIdentifiers = []
+      $(".block-ids").each(function( index ){
+	blockIdentifiers.push( $(this).val() )
+      });
+  if ( blockIdentifiers.length != (jQuery.unique(blockIdentifiers)).length ) {
+    console.log('length differs')
+    $('input[name=commit]').attr('disabled',true);
+    $('input[name=commit]').removeClass('btn-primary')
+    $('input[name=commit]').addClass('btn-danger')
+    $('input[name=commit]').attr('value','Provide unique block number to enable saving')
+  }
+  else {
+    console.log('length same')
+    $('input[name=commit]').attr('disabled',false);
+    $('input[name=commit]').removeClass('btn-danger')
+    $('input[name=commit]').addClass('btn-primary')
+    $('input[name=commit]').attr('value','Save block codes')
+  }
+});
+</script>

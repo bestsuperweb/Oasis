@@ -1,0 +1,97 @@
+<p id="notice"><%= notice %></p>
+
+<%= render "layouts/basic" %>
+<%= render "layouts/complete" %>
+
+<div class="row">
+ <div id="patient_name col-sm-12">
+  <h3>Patient Name: <%= @patient.name %></h3>
+ </div>
+</div>
+
+<hr>
+
+<div class="row">
+ <div id="patient_age" class="col-sm-3">
+	 <strong>Age:</strong>
+         <%=@patient.age %>
+         <br>
+	 <strong>Race:</strong>
+         <%= @patient.race %>
+         <br>
+         <strong>Date of Birth:</strong>
+         <%= @patient.dob %>
+         <br>
+         <strong>Sex:</strong>
+         <%= @patient.sex %>
+ </div>
+ <div id="dates" class="col-sm-4">
+   <strong>Date of admission:</strong>
+   <%= @patient.date_admission %>
+   <br>
+   <strong>Date autopsy:</strong>
+   <%= @patient.date_autopsy %>
+   <br>
+   <strong>Time:</strong>
+   <%= @patient.time_of_autopsy %>
+ </div>
+ <div id="case" class="col-sm-2">
+   <strong>Case:</strong>
+   <%= @patient.case %>
+   <br>
+   <strong>Hospital:</strong>
+   <%= @patient.hospital %>
+ </div>
+
+ <div id="doctors" class="col-sm-3"> 
+   <strong>Pathologist:</strong>
+   <%= @patient.pathologist%>
+   <br>
+   <strong>Physician:</strong>
+   <%= @patient.physician %>
+   <br>
+   <strong>Attendant:</strong>
+   <%= @patient.attendant %>
+   <br>
+   <strong>Prosector:</strong>
+   <%= @patient.prosector %>
+   <br>
+ </div>
+ </div>
+
+ <hr>
+
+ <div class="row">
+	 <div class="col-sm-12">
+  <strong>Restrictions:</strong>
+  <%= @patient.restrictions.html_safe %>
+ </div>
+ </div>
+ <br>
+<%= link_to 'Edit Patient Information', edit_patient_path(@patient), class: 'btn btn-primary' %> 
+<%# if ! @patient.organ_weight.nil? %>
+<%#=  link_to 'Edit Organ Weight', edit_organ_weight_path(@patient), class: 'btn btn-success' %> 
+<%# else %>
+<%#=  link_to 'New Organ Weight', new_organ_weight_path(@patient), class: 'btn btn-success' %> 
+<%# end %>
+<%# if ! @patient.body_measurement.nil? %>
+<%#=  link_to 'Edit Body Measurement', edit_body_measurement_path(@patient), class: 'btn btn-success' %> 
+<%# else %>
+<%#=  link_to 'New Body Measurement', new_body_measurement_path(@patient), class: 'btn btn-success' %> 
+<%# end %>
+<%#= link_to 'Back', patients_path, class: 'btn btn-primary' %>
+ <hr>
+ <%# if ! @patient.organ_weight.nil? %>
+  <%#= render file: 'app/views/organ_weights/show.html.erb' %>
+ <%# else %>
+  <%#= link_to 'Add Organ Weight' ,new_organ_weight_path(@patient), class: 'btn btn-warning'%>
+ <%# end%>
+ 
+ <%# if ! @patient.body_measurement.nil? %>
+  <%#= render file: 'app/views/body_measurements/show.html.erb' %>
+ <%# else %>
+  <%#= link_to 'Add Body Measurement' ,new_body_measurement_path(@patient), class: 'btn btn-warning'%>
+ <%# end%>
+ <hr>
+  <%= link_to 'Back', patients_path, class: 'btn btn-success' %>
+ <hr>

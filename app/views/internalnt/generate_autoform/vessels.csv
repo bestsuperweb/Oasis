@@ -1,0 +1,12 @@
+vessels and ducts normal	checkbox			
+origins of aorta and pulmonary artery	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+arch configuartion	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+arch branches	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+thoracic branches	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+intima and wall	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+Superior vena cava	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+Inferior vena cava	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+pulmonary arteries	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+pulmonary veins	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+ductus	select	"Closed","Open"	Open, specify	If open is selected, a box will appear saying internal diameter= ….. Cm.
+coronary arteries	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify

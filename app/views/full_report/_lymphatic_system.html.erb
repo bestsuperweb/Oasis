@@ -1,0 +1,11 @@
+<div>
+  <h3>Lymphatic System</h3>
+  <table>
+    <%
+      @names_array = ["State of distension","Contents","Anomalies","Other","Microscopic description"]
+      @prop_array = ["lymphatic_system_state_of_distension","lymphatic_system_contents","lymphatic_system_anomalies","lymphatic_system_other","lymphatic_system_md"]
+      @specify_array = ["lymphatic_system_state_of_distension_specify","","lymphatic_system_anomalies_specify","",""]
+    %>
+    <%= render :partial => "internal_loop"%>
+</table>
+</div>

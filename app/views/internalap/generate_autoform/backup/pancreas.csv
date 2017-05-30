@@ -1,0 +1,7 @@
+pancreas normal	checkbox			
+pancreas weight	number			Auto calculation: Expected for …. Weeks gestational age.
+pancreas size configuration	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+pancreas external surface:	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+pancreas parenchyma or cut surface	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+ducts	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+pancreas other	text			

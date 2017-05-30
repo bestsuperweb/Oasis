@@ -1,0 +1,8 @@
+Larynx and trachea	epiglottis	select	"Normal","Abnormal"	Abnormal, specify
+Larynx and trachea	foreign material in lumen	select	"yes","no"	yes, specify
+Larynx and trachea	larynx trachea configuration position	select	"Normal","Abnormal"	Abnormal, specify
+Larynx and trachea	vocal cords	select	"Normal","Abnormal"	Abnormal, specify
+Larynx and trachea	tracheastomy	select	"yes","no"	
+Larynx and trachea	mucosal surfaces	select	"Normal","Abnormal"	Abnormal, specify
+Larynx and trachea	tracheal rings	select	"Present","Absent"	
+Larynx and trachea	larynx other	text		

@@ -1,0 +1,51 @@
+<br>
+  <div class="row">
+    <% if ! @description.special_reports.nil? %>
+      <div class="col-sm-12">
+	<% all_description = @description.special_reports.all.sort_by {|cyclist| cyclist.id} %>
+	<table class="table table-condensed">
+	  <thead>
+	    <tr>
+	      <th>Title</th>
+	      <th></th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <% all_description.each do |report| %>
+	      <% if report.lock.nil? %>
+		<tr>
+		  <td> <%= report.title %>
+		</td>
+		<td>
+                <% if can? :update , SpecialReport %>
+		  <%= link_to "Edit" , 
+		  edit_special_report_path(@description.id, report.id), 
+		  class: 'btn btn-xs btn-success' %>  
+	        <% end %>
+	      </td>
+		</tr>
+	      <% else %>
+		<tr>
+		  <td> 
+		    <%= report.title %>
+		  </td>
+		  <td> 
+		    <a href="<%= show_special_report_path(@description.id, report.id ) %>" 
+	 class="btn btn-xs btn-warning" >
+	 Signed Out
+		    </a >
+		  </td>
+		</tr>
+	      <% end %>
+	    <% end %>
+	  </tbody>
+	</table>
+      </div>
+      <% end %>
+
+      <div class="col-sm-12">
+       <% if can? :create, SpecialReport %>
+	<%= link_to 'Add special report', new_special_report_path, class: 'btn btn-primary' %>
+       <% end %>
+      </div>
+  </div>

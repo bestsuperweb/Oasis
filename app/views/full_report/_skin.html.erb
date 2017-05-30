@@ -1,0 +1,11 @@
+<div>
+  <h3>Skin</h3>
+  <table>
+    <%
+      @names_array = ["Incisions/Scars", "Rash/Excoriation", "Petechiae", "Ecchymoses", "Nevi/Angiomas"]
+      @prop_array = ["incisions_scars","rash_excoriation","petechiae","ecchymoses","nevi_angiomas"]
+      @specify_array =["incisions_scars_specify","rash_excoriation_specify","petechiae_specify","ecchymoses_specify","nevi_angiomas_specify"] 
+    %>
+    <%= render :partial => "external_loop"%>
+</table>
+</div>

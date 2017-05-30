@@ -1,0 +1,93 @@
+   <div class="col-sm-3">
+     <div class="panel panel-internal squarish">
+       <div class="panel-heading panel-heading-internal small-heading squarish">
+         Valves
+       </div>
+       <div class="panel-body panel-body-internal squarish">
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Tricuspid_valve: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.tricuspid_valve_specify.nil? or @description.internal.tricuspid_valve_specify == "" ) ?  @description.internal.tricuspid_valve :  @description.internal.tricuspid_valve_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Tricuspid_valve_circumference : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.tricuspid_valve_circumference%>               
+   	</div>
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Pulmonic_valve: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.pulmonic_valve_specify.nil? or @description.internal.pulmonic_valve_specify == "" ) ?  @description.internal.pulmonic_valve :  @description.internal.pulmonic_valve_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Pulmonic_valave_circumference : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.pulmonic_valave_circumference%>               
+   	</div>
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Mitral_valve: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.mitral_valve_specify.nil? or @description.internal.mitral_valve_specify == "" ) ?  @description.internal.mitral_valve :  @description.internal.mitral_valve_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Mitral_valve_circumference : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.mitral_valve_circumference%>               
+   	</div>
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Aortic_valve: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.aortic_valve_specify.nil? or @description.internal.aortic_valve_specify == "" ) ?  @description.internal.aortic_valve :  @description.internal.aortic_valve_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Aortic_valve_circumference : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.aortic_valve_circumference%>               
+   	</div>
+         </div>
+   
+       </div>
+     </div>
+   </div>

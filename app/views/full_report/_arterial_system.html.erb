@@ -1,0 +1,12 @@
+<div>
+  <h3>Arterial system</h3>
+  <table>
+    <%
+      @names_array = ["State of distension","Contents","Anomalies","Other","Microscopic description"]
+      @prop_array = ["arterial_system_state_of_distension","arterial_system_contents","arterial_system_anomalies","arterial_system_other","arterial_system_md"]
+      @specify_array = ["arterial_system_state_of_distension_specify","","arterial_system_anomalies_specify","",""]
+    %>
+    <%= render :partial => "internal_loop"%>
+</table>
+</div>
+

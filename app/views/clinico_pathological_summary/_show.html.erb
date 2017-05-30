@@ -1,0 +1,17 @@
+<br>
+
+<div class="panel panel-clinpath">
+  <div class="panel-heading panel-heading-clinpath small-heading">
+    <span class="fa fa-user pull-left"></span>Clinico-Pathological Summary
+  </div>
+  <div class="panel-body panel-body-tests">
+      <div class="col-sm-12">
+	<div class="col-sm-4 custom-prop"><strong>Clinico Pathological Summary:</strong></div><div class="col-sm-8 custom-val"><%=@description.clinico_pathological_summary.clinpath_summary%></div>
+	<div class="col-sm-4 custom-prop"><strong>References:                  </strong></div><div class="col-sm-8 custom-val"><%=@description.clinico_pathological_summary.references %>     </div>
+      </div>
+    </div>
+</div>
+
+<% if can? :update, ClinicoPathologicalSummary %>
+    <%= link_to 'Edit Summary', edit_clinico_pathological_summary_path(@description), class: 'btn btn-primary' %>
+<% end %>

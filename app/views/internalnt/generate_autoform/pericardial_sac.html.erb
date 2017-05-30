@@ -1,0 +1,42 @@
+   <div class="col-sm-3">
+     <div class="panel panel-internal squarish">
+       <div class="panel-heading panel-heading-internal small-heading squarish">
+         Pericardial_sac
+       </div>
+       <div class="panel-body panel-body-internal squarish">
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Serosal_sarfaces: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.serosal_sarfaces_specify.nil? or @description.internal.serosal_sarfaces_specify == "" ) ?  @description.internal.serosal_sarfaces :  @description.internal.serosal_sarfaces_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Pericardial_sac_contents: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.pericardial_sac_contents_specify.nil? or @description.internal.pericardial_sac_contents_specify == "" ) ?  @description.internal.pericardial_sac_contents :  @description.internal.pericardial_sac_contents_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Pericardial_sac_amount_of_fluid: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.pericardial_sac_amount_of_fluid_specify.nil? or @description.internal.pericardial_sac_amount_of_fluid_specify == "" ) ?  @description.internal.pericardial_sac_amount_of_fluid :  @description.internal.pericardial_sac_amount_of_fluid_specify 
+   	%>  
+         </div> 
+         </div>
+   
+       </div>
+     </div>
+   </div>

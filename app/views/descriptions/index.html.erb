@@ -1,0 +1,39 @@
+<!-- <p id="notice"><%= notice %></p> -->
+
+<h1>Listing Patients</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>User Identifier</th>
+      <th>Brief Clinical Diagnosis</th>
+      <th></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @descriptions.each do |description| %>
+       <% if (can? :update, description) or (current_user.admin?) or (current_user.secretary?) or (can? :update_description_through_special_report, description ) %>
+       <tr>
+         <td><%= description.case_identifier %></td>
+	 <td><%= description.description.html_safe%> 
+	 <% if (can? :update_description_through_special_report, description) and !current_user.admin? %>
+	       <div class="label label-info">Consult</div>
+	    <% end %>
+         </td>
+	 <td>
+	   <%= link_to 'Show', description, class: 'btn btn-primary btn-xs' %>
+	 </td>
+       </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<% if can? :create, Description %>
+<%= link_to 'New Report', new_description_path, class: 'btn btn-success' %>
+<% end %>
+

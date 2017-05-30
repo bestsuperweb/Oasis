@@ -1,0 +1,12 @@
+<div>
+  <h3>Lungs</h3>
+  <table>
+    <%
+      @names_array = ["Right lungs weight","Left lung weight","Bilateral","Combined heart and lungs weight","Lung to body weight ratio","Lobar pattern","State of expansion","Lungs consistency","Bronchial tree","Vessels","Parenchyma color","Congestion","Interstitial emphysema","Hilar nodes","Visceral pleura","Pleural petechiae","Fixed by perfusion","Microscopic description"]
+      @prop_array = ["right_lungs_weight","left_lung_weight","bilateral","combined_heart_and_lungs_weight","lung_to_body_weight_ratio","lobar_pattern","state_of_expansion","lungs_consistency","bronchial_tree","vessels","parenchyma_color","congestion","interstitial_emphysema","hilar_nodes","visceral_pleura","pleural_petechiae","fixed_by_perfusion","lungs_md"]
+      @specify_array = ["","","","","","lobar_pattern_specify","state_of_expansion_specify","lungs_consistency_specify","bronchial_tree_specify","vessels_specify","parenchyma_color_specify","","","hilar_nodes_specify","visceral_pleura_specify","","fixed_by_perfusion_specify",""]
+    %>
+    <%= render :partial => "internal_loop"%>
+</table>
+</div>
+

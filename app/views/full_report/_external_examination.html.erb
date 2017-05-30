@@ -1,0 +1,9 @@
+<div>
+    <h2 style="text-align:center">External examinations</h2>
+    <table style="width:100%">
+      <tr><td style="width:50%"><strong>Degree of Maceration: </strong> </td><td> <%= @description.external.degree_of_maceration.nil? ? "N/A" : @description.external.degree_of_maceration.capitalize %> </td></tr>
+      <tr><td style="width:50%"><strong>Development: </strong></td><td> <%= @description.external.degree_of_maceration.nil? ? "N/A" : @description.external.development_habitus.capitalize %> </td></tr>
+      <tr><td style="width:50%"><strong>Nutrition: </strong></td><td> <%= @description.external.nutrition.nil? ? "N/A" : @description.external.nutrition.capitalize %> </td></tr>
+      <tr><td style="width:50%"><strong>Hydration: </strong></td><td> <%= @description.external.hydration_including_edema.nil? ? "N/A" : @description.external.hydration_including_edema.capitalize %> </td></tr>
+    </table>
+</div>

@@ -1,0 +1,12 @@
+<div>
+  <h3>Larynx and trachea</h3>
+  <table>
+    <%
+      @names_array = ["Epiglottis","Foreign material in lumen","Configuration position","Vocal cords","Tracheastomy","Mucosal surfaces","Tracheal rings","Other","Microscopic description"]
+      @prop_array = ["epiglottis","foreign_material_in_lumen","larynx_trachea_configuration_position","vocal_cords","tracheastomy","mucosal_surfaces","tracheal_rings","larynx_other","larynx_md"]
+      @specify_array = ["epiglottis_specify","foreign_material_in_lumen_specify","larynx_trachea_configuration_position_specify","vocal_cords_specify","","mucosal_surfaces_specify","","",""]
+    %>
+    <%= render :partial => "internal_loop"%>
+</table>
+</div>
+

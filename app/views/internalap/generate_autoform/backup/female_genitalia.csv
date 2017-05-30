@@ -1,0 +1,8 @@
+internal genitalia female normal	checkbox			
+vagina	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+uterus	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+right fallopian tubes	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+right ovary	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+left fallopian tube	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+left ovary	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+female genetalia other	text			

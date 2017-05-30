@@ -1,0 +1,4 @@
+Pancreas	pancreas weight	number		
+Pancreas	size configuration	select	"Normal","Abnormal"	Abnormal, specify
+Pancreas	pancreas parenchyma or cut surface	select	"Normal","Abnormal"	Abnormal, specify
+Pancreas	ducts	select	"Normal","Abnormal"	Abnormal, specify

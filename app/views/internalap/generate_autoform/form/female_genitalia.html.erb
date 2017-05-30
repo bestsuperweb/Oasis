@@ -1,0 +1,124 @@
+        <div class="col-sm-3">
+          <div class="panel panel-internal squarish">
+            <div class="panel-heading panel-heading-internal small-heading squarish">
+              Internal_genitalia_female
+            </div>
+            <div class="panel-body panel-body-internal squarish">
+        
+              <div class="row">
+        	<div class="col-sm-6 no-pad small custom-prop">
+        	  <%= f.label  :Normal, class: "small" %><br>
+        	</div>		     
+        	<div class="col-sm-6 no-pad custom-val">
+        	  <%= f.check_box :internal_genitalia_female_normal, { class: "form-control input-sm" , :onchange => "makeNormal(this, '.internal_genitalia_female')" } %>
+        	</div>
+              </div>
+        
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :vagina, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :vagina, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent internal_genitalia_female" , "dependent-selector" => "#vagina-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="vagina-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :vagina_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :vagina_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :uterus, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :uterus, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent internal_genitalia_female" , "dependent-selector" => "#uterus-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="uterus-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :uterus_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :uterus_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :right_fallopian_tubes, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :right_fallopian_tubes, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent internal_genitalia_female" , "dependent-selector" => "#right_fallopian_tubes-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="right_fallopian_tubes-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :right_fallopian_tubes_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :right_fallopian_tubes_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :right_ovary, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :right_ovary, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent internal_genitalia_female" , "dependent-selector" => "#right_ovary-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="right_ovary-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :right_ovary_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :right_ovary_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :left_fallopian_tube, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :left_fallopian_tube, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent internal_genitalia_female" , "dependent-selector" => "#left_fallopian_tube-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="left_fallopian_tube-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :left_fallopian_tube_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :left_fallopian_tube_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :left_ovary, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :left_ovary, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent internal_genitalia_female" , "dependent-selector" => "#left_ovary-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="left_ovary-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :left_ovary_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :left_ovary_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+        
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small">
+        	  <%= f.label :female_genetalia_other , class: "small" %>
+        	</div> 
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :female_genetalia_other, class: "form-control input-sm" %>
+        	</div>
+              </div>
+            </div>
+          </div>
+	</div>

@@ -1,0 +1,81 @@
+<div class="panel panel-primary">
+        <div class="panel-heading">
+           <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#Internal-genitalia-male">Internal-genitalia-male</a>
+           </h4>
+        </div>
+      <div id="Internal-genitalia-male" class="panel-collapse collapse in"> 
+<div class="row" style="width:100%">
+		   <div class="col-sm-6 drop-down">
+		      <%= f.label  :prostate %><br>
+		      <%= f.select :prostate, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+		   </div>
+
+		   <div class="col-sm-6">
+		   <% if !@description.internal.nil?  %>
+		    <% if @description.internal.prostate == "Abnormal" %>
+		      <%= f.label  :please_specify, { id:"label_internal_prostate_specify" } %><br>
+		      <%= f.text_field :prostate_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_prostate_specify" } %><br>
+		      <%= f.text_field :prostate_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		    <% end %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_prostate_specify" } %><br>
+		      <%= f.text_field :prostate_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		   <% end %>
+		  </div>
+		</div>
+      
+<div class="row" style="width:100%">
+		   <div class="col-sm-6 drop-down">
+		      <%= f.label  :epididymis %><br>
+		      <%= f.select :epididymis, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+		   </div>
+
+		   <div class="col-sm-6">
+		   <% if !@description.internal.nil?  %>
+		    <% if @description.internal.epididymis == "Abnormal" %>
+		      <%= f.label  :please_specify, { id:"label_internal_epididymis_specify" } %><br>
+		      <%= f.text_field :epididymis_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_epididymis_specify" } %><br>
+		      <%= f.text_field :epididymis_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		    <% end %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_epididymis_specify" } %><br>
+		      <%= f.text_field :epididymis_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		   <% end %>
+		  </div>
+		</div>
+      
+<div class="row" style="width:100%">
+		   <div class="col-sm-6 drop-down">
+		      <%= f.label  :testes %><br>
+		      <%= f.select :testes, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+		   </div>
+
+		   <div class="col-sm-6">
+		   <% if !@description.internal.nil?  %>
+		    <% if @description.internal.testes == "Abnormal" %>
+		      <%= f.label  :please_specify, { id:"label_internal_testes_specify" } %><br>
+		      <%= f.text_field :testes_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_testes_specify" } %><br>
+		      <%= f.text_field :testes_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		    <% end %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_testes_specify" } %><br>
+		      <%= f.text_field :testes_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		   <% end %>
+		  </div>
+		</div>
+      
+
+	     <div class="row" style="width:100%">
+		<div class="field col-sm-4">
+		    <%= f.label :male_genetalia_other %><br>
+		    <%= f.text_field :male_genetalia_other, class: "form-control" %>
+	     </div> </div>
+</div>
+</div>

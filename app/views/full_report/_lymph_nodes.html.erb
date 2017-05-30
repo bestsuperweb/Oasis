@@ -1,0 +1,12 @@
+<div>
+  <h3>Lymph nodes</h3>
+  <table>
+    <%
+      @names_array = ["Cervical","Axillary","Mediastinal","Hilar","Celiac peripancreatic","Mesenteric","Periaortic","Iliac","Inguinal","Other","Microscopic description"]
+      @prop_array = ["cervical","axillary","mediastinal","hilar","celiac_peripancreatic","mesenteric","periaortic","iliac","inguinal","lymph_nodes_other","lymph_nodes_md"]
+      @specify_array = ["cervical_specify","axillary_specify","mediastinal_specify","hilar_specify","celiac_peripancreatic_specify","mesenteric_specify","periaortic_specify","iliac_specify","inguinal_specify","",""]
+    %>
+    <%= render :partial => "internal_loop"%>
+</table>
+</div>
+

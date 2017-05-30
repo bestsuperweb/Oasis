@@ -1,0 +1,177 @@
+<div>
+  <br>
+  <div class="row">
+      <div class="well-custom well">
+    <div class="col-sm-1">
+      <div class="fa fa-heart-o fa-2x">
+      </div>
+      </div>
+    <div class="col-sm-11">
+	<div class="row">
+	  <div class="col-sm-3">
+	    <strong>Age in years:</strong>
+	    <%= @description.mother_datum.mother_age %><br>
+	  </div>
+
+	  <!--
+	  <div class="col-sm-4">
+	    <strong>Gestational Age:</strong>
+	    <%#= @description.mother_datum.gestational_age %><br>
+	  </div>
+	  -->
+	  <div class="col-sm-3">
+	    <strong>Prenatal Care:</strong>
+	    <%= @description.mother_datum.prenatal_care %><br>
+	  </div>
+	  <div class="col-sm-1">
+	    <strong>Gravida:</strong>
+	    <%= @description.mother_datum.gravida %><br>
+	  </div>
+	  <div class="col-sm-1">
+	    <strong>Para:</strong>
+	    <%= @description.mother_datum.para %><br>
+	  </div>
+	  <div class="col-sm-2">
+	    <strong>Abortus:</strong>
+	    <%= @description.mother_datum.abortus %><br>
+	  </div>
+
+	  <div class="col-sm-1">
+	    <strong>Term:</strong>
+	    <%= @description.mother_datum.term %><br>
+	  </div>
+
+	  <div class="col-sm-1">
+	    <strong>Living:</strong>
+	    <%= @description.mother_datum.living %><br>
+	  </div>
+	</div>
+      </div>
+
+      <div class="row">
+	<div class="col-sm-4">
+	  <strong>Pre Preg Weight:</strong>
+	  <%= @description.mother_datum.pre_pregnancy_weight %><br>
+	</div>
+	<div class="col-sm-4">
+	  <strong>Delivery Weight:</strong>
+	  <%= @description.mother_datum.delivery_weight %><br>
+	</div>
+      </div>
+
+      <div class="row">
+	<div class="col-sm-4">
+	  <strong>Blood Type:</strong>
+	  <%= @description.mother_datum.blood_type %><br>
+	</div>
+
+	<div class="col-sm-4">
+	  <strong>Antibody Screen</strong>
+	  <%= @description.mother_datum.antibody_screen %><br>
+	</div>
+
+	<div class="col-sm-4">
+	  <strong>RPR:</strong>
+	  <%= @description.mother_datum.rpr %><br>
+	</div>
+      </div>
+
+      <div class="row">
+	<div class="col-sm-4">
+	  <strong>Hep B:</strong>
+	  <%= @description.mother_datum.hepatitis_b %><br>
+	</div>
+
+	<div class="col-sm-4">
+	  <strong>Rubella:</strong>
+	  <%= @description.mother_datum.rubella %><br>
+	</div>
+
+	<div class="col-sm-4">
+	  <strong>HIV:</strong>
+	  <%= @description.mother_datum.HIV %><br>
+	</div>
+      </div>
+
+      <div class="row">
+	<div class="col-sm-4">
+	  <strong>Diabetes:</strong>
+	  <%= @description.mother_datum.diabetes %><br>
+	</div>
+
+	<div class="col-sm-4">
+	  <strong>GBS:</strong>
+	  <%= @description.mother_datum.GBS %><br>
+	</div>
+
+	<div class="col-sm-4">
+	  <strong>Amniocentesis:</strong>
+	  <%= @description.mother_datum.amniocentesis %><br>
+	</div>
+      </div>
+
+      <div class="row">
+	<div class="col-sm-12">
+	  <strong>Previous Pregnancy Summary:</strong>
+	  <%= @description.mother_datum.previous_pregnancy_summary.html_safe %><br>
+	</div>
+      </div>
+
+      <div class="row">
+	<div class="col-sm-12">
+	  <strong>Present Pregnancy Summary:</strong>
+	  <%= @description.mother_datum.present_pregnancy_summary.html_safe %><br>
+	</div>
+      </div>
+
+      <div class="row">
+	<div class="col-sm-12">
+	  <strong>Ultrasound findings:</strong>
+	  <%= @description.mother_datum.ultrasound_finding.html_safe %><br>
+	</div>
+      </div>
+
+      <div class="row">
+	<div class="col-sm-4">
+	  <strong>Birth Weight:</strong>
+	  <%= @description.mother_datum.birth_weight %><br>
+	</div>
+
+	<div class="col-sm-4">
+	  <strong>Maceration Degree:</strong>
+	  <%= @description.mother_datum.maceration_degree %><br>
+	</div>
+
+	<div class="col-sm-4">
+	  <strong>Gross Appearance:</strong>
+	  <%= @description.mother_datum.gross_appearance %><br>
+	</div>
+      </div>
+
+      <div class="row">
+	<div class="col-sm-6">
+	  <strong>Placenta Available?:</strong>
+	  <%= @description.mother_datum.placenta_available_for_examination %><br>
+	</div>
+
+	<div class="col-sm-6">
+	  <strong>Amniotic Fluid:</strong>
+	  <%= @description.mother_datum.amniotic_fluid %><br>
+	</div>
+      </div>
+
+      <div class="row">
+	<div class="col-sm-12">
+	  <strong>Medical History:</strong>
+	  <%= @description.mother_datum.mother_medical_history.html_safe %><br>
+	</div>
+      </div>
+      <div class="row">
+	<div class="col-sm-12">
+	  <strong>checkbox:</strong>
+	  <%= @description.mother_datum.feto_placental_findings_at_the_time_of_delivery %><br>
+	</div>
+      </div>
+    </div>
+
+    <%= link_to 'Edit Mothers Information', edit_mother_datum_path(@description), class: 'btn btn-primary' %> 

@@ -1,0 +1,45 @@
+          <div class="row" style="width:100%">
+          		   <div class="col-sm-6 drop-down">
+          		      <%= f.label  :axilla_configuration %><br>
+          		      <%= f.select :axilla_configuration, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+          		   </div>
+          
+          		   <div class="col-sm-6">
+                             <% if !@description.external.nil?  %>
+                              <% if @description.external.axilla_configuration == "Abnormal" %>
+          	  	      <%= f.label  :please_specify, { id:"label_external_axilla_configuration_specify" } %><br>
+          		      <%= f.text_field :axilla_configuration_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+                              <% else %>
+          	  	      <%= f.label  :please_specify, { id:"label_external_axilla_configuration_specify" } %><br>
+          		      <%= f.text_field :axilla_configuration_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+                              <% end %>
+                             <% end %>
+          		  </div>
+          		</div>
+                
+          <div class="row" style="width:100%">
+          		   <div class="col-sm-6 drop-down">
+          		      <%= f.label  :axillary_lymph_nodes %><br>
+          		      <%= f.select :axillary_lymph_nodes, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+          		   </div>
+          
+          		   <div class="col-sm-6">
+                             <% if !@description.external.nil?  %>
+                              <% if @description.external.axillary_lymph_nodes == "Abnormal" %>
+          	  	      <%= f.label  :please_specify, { id:"label_external_axillary_lymph_nodes_specify" } %><br>
+          		      <%= f.text_field :axillary_lymph_nodes_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+                              <% else %>
+          	  	      <%= f.label  :please_specify, { id:"label_external_axillary_lymph_nodes_specify" } %><br>
+          		      <%= f.text_field :axillary_lymph_nodes_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+                              <% end %>
+                             <% end %>
+          		  </div>
+          		</div>
+                
+          
+          	     <div class="row" style="width:100%">
+          		<div class="field col-sm-4">
+          		    <%= f.label :chest_other %><br>
+          		    <%= f.text_field :chest_other, class: "form-control" %>
+          		</div> 
+          	      </div>

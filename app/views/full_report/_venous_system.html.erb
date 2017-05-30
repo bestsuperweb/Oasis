@@ -1,0 +1,12 @@
+<div>
+  <h3>Venous system</h3>
+  <table>
+    <%
+      @names_array = ["State of distension","Contents","Other","Microscopic description"]
+      @prop_array = ["venous_system_state_of_distension","venous_system_anomalies","venous_system_other","venous_system_md"]
+      @specify_array = ["venous_system_state_of_distension_specify","venous_system_anomalies_specify","",""]
+    %>
+    <%= render :partial => "internal_loop"%>
+</table>
+</div>
+

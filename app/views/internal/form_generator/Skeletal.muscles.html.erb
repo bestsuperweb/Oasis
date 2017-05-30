@@ -1,0 +1,59 @@
+<div class="panel panel-primary">
+        <div class="panel-heading">
+           <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#Skeletal-muscles">Skeletal-muscles</a>
+           </h4>
+        </div>
+      <div id="Skeletal-muscles" class="panel-collapse collapse in"> 
+<div class="row" style="width:100%">
+		   <div class="col-sm-6 drop-down">
+		      <%= f.label  :skeletal_muscle_color_consistency %><br>
+		      <%= f.select :skeletal_muscle_color_consistency, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+		   </div>
+
+		   <div class="col-sm-6">
+		   <% if !@description.internal.nil?  %>
+		    <% if @description.internal.skeletal_muscle_color_consistency == "Abnormal" %>
+		      <%= f.label  :please_specify, { id:"label_internal_skeletal_muscle_color_consistency_specify" } %><br>
+		      <%= f.text_field :skeletal_muscle_color_consistency_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_skeletal_muscle_color_consistency_specify" } %><br>
+		      <%= f.text_field :skeletal_muscle_color_consistency_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		    <% end %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_skeletal_muscle_color_consistency_specify" } %><br>
+		      <%= f.text_field :skeletal_muscle_color_consistency_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		   <% end %>
+		  </div>
+		</div>
+      
+<div class="row" style="width:100%">
+		   <div class="col-sm-6 drop-down">
+		      <%= f.label  :skeletal_muscle_size %><br>
+		      <%= f.select :skeletal_muscle_size, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+		   </div>
+
+		   <div class="col-sm-6">
+		   <% if !@description.internal.nil?  %>
+		    <% if @description.internal.skeletal_muscle_size == "Abnormal" %>
+		      <%= f.label  :please_specify, { id:"label_internal_skeletal_muscle_size_specify" } %><br>
+		      <%= f.text_field :skeletal_muscle_size_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_skeletal_muscle_size_specify" } %><br>
+		      <%= f.text_field :skeletal_muscle_size_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		    <% end %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_skeletal_muscle_size_specify" } %><br>
+		      <%= f.text_field :skeletal_muscle_size_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		   <% end %>
+		  </div>
+		</div>
+      
+
+	     <div class="row" style="width:100%">
+		<div class="field col-sm-4">
+		    <%= f.label :skeletal_muscle_other %><br>
+		    <%= f.text_field :skeletal_muscle_other, class: "form-control" %>
+	     </div> </div>
+</div>
+</div>

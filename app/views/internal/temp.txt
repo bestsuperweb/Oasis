@@ -1,0 +1,233 @@
+fat
+hydration
+subcutaneous other
+peritoneal serosal surfaces
+fluid
+fluid quantity
+peritoneal nature of fluid
+peritoneal cavity organ relations
+retrroperitoneum
+umbilical vessels
+no of umbilical arteries
+peritoneal cavity other
+pleural serosal surfaces
+pneumothorax
+pleural cavities amount of fluid
+pleural nature of fluid
+pleural cavity organ relations
+diaphragm
+pleural cavities other
+mediastinum position configuration
+mediastinum nodes masses
+pneumomediastinum
+mediastinum other
+serosal sarfaces
+pericardial sac contents
+pericardial sac amount of fluid
+heart position
+epicardium
+heart shape
+heart size
+heart only weight
+combined heart and lungs weight
+configuration and contents
+atrial situs
+ventricular situs
+atrial septum
+ventricular septum
+endocardium
+myocardium
+right ventricular wall thickness
+left ventricular wall thickness
+tricuspid valve
+tricuspid valve circumference
+pulmonic valve
+pulmonic valave circumference
+mitral valve
+mitral valve circumference
+aortic valve
+aortic valve circumference
+origins of aorta and pulmonary artery
+arch configuartion
+coronary arteries
+arch branches
+thoracic and abdominal branches
+intima and wall
+pulmonary arteries
+ductus
+venous system anomalies
+venous system state of distension
+venous system contents
+cardiovascular other
+epiglottis
+foreign material in lumen
+larynx trachea configuration position
+vocal cords
+tracheastomy
+mucosal surfaces
+tracheal rings
+larynx other
+right lungs weight
+left lung weight
+bilateral
+combined heart and lungs weight
+lung to body weight ratio
+lobar pattern
+state of expansion
+lungs consistency
+bronchial tree
+vessels
+parenchyma color
+congestion
+interstitial emphysema
+hilar nodes
+visceral pleura
+pleural petechiae
+fixed by perfusion
+esophagus size position configuration
+esophagus mucosa and wall
+stomach size position configuration
+stomach mucosa and wall
+stomach and duodenum contents
+ampulla
+small intestine size position configuration
+small intestine rotation
+small intestine mucosa and wall
+small intestine state of distension
+small intestine contents
+mecekel diverticulum
+large intestine size position configuration
+large intestine rotation
+large intestine mucosa and wall
+large intestine state of distension
+large intestine contents
+configuration
+liver weight
+liver size shape
+liver and billiary system external surface
+cut surface
+gallbladder
+bile ducts
+bile
+stones
+vessels portal vein hepatic artery
+pancreas weight
+size configuration
+pancreas parenchyma or cut surface
+ducts
+genitourinary anomalies
+right kidnes weight
+right kidney configuration position
+right kidney external surface
+right kidney parenchyma or cut surface
+right kidney cortical thickness
+right kidney medulla depth
+right kidney pelves and calyces
+right kidney peripelvic fat and lymph nodes
+right kidney renal vessels
+right kidney ureter
+left kidney weight
+left kidney configuration position
+left kidney external surface
+left kidney parenchyma or cut surface
+left kidney cortical thickness
+left kidney medulla depth
+left kidney pelves and calyces
+left kideny peripelvic fat and lymph nodes
+left panel renal vessels
+left kidney ureter
+size and configuration
+wall and mucosa
+perivesical tissue
+bladder contents
+urethra
+prostate
+epididymis
+testes
+male genetalia other
+vagina
+uterus
+right fallopian tubes
+right ovary
+left fallopian tube
+left ovary
+female genetalia other
+right adrenal gland weight
+right adrenal pos config shape
+right adrenal gland external surface
+right adrenal gland parenchyma or cut surface
+right adrenal cortex
+right adrenal fetal cortex
+right adrenal medulla
+right adrenal other
+left adrenal gland weight
+left adrenal pos config shape
+left adrenal gland external surface
+left adrenal gland parenchyma or cut surface
+left adrenal cortex
+left adrenal fetal cortex
+left adrenal medulla
+left adrenal other
+thyroid weight
+thyroid pos config shape
+thyroid external surface
+thyroid parenchyma or cut surface
+thyroid other
+pituitary weight
+pituitary pos config shape
+pituitary external surface
+pituitary parenchyma or cut surface
+parathyroid gland
+weight
+thymus pos config shape
+petechiae on external surface
+thymus parenchyma or cut surface
+thymus other
+spleen weight
+spleen shape position configuration
+capsular surface
+spleen consistency
+spleen parenchyma or cut surface
+accessory spleens
+spleen other
+cervical
+axillary
+mediastinal
+hilar
+celiac peripancreatic
+mesenteric
+periaortic
+iliac
+inguinal
+lymph nodes other
+hardness
+bone anomalies
+marrow
+bones other
+skeletal muscle color consistency
+skeletal muscle size
+skeletal muscle other
+bones
+sutures fontanelles
+skull base
+sella
+petrous pyramids opened and cultured
+ears removed
+foramen magnum antero-posterior dimension
+foramen magnum antero-lateral dimension
+cranium other
+dura falx tentorium
+subdural epidural
+venous sinuses
+sinuses other
+brain weight
+configuration lobar pattern
+brain consistency
+pachymeninges
+blood vessels
+cranial nerves
+kernicterus
+extradural space
+meninges
+cord proper
+peripheral nervous system

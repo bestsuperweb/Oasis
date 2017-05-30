@@ -1,0 +1,230 @@
+<br>
+<br>
+
+<% if @description.question_answer.nil? 
+      @question_answer = QuestionAnswer.new
+  end %>
+
+<%= form_for @question_answer, url: question_answer_path do |f| %>
+  <% if @question_answer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@question_answer.errors.count, "error") %> prohibited this question_answer from being saved:</h2>
+      <ul>
+	<% @question_answer.errors.full_messages.each do |message| %>
+	  <li><%= message %></li>
+	<% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <div class="panel panel-qa">
+      <div class="panel-heading panel-heading-qa small-heading">
+	<span class="fa fa-user pull-left"></span>Diagnosis/Cause of death
+      </div>
+      <div class="panel-body panel-body-qa">
+	<div class="row">
+	<div class="col-sm-3 custom-prop">
+	  <%= f.label :major_clinical_diagnosis %>
+	</div>
+	<div class="col-sm-9 custom-val">
+	  <%= f.text_field :major_clinical_diagnosis, class: "form-control input-sm" %>
+	</div>
+	</div>
+	<div class="row">
+	<div class="col-sm-3 custom-prop">
+	  <%= f.label :major_pathologic_diagnosis %>
+	</div>
+      <div class="col-sm-9 custom-val">
+	<%= f.text_field :major_pathologic_diagnosis, class: "form-control input-sm" %>
+      </div>
+	</div>
+	<div class="row">
+      <div class="col-sm-3 custom-prop">
+	<%= f.label :clinical_cause_of_death %>
+      </div>
+      <div class="col-sm-9 custom-val">
+	<%= f.text_field :clinical_cause_of_death, class: "form-control input-sm" %>
+      </div>
+	</div>
+	<div class="row">
+      <div class="col-sm-3 custom-prop">
+	<%= f.label :pathological_cause_of_death %>
+      </div>
+      <div class="col-sm-9 custom-val">
+	<%= f.text_field :pathological_cause_of_death, class: "form-control input-sm" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="panel panel-qa">
+      <div class="panel-heading panel-heading-qa small-heading">
+	<span class="fa fa-user pull-left"></span>Questionnaire for signout
+      </div>
+      <div class="panel-body panel-body-qa">
+      <div class="field col-sm-7 custom-prop">
+	<%= f.label  :discover_a_discrepancy_between_clinical_and_pathologic_diagnosis, "Did the autopsy discover a discrepancy between clinical and pathologic diagnosis?" %>
+      </div>
+      <div class="field col-sm-5 custom-val">
+        <%= f.select :discover_a_discrepancy_between_clinical_and_pathologic_diagnosi , [:yes, :no], { :prompt => "Select One" },{ class: "form-control input-sm"} %>
+      </div>
+      <div class="field col-sm-7 custom-prop">
+	<%= f.label  :establish_an_unexpected_additional_diagnosis, "Did the autopsy establish an unexpected additional diagnosis?" %><br>
+      </div>
+      <div class="field col-sm-5 custom-val">
+	<%= f.select :establish_an_unexpected_additional_diagnosis, [:yes, :no], { :prompt => "Select One" },{ class: "form-control input-sm"} %>
+      </div>
+      <div class="field col-sm-7 custom-prop">
+	<%= f.label  :confirm_the_major_clinical_diagnosis, "Did the autopsy confirm the major clinical diagnosis?" %>
+      </div>
+      <div class="field col-sm-5 custom-val">
+	<%= f.select :confirm_the_major_clinical_diagnosis, [:yes, :no], { :prompt => "Select One" },{ class: "form-control input-sm"} %>
+      </div>
+      <div class="field col-sm-7 custom-prop">
+	<%= f.label  :information_relevant_to_genetic_counselling, "Did the autopsy convey information relevant to genetic counselling?" %><br>
+      </div>
+      <div class="field col-sm-5 custom-val">
+	<%= f.select :information_relevant_to_genetic_counselling, [:yes, :no, :"not applicable"], { :prompt => "Select One" },{ class: "form-control input-sm"} %>
+      </div>
+      <div class="field col-sm-7 custom-prop">
+	<%= f.label  :information_relevant_to_treatment_effect , "Did the autopsy convey information relevant to treatment effect?" %><br>
+      </div>
+      <div class="field col-sm-5 custom-val">
+	<%= f.select :information_relevant_to_treatment_effect, [:yes, :no, :"not applicable"], { :prompt => "Select One" },{ class: "form-control input-sm"} %>
+      </div>
+      <div class="field col-sm-7 custom-prop">
+	<%= f.label  :information_on_diagnostic_procedures, "Did the autopsy convey information on diagnostic procedures?" %><br>
+      </div>
+      <div class="field col-sm-5 custom-val">
+	<%= f.select :information_on_diagnostic_procedures, [:yes, :no, :"not applicable"], { :prompt => "Select One" },{ class: "form-control input-sm"} %>
+      </div>
+      <div class="field col-sm-7 custom-prop">
+	<%= f.label  :information_relevant_to_previous_lab_or_anatomic_pathology_data, "Did the autopsy convey information relevant to previous lab or anatomic pathology data?" %><br>
+      </div>
+      <div class="field col-sm-5 custom-val">
+	<%= f.select :information_relevant_to_previous_lab_or_anatomic_pathology_data, [:yes, :no, :"not applicable"], { :prompt => "Select One" },{ class: "form-control input-sm"} %>
+      </div>
+      <div class="field col-sm-7 custom-prop">
+	<%= f.label  :are_all_parts_of_the_report_complete, "Are all parts of the report complete?" %><br>
+      </div>
+      <div class="field col-sm-5 custom-val">
+	<%= f.select :are_all_parts_of_the_report_complete, [:yes, :no], { :prompt => "Select One" },{ class: "form-control input-sm"} %>
+      </div>
+      <div class="field col-sm-7 custom-prop">
+	<%= f.label  :are_the_descriptions_clear, "Are all descriptions clear?" %><br>
+      </div>
+      <div class="field col-sm-5 custom-val">
+	<%= f.select :are_the_descriptions_clear, [:yes, :no], { :prompt => "Select One" },{ class: "form-control input-sm"} %>
+      </div>
+      <div class="field col-sm-7 custom-prop">
+	<%= f.label  :are_all_gross_abnormalities_confirmed_microscopically, "Are all gross abnormalities confirmed microscopically?" %><br>
+      </div>
+      <div class="field col-sm-5 custom-val">
+	<%= f.select :are_all_gross_abnormalities_confirmed_microscopically, [:yes, :no], { :prompt => "Select One" },{ class: "form-control input-sm"} %>
+      </div>
+      <div class="field col-sm-7 custom-prop">
+	<%= f.label  :are_all_appropriate_special_studies_done_and_reported, "Are all appropriate special studies done and reported?" %><br>
+      </div>
+      <div class="field col-sm-5 custom-val">
+	<%= f.select :are_all_appropriate_special_studies_done_and_reported, [:yes, :no, :"not applicable"], { :prompt => "Select One" },{ class: "form-control input-sm" , onchange: "myFunction(this,'no')"} %> 
+      </div>
+      <% if !@description.question_answer.nil?  %>
+	<% if @description.question_answer.are_all_appropriate_special_studies_done_and_reported == "no" %>
+	  <div class="field col-sm-7 custom-prop">
+	    <%= f.label  :please_specify, { id:"label_question_answer_are_all_appropriate_special_studies_done_and_reported_specify" } %><br>
+	  </div>
+	  <div class="field col-sm-5 custom-val">
+	    <%= f.text_field :are_all_appropriate_special_studies_done_and_reported_specify, { class: "form-control input-sm", placeholder: "If no, explain" } %>
+	  </div>
+	<% else %>
+	  <div class="field col-sm-7 custom-prop">
+	    <%= f.label  :please_specify, { id:"label_question_answer_are_all_appropriate_special_studies_done_and_reported_specify" } %><br>
+	  </div>
+	  <div class="field col-sm-5 custom-val">
+	    <%= f.text_field :are_all_appropriate_special_studies_done_and_reported_specify, { class: "form-control input-sm", placeholder: "If no, explain" , disabled: true } %>
+	  </div>
+	<% end %>
+      <% else %>
+	  <div class="field col-sm-7 custom-prop">
+	    <%= f.label  :please_specify, { id:"label_question_answer_are_all_appropriate_special_studies_done_and_reported_specify" } %><br>
+	  </div>
+	  <div class="field col-sm-5 custom-val">
+	    <%= f.text_field :are_all_appropriate_special_studies_done_and_reported_specify, { class: "form-control input-sm", placeholder: "If no, explain" , disabled: true } %>
+	  </div>
+      <% end %>
+      <div class="field col-sm-7 custom-prop">
+	<%= f.label  :diagnoses_justified_on_anatomic_evidence_scroll_down_menu_sayin, "Are the diagnoses justified on anatomic evidence?" %>
+      </div>
+      <div class="field col-sm-5 custom-val">
+	<%= f.select :diagnoses_justified_on_anatomic_evidence_scroll_down_menu_sayin, [:yes, :no], { :prompt => "Select One" },{ class: "form-control input-sm"} %>
+      </div>
+      <div class="field col-sm-7 custom-prop">
+	<%= f.label  :diagnoses_complete %><br>
+      </div>
+      <div class="field col-sm-5 custom-val">
+	<%= f.select :diagnoses_complete, [:yes, :no], { :prompt => "Select One" },{ class: "form-control input-sm"} %>
+      </div>
+      <div class="field col-sm-7 custom-prop">
+	<%= f.label  :diagnosis_organized_and_sequenced_by_pathogenetic_significance, "Are the diagnoses organized and sequenced by pathogenetic significance?" %><br>
+      </div>
+      <div class="field col-sm-5 custom-val">
+	<%= f.select :diagnosis_organized_and_sequenced_by_pathogenetic_significance, [:yes, :no], { :prompt => "Select One" },{ class: "form-control input-sm"} %>
+      </div>
+      <div class="field col-sm-7 custom-prop">
+	<%= f.label  :transcriptional_or_typographical_errors, "Are there transcriptional or typographical errors?" %><br>
+      </div>
+      <div class="field col-sm-5 custom-val">
+	<%= f.select :transcriptional_or_typographical_errors, [:yes, :no], { :prompt => "Select One" },{ class: "form-control input-sm"} %>
+      </div>
+      <div class="field col-sm-7 custom-prop">
+	<%= f.label  :clinically_relevant_postmortem_findings_addressed_in_cpc, "Are clinically relevant post mortem findings addressed in the CPC?" %><br>
+      </div>
+      <div class="field col-sm-5 custom-val">
+	<%= f.select :clinically_relevant_postmortem_findings_addressed_in_cpc, [:yes, :no], { :prompt => "Select One" },{ class: "form-control input-sm"} %>
+      </div>
+      <div class="field col-sm-7 custom-prop">
+	<%= f.label :comments_and_recommendations %><br>
+      </div>
+      <div class="field col-sm-5 custom-val">
+	<%= f.text_field :comments_and_recommendations, class: "form-control input-sm" %>
+      </div>
+      <div class="field col-sm-7 custom-prop">
+	<%= f.label :reviewed_by %><br>
+      </div>
+      <div class="field col-sm-5 custom-val">
+	<%= f.text_field :reviewed_by, class: "form-control input-sm" %>
+      </div>
+      <div class="field col-sm-7 custom-prop">
+	<%= f.label :date %><br>
+      </div>
+      <div class="field col-sm-5 custom-val">
+	<%= f.text_field :date, class: "form-control input-sm date-picker" %>
+      </div>
+    </div> 
+  </div>
+
+<% if can? :create, QuestionAnswer %>
+  <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+    <i class="icon-ok icon-white"></i> Save
+  <% end %>
+<% end %>
+
+  <script>
+    $('.date-picker').datepicker()
+
+    function myFunction(item,match_string) {
+      var id = $(item).attr("id")
+      var target_id = id + "_specify"
+      var label_id = "label_" + id + "_specify"
+
+      if(item.value == match_string){
+	select_this = document.getElementById(target_id)
+	select_this.removeAttribute("disabled")
+      }
+      else{
+	select_this = document.getElementById(target_id)
+	select_this.setAttribute("disabled","true")
+      }
+    }
+  </script>
+<% end %>

@@ -1,0 +1,59 @@
+<br>
+
+<div class="row">
+  <div class="col-sm-12">
+    <div class="panel panel-qa">
+      <div class="panel-heading panel-heading-qa"> 
+	Diagnosis/Cause of Death
+      </div>
+      <div class="panel-body panel-body-qa"> 
+	<div class="row">
+	  <div class="col-sm-12">
+	    <div class="col-sm-8 custom-prop"><strong>Major clinical diagnosis:   </strong></div><div class="col-sm-4 custom-val"><%=@description.question_answer.major_clinical_diagnosis%>   </div>
+	    <div class="col-sm-8 custom-prop"><strong>Major pathologic diagnosis: </strong></div><div class="col-sm-4 custom-val"><%=@description.question_answer.major_pathologic_diagnosis%> </div>
+	    <div class="col-sm-8 custom-prop"><strong>Clinical cause of death:    </strong></div><div class="col-sm-4 custom-val"><%=@description.question_answer.clinical_cause_of_death%>    </div>
+	    <div class="col-sm-8 custom-prop"><strong>Pathological cause of death:</strong></div><div class="col-sm-4 custom-val"><%=@description.question_answer.pathological_cause_of_death%></div>
+	  </div>
+	</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <div class="panel panel-qa">
+      <div class="panel-heading panel-heading-qa"> 
+	Signout questions
+      </div>
+      <div class="panel-body panel-body-qa"> 
+	<div class="row">
+	  <div class="col-sm-8 custom-prop"><strong>Did the autopsy discover a discrepancy between clinical and pathologic diagnosis?       </strong> </div><div class="col-sm-4 custom-val"><%=@description.question_answer.discover_a_discrepancy_between_clinical_and_pathologic_diagnosi%></div>
+	  <div class="col-sm-8 custom-prop"><strong>Did the autopsy establish an unexpected additional diagnosis?                           </strong> </div><div class="col-sm-4 custom-val"><%=@description.question_answer.establish_an_unexpected_additional_diagnosis%>                   </div>
+	  <div class="col-sm-8 custom-prop"><strong>Did the autopsy confirm the major clinical diagnosis?                                   </strong> </div><div class="col-sm-4 custom-val"><%=@description.question_answer.confirm_the_major_clinical_diagnosis%>                           </div>
+	  <div class="col-sm-8 custom-prop"><strong>Did the autopsy convey information relevant to genetic counselling?                     </strong> </div><div class="col-sm-4 custom-val"><%=@description.question_answer.information_relevant_to_genetic_counselling%>                    </div>
+	  <div class="col-sm-8 custom-prop"><strong>Did the autopsy convey information relevant to treatment effect?                        </strong> </div><div class="col-sm-4 custom-val"><%=@description.question_answer.information_relevant_to_treatment_effect%>                       </div>
+	  <div class="col-sm-8 custom-prop"><strong>Did the autopsy convey information on diagnostic procedures?                            </strong> </div><div class="col-sm-4 custom-val"><%=@description.question_answer.information_on_diagnostic_procedures%>                           </div>
+	  <div class="col-sm-8 custom-prop"><strong>Did the autopsy convey information relevant to previous lab or anatomic pathology data?:</strong> </div><div class="col-sm-4 custom-val"><%=@description.question_answer.information_relevant_to_previous_lab_or_anatomic_pathology_data%></div>
+	  <div class="col-sm-8 custom-prop"><strong>Are all parts of the report complete?                                                   </strong> </div><div class="col-sm-4 custom-val"><%=@description.question_answer.are_all_parts_of_the_report_complete%>                           </div>
+	  <div class="col-sm-8 custom-prop"><strong>Are all descriptions clear?                                                             </strong> </div><div class="col-sm-4 custom-val"><%=@description.question_answer.are_the_descriptions_clear%>                                     </div>
+	  <div class="col-sm-8 custom-prop"><strong>Are all gross abnormalities confirmed microscopically?                                  </strong> </div><div class="col-sm-4 custom-val"><%=@description.question_answer.are_all_gross_abnormalities_confirmed_microscopically%>          </div>
+	  <div class="col-sm-8 custom-prop"><strong>Are all appropriate special studies done and reported?                                  </strong> </div><div class="col-sm-4 custom-val"><%=@description.question_answer.are_all_appropriate_special_studies_done_and_reported%>          </div>
+	  <div class="col-sm-8"></div><div class="col-sm-4"><%=@description.question_answer.are_all_appropriate_special_studies_done_and_reported_specify%> </div> 
+	  <div class="col-sm-8 custom-prop"><strong>Are the diagnoses justified on anatomic evidence?                                       </strong></div><div class="col-sm-4 custom-val"><%=@description.question_answer.diagnoses_justified_on_anatomic_evidence_scroll_down_menu_sayin%></div>
+	  <div class="col-sm-8 custom-prop"><strong>Diagnoses complete:                                                                     </strong></div><div class="col-sm-4 custom-val"><%=@description.question_answer.diagnoses_complete%>                                             </div>
+	  <div class="col-sm-8 custom-prop"><strong>Are the diagnoses organized and sequenced by pathogenetic significance?                 </strong></div><div class="col-sm-4 custom-val"><%=@description.question_answer.diagnosis_organized_and_sequenced_by_pathogenetic_significance%> </div>
+	  <div class="col-sm-8 custom-prop"><strong>Are there transcriptional or typographical errors?                                      </strong></div><div class="col-sm-4 custom-val"><%=@description.question_answer.transcriptional_or_typographical_errors%>                        </div>
+	  <div class="col-sm-8 custom-prop"><strong>Are clinically relevant post mortem findings addressed in the CPC?:                     </strong></div><div class="col-sm-4 custom-val"><%=@description.question_answer.clinically_relevant_postmortem_findings_addressed_in_cpc%>       </div>
+	  <div class="col-sm-8 custom-prop"><strong>Comments and recommendations:                                                           </strong></div><div class="col-sm-4 custom-val"><%=@description.question_answer.comments_and_recommendations%>                                   </div>
+	  <div class="col-sm-8 custom-prop"><strong>Reviewed by:                                                                            </strong></div><div class="col-sm-4 custom-val"><%=@description.question_answer.reviewed_by%>                                                    </div>
+	  <div class="col-sm-8 custom-prop"><strong>Date:                                                                                   </strong></div><div class="col-sm-4 custom-val"><%=@description.question_answer.date%>                                                           </div>
+	</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% if can? :update, QuestionAnswer %>
+ <%= link_to 'Edit Question Answers', edit_question_answer_path(@description), class: 'btn btn-primary' %>
+<% end %>

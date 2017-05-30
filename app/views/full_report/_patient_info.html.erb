@@ -1,0 +1,34 @@
+<div class="row">
+  <table class="table table-condensed patient-table" style="border-collapse: collapse; border-bottom: 0px solid black ; order-collapse: collapse">
+    <tbody>
+      <tr>
+	<td><strong>Name: </strong><%= @description.patient.name %> </td>
+	<td style="text-align: right"><strong>Case: </strong><%= @description.patient.case %> </td>
+      </tr>
+      <tr>
+	<td><strong>Date of Birth: </strong><%= @description.patient.dob %> </td>
+	<td style="text-align: right"><strong>Time of Birth: </strong>  <%= @description.patient.time_of_birth %> </td>
+      </tr>
+      <tr>
+	<td><strong>Date of Autopsy: </strong><%= @description.patient.date_autopsy %> </td>
+	<td style="text-align: right"><strong>Time of Autopsy: </strong><%= @description.patient.time_of_autopsy %> </td>
+      </tr>
+      <tr>
+	<td><strong>Race: </strong><%=@description.patient.race %></td>
+	<td style="text-align: right"><strong>Gender: </strong><%=@description.patient.sex %></td>
+      </tr>
+      <tr>
+	<td><strong>Date of Admission: </strong><%=@description.patient.date_admission %></td>
+	<td style="text-align: right"><strong>Pathologist: </strong><%= User.find(@description.patient.pathologist).email %></td>
+      </tr>
+      <tr>
+	<td><strong>Physicians: </strong><%=@description.patient.physician %></td>
+	<td style="text-align: right"><strong>Attendant: </strong><%= @description.patient.attendant %></td>
+      </tr>
+      <tr>
+	<td><strong>Prosector: </strong><%=@description.patient.prosector %></td>
+	<td style="text-align: right"><strong>Restrictions: </strong><%=@description.patient.restrictions %></td>
+      </tr>
+      <tbody>
+  </table>
+</div>

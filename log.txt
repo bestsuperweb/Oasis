@@ -1,0 +1,101 @@
+2016-08-15T15:44:59.907983+00:00 app[web.1]:   Rendered patients/_show.html.erb (0.3ms)
+2016-08-15T15:44:59.944329+00:00 app[web.1]:     39: 	       <div class="col-sm-3 no-pad small custom-prop">
+2016-08-15T15:44:59.944322+00:00 app[web.1]: ActionView::Template::Error (undefined local variable or method `weight' for #<#<Class:0x007fe065dce1f8>:0x007fe065d0f4d8>):
+2016-08-15T15:44:59.944322+00:00 app[web.1]:     34: 	       <div class="col-sm-2 no-pad custom-val">
+2016-08-15T15:44:59.944323+00:00 app[web.1]:     35: 	       </div>
+2016-08-15T15:44:59.944323+00:00 app[web.1]:     36: 	       <div class="col-sm-2 no-pad custom-val">
+2016-08-15T15:44:59.944324+00:00 app[web.1]:     37: 		 <strong><%= "From Maroun el al., for #{weight["gw"]} GW" %> </strong>
+2016-08-15T15:44:59.944325+00:00 app[web.1]:     38: 	       </div>
+2016-08-15T15:44:59.944330+00:00 app[web.1]:     40: 	       </div>
+2016-08-15T15:44:59.944330+00:00 app[web.1]:   app/views/external/_form.html.erb:37:in `block in _app_views_external__form_html_erb__92411915558535704_70300884340620'
+2016-08-15T15:44:59.944331+00:00 app[web.1]:   app/views/external/_form.html.erb:8:in `_app_views_external__form_html_erb__92411915558535704_70300884340620'
+2016-08-15T15:44:59.941179+00:00 app[web.1]:   Rendered external/_form.html.erb (12.6ms)
+2016-08-15T15:44:59.909574+00:00 app[web.1]:   [1m[36mMotherDatum Load (1.2ms)[0m  [1mSELECT  "mother_data".* FROM "mother_data" WHERE "mother_data"."description_id" = $1 LIMIT 1[0m  [["description_id", 2]]
+2016-08-15T15:44:59.941287+00:00 app[web.1]:   Rendered descriptions/show.html.erb within layouts/application (34.1ms)
+2016-08-15T15:44:59.941403+00:00 app[web.1]: Completed 500 Internal Server Error in 40ms (ActiveRecord: 6.1ms)
+2016-08-15T15:44:59.944331+00:00 app[web.1]:   app/views/layouts/_complete.html.erb:52:in `_app_views_layouts__complete_html_erb__2156459821657992112_70300879073580'
+2016-08-15T15:44:59.944332+00:00 app[web.1]: 
+2016-08-15T15:44:59.944332+00:00 app[web.1]:   app/views/descriptions/show.html.erb:6:in `_app_views_descriptions_show_html_erb___4056425393943236803_70300879166860'
+2016-08-15T15:45:00.063362+00:00 app[web.1]: Started GET "/descriptions/2" for 128.249.1.198 at 2016-08-15 15:45:00 +0000
+2016-08-15T15:45:00.065225+00:00 app[web.1]: Processing by DescriptionsController#show as HTML
+2016-08-15T15:45:00.065251+00:00 app[web.1]:   Parameters: {"id"=>"2"}
+2016-08-15T15:44:59.944332+00:00 app[web.1]: 
+2016-08-15T15:45:00.067790+00:00 app[web.1]:   [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+2016-08-15T15:45:00.069742+00:00 app[web.1]:   [1m[35mDescription Load (1.1ms)[0m  SELECT  "descriptions".* FROM "descriptions" WHERE "descriptions"."id" = $1 LIMIT 1  [["id", 2]]
+2016-08-15T15:45:00.070014+00:00 app[web.1]:   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "descriptions".* FROM "descriptions" WHERE "descriptions"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+2016-08-15T15:45:00.073305+00:00 app[web.1]:   Rendered layouts/_basic.html.erb (0.6ms)
+2016-08-15T15:45:00.073711+00:00 app[web.1]:   Rendered patients/_show.html.erb (0.2ms)
+2016-08-15T15:45:00.071523+00:00 app[web.1]:   [1m[35mPatient Load (1.1ms)[0m  SELECT  "patients".* FROM "patients" WHERE "patients"."description_id" = $1 LIMIT 1  [["description_id", 2]]
+2016-08-15T15:45:00.099871+00:00 app[web.1]:   Rendered mother_data/_form.html.erb (23.4ms)
+2016-08-15T15:45:00.075708+00:00 app[web.1]:   [1m[36mMotherDatum Load (1.3ms)[0m  [1mSELECT  "mother_data".* FROM "mother_data" WHERE "mother_data"."description_id" = $1 LIMIT 1[0m  [["description_id", 2]]
+2016-08-15T15:45:00.101841+00:00 app[web.1]:   [1m[35mExternal Load (1.4ms)[0m  SELECT  "externals".* FROM "externals" WHERE "externals"."description_id" = $1 LIMIT 1  [["description_id", 2]]
+2016-08-15T15:45:00.116567+00:00 app[web.1]:   Rendered external/_form.html.erb (13.4ms)
+2016-08-15T15:45:00.116675+00:00 app[web.1]:   Rendered descriptions/show.html.erb within layouts/application (44.1ms)
+2016-08-15T15:45:00.116610+00:00 app[web.1]:   Rendered layouts/_complete.html.erb (43.2ms)
+2016-08-15T15:45:00.116794+00:00 app[web.1]: Completed 500 Internal Server Error in 51ms (ActiveRecord: 6.1ms)
+2016-08-15T15:45:00.120146+00:00 app[web.1]: 
+2016-08-15T15:45:00.120147+00:00 app[web.1]: ActionView::Template::Error (undefined local variable or method `weight' for #<#<Class:0x007fe065dce1f8>:0x007fe064581370>):
+2016-08-15T15:45:00.120147+00:00 app[web.1]:     34: 	       <div class="col-sm-2 no-pad custom-val">
+2016-08-15T15:45:00.120149+00:00 app[web.1]:     36: 	       <div class="col-sm-2 no-pad custom-val">
+2016-08-15T15:45:00.120148+00:00 app[web.1]:     35: 	       </div>
+2016-08-15T15:45:00.120149+00:00 app[web.1]:     37: 		 <strong><%= "From Maroun el al., for #{weight["gw"]} GW" %> </strong>
+2016-08-15T15:45:00.120150+00:00 app[web.1]:     38: 	       </div>
+2016-08-15T15:45:00.120150+00:00 app[web.1]:     39: 	       <div class="col-sm-3 no-pad small custom-prop">
+2016-08-15T15:45:00.120150+00:00 app[web.1]:     40: 	       </div>
+2016-08-15T15:45:00.120151+00:00 app[web.1]:   app/views/external/_form.html.erb:8:in `_app_views_external__form_html_erb__92411915558535704_70300884340620'
+2016-08-15T15:45:00.120151+00:00 app[web.1]:   app/views/external/_form.html.erb:37:in `block in _app_views_external__form_html_erb__92411915558535704_70300884340620'
+2016-08-15T15:45:00.120152+00:00 app[web.1]:   app/views/descriptions/show.html.erb:6:in `_app_views_descriptions_show_html_erb___4056425393943236803_70300879166860'
+2016-08-15T15:45:00.120152+00:00 app[web.1]:   app/views/layouts/_complete.html.erb:52:in `_app_views_layouts__complete_html_erb__2156459821657992112_70300879073580'
+2016-08-15T15:45:00.120153+00:00 app[web.1]: 
+2016-08-15T15:45:00.120153+00:00 app[web.1]: 
+2016-08-15T15:44:58.877803+00:00 heroku[router]: at=info method=GET path="/descriptions/2" host=boiling-oasis-14239.herokuapp.com request_id=835cf1c6-5e62-4ef9-935c-3b15c88a7555 fwd="10.51.164.210,128.249.1.198" dyno=web.1 connect=1ms service=45ms status=500 bytes=1754
+2016-08-15T15:44:59.201730+00:00 heroku[router]: at=info method=GET path="/descriptions/2" host=boiling-oasis-14239.herokuapp.com request_id=dd768924-1a63-4e03-92b4-bd73bff6749b fwd="10.51.164.210,128.249.1.198" dyno=web.1 connect=1ms service=44ms status=500 bytes=1754
+2016-08-15T15:44:58.988588+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=boiling-oasis-14239.herokuapp.com request_id=0573f915-5a04-4a86-ba64-6f5c735d1a5d fwd="10.51.164.210,128.249.1.198" dyno=web.1 connect=1ms service=4ms status=200 bytes=228
+2016-08-15T15:44:59.401159+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=boiling-oasis-14239.herokuapp.com request_id=1eda413d-6afb-4277-86e1-03d19644b943 fwd="10.51.164.210,128.249.1.198" dyno=web.1 connect=1ms service=3ms status=200 bytes=228
+2016-08-15T15:44:59.616908+00:00 heroku[router]: at=info method=GET path="/descriptions/2" host=boiling-oasis-14239.herokuapp.com request_id=6fe505d7-be8e-42bf-aa45-5b1e6ed28439 fwd="10.51.164.210,128.249.1.198" dyno=web.1 connect=1ms service=47ms status=500 bytes=1754
+2016-08-15T15:44:59.822542+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=boiling-oasis-14239.herokuapp.com request_id=74e03fb5-531b-4c76-a065-b413d54dd0d4 fwd="10.51.164.210,128.249.1.198" dyno=web.1 connect=1ms service=3ms status=200 bytes=228
+2016-08-15T15:45:00.089050+00:00 heroku[router]: at=info method=GET path="/descriptions/2" host=boiling-oasis-14239.herokuapp.com request_id=fd303251-c4e4-4dba-ac83-61a64cb64ced fwd="10.51.164.210,128.249.1.198" dyno=web.1 connect=1ms service=62ms status=500 bytes=1754
+2016-08-15T15:44:59.916288+00:00 heroku[router]: at=info method=GET path="/descriptions/2" host=boiling-oasis-14239.herokuapp.com request_id=4ce45389-f128-4dab-8ae1-841441228e5a fwd="10.51.164.210,128.249.1.198" dyno=web.1 connect=1ms service=49ms status=500 bytes=1754
+2016-08-15T15:44:59.520132+00:00 heroku[router]: at=info method=GET path="/descriptions/2" host=boiling-oasis-14239.herokuapp.com request_id=4a1347c3-f7ac-4b21-9afb-02e8232ea82c fwd="10.51.164.210,128.249.1.198" dyno=web.1 connect=1ms service=43ms status=500 bytes=1754
+2016-08-15T15:45:00.199955+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=boiling-oasis-14239.herokuapp.com request_id=7cc35880-da60-4bd2-add3-e630ec8cf56a fwd="10.51.164.210,128.249.1.198" dyno=web.1 connect=1ms service=4ms status=200 bytes=228
+2016-08-15T15:45:04.585019+00:00 app[web.1]: Completed 200 OK in 10ms (Views: 5.3ms | ActiveRecord: 2.4ms)
+2016-08-15T15:45:04.582276+00:00 app[web.1]:   Rendered descriptions/index.html.erb within layouts/application (3.2ms)
+2016-08-15T15:45:04.573090+00:00 app[web.1]: Started GET "/descriptions" for 128.249.1.198 at 2016-08-15 15:45:04 +0000
+2016-08-15T15:45:04.575075+00:00 app[web.1]: Processing by DescriptionsController#index as HTML
+2016-08-15T15:45:04.581134+00:00 app[web.1]:   [1m[35mDescription Load (1.2ms)[0m  SELECT "descriptions".* FROM "descriptions"
+2016-08-15T15:45:04.577676+00:00 app[web.1]:   [1m[36mUser Load (1.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+2016-08-15T15:45:04.554882+00:00 heroku[router]: at=info method=GET path="/descriptions" host=boiling-oasis-14239.herokuapp.com request_id=98435184-1c6e-43e1-886a-339e162bb84b fwd="10.51.164.210,128.249.1.198" dyno=web.1 connect=1ms service=18ms status=200 bytes=2905
+2016-08-15T15:45:04.877122+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=boiling-oasis-14239.herokuapp.com request_id=0db7835c-14bd-4977-9bff-d9b412029d91 fwd="10.51.164.210,128.249.1.198" dyno=web.1 connect=1ms service=4ms status=304 bytes=133
+2016-08-15T15:45:08.200902+00:00 app[web.1]: Started GET "/descriptions/1" for 128.249.1.198 at 2016-08-15 15:45:08 +0000
+2016-08-15T15:45:08.205399+00:00 app[web.1]:   [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+2016-08-15T15:45:08.202992+00:00 app[web.1]: Processing by DescriptionsController#show as HTML
+2016-08-15T15:45:08.203019+00:00 app[web.1]:   Parameters: {"id"=>"1"}
+2016-08-15T15:45:08.239270+00:00 app[web.1]:   [1m[35mExternal Load (1.3ms)[0m  SELECT  "externals".* FROM "externals" WHERE "externals"."description_id" = $1 LIMIT 1  [["description_id", 1]]
+2016-08-15T15:45:08.210269+00:00 app[web.1]:   Rendered layouts/_basic.html.erb (0.2ms)
+2016-08-15T15:45:08.237582+00:00 app[web.1]:   Rendered mother_data/_form.html.erb (24.1ms)
+2016-08-15T15:45:08.211159+00:00 app[web.1]:   Rendered patients/_show.html.erb (0.7ms)
+2016-08-15T15:45:08.207527+00:00 app[web.1]:   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "descriptions".* FROM "descriptions" WHERE "descriptions"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+2016-08-15T15:45:08.206924+00:00 app[web.1]:   [1m[35mDescription Load (1.1ms)[0m  SELECT  "descriptions".* FROM "descriptions" WHERE "descriptions"."id" = $1 LIMIT 1  [["id", 1]]
+2016-08-15T15:45:08.209044+00:00 app[web.1]:   [1m[35mPatient Load (1.0ms)[0m  SELECT  "patients".* FROM "patients" WHERE "patients"."description_id" = $1 LIMIT 1  [["description_id", 1]]
+2016-08-15T15:45:08.212645+00:00 app[web.1]:   [1m[36mMotherDatum Load (1.1ms)[0m  [1mSELECT  "mother_data".* FROM "mother_data" WHERE "mother_data"."description_id" = $1 LIMIT 1[0m  [["description_id", 1]]
+2016-08-15T15:45:08.252900+00:00 app[web.1]:     34: 	       <div class="col-sm-2 no-pad custom-val">
+2016-08-15T15:45:08.251314+00:00 app[web.1]:   Rendered external/_form.html.erb (11.1ms)
+2016-08-15T15:45:08.251370+00:00 app[web.1]:   Rendered layouts/_complete.html.erb (41.0ms)
+2016-08-15T15:45:08.251432+00:00 app[web.1]:   Rendered descriptions/show.html.erb within layouts/application (41.5ms)
+2016-08-15T15:45:08.252901+00:00 app[web.1]:     35: 	       </div>
+2016-08-15T15:45:08.252901+00:00 app[web.1]:     36: 	       <div class="col-sm-2 no-pad custom-val">
+2016-08-15T15:45:08.252900+00:00 app[web.1]: ActionView::Template::Error (undefined local variable or method `weight' for #<#<Class:0x007fe065dce1f8>:0x007fe0665f9eb8>):
+2016-08-15T15:45:08.251552+00:00 app[web.1]: Completed 500 Internal Server Error in 48ms (ActiveRecord: 5.7ms)
+2016-08-15T15:45:08.252899+00:00 app[web.1]: 
+2016-08-15T15:45:08.252903+00:00 app[web.1]:     38: 	       </div>
+2016-08-15T15:45:08.252905+00:00 app[web.1]:   app/views/layouts/_complete.html.erb:52:in `_app_views_layouts__complete_html_erb__2156459821657992112_70300879073580'
+2016-08-15T15:45:08.252906+00:00 app[web.1]:   app/views/descriptions/show.html.erb:6:in `_app_views_descriptions_show_html_erb___4056425393943236803_70300879166860'
+2016-08-15T15:45:08.252906+00:00 app[web.1]: 
+2016-08-15T15:45:08.252904+00:00 app[web.1]:   app/views/external/_form.html.erb:37:in `block in _app_views_external__form_html_erb__92411915558535704_70300884340620'
+2016-08-15T15:45:08.252903+00:00 app[web.1]:     39: 	       <div class="col-sm-3 no-pad small custom-prop">
+2016-08-15T15:45:08.252903+00:00 app[web.1]:     40: 	       </div>
+2016-08-15T15:45:08.252905+00:00 app[web.1]:   app/views/external/_form.html.erb:8:in `_app_views_external__form_html_erb__92411915558535704_70300884340620'
+2016-08-15T15:45:08.252902+00:00 app[web.1]:     37: 		 <strong><%= "From Maroun el al., for #{weight["gw"]} GW" %> </strong>
+2016-08-15T15:45:08.252906+00:00 app[web.1]: 
+2016-08-15T15:45:08.221731+00:00 heroku[router]: at=info method=GET path="/descriptions/1" host=boiling-oasis-14239.herokuapp.com request_id=4dbda5d4-5cca-4728-be3f-82d8b74f07af fwd="10.51.164.210,128.249.1.198" dyno=web.1 connect=2ms service=57ms status=500 bytes=1754
+2016-08-15T15:45:08.307805+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=boiling-oasis-14239.herokuapp.com request_id=c6f8f808-682c-46f9-81c5-7fa00aba4f97 fwd="10.51.164.210,128.249.1.198" dyno=web.1 connect=1ms service=3ms status=304 bytes=133

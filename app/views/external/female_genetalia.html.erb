@@ -1,0 +1,83 @@
+          <div class="row" style="width:100%">
+            <div class="col-sm-6 drop-down">
+              <%= f.label  :labia %><br>
+              <%= f.select :labia, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+            </div>
+          
+            <div class="col-sm-6">
+              <% if !@description.external.nil?  %>
+                <% if @description.external.labia == "Abnormal" %>
+          	<%= f.label  :please_specify, { id:"label_external_labia_specify" } %><br>
+          	<%= f.text_field :labia_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+                <% else %>
+          	<%= f.label  :please_specify, { id:"label_external_labia_specify" } %><br>
+          	<%= f.text_field :labia_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+          
+          <div class="row" style="width:100%">
+            <div class="col-sm-6 drop-down">
+              <%= f.label  :clitoris %><br>
+              <%= f.select :clitoris, [:Normal, :Abnormal, :"Not examined"], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+            </div>
+          
+            <div class="col-sm-6">
+              <% if !@description.external.nil?  %>
+                <% if @description.external.clitoris == "Abnormal" %>
+          	<%= f.label  :please_specify, { id:"label_external_clitoris_specify" } %><br>
+          	<%= f.text_field :clitoris_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+                <% else %>
+          	<%= f.label  :please_specify, { id:"label_external_clitoris_specify" } %><br>
+          	<%= f.text_field :clitoris_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+          
+          <div class="row" style="width:100%">
+            <div class="col-sm-6 drop-down">
+              <%= f.label  :vagina_hymen %><br>
+              <%= f.select :vagina_hymen, [:Normal, :Abnormal, :"Not examined"], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+            </div>
+          
+            <div class="col-sm-6">
+              <% if !@description.external.nil?  %>
+                <% if @description.external.vagina_hymen == "Abnormal" %>
+          	<%= f.label  :please_specify, { id:"label_external_vagina_hymen_specify" } %><br>
+          	<%= f.text_field :vagina_hymen_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+                <% else %>
+          	<%= f.label  :please_specify, { id:"label_external_vagina_hymen_specify" } %><br>
+          	<%= f.text_field :vagina_hymen_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+          
+          <div class="row" style="width:100%">
+            <div class="col-sm-6 drop-down">
+              <%= f.label  :urethral_meatus %><br>
+              <%= f.select :urethral_meatus, [:Normal, :Abnormal, :"Not examined"], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+            </div>
+          
+            <div class="col-sm-6">
+              <% if !@description.external.nil?  %>
+                <% if @description.external.urethral_meatus == "Abnormal" %>
+          	<%= f.label  :please_specify, { id:"label_external_urethral_meatus_specify" } %><br>
+          	<%= f.text_field :urethral_meatus_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+                <% else %>
+          	<%= f.label  :please_specify, { id:"label_external_urethral_meatus_specify" } %><br>
+          	<%= f.text_field :urethral_meatus_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+          
+          
+          <div class="row" style="width:100%">
+            <div class="field col-sm-4">
+              <%= f.label :genitalia_other %><br>
+              <%= f.text_field :genitalia_other, class: "form-control" %>
+	  </div> 
+	</div>

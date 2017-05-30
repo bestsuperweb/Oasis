@@ -1,0 +1,12 @@
+<div>
+  <h3>Bones</h3>
+  <table>
+    <%
+      @names_array = ["Hardness","Bone anomalies","Marrow","Other","Microscopic description"]
+      @prop_array = ["hardness","bone_anomalies","marrow","bones_other","bone_md"]
+      @specify_array = ["hardness_specify","bone_anomalies_specify","marrow_specify","",""]
+    %>
+    <%= render :partial => "internal_loop"%>
+</table>
+</div>
+

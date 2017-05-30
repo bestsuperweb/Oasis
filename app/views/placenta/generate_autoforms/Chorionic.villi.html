@@ -1,0 +1,51 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h4 class="panel-title">
+      <a data-toggle="collapse" data-parent="#accordion" href="#Chorionic-villi">Chorionic-villi</a>
+    </h4>
+  </div>
+  <div id="Chorionic-villi" class="panel-collapse collapse in"> 
+    <div class="row" style="width:100%">
+      <div class="col-sm-4 drop-down">
+	<%= f.label  :maturation_appropriate_for_gestational_age %><br>
+	<%= f.select :maturation_appropriate_for_gestational_age, [:yes, :no], { :prompt => "Select One" },{ class: "form-control"} %>
+      </div> 
+    </div>
+    <div class="row" style="width:100%">
+      <div class="col-sm-4 drop-down">
+	<%= f.label  :maturation_no_specify %><br>
+	<%= f.select :maturation_no_specify, [:"accelerated maturation", :" immature villi", :" distal villous hypoplasia", :" uneven maturation", :" other"], { :prompt => "Select One" },{ class: "form-control"} %>
+      </div> 
+    </div>
+    <div class="row" style="width:100%">
+      <div class="col-sm-4 drop-down">
+	<%= f.label  :chorionic_villi_and_intervillous_space_normal %><br>
+	<%= f.select :chorionic_villi_and_intervillous_space_normal, [:yes, :no], { :prompt => "Select One" },{ class: "form-control"} %>
+      </div> 
+    </div>
+    <div class="row" style="width:100%">
+      <div class="col-sm-4 drop-down">
+	<%= f.label  :chorionic_villi_abnormal_chronic_lymphohistiocytic_villitis %><br>
+	<%= f.select :chorionic_villi_abnormal_chronic_lymphohistiocytic_villitis, [:yes, :no], { :prompt => "Select One" },{ class: "form-control"} %>
+      </div> 
+    </div>
+
+    <div class="row" style="width:100%">
+      <div class="field col-sm-4">
+	<%= f.label :chorionic_villi_abnormal_acute_intervillositis %><br>
+	<%= f.text_field :chorionic_villi_abnormal_acute_intervillositis, class: "form-control" %>
+    </div> </div>
+    <div class="row" style="width:100%">
+      <div class="col-sm-4 drop-down">
+	<%= f.label  :chorionic_villi_abnormal_avascular_villi %><br>
+	<%= f.select :chorionic_villi_abnormal_avascular_villi, [:focal, :" diffuse"], { :prompt => "Select One" },{ class: "form-control"} %>
+      </div> 
+    </div>
+
+    <div class="row" style="width:100%">
+      <div class="field col-sm-4">
+	<%= f.label :chorionic_villi_abnormal_other %><br>
+	<%= f.text_field :chorionic_villi_abnormal_other, class: "form-control" %>
+    </div> </div>
+  </div>
+</div>

@@ -1,0 +1,88 @@
+          <div class="row" style="width:100%">
+            <div class="col-sm-4 drop-down">
+              <%= f.label  :penis %><br>
+              <%= f.select :penis, [:Circumscribed, :"Non circumscribed"], { :prompt => "Select One" },{ class: "form-control"} %>
+            </div> 
+          </div>
+          <div class="row" style="width:100%">
+            <div class="col-sm-6 drop-down">
+              <%= f.label  :penile_length %><br>
+              <%= f.select :penile_length, [:Present, :Absent, :"Not examined"], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+            </div>
+          
+            <div class="col-sm-6">
+              <% if !@description.external.nil?  %>
+                <% if @description.external.penile_length == "Abnormal" %>
+          	<%= f.label  :please_specify, { id:"label_external_penile_length_specify" } %><br>
+          	<%= f.text_field :penile_length_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+                <% else %>
+          	<%= f.label  :please_specify, { id:"label_external_penile_length_specify" } %><br>
+          	<%= f.text_field :penile_length_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+          
+          <div class="row" style="width:100%">
+            <div class="col-sm-6 drop-down">
+              <%= f.label  :scrotum %><br>
+              <%= f.select :scrotum, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+            </div>
+          
+            <div class="col-sm-6">
+              <% if !@description.external.nil?  %>
+                <% if @description.external.scrotum == "Abnormal" %>
+          	<%= f.label  :please_specify, { id:"label_external_scrotum_specify" } %><br>
+          	<%= f.text_field :scrotum_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+                <% else %>
+          	<%= f.label  :please_specify, { id:"label_external_scrotum_specify" } %><br>
+          	<%= f.text_field :scrotum_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+          
+          <div class="row" style="width:100%">
+            <div class="col-sm-6 drop-down">
+              <%= f.label  :bilateral_testes_identified %><br>
+              <%= f.select :bilateral_testes_identified, [:Yes, :No], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'No')"} %> 
+            </div>
+          
+            <div class="col-sm-6">
+              <% if !@description.external.nil?  %>
+                <% if @description.external.bilateral_testes_identified == "No" %>
+          	<%= f.label  :please_specify, { id:"label_external_bilateral_testes_identified_specify" } %><br>
+          	<%= f.text_field :bilateral_testes_identified_specify, { class: "form-control", placeholder: "If No, explain" } %>
+                <% else %>
+          	<%= f.label  :please_specify, { id:"label_external_bilateral_testes_identified_specify" } %><br>
+          	<%= f.text_field :bilateral_testes_identified_specify, { class: "form-control", placeholder: "If No, explain" , disabled: true } %>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+          
+          <div class="row" style="width:100%">
+            <div class="col-sm-6 drop-down">
+              <%= f.label  :testes_size %><br>
+              <%= f.select :testes_size, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+            </div>
+          
+            <div class="col-sm-6">
+              <% if !@description.external.nil?  %>
+                <% if @description.external.testes_size == "Abnormal" %>
+          	<%= f.label  :please_specify, { id:"label_external_testes_size_specify" } %><br>
+          	<%= f.text_field :testes_size_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+                <% else %>
+          	<%= f.label  :please_specify, { id:"label_external_testes_size_specify" } %><br>
+          	<%= f.text_field :testes_size_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+          
+          <div class="row" style="width:100%">
+            <div class="col-sm-4 drop-down">
+              <%= f.label  :testes_position %><br>
+              <%= f.select :testes_position, [:Scrotal, :"Inguinal canal", :Pelvic, :Abdominal], { :prompt => "Select One" },{ class: "form-control"} %>
+            </div> 
+          </div>

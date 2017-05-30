@@ -1,0 +1,9 @@
+left adrenal gland normal	checkbox			
+left adrenal gland weight	number			Auto calculation: Expected for …. Weeks gestational age.
+left adrenal pos config shape	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+left adrenal gland external surface	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+left adrenal gland parenchyma or cut surface	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+left adrenal cortex	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+left adrenal fetal cortex	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+left adrenal medulla	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+left adrenal other	text			Empty box

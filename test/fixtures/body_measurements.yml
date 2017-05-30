@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  crown_heel: 1
+  crown_rump: 1
+  head_circumference: 1
+  chest_circumference: 1
+  abdomen_circumference: 1
+  weight: 1
+  birth_weight: 1
+  intercanthal_distance: 1
+  interpupillary_distance: 1
+  arms: 1
+  leg: 1
+  foot_length: 1
+  patient_id: 
+
+two:
+  crown_heel: 1
+  crown_rump: 1
+  head_circumference: 1
+  chest_circumference: 1
+  abdomen_circumference: 1
+  weight: 1
+  birth_weight: 1
+  intercanthal_distance: 1
+  interpupillary_distance: 1
+  arms: 1
+  leg: 1
+  foot_length: 1
+  patient_id: 

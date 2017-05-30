@@ -1,0 +1,95 @@
+   <div class="col-sm-3">
+     <div class="panel panel-internal squarish">
+       <div class="panel-heading panel-heading-internal small-heading squarish">
+         Chambers_and_septae
+       </div>
+       <div class="panel-body panel-body-internal squarish">
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Atrial_situs: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.atrial_situs_specify.nil? or @description.internal.atrial_situs_specify == "" ) ?  @description.internal.atrial_situs :  @description.internal.atrial_situs_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Ventricular_situs: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.ventricular_situs_specify.nil? or @description.internal.ventricular_situs_specify == "" ) ?  @description.internal.ventricular_situs :  @description.internal.ventricular_situs_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Atrial_septum: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.atrial_septum_specify.nil? or @description.internal.atrial_septum_specify == "" ) ?  @description.internal.atrial_septum :  @description.internal.atrial_septum_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Ventricular_septum: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.ventricular_septum_specify.nil? or @description.internal.ventricular_septum_specify == "" ) ?  @description.internal.ventricular_septum :  @description.internal.ventricular_septum_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Endocardium: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.endocardium_specify.nil? or @description.internal.endocardium_specify == "" ) ?  @description.internal.endocardium :  @description.internal.endocardium_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Myocardium: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.myocardium_specify.nil? or @description.internal.myocardium_specify == "" ) ?  @description.internal.myocardium :  @description.internal.myocardium_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Right_ventricular_wall_thickness : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.right_ventricular_wall_thickness%>               
+   	</div>
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Left_ventricular_wall_thickness : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.left_ventricular_wall_thickness%>               
+   	</div>
+         </div>
+   
+       </div>
+     </div>
+   </div>

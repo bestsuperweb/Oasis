@@ -1,0 +1,12 @@
+<div>
+  <h3>Subcutaneous</h3>
+  <table>
+    <%
+      @names_array = ["Fat","Hydration","Other","Microscopic description"]
+      @prop_array = ["fat","hydration","subcutaneous_other","subcutaneous_md"]
+      @specify_array =["","","",""]
+    %>
+    <%= render :partial => "internal_loop"%>
+</table>
+</div>
+

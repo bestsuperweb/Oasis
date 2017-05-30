@@ -1,0 +1,117 @@
+ <div class="col-sm-3">
+         <div class="panel panel-internal squarish">
+             <div class="panel-heading panel-heading-internal small-heading squarish">
+               Liver_and_biiary_system
+             </div>
+         <div class="panel-body panel-body-internal squarish">
+
+            <div class="row">
+              <div class="col-sm-6 custom-prop">
+                <strong>Liver_weight : </strong>
+              </div>
+              <div class="col-sm-6 custom-val">
+                 <%= @description.internal.liver_weight%>               
+              </div>
+	    </div>
+         
+
+            <div class="row">
+               <div class="col-sm-6 custom-prop">
+                  <strong>Liver_size_shape: </strong>
+               </div>
+               <div class="col-sm-6 custom-val">
+                  <%= ( @description.internal.liver_size_shape_specify.nil? or @description.internal.liver_size_shape_specify == "" ) ?  @description.internal.liver_size_shape :  @description.internal.liver_size_shape_specify 
+                  %>  
+               </div> 
+             </div>
+           
+
+            <div class="row">
+               <div class="col-sm-6 custom-prop">
+                  <strong>Liver_and_billiary_system_external_surface: </strong>
+               </div>
+               <div class="col-sm-6 custom-val">
+                  <%= ( @description.internal.liver_and_billiary_system_external_surface_specify.nil? or @description.internal.liver_and_billiary_system_external_surface_specify == "" ) ?  @description.internal.liver_and_billiary_system_external_surface :  @description.internal.liver_and_billiary_system_external_surface_specify 
+                  %>  
+               </div> 
+             </div>
+           
+
+            <div class="row">
+               <div class="col-sm-6 custom-prop">
+                  <strong>Cut_surface: </strong>
+               </div>
+               <div class="col-sm-6 custom-val">
+                  <%= ( @description.internal.cut_surface_specify.nil? or @description.internal.cut_surface_specify == "" ) ?  @description.internal.cut_surface :  @description.internal.cut_surface_specify 
+                  %>  
+               </div> 
+             </div>
+           
+
+            <div class="row">
+               <div class="col-sm-6 custom-prop">
+                  <strong>Gallbladder: </strong>
+               </div>
+               <div class="col-sm-6 custom-val">
+                  <%= ( @description.internal.gallbladder_specify.nil? or @description.internal.gallbladder_specify == "" ) ?  @description.internal.gallbladder :  @description.internal.gallbladder_specify 
+                  %>  
+               </div> 
+             </div>
+           
+
+            <div class="row">
+               <div class="col-sm-6 custom-prop">
+                  <strong>Bile_ducts: </strong>
+               </div>
+               <div class="col-sm-6 custom-val">
+                  <%= ( @description.internal.bile_ducts_specify.nil? or @description.internal.bile_ducts_specify == "" ) ?  @description.internal.bile_ducts :  @description.internal.bile_ducts_specify 
+                  %>  
+               </div> 
+             </div>
+           
+
+            <div class="row">
+               <div class="col-sm-6 custom-prop">
+                  <strong>Bile: </strong>
+               </div>
+               <div class="col-sm-6 custom-val">
+                  <%= ( @description.internal.bile_specify.nil? or @description.internal.bile_specify == "" ) ?  @description.internal.bile :  @description.internal.bile_specify 
+                  %>  
+               </div> 
+             </div>
+           
+
+            <div class="row">
+               <div class="col-sm-6 custom-prop">
+                  <strong>Stones: </strong>
+               </div>
+               <div class="col-sm-6 custom-val">
+                  <%= ( @description.internal.stones_specify.nil? or @description.internal.stones_specify == "" ) ?  @description.internal.stones :  @description.internal.stones_specify 
+                  %>  
+               </div> 
+             </div>
+           
+
+            <div class="row">
+               <div class="col-sm-6 custom-prop">
+                  <strong>Hilar_vessels_portal_vein_hepatic_artery: </strong>
+               </div>
+               <div class="col-sm-6 custom-val">
+                  <%= ( @description.internal.hilar_vessels_portal_vein_hepatic_artery_specify.nil? or @description.internal.hilar_vessels_portal_vein_hepatic_artery_specify == "" ) ?  @description.internal.hilar_vessels_portal_vein_hepatic_artery :  @description.internal.hilar_vessels_portal_vein_hepatic_artery_specify 
+                  %>  
+               </div> 
+             </div>
+           
+
+            <div class="row">
+              <div class="col-sm-6 custom-prop">
+                <strong>Liver_and_biiary_system_other : </strong>
+              </div>
+              <div class="col-sm-6 custom-val">
+                 <%= @description.internal.liver_and_biiary_system_other%>               
+              </div>
+	    </div>
+	 
+</div>
+</div>
+</div>

@@ -1,0 +1,108 @@
+        <div class="col-sm-3">
+          <div class="panel panel-internal squarish">
+            <div class="panel-heading panel-heading-internal small-heading squarish">
+              Spleen
+            </div>
+            <div class="panel-body panel-body-internal squarish">
+        
+              <div class="row">
+        	<div class="col-sm-6 no-pad small custom-prop">
+        	  <%= f.label  :Normal, class: "small" %><br>
+        	</div>		     
+        	<div class="col-sm-6 no-pad custom-val">
+        	  <%= f.check_box :spleen_normal, { class: "form-control input-sm" , :onchange => "makeNormal(this, '.spleen')" } %>
+        	</div>
+              </div>
+        
+        
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small">
+        	  <%= f.label :spleen_weight, class: "small" %>
+        	</div> 
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.number_field :spleen_weight, class: "form-control input-sm" %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :spleen_shape_position_configuration, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :spleen_shape_position_configuration, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent spleen" , "dependent-selector" => "#spleen_shape_position_configuration-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="spleen_shape_position_configuration-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :spleen_shape_position_configuration_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :spleen_shape_position_configuration_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :capsular_surface, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :capsular_surface, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent spleen" , "dependent-selector" => "#capsular_surface-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="capsular_surface-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :capsular_surface_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :capsular_surface_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :spleen_consistency, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :spleen_consistency, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent spleen" , "dependent-selector" => "#spleen_consistency-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="spleen_consistency-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :spleen_consistency_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :spleen_consistency_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :spleen_cut_surface, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :spleen_cut_surface, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent spleen" , "dependent-selector" => "#spleen_cut_surface-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="spleen_cut_surface-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :spleen_cut_surface_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :spleen_cut_surface_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+        	</div>
+              </div>
+              <div class="row">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :accessory_spleens, class: "small"%>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.select :accessory_spleens, [:yes, :no], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent spleen" , "dependent-selector" => "#accessory_spleens-dependent", "when-value" => "yes", "dependent-action" => "show-hide"} %>
+        	</div>
+              </div>
+              <div class="row" id="accessory_spleens-dependent">
+        	<div class="col-sm-6 nopad custom-prop small drop-down">
+        	  <%= f.label  :accessory_spleens_specify, class: "small" %><br>
+        	</div>
+        	<div class="col-sm-6 nopad custom-val">
+        	  <%= f.text_field :accessory_spleens_specify, { class: "form-control input-sm", placeholder: "If yes, explain" } %>
+        	</div>
+              </div>
+            </div>
+          </div>
+        </div>

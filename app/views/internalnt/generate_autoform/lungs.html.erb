@@ -1,0 +1,188 @@
+   <div class="col-sm-3">
+     <div class="panel panel-internal squarish">
+       <div class="panel-heading panel-heading-internal small-heading squarish">
+         Lungs
+       </div>
+       <div class="panel-body panel-body-internal squarish">
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Right_lungs_weight : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.right_lungs_weight%>               
+   	</div>
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Left_lung_weight : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.left_lung_weight%>               
+   	</div>
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Bilateral : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.bilateral%>               
+   	</div>
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Combined_heart_and_lungs_weight : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.combined_heart_and_lungs_weight%>               
+   	</div>
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Lung_to_body_weight_ratio : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.lung_to_body_weight_ratio%>               
+   	</div>
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Lobar_pattern: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.lobar_pattern_specify.nil? or @description.internal.lobar_pattern_specify == "" ) ?  @description.internal.lobar_pattern :  @description.internal.lobar_pattern_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>State_of_expansion: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.state_of_expansion_specify.nil? or @description.internal.state_of_expansion_specify == "" ) ?  @description.internal.state_of_expansion :  @description.internal.state_of_expansion_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Lungs_consistency: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.lungs_consistency_specify.nil? or @description.internal.lungs_consistency_specify == "" ) ?  @description.internal.lungs_consistency :  @description.internal.lungs_consistency_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Bronchial_tree: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.bronchial_tree_specify.nil? or @description.internal.bronchial_tree_specify == "" ) ?  @description.internal.bronchial_tree :  @description.internal.bronchial_tree_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Vessels: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.vessels_specify.nil? or @description.internal.vessels_specify == "" ) ?  @description.internal.vessels :  @description.internal.vessels_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Parenchyma_color: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.parenchyma_color_specify.nil? or @description.internal.parenchyma_color_specify == "" ) ?  @description.internal.parenchyma_color :  @description.internal.parenchyma_color_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Congestion : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.congestion%>               
+   	</div>
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Interstitial_emphysema : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.interstitial_emphysema%>               
+   	</div>
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Hilar_nodes: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.hilar_nodes_specify.nil? or @description.internal.hilar_nodes_specify == "" ) ?  @description.internal.hilar_nodes :  @description.internal.hilar_nodes_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Visceral_pleura: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.visceral_pleura_specify.nil? or @description.internal.visceral_pleura_specify == "" ) ?  @description.internal.visceral_pleura :  @description.internal.visceral_pleura_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Pleural_petechiae : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.pleural_petechiae%>               
+   	</div>
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Fixed_by_perfusion: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.fixed_by_perfusion_specify.nil? or @description.internal.fixed_by_perfusion_specify == "" ) ?  @description.internal.fixed_by_perfusion :  @description.internal.fixed_by_perfusion_specify 
+   	%>  
+         </div> 
+         </div>
+   
+       </div>
+     </div>
+   </div>

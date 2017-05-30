@@ -1,0 +1,6 @@
+thymus normal	checkbox			
+weight	number			Auto calculation: Expected for …. Weeks gestational age.
+thymus pos config shape	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+petechiae on external surface	select	"None","Few","Many (greater than 2 per sq cm)"		
+cut surface	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+thymus other	text			

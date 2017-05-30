@@ -1,0 +1,80 @@
+<br>
+<br>
+
+<% if @description.final_diagnosis.nil? 
+     @final_diagnosis = FinalDiagnosis.new()
+end %>
+
+<%= form_for @final_diagnosis, url: final_diagnosis_path do |f| %>
+  <% if @final_diagnosis.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@final_diagnosis.errors.count, "error") %> prohibited this final_diagnosis from being saved:</h2>
+      <ul>
+	<% @final_diagnosis.errors.full_messages.each do |message| %>
+	  <li><%= message %></li>
+	<% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <% 
+    if @description.provisional_diagnosis.nil? 
+      default_text = "Please complete the provisional diagnosis first"
+    else
+      default_text = @description.provisional_diagnosis.report
+    end
+  %>
+
+  <div class="panel panel-final">
+    <div class="panel-heading panel-heading-final small-heading">
+      <span class="fa fa-user pull-left"></span>Final Diagnosis
+    </div>
+    <div class="panel-body panel-body-final">
+      <div class="row">
+	<div class="col-sm-12">
+	  <% if @description.final_diagnosis.nil? %>
+	    <%= f.text_area :report , { class: "form-control tinymce" , rows: 15, value: default_text } %> 
+	  <% else %>
+	    <%= f.text_area :report , { class: "form-control tinymce" , rows: 15 } %> 
+	  <% end %>
+	</div>
+      </div>
+      <br>
+      <div class="row">
+	<div class="col-sm-12">
+	  <%= f.label :status, "Status of the final diagnosis" %>
+	  <%= f.select :status, ["In progress" , :Complete] ,{} , { class: "form-control"} %> 
+	</div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  
+  <% if ! @description.final_diagnosis.nil? %>
+    <% if (@description.final_diagnosis.status != "Complete") %>
+      <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+       <i class="icon-ok icon-white"></i> Save
+      <% end %>
+    <% else %>
+      <div class="row">
+	<div class="col-sm-12">
+	  <p class='bg-danger'>
+	  As the final diagnosis is finalized you can't make further changes to the report
+	  </p>
+	</div>
+      </div>
+    <% end %>
+  <% else %>
+   <% if can? :create, FinalDiagnosis %>
+     <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+      <i class="icon-ok icon-white"></i> Save
+     <% end %>
+   <% end %>
+  <% end %>
+
+  <%= tinymce %>
+
+<% end %>
+

@@ -1,0 +1,4 @@
+Mediastinum	mediastinum position configuration	select	"Normal","Abnormal"	Abnormal, specify
+Mediastinum	mediastinum nodes masses	select	"Normal","Abnormal"	Abnormal, specify
+Mediastinum	pneumomediastinum	select	"yes","no"	
+Mediastinum	mediastinum other	text		

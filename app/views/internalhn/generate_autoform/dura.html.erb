@@ -1,0 +1,63 @@
+   <div class="col-sm-3">
+     <div class="panel panel-internal squarish">
+       <div class="panel-heading panel-heading-internal small-heading squarish">
+         Dura_and_sinuses
+       </div>
+       <div class="panel-body panel-body-internal squarish">
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Epidural_space: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.epidural_space_specify.nil? or @description.internal.epidural_space_specify == "" ) ?  @description.internal.epidural_space :  @description.internal.epidural_space_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Dura_falx_tentorium: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.dura_falx_tentorium_specify.nil? or @description.internal.dura_falx_tentorium_specify == "" ) ?  @description.internal.dura_falx_tentorium :  @description.internal.dura_falx_tentorium_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Subdural_epidural: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.subdural_epidural_specify.nil? or @description.internal.subdural_epidural_specify == "" ) ?  @description.internal.subdural_epidural :  @description.internal.subdural_epidural_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Venous_sinuses: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.venous_sinuses_specify.nil? or @description.internal.venous_sinuses_specify == "" ) ?  @description.internal.venous_sinuses :  @description.internal.venous_sinuses_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Sinuses_other : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.sinuses_other%>               
+   	</div>
+         </div>
+   
+       </div>
+     </div>
+   </div>

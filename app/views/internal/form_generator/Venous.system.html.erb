@@ -1,0 +1,65 @@
+<div class="panel panel-primary">
+        <div class="panel-heading">
+           <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#Venous-system">Venous-system</a>
+           </h4>
+        </div>
+      <div id="Venous-system" class="panel-collapse collapse in"> 
+<div class="row" style="width:100%">
+		   <div class="col-sm-6 drop-down">
+		      <%= f.label  :venous_system_anomalies %><br>
+		      <%= f.select :venous_system_anomalies, [:Present, :Absent], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Present')"} %> 
+		   </div>
+
+		   <div class="col-sm-6">
+		   <% if !@description.internal.nil?  %>
+		    <% if @description.internal.venous_system_anomalies == "Present" %>
+		      <%= f.label  :please_specify, { id:"label_internal_venous_system_anomalies_specify" } %><br>
+		      <%= f.text_field :venous_system_anomalies_specify, { class: "form-control", placeholder: "If Present, explain" } %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_venous_system_anomalies_specify" } %><br>
+		      <%= f.text_field :venous_system_anomalies_specify, { class: "form-control", placeholder: "If Present, explain" , disabled: true } %>
+		    <% end %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_venous_system_anomalies_specify" } %><br>
+		      <%= f.text_field :venous_system_anomalies_specify, { class: "form-control", placeholder: "If Present, explain" , disabled: true } %>
+		   <% end %>
+		  </div>
+		</div>
+      
+<div class="row" style="width:100%">
+		   <div class="col-sm-6 drop-down">
+		      <%= f.label  :venous_system_state_of_distension %><br>
+		      <%= f.select :venous_system_state_of_distension, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+		   </div>
+
+		   <div class="col-sm-6">
+		   <% if !@description.internal.nil?  %>
+		    <% if @description.internal.venous_system_state_of_distension == "Abnormal" %>
+		      <%= f.label  :please_specify, { id:"label_internal_venous_system_state_of_distension_specify" } %><br>
+		      <%= f.text_field :venous_system_state_of_distension_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_venous_system_state_of_distension_specify" } %><br>
+		      <%= f.text_field :venous_system_state_of_distension_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		    <% end %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_venous_system_state_of_distension_specify" } %><br>
+		      <%= f.text_field :venous_system_state_of_distension_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		   <% end %>
+		  </div>
+		</div>
+      
+ <div class="row" style="width:100%">
+		  <div class="col-sm-4 drop-down">
+		     <%= f.label  :venous_system_contents %><br>
+		     <%= f.select :venous_system_contents, [:Fluid, :Clots, :Thrombi], { :prompt => "Select One" },{ class: "form-control"} %>
+		 </div> 
+		 </div>
+
+	     <div class="row" style="width:100%">
+		<div class="field col-sm-4">
+		    <%= f.label :cardiovascular_other %><br>
+		    <%= f.text_field :cardiovascular_other, class: "form-control" %>
+	     </div> </div>
+</div>
+</div>

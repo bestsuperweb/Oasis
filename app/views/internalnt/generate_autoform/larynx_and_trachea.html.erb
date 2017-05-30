@@ -1,0 +1,94 @@
+   <div class="col-sm-3">
+     <div class="panel panel-internal squarish">
+       <div class="panel-heading panel-heading-internal small-heading squarish">
+         Larynx_and_trachea
+       </div>
+       <div class="panel-body panel-body-internal squarish">
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Epiglottis: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.epiglottis_specify.nil? or @description.internal.epiglottis_specify == "" ) ?  @description.internal.epiglottis :  @description.internal.epiglottis_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Foreign_material_in_lumen: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.foreign_material_in_lumen_specify.nil? or @description.internal.foreign_material_in_lumen_specify == "" ) ?  @description.internal.foreign_material_in_lumen :  @description.internal.foreign_material_in_lumen_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Larynx_trachea_configuration_position: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.larynx_trachea_configuration_position_specify.nil? or @description.internal.larynx_trachea_configuration_position_specify == "" ) ?  @description.internal.larynx_trachea_configuration_position :  @description.internal.larynx_trachea_configuration_position_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Vocal_cords: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.vocal_cords_specify.nil? or @description.internal.vocal_cords_specify == "" ) ?  @description.internal.vocal_cords :  @description.internal.vocal_cords_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Tracheastomy : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.tracheastomy%>               
+   	</div>
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Mucosal_surfaces: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.mucosal_surfaces_specify.nil? or @description.internal.mucosal_surfaces_specify == "" ) ?  @description.internal.mucosal_surfaces :  @description.internal.mucosal_surfaces_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Tracheal_rings : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.tracheal_rings%>               
+   	</div>
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Larynx_other : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.larynx_other%>               
+   	</div>
+         </div>
+   
+       </div>
+     </div>
+   </div>

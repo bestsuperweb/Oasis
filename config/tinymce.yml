@@ -1,0 +1,21 @@
+theme_advanced_toolbar_location: top
+theme_advanced_toolbar_align: left
+theme_advanced_statusbar_location: bottom
+theme_advanced_buttons3_add:
+toolbar: 
+  - bold italic fontselect
+plugins:
+  - table
+menu:
+  edit: 
+    title: 'Edit'
+    items: 'undo redo | cut copy paste pastetext | selectall'
+  table: 
+    title: 'Table'
+    items: 'inserttable tableprops deletetable | cell row column'
+  format: 
+    title: 'Format'
+    items: 'bold italic underline strikethrough superscript subscript | formats | removeformat'
+  statusbar: false
+content_css : "/assets/tinymce-content-15f834c499ab9aa40909fe75b52ab9cfc76b986f9fb0d9a292fb3c39b1a20d4c.css"
+body_id: 'report_body_id'

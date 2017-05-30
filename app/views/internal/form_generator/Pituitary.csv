@@ -1,0 +1,4 @@
+Pituitary	pituitary weight	number		
+Pituitary	pituitary pos config shape	select	"Normal","Abnormal"	Abnormal, specify
+Pituitary	pituitary external surface	select	"Normal","Abnormal"	Abnormal, specify
+Pituitary	pituitary parenchyma or cut surface	select	"Normal","Abnormal","Not examined"	Abnormal, specify

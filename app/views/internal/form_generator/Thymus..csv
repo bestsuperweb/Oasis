@@ -1,0 +1,5 @@
+Thymus 	weight	number		
+Thymus 	thymus pos config shape	select	"Normal","Abnormal"	Abnormal, specify
+Thymus 	petechiae on external surface	select	"None","Few","Many (greater than 2 per sq cm)"	
+Thymus 	thymus parenchyma or cut surface	select	"Normal","Abnormal"	Abnormal, specify
+Thymus 	thymus other	text		

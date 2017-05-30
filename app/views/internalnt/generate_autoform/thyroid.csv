@@ -1,0 +1,7 @@
+thyroid parathyroid normal	checkbox			
+thyroid weight	number			Auto calculation: Expected for …. Weeks gestational age.
+thyroid pos config shape	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+thyroid external surface	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+thyroid parenchyma or cut surface	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+thyroid other	text			Empty box
+parathyroid gland	select	"Identified","Not identified"	Identified, Specify	If identifiied, a box will appear saying specify

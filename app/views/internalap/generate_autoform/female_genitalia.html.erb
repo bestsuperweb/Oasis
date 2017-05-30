@@ -1,0 +1,85 @@
+ <div class="col-sm-3">
+         <div class="panel panel-internal squarish">
+             <div class="panel-heading panel-heading-internal small-heading squarish">
+               Internal_genitalia_female
+             </div>
+         <div class="panel-body panel-body-internal squarish">
+
+            <div class="row">
+               <div class="col-sm-6 custom-prop">
+                  <strong>Vagina: </strong>
+               </div>
+               <div class="col-sm-6 custom-val">
+                  <%= ( @description.internal.vagina_specify.nil? or @description.internal.vagina_specify == "" ) ?  @description.internal.vagina :  @description.internal.vagina_specify 
+                  %>  
+               </div> 
+             </div>
+           
+
+            <div class="row">
+               <div class="col-sm-6 custom-prop">
+                  <strong>Uterus: </strong>
+               </div>
+               <div class="col-sm-6 custom-val">
+                  <%= ( @description.internal.uterus_specify.nil? or @description.internal.uterus_specify == "" ) ?  @description.internal.uterus :  @description.internal.uterus_specify 
+                  %>  
+               </div> 
+             </div>
+           
+
+            <div class="row">
+               <div class="col-sm-6 custom-prop">
+                  <strong>Right_fallopian_tubes: </strong>
+               </div>
+               <div class="col-sm-6 custom-val">
+                  <%= ( @description.internal.right_fallopian_tubes_specify.nil? or @description.internal.right_fallopian_tubes_specify == "" ) ?  @description.internal.right_fallopian_tubes :  @description.internal.right_fallopian_tubes_specify 
+                  %>  
+               </div> 
+             </div>
+           
+
+            <div class="row">
+               <div class="col-sm-6 custom-prop">
+                  <strong>Right_ovary: </strong>
+               </div>
+               <div class="col-sm-6 custom-val">
+                  <%= ( @description.internal.right_ovary_specify.nil? or @description.internal.right_ovary_specify == "" ) ?  @description.internal.right_ovary :  @description.internal.right_ovary_specify 
+                  %>  
+               </div> 
+             </div>
+           
+
+            <div class="row">
+               <div class="col-sm-6 custom-prop">
+                  <strong>Left_fallopian_tube: </strong>
+               </div>
+               <div class="col-sm-6 custom-val">
+                  <%= ( @description.internal.left_fallopian_tube_specify.nil? or @description.internal.left_fallopian_tube_specify == "" ) ?  @description.internal.left_fallopian_tube :  @description.internal.left_fallopian_tube_specify 
+                  %>  
+               </div> 
+             </div>
+           
+
+            <div class="row">
+               <div class="col-sm-6 custom-prop">
+                  <strong>Left_ovary: </strong>
+               </div>
+               <div class="col-sm-6 custom-val">
+                  <%= ( @description.internal.left_ovary_specify.nil? or @description.internal.left_ovary_specify == "" ) ?  @description.internal.left_ovary :  @description.internal.left_ovary_specify 
+                  %>  
+               </div> 
+             </div>
+           
+
+            <div class="row">
+              <div class="col-sm-6 custom-prop">
+                <strong>Female_genetalia_other : </strong>
+              </div>
+              <div class="col-sm-6 custom-val">
+                 <%= @description.internal.female_genetalia_other%>               
+              </div>
+	    </div>
+	 
+</div>
+</div>
+</div>

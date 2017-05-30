@@ -1,0 +1,143 @@
+<div class="panel panel-primary">
+        <div class="panel-heading">
+           <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#Peritoneal-cavity">Peritoneal-cavity</a>
+           </h4>
+        </div>
+      <div id="Peritoneal-cavity" class="panel-collapse collapse in"> 
+<div class="row" style="width:100%">
+		   <div class="col-sm-6 drop-down">
+		      <%= f.label  :peritoneal_serosal_surfaces %><br>
+		      <%= f.select :peritoneal_serosal_surfaces, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+		   </div>
+
+		   <div class="col-sm-6">
+		   <% if !@description.internal.nil?  %>
+		    <% if @description.internal.peritoneal_serosal_surfaces == "Abnormal" %>
+		      <%= f.label  :please_specify, { id:"label_internal_peritoneal_serosal_surfaces_specify" } %><br>
+		      <%= f.text_field :peritoneal_serosal_surfaces_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_peritoneal_serosal_surfaces_specify" } %><br>
+		      <%= f.text_field :peritoneal_serosal_surfaces_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		    <% end %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_peritoneal_serosal_surfaces_specify" } %><br>
+		      <%= f.text_field :peritoneal_serosal_surfaces_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		   <% end %>
+		  </div>
+		</div>
+      
+
+	     <div class="row" style="width:100%">
+		<div class="field col-sm-4">
+		    <%= f.label :fluid %><br>
+		    <%= f.text_field :fluid, class: "form-control" %>
+	     </div> </div>
+
+	     <div class="row" style="width:100%">
+		<div class="field col-sm-4">
+		    <%= f.label :fluid_quantity %><br>
+		<%= f.number_field :fluid_quantity, class: "form-control" %>
+	     </div> </div>
+<div class="row" style="width:100%">
+		   <div class="col-sm-6 drop-down">
+		      <%= f.label  :peritoneal_nature_of_fluid %><br>
+		      <%= f.select :peritoneal_nature_of_fluid, [:Clear, :Serosanguineous, :Bloody, :Exudative, :Chylous, :Other], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Other')"} %> 
+		   </div>
+
+		   <div class="col-sm-6">
+		   <% if !@description.internal.nil?  %>
+		    <% if @description.internal.peritoneal_nature_of_fluid == "Other" %>
+		      <%= f.label  :please_specify, { id:"label_internal_peritoneal_nature_of_fluid_specify" } %><br>
+		      <%= f.text_field :peritoneal_nature_of_fluid_specify, { class: "form-control", placeholder: "If Other, explain" } %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_peritoneal_nature_of_fluid_specify" } %><br>
+		      <%= f.text_field :peritoneal_nature_of_fluid_specify, { class: "form-control", placeholder: "If Other, explain" , disabled: true } %>
+		    <% end %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_peritoneal_nature_of_fluid_specify" } %><br>
+		      <%= f.text_field :peritoneal_nature_of_fluid_specify, { class: "form-control", placeholder: "If Other, explain" , disabled: true } %>
+		   <% end %>
+		  </div>
+		</div>
+      
+<div class="row" style="width:100%">
+		   <div class="col-sm-6 drop-down">
+		      <%= f.label  :peritoneal_cavity_organ_relations %><br>
+		      <%= f.select :peritoneal_cavity_organ_relations, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+		   </div>
+
+		   <div class="col-sm-6">
+		   <% if !@description.internal.nil?  %>
+		    <% if @description.internal.peritoneal_cavity_organ_relations == "Abnormal" %>
+		      <%= f.label  :please_specify, { id:"label_internal_peritoneal_cavity_organ_relations_specify" } %><br>
+		      <%= f.text_field :peritoneal_cavity_organ_relations_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_peritoneal_cavity_organ_relations_specify" } %><br>
+		      <%= f.text_field :peritoneal_cavity_organ_relations_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		    <% end %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_peritoneal_cavity_organ_relations_specify" } %><br>
+		      <%= f.text_field :peritoneal_cavity_organ_relations_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		   <% end %>
+		  </div>
+		</div>
+      
+<div class="row" style="width:100%">
+		   <div class="col-sm-6 drop-down">
+		      <%= f.label  :retrroperitoneum %><br>
+		      <%= f.select :retrroperitoneum, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+		   </div>
+
+		   <div class="col-sm-6">
+		   <% if !@description.internal.nil?  %>
+		    <% if @description.internal.retrroperitoneum == "Abnormal" %>
+		      <%= f.label  :please_specify, { id:"label_internal_retrroperitoneum_specify" } %><br>
+		      <%= f.text_field :retrroperitoneum_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_retrroperitoneum_specify" } %><br>
+		      <%= f.text_field :retrroperitoneum_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		    <% end %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_retrroperitoneum_specify" } %><br>
+		      <%= f.text_field :retrroperitoneum_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		   <% end %>
+		  </div>
+		</div>
+      
+<div class="row" style="width:100%">
+		   <div class="col-sm-6 drop-down">
+		      <%= f.label  :umbilical_vessels %><br>
+		      <%= f.select :umbilical_vessels, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+		   </div>
+
+		   <div class="col-sm-6">
+		   <% if !@description.internal.nil?  %>
+		    <% if @description.internal.umbilical_vessels == "Abnormal" %>
+		      <%= f.label  :please_specify, { id:"label_internal_umbilical_vessels_specify" } %><br>
+		      <%= f.text_field :umbilical_vessels_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_umbilical_vessels_specify" } %><br>
+		      <%= f.text_field :umbilical_vessels_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		    <% end %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_umbilical_vessels_specify" } %><br>
+		      <%= f.text_field :umbilical_vessels_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		   <% end %>
+		  </div>
+		</div>
+      
+ <div class="row" style="width:100%">
+		  <div class="col-sm-4 drop-down">
+		     <%= f.label  :no_of_umbilical_arteries %><br>
+		     <%= f.select :no_of_umbilical_arteries, [:"1", :"2"], { :prompt => "Select One" },{ class: "form-control"} %>
+		 </div> 
+		 </div>
+
+	     <div class="row" style="width:100%">
+		<div class="field col-sm-4">
+		    <%= f.label :peritoneal_cavity_other %><br>
+		    <%= f.text_field :peritoneal_cavity_other, class: "form-control" %>
+	     </div> </div>
+</div>
+</div>

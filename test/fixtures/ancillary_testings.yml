@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  microbiology: MyString
+  viral_culture: MyString
+  karyotype_requested: MyString
+  electron_microscopy: MyString
+  molecular_diagnostic_pathology: MyString
+  specimens_snap_frozen: MyString
+  post_mortem_x-rays: MyString
+  photographs: MyString
+  organs_for_special_study: MyString
+  other: MyString
+  description_id: 
+
+two:
+  microbiology: MyString
+  viral_culture: MyString
+  karyotype_requested: MyString
+  electron_microscopy: MyString
+  molecular_diagnostic_pathology: MyString
+  specimens_snap_frozen: MyString
+  post_mortem_x-rays: MyString
+  photographs: MyString
+  organs_for_special_study: MyString
+  other: MyString
+  description_id: 

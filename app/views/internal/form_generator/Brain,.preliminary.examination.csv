@@ -1,0 +1,7 @@
+Brain, preliminary examination	brain weight	number		
+Brain, preliminary examination	configuration lobar pattern	select	"Normal","Abnormal"	Abnormal, specify
+Brain, preliminary examination	brain consistency	select	"Normal","Abnormal"	Abnormal, specify
+Brain, preliminary examination	pachymeninges	select	"Normal","Abnormal"	Abnormal, specify
+Brain, preliminary examination	blood vessels	select	"Normal","Abnormal"	Abnormal, specify
+Brain, preliminary examination	cranial nerves	select	"Normal","Abnormal"	Abnormal, specify
+Brain, preliminary examination	kernicterus	select	"Normal","Abnormal"	Abnormal, specify

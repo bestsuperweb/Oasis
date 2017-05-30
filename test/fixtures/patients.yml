@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  dob: 2016-03-09
+  case: 1
+  hospital: 1
+  age: 1
+  date_admission: 2016-03-09
+  race: MyString
+  sex: MyString
+  pathologist: MyString
+  physician: MyString
+  attendant: MyString
+  date_autopsy: 2016-03-09
+  time_of_autopsy: 2016-03-09 16:47:44
+  restrictions: MyString
+  prosector: MyString
+
+two:
+  name: MyString
+  dob: 2016-03-09
+  case: 1
+  hospital: 1
+  age: 1
+  date_admission: 2016-03-09
+  race: MyString
+  sex: MyString
+  pathologist: MyString
+  physician: MyString
+  attendant: MyString
+  date_autopsy: 2016-03-09
+  time_of_autopsy: 2016-03-09 16:47:44
+  restrictions: MyString
+  prosector: MyString

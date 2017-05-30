@@ -1,0 +1,7 @@
+<% (0...@names_array.length).each do |i| %>
+    <% if @specify_array[i] == "" %>
+       <%= get_view_from_array(@names_array[i], eval("@description.external.#{@prop_array[i]}").capitalize, "") %>
+    <% else %>
+       <%= get_view_from_array(@names_array[i], eval("@description.external.#{@prop_array[i]}").capitalize, eval("@description.external.#{@specify_array[i]}") ) %>
+    <% end %>
+<%  end %>

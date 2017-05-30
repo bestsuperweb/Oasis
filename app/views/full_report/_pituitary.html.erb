@@ -1,0 +1,12 @@
+<div>
+  <h3>Pituitary</h3>
+  <table>
+    <%
+      @names_array = ["Pituitary weight","Position configuration","External surface","Parenchyma or cut surface","Other","Microscopic description"]
+      @prop_array = ["pituitary_weight","pituitary_pos_config_shape","pituitary_external_surface","pituitary_parenchyma_or_cut_surface","pituitary_other","pituitary_md"]
+      @specify_array = ["","pituitary_pos_config_shape_specify","pituitary_external_surface_specify","pituitary_parenchyma_or_cut_surface_specify","",""] 
+    %>
+    <%= render :partial => "internal_loop"%>
+</table>
+</div>
+

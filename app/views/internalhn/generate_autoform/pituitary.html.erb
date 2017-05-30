@@ -1,0 +1,62 @@
+   <div class="col-sm-3">
+     <div class="panel panel-internal squarish">
+       <div class="panel-heading panel-heading-internal small-heading squarish">
+         Pituitary
+       </div>
+       <div class="panel-body panel-body-internal squarish">
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Pituitary_weight : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.pituitary_weight%>               
+   	</div>
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Pituitary_pos_config_shape: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.pituitary_pos_config_shape_specify.nil? or @description.internal.pituitary_pos_config_shape_specify == "" ) ?  @description.internal.pituitary_pos_config_shape :  @description.internal.pituitary_pos_config_shape_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Pituitary_external_surface: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.pituitary_external_surface_specify.nil? or @description.internal.pituitary_external_surface_specify == "" ) ?  @description.internal.pituitary_external_surface :  @description.internal.pituitary_external_surface_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Pituitary_parenchyma_or_cut_surface: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.pituitary_parenchyma_or_cut_surface_specify.nil? or @description.internal.pituitary_parenchyma_or_cut_surface_specify == "" ) ?  @description.internal.pituitary_parenchyma_or_cut_surface :  @description.internal.pituitary_parenchyma_or_cut_surface_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Pituitary_other : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.pituitary_other%>               
+   	</div>
+         </div>
+   
+       </div>
+     </div>
+   </div>

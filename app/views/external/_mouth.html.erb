@@ -1,0 +1,133 @@
+          <div class="row" style="width:100%">
+            <div class="col-sm-6 drop-down">
+              <%= f.label  :lips_mucosa_gums %><br>
+              <%= f.select :lips_mucosa_gums, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+            </div>
+          
+            <div class="col-sm-6">
+              <% if !@description.external.nil?  %>
+                <% if @description.external.lips_mucosa_gums == "Abnormal" %>
+          	<%= f.label  :please_specify, { id:"label_external_lips_mucosa_gums_specify" } %><br>
+          	<%= f.text_field :lips_mucosa_gums_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+                <% else %>
+          	<%= f.label  :please_specify, { id:"label_external_lips_mucosa_gums_specify" } %><br>
+          	<%= f.text_field :lips_mucosa_gums_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+          
+          <div class="row" style="width:100%">
+            <div class="col-sm-6 drop-down">
+              <%= f.label  :tongue %><br>
+              <%= f.select :tongue, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+            </div>
+          
+            <div class="col-sm-6">
+              <% if !@description.external.nil?  %>
+                <% if @description.external.tongue == "Abnormal" %>
+          	<%= f.label  :please_specify, { id:"label_external_tongue_specify" } %><br>
+          	<%= f.text_field :tongue_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+                <% else %>
+          	<%= f.label  :please_specify, { id:"label_external_tongue_specify" } %><br>
+          	<%= f.text_field :tongue_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+          
+          <div class="row" style="width:100%">
+            <div class="col-sm-6 drop-down">
+              <%= f.label  :palate_maxilla_mandible %><br>
+              <%= f.select :palate_maxilla_mandible, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+            </div>
+          
+            <div class="col-sm-6">
+              <% if !@description.external.nil?  %>
+                <% if @description.external.palate_maxilla_mandible == "Abnormal" %>
+          	<%= f.label  :please_specify, { id:"label_external_palate_maxilla_mandible_specify" } %><br>
+          	<%= f.text_field :palate_maxilla_mandible_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+                <% else %>
+          	<%= f.label  :please_specify, { id:"label_external_palate_maxilla_mandible_specify" } %><br>
+          	<%= f.text_field :palate_maxilla_mandible_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+          
+          
+          <div class="row" style="width:100%">
+            <div class="field col-sm-4">
+              <%= f.label :teeth_upper %><br>
+              <%= f.number_field :teeth_upper, class: "form-control" %>
+          </div> </div>
+          
+          <div class="row" style="width:100%">
+            <div class="field col-sm-4">
+              <%= f.label :teeth_lower %><br>
+              <%= f.number_field :teeth_lower, class: "form-control" %>
+          </div> </div>
+          <div class="row" style="width:100%">
+            <div class="col-sm-6 drop-down">
+              <%= f.label  :tonsils %><br>
+              <%= f.select :tonsils, [:Normal, :Abnormal, :"Not examined"], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+            </div>
+          
+            <div class="col-sm-6">
+              <% if !@description.external.nil?  %>
+                <% if @description.external.tonsils == "Abnormal" %>
+          	<%= f.label  :please_specify, { id:"label_external_tonsils_specify" } %><br>
+          	<%= f.text_field :tonsils_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+                <% else %>
+          	<%= f.label  :please_specify, { id:"label_external_tonsils_specify" } %><br>
+          	<%= f.text_field :tonsils_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+          
+          <div class="row" style="width:100%">
+            <div class="col-sm-6 drop-down">
+              <%= f.label  :salivary_glands %><br>
+              <%= f.select :salivary_glands, [:Normal, :Abnormal, :"Not examined"], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+            </div>
+          
+            <div class="col-sm-6">
+              <% if !@description.external.nil?  %>
+                <% if @description.external.salivary_glands == "Abnormal" %>
+          	<%= f.label  :please_specify, { id:"label_external_salivary_glands_specify" } %><br>
+          	<%= f.text_field :salivary_glands_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+                <% else %>
+          	<%= f.label  :please_specify, { id:"label_external_salivary_glands_specify" } %><br>
+          	<%= f.text_field :salivary_glands_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+          
+          <div class="row" style="width:100%">
+            <div class="col-sm-6 drop-down">
+              <%= f.label  :pharynx %><br>
+              <%= f.select :pharynx, [:Normal, :Abnormal, :"Not examined"], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+            </div>
+          
+            <div class="col-sm-6">
+              <% if !@description.external.nil?  %>
+                <% if @description.external.pharynx == "Abnormal" %>
+          	<%= f.label  :please_specify, { id:"label_external_pharynx_specify" } %><br>
+          	<%= f.text_field :pharynx_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+                <% else %>
+          	<%= f.label  :please_specify, { id:"label_external_pharynx_specify" } %><br>
+          	<%= f.text_field :pharynx_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+          
+          
+          <div class="row" style="width:100%">
+            <div class="field col-sm-4">
+              <%= f.label :mouth_other %><br>
+              <%= f.text_field :mouth_other, class: "form-control" %>
+            </div> 
+          </div>

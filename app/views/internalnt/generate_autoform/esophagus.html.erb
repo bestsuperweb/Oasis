@@ -1,0 +1,41 @@
+   <div class="col-sm-3">
+     <div class="panel panel-internal squarish">
+       <div class="panel-heading panel-heading-internal small-heading squarish">
+         Esophagus
+       </div>
+       <div class="panel-body panel-body-internal squarish">
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Esophagus_size_position_configuration: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.esophagus_size_position_configuration_specify.nil? or @description.internal.esophagus_size_position_configuration_specify == "" ) ?  @description.internal.esophagus_size_position_configuration :  @description.internal.esophagus_size_position_configuration_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Esophagus_mucosa_and_wall: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.esophagus_mucosa_and_wall_specify.nil? or @description.internal.esophagus_mucosa_and_wall_specify == "" ) ?  @description.internal.esophagus_mucosa_and_wall :  @description.internal.esophagus_mucosa_and_wall_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Esophagus_other : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.esophagus_other%>               
+   	</div>
+         </div>
+   
+       </div>
+     </div>
+   </div>

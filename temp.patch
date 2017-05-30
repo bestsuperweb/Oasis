@@ -1,0 +1,104 @@
+--- app/views/layouts/_complete.html.erb	2017-02-12 16:08:16.000000000 -0600
++++ /Users/rp3/Downloads/boiling-oasis/app/views/layouts/_complete.html.erb	2017-02-13 13:52:05.000000000 -0600
+@@ -4,13 +4,14 @@
+     <li id="mothert"><a href="#mother" data-toggle="tab"><span>Mother's<br/>Information</span></a></li>
+     <li id="placentat"><a href="#placenta" data-toggle="tab"><span>Placenta</span></a></li>
+     <li id="externalt"><a href="#external" data-toggle="tab"><span>External<br/>Examination</span></a></li>
+-    <li id="qat"><a href="#qa" data-toggle="tab"><span>Autopsy<br/>Q/A</span></a></li>
+     <li id="testst"><a href="#tests" data-toggle="tab"><span>Ancilliary<br/>Tests</span></a></li>
+-    <li id="clinpatht"><a href="#clinpath" data-toggle="tab"><span>Clinicopathological<br/>summary</span></a></li>
+     <li id="internalt"><a href="#internal" data-toggle="tab"><span>Internal<br/>Examination</span></a></li>
+     <li id="blockcodest"><a href="#blockcodes" data-toggle="tab"><span>Block<br/>Codes</span></a></li>
+     <li id="provisionalt"><a href="#provisional" data-toggle="tab"><span>Provisional<br/>Diagnosis</span></a></li>
++    <li id="specialt"><a href="#special" data-toggle='tab'>Special<br>Reports</a></li>
+     <li id="finalt"><a href="#final" data-toggle="tab"><span>Final<br/>Diagnosis</span></a></li>
++    <li id="clinpatht"><a href="#clinpath" data-toggle="tab"><span>Clinicopathological<br/>summary</span></a></li>
++    <li id="qat"><a href="#qa" data-toggle="tab"><span>Autopsy<br/>Q/A</span></a></li>    
+   </ul>
+ </div>
+ 
+@@ -104,24 +105,6 @@
+     <%= yield %>
+   </div>
+ 
+-  <div id="clinpath" class="tab-pane">
+-    <% if @description.clinico_pathological_summary.nil? %>
+-      <%= render partial: 'clinico_pathological_summary/form' %>
+-    <% else %> 
+-      <%= render partial: 'clinico_pathological_summary/show' %>
+-    <% end %>
+-    <%= yield %>
+-  </div>
+-
+-  <div id="qa" class="tab-pane">
+-    <% if @description.question_answer.nil? %>
+-      <%= render partial: 'question_answer/form' %>
+-    <% else %> 
+-      <%= render partial: 'question_answer/show' %>
+-    <% end %>
+-    <%= yield %>
+-  </div>
+-
+   <div id="placenta" class="tab-pane">
+     <% if @description.placenta.nil? %>
+       <%= render partial: 'placenta/form' %>
+@@ -139,6 +122,23 @@
+     <% end %>
+     <%= yield %>
+   </div>
++  <!-- add tab content code by Tom Salinger -->
++  <div id = "special" class="tab-pane">
++    <% unless @description.special_reports.nil? %>
++      <% all_description = @description.special_reports.all.sort_by {|cyclist| cyclist.id} %>
++      <% all_description.each do |report| %>
++      <% if report.lock.nil? %>
++        <%= link_to report.title, edit_special_report_path(@description.id, report.id), class: 'btn btn-success' %>  
++      <% else %>
++        <a href="<%= show_special_report_path(@description.id, report.id ) %>" class="btn btn-warning" ><%= report.title %>  S/O </a> 
++      <% end %>      
++      <br>
++      <% end %>      
++    <% end %>
++    <%= link_to 'Add special report', new_special_report_path, class: 'btn btn-primary' %>
++    <%= yield %>    
++  </div>
++  <!-- end -->
+ 
+   <div id="final" class="tab-pane">
+     <% if @description.final_diagnosis.nil? %>
+@@ -148,13 +148,35 @@
+     <% end %>
+     <%= yield %>
+   </div>
++
++  <div id="clinpath" class="tab-pane">
++    <% if @description.clinico_pathological_summary.nil? %>
++      <%= render partial: 'clinico_pathological_summary/form' %>
++    <% else %> 
++      <%= render partial: 'clinico_pathological_summary/show' %>
++    <% end %>
++    <%= yield %>
++  </div>
++
++  <div id="qa" class="tab-pane">
++    <% if @description.question_answer.nil? %>
++      <%= render partial: 'question_answer/form' %>
++    <% else %> 
++      <%= render partial: 'question_answer/show' %>
++    <% end %>
++    <%= yield %>
++  </div>
+ </div>
+ 
++
++
+ <br>
+ 
+ <script>
+   var url = document.location.toString();
++  console.log(url)
+   var splitUrl = url.split('#')[1]
++  console.log(splitUrl)
+ 
+   if(typeof splitUrl != 'undefined'){
+ 

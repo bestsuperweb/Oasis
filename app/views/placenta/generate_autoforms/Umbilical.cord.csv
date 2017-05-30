@@ -1,0 +1,6 @@
+Umbilical cord	total_length	integer		
+Umbilical cord	vessels	select	"1","2","3"	
+Umbilical cord	umbillical_cord_normal	select	"yes","no"	
+Umbilical cord	normal_no_funisitis	select	"yes","no"	
+Umbilical cord	normal_no_acute_vasculitis	select	"yes","no"	
+Umbilical cord	umbillical_cord_normal_no_other	select	"yes","no"	

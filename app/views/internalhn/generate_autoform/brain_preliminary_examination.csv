@@ -1,0 +1,9 @@
+brain preliminary examination normal	checkbox			
+brain weight	number			Auto calculation: Expected for …. Weeks gestational age.
+configuration lobar pattern	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+brain consistency	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+pachymeninges	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+blood vessels	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+cranial nerves	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+kernicterus	select	"Normal","Abnormal","Not examined"	Abnormal, specify	If abnormal, a box will appear saying specify
+brain other	text			

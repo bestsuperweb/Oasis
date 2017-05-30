@@ -1,0 +1,7 @@
+Pleural cavities	pleural serosal surfaces	select	"Normal","Abnormal"	Abnormal, specify
+Pleural cavities	pneumothorax	select	"yes","no"	yes, specify
+Pleural cavities	pleural cavities amount of fluid	select	"Minimal","More than minimal"	More than minimal, specify
+Pleural cavities	pleural nature of fluid	select	"Clear","Serosanguineous","Bloody","Exudative","Chylous","Other"	Other, specify
+Pleural cavities	pleural cavity organ relations	select	"Normal","Abnormal"	Abnormal, specify
+Pleural cavities	diaphragm	select	"Normal","Abnormal"	Abnormal, specify
+Pleural cavities	pleural cavities other	text		

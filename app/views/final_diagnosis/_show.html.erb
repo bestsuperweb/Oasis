@@ -1,0 +1,19 @@
+<br>
+<div class="row">
+  <div class="col-sm-12">
+    <div class="panel panel-final">
+      <div class="panel-heading panel-heading-final small-heading">
+	<span class="fa fa-user pull-left"></span>Final Diagnosis
+      </div>
+      <div class="panel-body panel-body-final">
+	<div class="col-sm-12">
+	  <%= @description.final_diagnosis.report.html_safe %> 
+	</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% if can? :update, Internal %>
+ <%= link_to 'Edit Final Diagnosis', edit_final_diagnosis_path(@description), class: 'btn btn-primary' %>
+<% end %>

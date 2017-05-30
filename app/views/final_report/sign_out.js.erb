@@ -1,0 +1,8 @@
+	$('#loginModal1').modal('hide');
+<% if @result == 'success' %>
+	$('#resultModal1 p.signout-result').html('Placenta Final Report is signed out');
+	$('.final-report-operation').html('<b class="text-success">Signed Out</b>');
+<% else %>
+	$('#resultModal1 p.signout-result').html('The email and/or password entered is/are incorrect.');	
+<% end %>
+	$('#resultModal1').modal('show');

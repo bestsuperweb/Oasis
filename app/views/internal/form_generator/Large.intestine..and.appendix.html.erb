@@ -1,0 +1,103 @@
+<div class="panel panel-primary">
+        <div class="panel-heading">
+           <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#Large-intestine--and-appendix">Large-intestine--and-appendix</a>
+           </h4>
+        </div>
+      <div id="Large-intestine--and-appendix" class="panel-collapse collapse in"> 
+<div class="row" style="width:100%">
+		   <div class="col-sm-6 drop-down">
+		      <%= f.label  :large_intestine_size_position_configuration %><br>
+		      <%= f.select :large_intestine_size_position_configuration, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+		   </div>
+
+		   <div class="col-sm-6">
+		   <% if !@description.internal.nil?  %>
+		    <% if @description.internal.large_intestine_size_position_configuration == "Abnormal" %>
+		      <%= f.label  :please_specify, { id:"label_internal_large_intestine_size_position_configuration_specify" } %><br>
+		      <%= f.text_field :large_intestine_size_position_configuration_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_large_intestine_size_position_configuration_specify" } %><br>
+		      <%= f.text_field :large_intestine_size_position_configuration_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		    <% end %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_large_intestine_size_position_configuration_specify" } %><br>
+		      <%= f.text_field :large_intestine_size_position_configuration_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		   <% end %>
+		  </div>
+		</div>
+      
+<div class="row" style="width:100%">
+		   <div class="col-sm-6 drop-down">
+		      <%= f.label  :large_intestine_rotation %><br>
+		      <%= f.select :large_intestine_rotation, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+		   </div>
+
+		   <div class="col-sm-6">
+		   <% if !@description.internal.nil?  %>
+		    <% if @description.internal.large_intestine_rotation == "Abnormal" %>
+		      <%= f.label  :please_specify, { id:"label_internal_large_intestine_rotation_specify" } %><br>
+		      <%= f.text_field :large_intestine_rotation_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_large_intestine_rotation_specify" } %><br>
+		      <%= f.text_field :large_intestine_rotation_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		    <% end %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_large_intestine_rotation_specify" } %><br>
+		      <%= f.text_field :large_intestine_rotation_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		   <% end %>
+		  </div>
+		</div>
+      
+<div class="row" style="width:100%">
+		   <div class="col-sm-6 drop-down">
+		      <%= f.label  :large_intestine_mucosa_and_wall %><br>
+		      <%= f.select :large_intestine_mucosa_and_wall, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+		   </div>
+
+		   <div class="col-sm-6">
+		   <% if !@description.internal.nil?  %>
+		    <% if @description.internal.large_intestine_mucosa_and_wall == "Abnormal" %>
+		      <%= f.label  :please_specify, { id:"label_internal_large_intestine_mucosa_and_wall_specify" } %><br>
+		      <%= f.text_field :large_intestine_mucosa_and_wall_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_large_intestine_mucosa_and_wall_specify" } %><br>
+		      <%= f.text_field :large_intestine_mucosa_and_wall_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		    <% end %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_large_intestine_mucosa_and_wall_specify" } %><br>
+		      <%= f.text_field :large_intestine_mucosa_and_wall_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		   <% end %>
+		  </div>
+		</div>
+      
+<div class="row" style="width:100%">
+		   <div class="col-sm-6 drop-down">
+		      <%= f.label  :large_intestine_state_of_distension %><br>
+		      <%= f.select :large_intestine_state_of_distension, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+		   </div>
+
+		   <div class="col-sm-6">
+		   <% if !@description.internal.nil?  %>
+		    <% if @description.internal.large_intestine_state_of_distension == "Abnormal" %>
+		      <%= f.label  :please_specify, { id:"label_internal_large_intestine_state_of_distension_specify" } %><br>
+		      <%= f.text_field :large_intestine_state_of_distension_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_large_intestine_state_of_distension_specify" } %><br>
+		      <%= f.text_field :large_intestine_state_of_distension_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		    <% end %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_large_intestine_state_of_distension_specify" } %><br>
+		      <%= f.text_field :large_intestine_state_of_distension_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		   <% end %>
+		  </div>
+		</div>
+      
+
+	     <div class="row" style="width:100%">
+		<div class="field col-sm-4">
+		    <%= f.label :large_intestine_contents %><br>
+		    <%= f.text_field :large_intestine_contents, class: "form-control" %>
+	     </div> </div>
+</div>
+</div>

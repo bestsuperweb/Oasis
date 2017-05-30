@@ -1,0 +1,185 @@
+<div class="panel panel-primary">
+        <div class="panel-heading">
+           <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#Great-vessels-and-ducts">Great-vessels-and-ducts</a>
+           </h4>
+        </div>
+      <div id="Great-vessels-and-ducts" class="panel-collapse collapse in"> 
+<div class="row" style="width:100%">
+		   <div class="col-sm-6 drop-down">
+		      <%= f.label  :origins_of_aorta_and_pulmonary_artery %><br>
+		      <%= f.select :origins_of_aorta_and_pulmonary_artery, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+		   </div>
+
+		   <div class="col-sm-6">
+		   <% if !@description.internal.nil?  %>
+		    <% if @description.internal.origins_of_aorta_and_pulmonary_artery == "Abnormal" %>
+		      <%= f.label  :please_specify, { id:"label_internal_origins_of_aorta_and_pulmonary_artery_specify" } %><br>
+		      <%= f.text_field :origins_of_aorta_and_pulmonary_artery_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_origins_of_aorta_and_pulmonary_artery_specify" } %><br>
+		      <%= f.text_field :origins_of_aorta_and_pulmonary_artery_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		    <% end %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_origins_of_aorta_and_pulmonary_artery_specify" } %><br>
+		      <%= f.text_field :origins_of_aorta_and_pulmonary_artery_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		   <% end %>
+		  </div>
+		</div>
+      
+<div class="row" style="width:100%">
+		   <div class="col-sm-6 drop-down">
+		      <%= f.label  :arch_configuartion %><br>
+		      <%= f.select :arch_configuartion, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+		   </div>
+
+		   <div class="col-sm-6">
+		   <% if !@description.internal.nil?  %>
+		    <% if @description.internal.arch_configuartion == "Abnormal" %>
+		      <%= f.label  :please_specify, { id:"label_internal_arch_configuartion_specify" } %><br>
+		      <%= f.text_field :arch_configuartion_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_arch_configuartion_specify" } %><br>
+		      <%= f.text_field :arch_configuartion_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		    <% end %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_arch_configuartion_specify" } %><br>
+		      <%= f.text_field :arch_configuartion_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		   <% end %>
+		  </div>
+		</div>
+      
+<div class="row" style="width:100%">
+		   <div class="col-sm-6 drop-down">
+		      <%= f.label  :coronary_arteries %><br>
+		      <%= f.select :coronary_arteries, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+		   </div>
+
+		   <div class="col-sm-6">
+		   <% if !@description.internal.nil?  %>
+		    <% if @description.internal.coronary_arteries == "Abnormal" %>
+		      <%= f.label  :please_specify, { id:"label_internal_coronary_arteries_specify" } %><br>
+		      <%= f.text_field :coronary_arteries_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_coronary_arteries_specify" } %><br>
+		      <%= f.text_field :coronary_arteries_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		    <% end %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_coronary_arteries_specify" } %><br>
+		      <%= f.text_field :coronary_arteries_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		   <% end %>
+		  </div>
+		</div>
+      
+<div class="row" style="width:100%">
+		   <div class="col-sm-6 drop-down">
+		      <%= f.label  :arch_branches %><br>
+		      <%= f.select :arch_branches, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+		   </div>
+
+		   <div class="col-sm-6">
+		   <% if !@description.internal.nil?  %>
+		    <% if @description.internal.arch_branches == "Abnormal" %>
+		      <%= f.label  :please_specify, { id:"label_internal_arch_branches_specify" } %><br>
+		      <%= f.text_field :arch_branches_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_arch_branches_specify" } %><br>
+		      <%= f.text_field :arch_branches_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		    <% end %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_arch_branches_specify" } %><br>
+		      <%= f.text_field :arch_branches_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		   <% end %>
+		  </div>
+		</div>
+      
+<div class="row" style="width:100%">
+		   <div class="col-sm-6 drop-down">
+		      <%= f.label  :thoracic_and_abdominal_branches %><br>
+		      <%= f.select :thoracic_and_abdominal_branches, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+		   </div>
+
+		   <div class="col-sm-6">
+		   <% if !@description.internal.nil?  %>
+		    <% if @description.internal.thoracic_and_abdominal_branches == "Abnormal" %>
+		      <%= f.label  :please_specify, { id:"label_internal_thoracic_and_abdominal_branches_specify" } %><br>
+		      <%= f.text_field :thoracic_and_abdominal_branches_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_thoracic_and_abdominal_branches_specify" } %><br>
+		      <%= f.text_field :thoracic_and_abdominal_branches_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		    <% end %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_thoracic_and_abdominal_branches_specify" } %><br>
+		      <%= f.text_field :thoracic_and_abdominal_branches_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		   <% end %>
+		  </div>
+		</div>
+      
+<div class="row" style="width:100%">
+		   <div class="col-sm-6 drop-down">
+		      <%= f.label  :intima_and_wall %><br>
+		      <%= f.select :intima_and_wall, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+		   </div>
+
+		   <div class="col-sm-6">
+		   <% if !@description.internal.nil?  %>
+		    <% if @description.internal.intima_and_wall == "Abnormal" %>
+		      <%= f.label  :please_specify, { id:"label_internal_intima_and_wall_specify" } %><br>
+		      <%= f.text_field :intima_and_wall_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_intima_and_wall_specify" } %><br>
+		      <%= f.text_field :intima_and_wall_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		    <% end %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_intima_and_wall_specify" } %><br>
+		      <%= f.text_field :intima_and_wall_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		   <% end %>
+		  </div>
+		</div>
+      
+<div class="row" style="width:100%">
+		   <div class="col-sm-6 drop-down">
+		      <%= f.label  :pulmonary_arteries %><br>
+		      <%= f.select :pulmonary_arteries, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+		   </div>
+
+		   <div class="col-sm-6">
+		   <% if !@description.internal.nil?  %>
+		    <% if @description.internal.pulmonary_arteries == "Abnormal" %>
+		      <%= f.label  :please_specify, { id:"label_internal_pulmonary_arteries_specify" } %><br>
+		      <%= f.text_field :pulmonary_arteries_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_pulmonary_arteries_specify" } %><br>
+		      <%= f.text_field :pulmonary_arteries_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		    <% end %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_pulmonary_arteries_specify" } %><br>
+		      <%= f.text_field :pulmonary_arteries_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		   <% end %>
+		  </div>
+		</div>
+      
+<div class="row" style="width:100%">
+		   <div class="col-sm-6 drop-down">
+		      <%= f.label  :ductus %><br>
+		      <%= f.select :ductus, [:Closed, :Open], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Open')"} %> 
+		   </div>
+
+		   <div class="col-sm-6">
+		   <% if !@description.internal.nil?  %>
+		    <% if @description.internal.ductus == "Open" %>
+		      <%= f.label  :please_specify, { id:"label_internal_ductus_specify" } %><br>
+		      <%= f.text_field :ductus_specify, { class: "form-control", placeholder: "If Open, explain" } %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_ductus_specify" } %><br>
+		      <%= f.text_field :ductus_specify, { class: "form-control", placeholder: "If Open, explain" , disabled: true } %>
+		    <% end %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_ductus_specify" } %><br>
+		      <%= f.text_field :ductus_specify, { class: "form-control", placeholder: "If Open, explain" , disabled: true } %>
+		   <% end %>
+		  </div>
+		</div>
+      
+</div>
+</div>

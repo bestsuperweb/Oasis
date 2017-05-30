@@ -1,0 +1,85 @@
+   <div class="col-sm-3">
+     <div class="panel panel-internal squarish">
+       <div class="panel-heading panel-heading-internal small-heading squarish">
+         Heart_general
+       </div>
+       <div class="panel-body panel-body-internal squarish">
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Heart_position: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.heart_position_specify.nil? or @description.internal.heart_position_specify == "" ) ?  @description.internal.heart_position :  @description.internal.heart_position_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Epicardium: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.epicardium_specify.nil? or @description.internal.epicardium_specify == "" ) ?  @description.internal.epicardium :  @description.internal.epicardium_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Heart_shape: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.heart_shape_specify.nil? or @description.internal.heart_shape_specify == "" ) ?  @description.internal.heart_shape :  @description.internal.heart_shape_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Heart_size: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.heart_size_specify.nil? or @description.internal.heart_size_specify == "" ) ?  @description.internal.heart_size :  @description.internal.heart_size_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Heart_only_weight : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.heart_only_weight%>               
+   	</div>
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Heart_configuration: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.heart_configuration_specify.nil? or @description.internal.heart_configuration_specify == "" ) ?  @description.internal.heart_configuration :  @description.internal.heart_configuration_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Heart_content: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.heart_content_specify.nil? or @description.internal.heart_content_specify == "" ) ?  @description.internal.heart_content :  @description.internal.heart_content_specify 
+   	%>  
+         </div> 
+         </div>
+   
+       </div>
+     </div>
+   </div>

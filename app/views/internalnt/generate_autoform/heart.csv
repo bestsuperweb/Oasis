@@ -1,0 +1,8 @@
+heart normal	checkbox			
+heart position	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+epicardium	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+heart shape	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+heart size	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+heart only weight	number			
+heart configuration	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+heart content	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify

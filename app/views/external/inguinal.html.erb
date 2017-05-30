@@ -1,0 +1,45 @@
+          <div class="row" style="width:100%">
+            <div class="col-sm-6 drop-down">
+              <%= f.label  :hernia %><br>
+              <%= f.select :hernia, [:Yes, :No, :"Not examined"], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Yes')"} %> 
+            </div>
+          
+            <div class="col-sm-6">
+              <% if !@description.external.nil?  %>
+                <% if @description.external.hernia == "Yes" %>
+          	<%= f.label  :please_specify, { id:"label_external_hernia_specify" } %><br>
+          	<%= f.text_field :hernia_specify, { class: "form-control", placeholder: "If Yes, explain" } %>
+                <% else %>
+          	<%= f.label  :please_specify, { id:"label_external_hernia_specify" } %><br>
+          	<%= f.text_field :hernia_specify, { class: "form-control", placeholder: "If Yes, explain" , disabled: true } %>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+          
+          <div class="row" style="width:100%">
+            <div class="col-sm-6 drop-down">
+              <%= f.label  :palpable_lymph_nodes %><br>
+              <%= f.select :palpable_lymph_nodes, [:Present, :Absent, :"Not examined"], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Present')"} %> 
+            </div>
+          
+            <div class="col-sm-6">
+              <% if !@description.external.nil?  %>
+                <% if @description.external.palpable_lymph_nodes == "Present" %>
+          	<%= f.label  :please_specify, { id:"label_external_palpable_lymph_nodes_specify" } %><br>
+          	<%= f.text_field :palpable_lymph_nodes_specify, { class: "form-control", placeholder: "If Present, explain" } %>
+                <% else %>
+          	<%= f.label  :please_specify, { id:"label_external_palpable_lymph_nodes_specify" } %><br>
+          	<%= f.text_field :palpable_lymph_nodes_specify, { class: "form-control", placeholder: "If Present, explain" , disabled: true } %>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+          
+          
+          <div class="row" style="width:100%">
+            <div class="field col-sm-4">
+              <%= f.label :inguinal_other %><br>
+              <%= f.text_field :inguinal_other, class: "form-control" %>
+	  </div> 
+	</div>

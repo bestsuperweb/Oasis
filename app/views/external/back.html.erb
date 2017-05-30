@@ -1,0 +1,45 @@
+          <div class="row" style="width:100%">
+            <div class="col-sm-6 drop-down">
+              <%= f.label  :spine %><br>
+              <%= f.select :spine, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+            </div>
+          
+            <div class="col-sm-6">
+              <% if !@description.external.nil?  %>
+                <% if @description.external.spine == "Abnormal" %>
+          	<%= f.label  :please_specify, { id:"label_external_spine_specify" } %><br>
+          	<%= f.text_field :spine_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+                <% else %>
+          	<%= f.label  :please_specify, { id:"label_external_spine_specify" } %><br>
+          	<%= f.text_field :spine_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+          
+          <div class="row" style="width:100%">
+            <div class="col-sm-6 drop-down">
+              <%= f.label  :anus %><br>
+              <%= f.select :anus, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+            </div>
+          
+            <div class="col-sm-6">
+              <% if !@description.external.nil?  %>
+                <% if @description.external.anus == "Abnormal" %>
+          	<%= f.label  :please_specify, { id:"label_external_anus_specify" } %><br>
+          	<%= f.text_field :anus_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+                <% else %>
+          	<%= f.label  :please_specify, { id:"label_external_anus_specify" } %><br>
+          	<%= f.text_field :anus_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+          
+          
+          <div class="row" style="width:100%">
+            <div class="field col-sm-4">
+              <%= f.label :back_other %><br>
+              <%= f.text_field :back_other, class: "form-control" %>
+	  </div> 
+	</div>

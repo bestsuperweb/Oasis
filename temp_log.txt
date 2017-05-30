@@ -1,0 +1,101 @@
+2016-12-28T21:30:34.235290+00:00 app[web.1]: 
+2016-12-28T21:30:34.235292+00:00 app[web.1]: NoMethodError (undefined method `block_codes' for #<Description:0x007fa1d9913ef8>):
+2016-12-28T21:30:34.235293+00:00 app[web.1]:   app/controllers/block_codes_controller.rb:36:in `set_block_codes'
+2016-12-28T21:30:34.235294+00:00 app[web.1]: 
+2016-12-28T21:30:34.235294+00:00 app[web.1]: 
+2016-12-28T21:30:39.829872+00:00 heroku[router]: at=info method=GET path="/descriptions/1/patient/edit" host=boiling-oasis-14239.herokuapp.com request_id=45ab8a26-ca30-4978-890f-ed8896151ca4 fwd="207.231.32.33" dyno=web.1 connect=0ms service=43ms status=200 bytes=8114
+2016-12-28T21:30:39.788633+00:00 app[web.1]: Started GET "/descriptions/1/patient/edit" for 207.231.32.33 at 2016-12-28 21:30:39 +0000
+2016-12-28T21:30:39.791368+00:00 app[web.1]: Processing by PatientsController#edit as HTML
+2016-12-28T21:30:39.791403+00:00 app[web.1]:   Parameters: {"id"=>"1"}
+2016-12-28T21:30:39.794846+00:00 app[web.1]:   [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+2016-12-28T21:30:39.797250+00:00 app[web.1]:   [1m[36mDescription Load (1.6ms)[0m  [1mSELECT  "descriptions".* FROM "descriptions" WHERE "descriptions"."id" = $1 LIMIT 1[0m  [["id", 1]]
+2016-12-28T21:30:39.797731+00:00 app[web.1]:   [1m[35mCACHE (0.0ms)[0m  SELECT  "descriptions".* FROM "descriptions" WHERE "descriptions"."id" = $1 LIMIT 1  [["id", "1"]]
+2016-12-28T21:30:39.800124+00:00 app[web.1]:   [1m[36mPatient Load (1.6ms)[0m  [1mSELECT  "patients".* FROM "patients" WHERE "patients"."description_id" = $1 LIMIT 1[0m  [["description_id", 1]]
+2016-12-28T21:30:39.824066+00:00 app[web.1]:   Rendered patients/_form.html.erb (20.7ms)
+2016-12-28T21:30:39.824499+00:00 app[web.1]:   Rendered patients/edit.html.erb within layouts/application (22.0ms)
+2016-12-28T21:30:39.826245+00:00 app[web.1]: Completed 200 OK in 35ms (Views: 25.3ms | ActiveRecord: 5.3ms)
+2016-12-28T21:30:40.171878+00:00 heroku[router]: at=info method=GET path="/fonts/fontello.eot?52602240" host=boiling-oasis-14239.herokuapp.com request_id=0f7345a9-5c6d-47f4-b021-8ec29168d7ff fwd="207.231.32.33" dyno=web.1 connect=1ms service=25ms status=404 bytes=1829
+2016-12-28T21:30:40.166523+00:00 app[web.1]: Started GET "/fonts/fontello.eot?52602240" for 207.231.32.33 at 2016-12-28 21:30:40 +0000
+2016-12-28T21:30:40.170284+00:00 app[web.1]: 
+2016-12-28T21:30:40.170287+00:00 app[web.1]: ActionController::RoutingError (No route matches [GET] "/fonts/fontello.eot"):
+2016-12-28T21:30:40.170287+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+2016-12-28T21:30:40.170288+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+2016-12-28T21:30:40.170289+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/railties-4.2.4/lib/rails/rack/logger.rb:38:in `call_app'
+2016-12-28T21:30:40.170290+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/railties-4.2.4/lib/rails/rack/logger.rb:20:in `block in call'
+2016-12-28T21:30:40.170291+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.4/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+2016-12-28T21:30:40.170291+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.4/lib/active_support/tagged_logging.rb:26:in `tagged'
+2016-12-28T21:30:40.170292+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.4/lib/active_support/tagged_logging.rb:68:in `tagged'
+2016-12-28T21:30:40.170293+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/railties-4.2.4/lib/rails/rack/logger.rb:20:in `call'
+2016-12-28T21:30:40.170293+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+2016-12-28T21:30:40.170294+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/rack-1.6.4/lib/rack/methodoverride.rb:22:in `call'
+2016-12-28T21:30:40.170295+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/rack-1.6.4/lib/rack/runtime.rb:18:in `call'
+2016-12-28T21:30:40.170295+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.4/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+2016-12-28T21:30:40.170296+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/static.rb:116:in `call'
+2016-12-28T21:30:40.170297+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/rack-1.6.4/lib/rack/sendfile.rb:113:in `call'
+2016-12-28T21:30:40.170297+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/railties-4.2.4/lib/rails/engine.rb:518:in `call'
+2016-12-28T21:30:40.170298+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/railties-4.2.4/lib/rails/application.rb:165:in `call'
+2016-12-28T21:30:40.170299+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/rack-1.6.4/lib/rack/lock.rb:17:in `call'
+2016-12-28T21:30:40.170299+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/rack-1.6.4/lib/rack/content_length.rb:15:in `call'
+2016-12-28T21:30:40.170300+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/rack-1.6.4/lib/rack/handler/webrick.rb:88:in `service'
+2016-12-28T21:30:40.170301+00:00 app[web.1]:   vendor/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+2016-12-28T21:30:40.170301+00:00 app[web.1]:   vendor/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+2016-12-28T21:30:40.170302+00:00 app[web.1]:   vendor/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+2016-12-28T21:30:40.170303+00:00 app[web.1]: 
+2016-12-28T21:30:40.170303+00:00 app[web.1]: 
+2016-12-28T21:30:40.411742+00:00 app[web.1]: Started GET "/fonts/fontello.woff?52602240" for 207.231.32.33 at 2016-12-28 21:30:40 +0000
+2016-12-28T21:30:40.415376+00:00 app[web.1]: 
+2016-12-28T21:30:40.415378+00:00 app[web.1]: ActionController::RoutingError (No route matches [GET] "/fonts/fontello.woff"):
+2016-12-28T21:30:40.415379+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+2016-12-28T21:30:40.415380+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+2016-12-28T21:30:40.415381+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/railties-4.2.4/lib/rails/rack/logger.rb:38:in `call_app'
+2016-12-28T21:30:40.415382+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/railties-4.2.4/lib/rails/rack/logger.rb:20:in `block in call'
+2016-12-28T21:30:40.415382+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.4/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+2016-12-28T21:30:40.415383+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.4/lib/active_support/tagged_logging.rb:26:in `tagged'
+2016-12-28T21:30:40.415384+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.4/lib/active_support/tagged_logging.rb:68:in `tagged'
+2016-12-28T21:30:40.415384+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/railties-4.2.4/lib/rails/rack/logger.rb:20:in `call'
+2016-12-28T21:30:40.415385+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+2016-12-28T21:30:40.415386+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/rack-1.6.4/lib/rack/methodoverride.rb:22:in `call'
+2016-12-28T21:30:40.415386+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/rack-1.6.4/lib/rack/runtime.rb:18:in `call'
+2016-12-28T21:30:40.415387+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.4/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+2016-12-28T21:30:40.415388+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/static.rb:116:in `call'
+2016-12-28T21:30:40.415389+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/rack-1.6.4/lib/rack/sendfile.rb:113:in `call'
+2016-12-28T21:30:40.415389+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/railties-4.2.4/lib/rails/engine.rb:518:in `call'
+2016-12-28T21:30:40.415391+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/rack-1.6.4/lib/rack/lock.rb:17:in `call'
+2016-12-28T21:30:40.415390+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/railties-4.2.4/lib/rails/application.rb:165:in `call'
+2016-12-28T21:30:40.415391+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/rack-1.6.4/lib/rack/content_length.rb:15:in `call'
+2016-12-28T21:30:40.415392+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/rack-1.6.4/lib/rack/handler/webrick.rb:88:in `service'
+2016-12-28T21:30:40.415393+00:00 app[web.1]:   vendor/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+2016-12-28T21:30:40.415396+00:00 app[web.1]:   vendor/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+2016-12-28T21:30:40.415396+00:00 app[web.1]:   vendor/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+2016-12-28T21:30:40.415397+00:00 app[web.1]: 
+2016-12-28T21:30:40.415398+00:00 app[web.1]: 
+2016-12-28T21:30:40.422458+00:00 heroku[router]: at=info method=GET path="/fonts/fontello.woff?52602240" host=boiling-oasis-14239.herokuapp.com request_id=6a3ca765-2af0-4733-93c8-d6cef7ffe335 fwd="207.231.32.33" dyno=web.1 connect=0ms service=15ms status=404 bytes=1829
+2016-12-28T21:30:40.187969+00:00 heroku[router]: at=info method=GET path="/assets/fontello-6b4a3b59671541a148deeb49d475704061035b7d938c15c2be88fd4f97a8ea33.eot" host=boiling-oasis-14239.herokuapp.com request_id=f90204c1-3a9a-40bf-99f7-ff87671cd7fd fwd="207.231.32.33" dyno=web.1 connect=0ms service=38ms status=200 bytes=173640
+2016-12-28T21:30:40.600005+00:00 app[web.1]: Started GET "/fonts/fontello.ttf?52602240" for 207.231.32.33 at 2016-12-28 21:30:40 +0000
+2016-12-28T21:30:40.603213+00:00 app[web.1]: 
+2016-12-28T21:30:40.603216+00:00 app[web.1]: ActionController::RoutingError (No route matches [GET] "/fonts/fontello.ttf"):
+2016-12-28T21:30:40.603216+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+2016-12-28T21:30:40.603217+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+2016-12-28T21:30:40.603218+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/railties-4.2.4/lib/rails/rack/logger.rb:38:in `call_app'
+2016-12-28T21:30:40.603219+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/railties-4.2.4/lib/rails/rack/logger.rb:20:in `block in call'
+2016-12-28T21:30:40.603220+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.4/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+2016-12-28T21:30:40.603220+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.4/lib/active_support/tagged_logging.rb:26:in `tagged'
+2016-12-28T21:30:40.603221+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/railties-4.2.4/lib/rails/rack/logger.rb:20:in `call'
+2016-12-28T21:30:40.603221+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.4/lib/active_support/tagged_logging.rb:68:in `tagged'
+2016-12-28T21:30:40.603222+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+2016-12-28T21:30:40.603223+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/rack-1.6.4/lib/rack/methodoverride.rb:22:in `call'
+2016-12-28T21:30:40.603223+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/rack-1.6.4/lib/rack/runtime.rb:18:in `call'
+2016-12-28T21:30:40.603224+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.4/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+2016-12-28T21:30:40.603225+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/static.rb:116:in `call'
+2016-12-28T21:30:40.603225+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/rack-1.6.4/lib/rack/sendfile.rb:113:in `call'
+2016-12-28T21:30:40.603226+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/railties-4.2.4/lib/rails/engine.rb:518:in `call'
+2016-12-28T21:30:40.603226+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/railties-4.2.4/lib/rails/application.rb:165:in `call'
+2016-12-28T21:30:40.603227+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/rack-1.6.4/lib/rack/lock.rb:17:in `call'
+2016-12-28T21:30:40.603228+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/rack-1.6.4/lib/rack/content_length.rb:15:in `call'
+2016-12-28T21:30:40.603228+00:00 app[web.1]:   vendor/bundle/ruby/2.2.0/gems/rack-1.6.4/lib/rack/handler/webrick.rb:88:in `service'
+2016-12-28T21:30:40.603229+00:00 app[web.1]:   vendor/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+2016-12-28T21:30:40.603229+00:00 app[web.1]:   vendor/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+2016-12-28T21:30:40.603230+00:00 app[web.1]:   vendor/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+2016-12-28T21:30:40.603231+00:00 app[web.1]: 
+2016-12-28T21:30:40.603231+00:00 app[web.1]: 
+2016-12-28T21:30:40.605837+00:00 heroku[router]: at=info method=GET path="/fonts/fontello.ttf?52602240" host=boiling-oasis-14239.herokuapp.com request_id=f0e38248-f295-4c2d-870d-7ef60092229f fwd="207.231.32.33" dyno=web.1 connect=0ms service=8ms status=404 bytes=1829

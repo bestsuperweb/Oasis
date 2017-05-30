@@ -1,0 +1,11 @@
+#report_body_id * {
+ font-family: "Times New Roman";
+ border-collapse: collapse;
+ border: none;
+}
+table {
+ width: 100%;
+}
+td {
+ border: none;
+}

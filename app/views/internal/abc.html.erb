@@ -1,0 +1,75 @@
+<div class="col-sm-3">
+  <div class="panel panel-external squarish">
+    <div class="panel-heading panel-heading-external small-heading squarish">
+      Bones
+    </div>
+    <div class="panel-body panel-body-external squarish">
+
+      <div class="row">
+	<div class="col-sm-6 no-pad small custom-prop">
+	  <%= f.label  :Normal, class: "small" %><br>
+	</div>		     
+	<div class="col-sm-6 no-pad custom-val">
+	  <%= f.check_box :bones_normal, { class: "form-control input-sm" , :onchange => "makeNormal(this, '.bones')" } %>
+	</div>
+      </div>
+
+      <div class="row">
+	<div class="col-sm-6 nopad custom-prop small drop-down">
+	  <%= f.label  :hardness, class: "small"%>
+	</div>
+	<div class="col-sm-6 nopad custom-val">
+	  <%= f.select :hardness, [:Normal, :Abnormal, :"Not examined"], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent bones" , "dependent-selector" => "#hardness-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+	</div>
+      </div>
+      <div class="row" id="hardness-dependent">
+	<div class="col-sm-6 nopad custom-prop small drop-down">
+	  <%= f.label  :hardness_specify, class: "small" %><br>
+	</div>
+	<div class="col-sm-6 nopad custom-val">
+	  <%= f.text_field :hardness_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+	</div>
+      </div>
+      <div class="row">
+	<div class="col-sm-6 nopad custom-prop small drop-down">
+	  <%= f.label  :bone_anomalies, class: "small"%>
+	</div>
+	<div class="col-sm-6 nopad custom-val">
+	  <%= f.select :bone_anomalies, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent bones" , "dependent-selector" => "#bone_anomalies-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+	</div>
+      </div>
+      <div class="row" id="bone_anomalies-dependent">
+	<div class="col-sm-6 nopad custom-prop small drop-down">
+	  <%= f.label  :bone_anomalies_specify, class: "small" %><br>
+	</div>
+	<div class="col-sm-6 nopad custom-val">
+	  <%= f.text_field :bone_anomalies_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+	</div>
+      </div>
+      <div class="row">
+	<div class="col-sm-6 nopad custom-prop small drop-down">
+	  <%= f.label  :marrow, class: "small"%>
+	</div>
+	<div class="col-sm-6 nopad custom-val">
+	  <%= f.select :marrow, [:Normal, :Abnormal, :"Not examined"], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent bones" , "dependent-selector" => "#marrow-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+	</div>
+      </div>
+      <div class="row" id="marrow-dependent">
+	<div class="col-sm-6 nopad custom-prop small drop-down">
+	  <%= f.label  :marrow_specify, class: "small" %><br>
+	</div>
+	<div class="col-sm-6 nopad custom-val">
+	  <%= f.text_field :marrow_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+	</div>
+      </div>
+
+      <div class="row">
+	<div class="col-sm-6 nopad custom-prop small">
+	  <%= f.label :bones_other , class: "small" %>
+	</div> 
+	<div class="col-sm-6 nopad custom-val">
+	  <%= f.text_field :bones_other, class: "form-control input-sm" %>
+	</div>
+      </div>
+    </div>
+  </div>

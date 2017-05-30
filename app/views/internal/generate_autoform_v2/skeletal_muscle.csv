@@ -1,0 +1,5 @@
+skeletal_muscle_normal	checkbox			
+skeletal_muscle_color	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+skeletal_muscle_consistency	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+skeletal_muscle_size	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+skeletal_muscle_other	text			Empty box

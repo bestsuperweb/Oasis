@@ -1,0 +1,10 @@
+peritoneal cavity normal	checkbox			
+peritoneal serosal surfaces	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+fluid	text			
+fluid quantity	number			
+peritoneal nature of fluid	select	"Clear","Serosanguineous","Bloody","Exudative","Chylous","Other"	Other, specify	If other is selected, a box will appear saying specify
+peritoneal cavity organ relations	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+retrroperitoneum	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+umbilical vessels	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+no of umbilical arteries	select	"1","2"		
+peritoneal cavity other	text			

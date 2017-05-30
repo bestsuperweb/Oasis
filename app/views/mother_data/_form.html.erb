@@ -1,0 +1,392 @@
+<br>
+<br>
+
+<% if @description.mother_datum.nil? 
+  @mother_datum = MotherDatum.new()
+end %>
+
+<%= form_for @mother_datum, url: mother_datum_path do |f| %>
+  <% if @mother_datum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mother_datum.errors.count, "error") %> prohibited this mother_datum from being saved:</h2>
+
+      <ul>
+	<% @mother_datum.errors.full_messages.each do |message| %>
+	  <li><%= message %></li>
+	<% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <div class="panel panel-mother">
+      <div class="panel-heading panel-heading-mother small-heading">
+	<span class="fa fa-user pull-left"></span>Vitals of mother
+      </div>
+      <div class="panel-body panel-body-mother">
+	<div class="row" id="mother_data">
+	  <div class="field col-sm-3">
+	    <%= f.label :age_in_years %><br>
+	    <%= f.number_field :mother_age, class: "form-control input-sm" %>
+	  </div>
+	  <!--
+      <div class="field col-sm-2">
+	<%#= f.label :gestational_age %><br>
+	<%#= f.number_field :gestational_age, "data-provide" => 'datepicker', class: "form-control input-sm" %>
+      </div>
+      -->
+      <div class="col-sm-4 drop-down">
+	<%= f.label :prenatal_care %><br>
+	<%= f.select :prenatal_care,[:Yes, :No], {},{ class: "form-control input-sm"} %>
+      </div>
+      <div class="col-sm-1 drop-down">
+	<%= f.label :gravida %><br>
+	<%= f.select :gravida,[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20], {},{ class: "form-control input-sm"} %>
+      </div>
+      <div class="col-sm-1 drop-down">
+	<%= f.label :para %><br>
+	<%= f.select :para,[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20], {},{ class: "form-control input-sm"} %>
+      </div>
+      <div class="col-sm-1 drop-down">
+	<%= f.label :abortus %><br>
+	<%= f.select :abortus ,[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20], {},{ class: "form-control input-sm"} %>
+      </div>
+      <div class="col-sm-1 drop-down">
+	<%= f.label :term %><br>
+	<%= f.select :term ,[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20], {},{ class: "form-control input-sm"} %>
+      </div>
+      <div class="col-sm-1 drop-down">
+	<%= f.label :living %><br>
+	<%= f.select :living ,[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20], {},{ class: "form-control input-sm"} %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div id="for-bmi-calculation">
+	<div class="col-sm-1">
+	  <%= f.label :height %><br>
+	  <%= f.text_field :height , class: "form-control input-sm", :step => 0.1 %>
+	</div>
+
+	<div class="col-sm-1">
+	  <%= f.label :unit_of_height, "Unit" %><br>
+	  <%= f.select :height_unit , ['inches', 'cm', 'meters'] , {},{ class: "form-control input-sm"} %>
+	</div>
+
+	<div class="col-sm-2">
+	  <%= f.label :pre_pregnancy_weight %><br>
+	  <%= f.number_field :pre_pregnancy_weight , class: "form-control input-sm" %>
+	</div>
+
+	<div class="col-sm-1">
+	  <%= f.label :pre_pregnancy_weight_unit, "Unit" %><br>
+	  <%= f.select :pre_pregnancy_weight_unit , ['Lb','kg'] , {} , {class: "form-control input-sm" } %>
+	</div>
+
+	<div class="col-sm-2">
+	  <%= f.label :delivery_weight %><br>
+	  <%= f.text_field :delivery_weight , {class: "form-control input-sm", :step => '0.1' } %>
+	</div>
+
+	<div class="col-sm-1">
+	  <%= f.label :delivery_weight_unit, "Unit" %><br>
+	  <%= f.select :delivery_weight_unit , ['Lb','kg']  , {} , class: "form-control input-sm" %>
+	</div>
+      </div>
+
+      <div class="col-sm-2">
+	<%= f.label :pre_pregnancy_bmi, "Pre-pregnancy BMI" %><br>
+	<%= f.number_field :pre_pregnancy_bmi,  { class: "form-control input-sm", :step => "0.01" } %>
+      </div>
+
+      <div class="col-sm-2">
+	<%= f.label :delivery_bmi, "Delivery BMI" %><br>
+	<%= f.number_field :delivery_bmi,  { class: "form-control input-sm", :step => "0.01" } %>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="panel panel-mother">
+      <div class="panel-heading panel-heading-mother small-heading">
+	<span class="fa fa-user pull-left"></span>Mother's Antenatal Screening
+      </div>
+      <div class="panel-body panel-body-mother">
+    <div class="row">
+      <div class="col-sm-3 drop-down">
+	<%= f.label :blood_type %><br>
+	<%= f.select :blood_type ,['Unknown', 'A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+','O-'], {},{ class: "form-control input-sm"} %>
+      </div>
+
+      <div class="col-sm-3 drop-down">
+	<%= f.label :antibody_screen %><br>
+	<%= f.select :antibody_screen ,['negative', 'positive autoantibodies', 'positive allloantibodies', 'unknown'], {},{ class: "form-control input-sm"} %>
+      </div>
+
+      <div class="col-sm-3 drop-down">
+	<%= f.label :rpr, "RPR" %><br>
+	<%= f.select :rpr ,['reactive', 'non-reactive', 'unknown'], {},{ class: "form-control input-sm"} %>
+      </div>
+
+      <div class="col-sm-3 drop-down">
+	<%= f.label :hepatitis_b, "Hepatitis B"	%><br>
+	<%= f.select :hepatitis_b ,['negative', 'positive', 'unknown'], {},{ class: "form-control input-sm"} %>
+      </div>
+
+      <div class="col-sm-3 drop-down">
+	<%= f.label :rubella %><br>
+	<%= f.select :rubella ,['immune', 'non-immune', 'unknown'], {},{ class: "form-control input-sm"} %>
+      </div>
+
+      <div class="col-sm-3 drop-down">
+	<%= f.label :HIV, "HIV" %><br>
+	<%= f.select :HIV ,['negative', 'positive', 'unknown'], {},{ class: "form-control input-sm"} %>
+      </div>
+
+      <div class="col-sm-3 drop-down">
+	<%= f.label :diabetes %><br>
+	<%= f.select :diabetes ,['gestational', 'pre-gestational', 'unknown', 'no'], {},{ class: "form-control input-sm"} %>
+      </div>
+
+      <div class="col-sm-3 drop-down">
+	<%= f.label :GBS %><br>
+	<%= f.select :GBS ,['negative', 'positive', 'unknown'], {},{ class: "form-control input-sm"} %>
+      </div>
+
+      <div class="col-sm-6 drop-down">
+	<%= f.label :amniocentesis %><br>
+	<%= f.select :amniocentesis , ['yes', 'no', 'unknown'] , {:prompt => "Select One"} ,{ class: "form-control conditional input-sm", :when_answer => 'yes' , :todisable => ['mother_datum_amniocentesis_explain'] } %>
+      </div>
+
+      <div class="col-sm-6 drop-down">
+	<%= f.label :amniocentesis_explain, "Results of amniocentesis" %><br>
+	<%= f.text_field :amniocentesis_explain , { class: "form-control input-sm" , :placeholder => "If Yes, what are the results?"} %>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="panel panel-mother">
+      <div class="panel-heading panel-heading-mother small-heading">
+	<span class="fa fa-user pull-left"></span>Mother's Medical History
+      </div>
+      <div class="panel-body panel-body-mother">
+    <div class="row">
+      <div class="col-sm-12">
+	<%#= f.label :mother_medical_history %><br>
+	<%= f.text_area :mother_medical_history, class: "form-control tinymce"  %>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-sm-4">
+	<%= f.label :previous_pregnancy_summary, "Summary of previous pregnancies" %><br>
+	<%= f.text_area :previous_pregnancy_summary, class: "form-control tinymce"  %>
+      </div>
+
+      <div class="col-sm-4">
+	<%= f.label :present_pregnancy_summary, "Summary of present pregnancy"%><br>
+	<%= f.text_area :present_pregnancy_summary, class: "form-control tinymce"  %>
+      </div>
+
+      <div class="col-sm-4">
+	<%= f.label :ultrasound_finding, "Ultrasound findings" %><br>
+	<%= f.text_area :ultrasound_finding, class: "form-control tinymce"  %>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="panel panel-mother">
+      <div class="panel-heading panel-heading-mother small-heading">
+	<span class="fa fa-user pull-left"></span>Feto-placental findings at the time of delivery
+      </div>
+      <div class="panel-body panel-body-mother">
+	<!-- <div id="fp-finding" please_show_type="class" please_show_names="fp-dependent"> -->
+	  <!--
+	  <input type="radio" name="mother_datum[feto_placental_findings_at_the_time_of_delivery]" value=true <%= "checked=checked" if @description.mother_datum.feto_placental_findings_at_the_time_of_delivery == "true" rescue "" %>> Yes </input> 
+	  <input type="radio" name="mother_datum[feto_placental_findings_at_the_time_of_delivery]" value=false <%= "checked=checked" if @description.mother_datum.feto_placental_findings_at_the_time_of_delivery == "false" or @description.mother_datum.nil? rescue "checked=checked"%>> No </input> -->
+	  <!-- </div> -->
+
+    <!-- <div class="fp-dependent"> --> 
+      <div class="row">
+	<div class="col-sm-6 drop-down">
+	  <%= f.label :type_of_delivery, "Type of delivery" %><br>
+	  <%= f.select :type_of_delivery ,['spontaneous vaginal', 'induced vaginal', 'vaginal assisted', 'elective Cesarean', 'emergency Cesarean', 'other'], {:prompt => "Select One"},{ class: "form-control conditional input-sm", :when_answer => 'other',  :todisable => ['mother_datum_type_of_delivery_specify']} %>
+	</div>
+
+	<div class="col-sm-6 drop-down">
+	  <%= f.label :type_of_delivery_specify, "Please specify" %><br>
+	  <%= f.text_field :type_of_delivery_specify , { class: "form-control input-sm"} %>
+	</div>
+
+	<div class="col-sm-3">
+	  <%= f.label :birth_weight %><br>
+	  <%= f.number_field :birth_weight , class: "form-control input-sm" %>
+	</div>
+
+	<div class="col-sm-3">
+	  <%= f.label :birth_weight_unit, "Unit" %><br>
+	  <%= f.select :birth_weight_unit , ['lb/oz','gm'], {} , {class: "form-control input-sm"} %>
+	</div>
+
+	<!--
+	<div class="col-sm-4 drop-down">
+	  <%= f.label :maceration_degree %><br>
+	  <%= f.select :maceration_degree ,['mild', 'moderate', 'severe', 'none'], {},{ class: "form-control input-sm"} %>
+	</div>
+	-->
+
+
+	<div class="col-sm-6 drop-down">
+	  <%= f.label :gross_appearance, "Fetal appearance" %><br>
+	  <%= f.select :gross_appearance ,['normal', 'abnormal/dysmorphic', 'unknown'], {},{ class: "form-control input-sm"} %>
+	</div>
+      </div>
+
+      <div class="row">
+	<div class="col-sm-6">
+	  <%= f.label  :placenta %><br>
+	  <%= f.select :placenta ,['normal','abnormal','unknown'],
+	                          {:prompt => "Select One"},
+				  { class: "form-control conditional input-sm", 
+				         :when_answer => 'abnormal' , 
+					 :todisable => ['mother_datum_placenta_specify']}
+        %>
+	</div>
+
+	<div class="col-sm-6">
+	  <%= f.label  :placenta_specify %><br>
+	  <%= f.text_field :placenta_specify,{ class: "form-control input-sm"} %>
+	</div>
+      </div>
+
+      <div class="row">
+	<div class="col-sm-6 drop-down">
+	  <%= f.label  :amniotic_fluid %><br>
+	  <%= f.select :amniotic_fluid,['clear','meconium tinged','bloody', 'unknown', 'other'], {:prompt => "Select One"},{ class: "form-control conditional input-sm", :when_answer => 'other' , :todisable => ['mother_datum_amniotic_fluid_specify']} %>
+	</div>
+
+	<div class="col-sm-6">
+	  <%= f.label  :amniotic_fluid_specify %><br>
+	  <%= f.text_field :amniotic_fluid_specify,{ class: "form-control input-sm"} %>
+	</div>
+      </div>
+      <!-- </div> -->
+  </div>
+  </div>
+
+
+  <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+    <i class="icon-ok icon-white"></i> Save
+  <% end %>
+
+  <br>
+  <br>
+  <%= tinymce %>
+  <!-- js for small dependent field -->
+  <script>
+    addEventListener("change", function() {
+      setConditions()
+      //whatDoesCheckBoxSay()
+    });
+
+    addEventListener("load", function() {
+      setConditions()
+      //whatDoesCheckBoxSay()
+    });
+
+    document.getElementById("for-bmi-calculation").addEventListener('change',bmiCalculation)
+
+    function bmiCalculation() {
+      // first see if the values of height and weight is number
+      if($.isNumeric($('#mother_datum_height').val()) && $.isNumeric($('#mother_datum_pre_pregnancy_weight').val())) {
+	var height = $('#mother_datum_height').val()
+	var heightUnit = $('#mother_datum_height_unit').val()
+	// convert height to meteres
+	heightInMeters = convertHeightToMeters(height, heightUnit)
+	// get prepregnancy weight
+	var preWeight = $('#mother_datum_pre_pregnancy_weight').val()
+	var prePWU = $('#mother_datum_pre_pregnancy_weight_unit').val()
+	// convert weight to Kgs
+	var weightInKg     = convertWeightToKg(preWeight, prePWU)
+	// compute BMI
+	var bmi = weightInKg/(heightInMeters*heightInMeters)
+	// update the form
+	document.getElementById('mother_datum_pre_pregnancy_bmi').value = bmi.toFixed(2)
+      }
+      if($.isNumeric($('#mother_datum_height').val()) && $.isNumeric($('#mother_datum_delivery_weight').val())) {
+	var height = $('#mother_datum_height').val()
+	var heightUnit = $('#mother_datum_height_unit').val()
+	// convert height to meteres
+	heightInMeters = convertHeightToMeters(height, heightUnit)
+	// get prepregnancy weight
+	var deliveryWeight = $('#mother_datum_delivery_weight').val()
+	var deliveryU = $('#mother_datum_delivery_weight_unit').val()
+	var weightInKg     = convertWeightToKg(deliveryWeight, deliveryU)
+	var bmi = weightInKg/(heightInMeters*heightInMeters)
+	document.getElementById('mother_datum_delivery_bmi').value = bmi.toFixed(2)
+
+      }
+    }
+
+      function whatDoesCheckBoxSay() {
+	var checkBoxValue = document.getElementById('fp-finding')
+	var attributeSelector = checkBoxValue.getAttribute('please_show_type')
+	var targetText = checkBoxValue.getAttribute('please_show_names')
+
+	var indComp1 = $( "input[name='mother_datum[feto_placental_findings_at_the_time_of_delivery]']")[0]
+	var indComp2 = $( "input[name='mother_datum[feto_placental_findings_at_the_time_of_delivery]']")[1]
+
+	if(attributeSelector == 'class'){ 
+	  if(indComp1.checked == true) {
+	    var all_class = document.getElementsByClassName(targetText)
+	    for( j = 0; j < all_class.length; j++ ){
+	      var abc = all_class[j]
+	      abc.style.display = 'inherit'
+	    }
+	  }
+	  else {
+	    var all_class = document.getElementsByClassName(targetText)
+	    for( j = 0; j < all_class.length; j++ ){
+	      var abc = all_class[j]
+	      abc.style.display = 'none'
+	    }
+	  }
+	}
+      }
+
+      function setConditions(){
+	var all_class = document.getElementsByClassName('conditional')
+	for( j = 0; j < all_class.length; j++ ){
+	  var abc = all_class[j]
+	  var when_answer = abc.getAttribute('when_answer')
+	  var todisable = abc.getAttribute('todisable')
+	  takeAction(abc.value, when_answer, todisable)
+	}
+      }
+
+      function takeAction(given,enable_when,todisable){
+	if (given != enable_when){
+	  disableDisplay(todisable)
+	}
+	else {
+	  enableDisplay(todisable)
+	}
+      }
+
+      function enableDisplay (inarray){
+	inarray = inarray.split(' ')
+	for(i = 0 ; i < inarray.length ; i++){
+	  temp1 = document.getElementById(inarray[i])
+	  temp1.removeAttribute('disabled')
+	}
+      }
+      function disableDisplay (inarray){
+	inarray = inarray.split(' ')
+	for(i = 0 ; i < inarray.length ; i++){
+	  temp1 = document.getElementById(inarray[i])
+	  temp1.setAttribute('disabled','')
+	}
+      }
+    </script>
+  <% end %>

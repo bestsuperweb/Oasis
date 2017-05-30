@@ -1,0 +1,4 @@
+spinal cord normal	checkbox			
+extradural space	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+meninges	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+cord proper	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify

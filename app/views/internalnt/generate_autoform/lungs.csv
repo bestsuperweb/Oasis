@@ -1,0 +1,18 @@
+lungs normal	checkbox			
+right lungs weight	number			
+left lung weight	number			
+bilateral	number			
+combined heart and lungs weight	number			
+lung to body weight ratio	number			autocalculation using "bilateral weight" divided by "birth weight". If birth weight is not available…a message box will appear saying "insert birth weight".
+lobar pattern	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+state of expansion	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+lungs consistency	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+bronchial tree	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+vessels	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+parenchyma color	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+congestion	select	"yes","no"		
+interstitial emphysema	select	"yes","no"		
+hilar nodes	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+visceral pleura	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+pleural petechiae	select	"Absent","Few","Greater than 2 per sq cm"		
+fixed by perfusion	select	"yes","no"	yes, specify	If yes a bunch of boxes will appear as follows: 

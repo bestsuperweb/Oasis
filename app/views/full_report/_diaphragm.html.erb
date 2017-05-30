@@ -1,0 +1,12 @@
+<div>
+  <h3>Diaphragm</h3>
+  <table>
+    <%
+      @names_array = ["Diaphragm position configuration","Diaphragm defect","Other","Microscopic description"]
+      @prop_array = ["diaphragm_position_configuration","diphragm_defect","diaphragm_other","diaphragm_md"]
+      @specify_array = ["diaphragm_position_configuration_specify","","",""] 
+    %>
+    <%= render :partial => "internal_loop"%>
+</table>
+</div>
+

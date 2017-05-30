@@ -1,0 +1,83 @@
+          <div class="row" style="width:100%">
+            <div class="col-sm-6 drop-down">
+              <%= f.label  :abdomen_configuration %><br>
+              <%= f.select :abdomen_configuration, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+            </div>
+          
+            <div class="col-sm-6">
+              <% if !@description.external.nil?  %>
+                <% if @description.external.abdomen_configuration == "Abnormal" %>
+          	<%= f.label  :please_specify, { id:"label_external_abdomen_configuration_specify" } %><br>
+          	<%= f.text_field :abdomen_configuration_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+                <% else %>
+          	<%= f.label  :please_specify, { id:"label_external_abdomen_configuration_specify" } %><br>
+          	<%= f.text_field :abdomen_configuration_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+          
+          <div class="row" style="width:100%">
+            <div class="col-sm-6 drop-down">
+              <%= f.label  :umbilicus_abdominal_wall %><br>
+              <%= f.select :umbilicus_abdominal_wall, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+            </div>
+          
+            <div class="col-sm-6">
+              <% if !@description.external.nil?  %>
+                <% if @description.external.umbilicus_abdominal_wall == "Abnormal" %>
+          	<%= f.label  :please_specify, { id:"label_external_umbilicus_abdominal_wall_specify" } %><br>
+          	<%= f.text_field :umbilicus_abdominal_wall_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+                <% else %>
+          	<%= f.label  :please_specify, { id:"label_external_umbilicus_abdominal_wall_specify" } %><br>
+          	<%= f.text_field :umbilicus_abdominal_wall_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+          
+          <div class="row" style="width:100%">
+            <div class="col-sm-6 drop-down">
+              <%= f.label  :size_of_palpable_organs %><br>
+              <%= f.select :size_of_palpable_organs, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+            </div>
+          
+            <div class="col-sm-6">
+              <% if !@description.external.nil?  %>
+                <% if @description.external.size_of_palpable_organs == "Abnormal" %>
+          	<%= f.label  :please_specify, { id:"label_external_size_of_palpable_organs_specify" } %><br>
+          	<%= f.text_field :size_of_palpable_organs_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+                <% else %>
+          	<%= f.label  :please_specify, { id:"label_external_size_of_palpable_organs_specify" } %><br>
+          	<%= f.text_field :size_of_palpable_organs_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+          
+          <div class="row" style="width:100%">
+            <div class="col-sm-6 drop-down">
+              <%= f.label  :masses %><br>
+              <%= f.select :masses, [:Present, :Absent], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Present')"} %> 
+            </div>
+          
+            <div class="col-sm-6">
+              <% if !@description.external.nil?  %>
+                <% if @description.external.masses == "Present" %>
+          	<%= f.label  :please_specify, { id:"label_external_masses_specify" } %><br>
+          	<%= f.text_field :masses_specify, { class: "form-control", placeholder: "If Present, explain" } %>
+                <% else %>
+          	<%= f.label  :please_specify, { id:"label_external_masses_specify" } %><br>
+          	<%= f.text_field :masses_specify, { class: "form-control", placeholder: "If Present, explain" , disabled: true } %>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+          
+          
+          <div class="row" style="width:100%">
+            <div class="field col-sm-4">
+              <%= f.label :abdomen_other %><br>
+              <%= f.text_field :abdomen_other, class: "form-control" %>
+	  </div> 
+	</div>

@@ -1,0 +1,12 @@
+<div>
+  <h3>Head</h3>
+  <table>
+    <%
+      @names_array = ["Configuration / Size", "Calvarium and sutures", "Anterior fontanelle", "Hair color","Other"]
+      @prop_array = ["configuration_size","calvarium_sutures","anterior_fontanelle","hair_color","head_other"]
+      @specify_array =["configuration_size_specify","calvarium_sutures_specify","anterior_fontanelle_measurement","",""] 
+    %>
+    <%= render :partial => "external_loop"%>
+</table>
+</div>
+

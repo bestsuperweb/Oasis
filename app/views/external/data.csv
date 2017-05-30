@@ -1,0 +1,82 @@
+Development habitus	select	"AGA","SGA","LGA"	
+Nutrition	select	"normal","undernourished","overnourished","not applicable"	
+hydration including edema	select	"normal","hydrops"	
+facies	select	"normal","dysmorphism"	
+embalmed	select	"yes","no"	
+rigor	select	"yes","no"	
+livor	select	"yes","no"	
+cyanosis	select	"yes","no"	
+icterus	select	"yes","no"	
+tubes	select	"yes","no"	yes, specify
+catheters	select	"yes","no"	yes, specify
+needle marks	select	"yes","no"	yes, specify
+Incisions scars	select	"yes","no"	yes, specify
+Rash excoriation	select	"yes","no"	yes, specify
+Petechiae	select	"yes","no"	yes, specify
+Ecchymoses	select	"yes","no"	yes, specify
+Nevi angiomas	select	"yes","no"	yes, specify
+Configuration size	select	"Normal","Abnormal"	Abnormal, specify
+Hair color	select	"Brown","Black","Blond","not applicable"	
+Scalp subcutaneous	select	"Normal","Abnormal"	Abnormal, specify
+Scalp subgaleal	select	"Normal","Abnormal"	Abnormal, specify
+Calvarium sutures	select	"Normal","Abnormal"	Abnormal, specify
+Anterior fontanelle	select	"Closed","Open"	Open, measurements
+Head other	text		
+Position	select	"Normal","Low set"	
+Shape	select	"Normal","Abnormal"	Abnormal, specify
+Canals	select	"Normal","Abnormal"	Abnormal, specify
+Ears other	text		
+Size shape position	select	"Normal","Abnormal"	Abnormal, specify
+Lids periorbital soft tissue	select	"Normal","Abnormal"	Abnormal, specify
+Conjunctiva	select	"Normal","Abnormal"	Abnormal, specify
+Sclera cornea lens	select	"Normal","Abnormal"	Abnormal, specify
+Iris color	select	"Black","Blue","Grey","Green","Brown","Other"	Other, specify
+Pupils	select	"Right","Left"	
+Eyes removed	select	"yes","no"	
+Eyes other	text		
+Position shape	select	"Normal","Abnormal"	Abnormal, specify
+Nares exudate	select	"Normal","Abnormal"	Abnormal, specify
+Patency of choanae	select	"Patent","Non patent"	
+Septum	select	"Normal","Abnormal","Not examined"	Abnormal, specify
+Nose other	text		
+Lips mucosa gums	select	"Normal","Abnormal"	Abnormal, specify
+Tongue	select	"Normal","Abnormal"	Abnormal, specify
+Palate maxilla mandible	select	"Normal","Abnormal"	Abnormal, specify
+Teeth Upper	number		
+Teeth Lower	number		
+Tonsils	select	"Normal","Abnormal","Not examined"	Abnormal, specify
+Salivary glands	select	"Normal","Abnormal","Not examined"	Abnormal, specify
+Pharynx	select	"Normal","Abnormal","Not examined"	Abnormal, specify
+Mouth other	text		
+Neck configuration	select	"Normal","Abnormal"	Abnormal, specify
+Nodes masses	select	"Present","Absent"	Present, specify
+Neck other	text		
+Axilla configuration	select	"Normal","Abnormal"	Abnormal, specify
+Axillary lymph nodes	select	"Normal","Abnormal"	Abnormal, specify
+Chest other	text		
+Abdomen configuration	select	"Normal","Abnormal"	Abnormal, specify
+Umbilicus abdominal wall	select	"Normal","Abnormal"	Abnormal, specify
+Size of palpable organs	select	"Normal","Abnormal"	Abnormal, specify
+Masses	select	"Present","Absent"	Present, specify
+Abdomen other	text		
+Hernia	select	"Yes","No","Not examined"	Yes, specify
+Palpable lymph nodes	select	"Present","Absent","Not examined"	Present, specify
+Inguinal other	text		
+Penis	select	"Circumscribed","Non circumscribed"	
+Penile length	select	"Present","Absent","Not examined"	Abnormal, specify
+Scrotum	select	"Normal","Abnormal"	Abnormal, specify
+Bilateral testes identified	select	"Yes","No"	No, specify
+Testes size	select	"Normal","Abnormal"	Abnormal, specify
+Testes position	select	"Scrotal","Inguinal canal","Pelvic","Abdominal"	
+Labia	select	"Normal","Abnormal"	Abnormal, specify
+Clitoris	select	"Normal","Abnormal","Not examined"	Abnormal, specify
+Vagina hymen	select	"Normal","Abnormal","Not examined"	Abnormal, specify
+Urethral meatus	select	"Normal","Abnormal","Not examined"	Abnormal, specify
+Genitalia other	text		
+Spine	select	"Normal","Abnormal"	Abnormal, specify
+Anus	select	"Normal","Abnormal"	Abnormal, specify
+Back other	text		
+Extermities configuration	select	"Normal","Abnormal"	Abnormal, specify
+Joints	select	"Normal","Abnormal"	Abnormal, specify
+Dermatoglyphics	select	"Normal","Abnormal"	Abnormal, specify
+Extermities other	text		

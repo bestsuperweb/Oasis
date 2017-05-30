@@ -1,0 +1,109 @@
+<br>
+<div class="panel panel-placenta">
+    <div class="panel-heading panel-heading-placenta small-heading">
+		<span class="fa fa-user pull-left"></span>Placenta Final Diagnosis
+    </div>
+    <div class="panel-body panel-body-placenta">
+      <div class="row">
+      	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      		<%= @description.final_report.report.html_safe %>					   
+      	</div>      	      		      
+	  </div>
+	</div>
+</div>
+
+<div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <b>Assign to:</b>
+            <% unless @description.final_report.assign == '' %>
+              <%= User.find(@description.final_report.assign).email %>
+            <% end %>
+      </div>      
+</div>
+<br>
+<div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 final-report-operation">
+      <% if @description.final_report.lock.nil? %>
+        <table>
+          <tr>                        
+            <td>
+            <%= form_tag(update_final_report_path, method: "patch") do %>
+              <input type="hidden" name="final_report[flag]" value="0">
+              <input type="submit" class="btn btn-primary" value="Edit" >
+            <% end %>&nbsp;&nbsp;&nbsp;
+            </td>            
+            <td>
+              <a href="#" class="btn btn-success" data-dismiss="modal" data-toggle="modal" data-target="#alertModal1">Sign Out</a>           
+            </td>
+          </tr>
+        </table>
+      <% else %>
+        <b class="text-success">Signed Out</b>
+      <% end %>       
+      </div>
+</div>
+
+<div id="alertModal1" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Sign out</h4>
+      </div>
+      <div class="modal-body">
+        <p>"This action will finalize the Placenta Final Report in its present form and you will not be allowed to make any changes to it. You can continue to make changes to the remainder of the autopsy report. Do you want to continue?"</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#loginModal1">Yes</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="loginModal1" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>        
+        <h4 class="modal-title">Log in for Sign out</h4>
+      </div>
+ <!-- form start -->
+      <%= form_for :sign_out, url: signout_final_report_path(@description.id), remote: true, method: :post do |d|%>
+       <div class="modal-body form-horizontal">
+        <div class="form-group">
+          <label class="control-label col-sm-3" >Email:</label>
+          <div class="col-sm-9">
+            <%= d.email_field :email, :class => 'form-control', :required => 'true' %>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-3" >Password:</label>
+          <div class="col-sm-9">
+            <%= d.password_field :password, :class => 'form-control', :required => 'true' %>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-primary" >Login</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+      </div>
+      <% end %>
+<!-- form end -->
+    </div>
+  </div>
+</div>
+
+<div id="resultModal1" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-sm">
+    <!-- Modal content-->
+    <div class="modal-content">      
+      <div class="modal-body">
+        <p class="signout-result"></p>
+      </div>
+    </div>
+  </div>
+</div>

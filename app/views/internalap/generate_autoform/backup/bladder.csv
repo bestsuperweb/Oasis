@@ -1,0 +1,7 @@
+bladder and urethra normal	checkbox			
+size and configuration	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+wall and mucosa	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+perivesical tissue	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+bladder contents	select	"Present","Absent"	Present, specify	If present is selected, a box will appear saying specify volume and color
+urethra	select	"Normal","Abnormal","Not examined"	Abnormal, specify	If abnormal, a box will appear saying specify
+bladder and urethra other	text			

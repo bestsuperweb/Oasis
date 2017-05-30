@@ -1,0 +1,11 @@
+liver and biliary system normal	checkbox			
+liver weight	number			Auto calculation: Expected for …. Weeks gestational age.
+liver size shape	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+liver and billiary system external surface	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+cut surface	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+gallbladder	select	"Normal","Abnormal","Absent"	Abnormal, specify	If abnormal, a box will appear saying specify
+bile ducts	select	"Normal","Abnormal","Absent"	Abnormal, specify	If abnormal, a box will appear saying specify
+bile	select	"Colorless","Golden","Green","Other"	Other, specify	If other is selected, a box will appear saying specify
+stones	select	"Present","Absent"	Present, specify	If present is selected, a box will appear saying specify
+hilar vessels portal vein hepatic artery	select	"Normal","Abnormal","Not examined"	Abnormal, specify	If abnormal, a box will appear saying specify
+liver and biiary system other	text			

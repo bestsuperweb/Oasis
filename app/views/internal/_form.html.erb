@@ -1,0 +1,63 @@
+<br>
+<div class="row" style="width:55%; margin:auto" id="tabs2">
+  <ul class="nav nav-tabs">
+    <li id="internal-gnt"  class="active"><a href="#internal-gn" data-toggle="tab"><span>General</span></a></li>
+    <li id="internal-hnt"><a href="#internal-hn" data-toggle="tab"><span>Head and nervous system</span></a></li>
+    <li id="internal-ntt"><a href="#internal-nt" data-toggle="tab"><span>Neck and thorax</span></a></li>
+    <li id="internal-apt"><a href="#internal-ap" data-toggle="tab"><span>Abdomen and pelvis</span></a></li>
+  </ul>
+</div>
+
+<style>
+  .nav-tabs>li {
+    height:60px;
+    text-align: center;
+  }
+  .nav-tabs>li>a, .nav-tabs>li>a>div {
+    height:100%;
+    display:table;
+  }
+  .nav-tabs>li>a span {
+    display:table-cell;
+    vertical-align:middle;
+  }
+</style>
+
+<div class="tab-content">
+  <div id="internal-gn" class="tab-pane active">
+  </div>
+
+  <div id="internal-hn" class="tab-pane">
+  </div>
+
+  <div id="internal-nt" class="tab-pane">
+  </div>
+
+  <div id="internal-ap" class="tab-pane">
+  </div>
+</div>
+
+<br>
+
+<script>
+  var url = document.location.toString();
+  var splitUrl = url.split('#')[1]
+  if(typeof splitUrl != 'undefined'){
+    $('.active').removeClass('active')
+    document.getElementById(splitUrl+'t').className += (' active') 
+    document.getElementById(splitUrl).className += (' active') 
+  }
+  $(function(){
+    var hash = window.location.hash;
+    hash && $('ul.nav a[href="' + hash + '"]').tab('show');
+
+    $('.nav-tabs a').click(function (e) {
+      $(this).tab('show');
+      var scrollmem = $('body').scrollTop() || $('html').scrollTop();
+      window.location.hash = this.hash;
+      $('html,body').scrollTop(scrollmem);
+    });
+  });
+
+
+</script>

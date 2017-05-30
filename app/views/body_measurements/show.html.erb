@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<h2 class='text-center'> Body Measurements </h2>
+<hr>
+
+<div class=row>
+	<div class=col-sm-3>
+         <strong>Crown heel:</strong>
+         <%= @patient.body_measurement.crown_heel %>
+	 <br>
+         <strong>Crown rump:</strong>
+         <%= @patient.body_measurement.crown_rump %>
+	 <br>
+	</div>
+
+	<div class=col-sm-3>
+         <strong>Head circumference:</strong>
+         <%= @patient.body_measurement.head_circumference %>
+         <strong>Chest circumference:</strong>
+         <%= @patient.body_measurement.chest_circumference %>
+	 <br>
+         <strong>Abdomen circumference:</strong>
+         <%= @patient.body_measurement.abdomen_circumference %>
+        </div>
+	<div class=col-sm-3>
+         <strong>Weight:</strong>
+         <%= @patient.body_measurement.weight %>
+	 <br>
+         <strong>Birth weight:</strong>
+         <%= @patient.body_measurement.birth_weight %>
+	 <br>
+        </div>
+	<div class=col-sm-3>
+           <strong>Intercanthal distance:</strong>
+           <%= @patient.body_measurement.intercanthal_distance %>
+	  <br>
+           <strong>Interpupillary distance:</strong>
+           <%= @patient.body_measurement.interpupillary_distance %>
+	  <br>
+           <strong>Arms:</strong>
+           <%= @patient.body_measurement.arms %>
+	  <br>
+           <strong>Leg:</strong>
+           <%= @patient.body_measurement.leg %>
+	  <br>
+           <strong>Foot length:</strong>
+           <%= @patient.body_measurement.foot_length %>
+        </div>
+</div>
+<hr>
+
+<%=  link_to 'Edit Body Measurement', edit_body_measurement_path(@patient), class: 'btn btn-primary' %> 
+<%#= link_to 'Back', patients_path, class: 'btn btn-primary' %>

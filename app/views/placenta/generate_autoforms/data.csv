@@ -1,0 +1,29 @@
+Placenta	weight	integer		
+Placenta	placental_weight_ratio	float		
+Umbilical cord	total_length	integer		
+Umbilical cord	vessels	select	"1","2","3"	
+Umbilical cord	umbillical_cord_normal	select	"yes","no"	
+Umbilical cord	normal_no_funisitis	select	"yes","no"	
+Umbilical cord	normal_no_acute_vasculitis	select	"yes","no"	
+Umbilical cord	umbillical_cord_normal_no_other	select	"yes","no"	
+Fetal membranes	fetal_memberanes_normal	select	"yes","no"	
+Fetal membranes	normal_no_acute_chorioamnionitis	select	"yes","no"	
+Fetal membranes	normal_no_pigmented_macrophages	select	"yes","no"	
+Fetal membranes	fetal_membranes_normal_no_other	text		
+Chorionic plate and stem vessels	chorionic_plate_and_stem_vessels_normal	select	"yes","no"	
+Chorionic plate and stem vessels	normal_no_acute_vasculitis	select	"yes","no"	
+Chorionic plate and stem vessels	normal_no_thrombosis	select	"yes","no"	
+Chorionic plate and stem vessels	normal_no_hemorrhagic_endovasculosis	select	"yes","no"	
+Chorionic plate and stem vessels	normal_no_cushion_lesions_with_or_without_fibrin	select	"yes","no"	
+Chorionic plate and stem vessels	chorionic_plate_and_stem_vessels_normal_no_other	text		
+Chorionic villi	maturation_appropriate_for_gestational_age	select	"yes","no"	
+Chorionic villi	maturation_no_specify	select	"accelerated maturation", "immature villi", "distal villous hypoplasia", "uneven maturation", "other"	
+Chorionic villi	chorionic_villi_and_intervillous_space_normal	select	"yes","no"	
+Chorionic villi	chorionic_villi_abnormal_chronic_lymphohistiocytic_villitis	select	"yes","no"	
+Chorionic villi	chorionic_villi_abnormal_acute_intervillositis	text		
+Chorionic villi	chorionic_villi_abnormal_avascular_villi	select	"focal", "diffuse"	
+Chorionic villi	chorionic_villi_abnormal_other	text		
+Basal plate	basal_plate_normal	select	"yes", "no"	
+Basal plate	normal_no_maternal_vessels_normal	select	"yes","no"	no,specify
+Basal plate	normal_no_decidua_basalis_normal	select	"yes","no"	no,specify
+Basal plate	normal_no_basalplate_other	text		

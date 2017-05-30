@@ -1,0 +1,9 @@
+Liver and biiary system	liver weight	number		
+Liver and biiary system	liver size shape	select	"Normal","Abnormal"	Abnormal, specify
+Liver and biiary system	liver and billiary system external surface	select	"Normal","Abnormal"	Abnormal, specify
+Liver and biiary system	cut surface	select	"Normal","Abnormal"	Abnormal, specify
+Liver and biiary system	gallbladder	select	"Normal","Abnormal","Absent"	Abnormal, specify
+Liver and biiary system	bile ducts	select	"Normal","Abnormal","Absent"	Abnormal, specify
+Liver and biiary system	bile	select	"Colorless","Golden","Green","Other"	Other, specify
+Liver and biiary system	stones	select	"Present","Absent"	Present, specify
+Liver and biiary system	vessels portal vein hepatic artery	select	"Normal","Abnormal"	Abnormal, specify

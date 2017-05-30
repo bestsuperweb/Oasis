@@ -1,0 +1,56 @@
+class AddDetailsToExternal < ActiveRecord::Migration
+  def change
+    add_column :externals, :development_habitus, :string
+    add_column :externals, :tubes_specify, :string
+    add_column :externals, :catheters_specify, :string
+    add_column :externals, :needle_marks_specify, :string
+    add_column :externals, :incisions_scars_specify, :string
+    add_column :externals, :rash_excoriation_specify, :string
+    add_column :externals, :petechiae_specify, :string
+    add_column :externals, :ecchymoses_specify, :string
+    add_column :externals, :nevi_angiomas_specify, :string
+    add_column :externals, :configuration_size_specify, :string
+    add_column :externals, :scalp_subcutaneous_specify, :string
+    add_column :externals, :scalp_subgaleal_specify, :string
+    add_column :externals, :calvarium_sutures_specify, :string
+    add_column :externals, :shape_specify, :string
+    add_column :externals, :canals_specify, :string
+    add_column :externals, :size_shape_position_specify, :string
+    add_column :externals, :lids_periorbital_soft_tissue_specify, :string
+    add_column :externals, :conjunctiva_specify, :string
+    add_column :externals, :sclera_cornea_lens_specify, :string
+    add_column :externals, :iris_color_specify, :string
+    add_column :externals, :position_shape_specify, :string
+    add_column :externals, :nares_exudate_specify, :string
+    add_column :externals, :septum_specify, :string
+    add_column :externals, :lips_mucosa_gums_specify, :string
+    add_column :externals, :tongue_specify, :string
+    add_column :externals, :palate_maxilla_mandible_specify, :string
+    add_column :externals, :tonsils_specify, :string
+    add_column :externals, :salivary_glands_specify, :string
+    add_column :externals, :pharynx_specify, :string
+    add_column :externals, :neck_configuration_specify, :string
+    add_column :externals, :Nodes_masses_specify, :string
+    add_column :externals, :axilla_configuration_specify, :string
+    add_column :externals, :axillary_lymph_nodes_specify, :string
+    add_column :externals, :abdomen_configuration_specify, :string
+    add_column :externals, :umbilicus_abdominal_wall_specify, :string
+    add_column :externals, :size_of_palpable_organs_specify, :string
+    add_column :externals, :masses_specify, :string
+    add_column :externals, :hernia_specify, :string
+    add_column :externals, :palpable_lymph_nodes_specify, :string
+    add_column :externals, :penile_length_specify, :string
+    add_column :externals, :scrotum_specify, :string
+    add_column :externals, :bilateral_testes_identified_specify, :string
+    add_column :externals, :testes_size_specify, :string
+    add_column :externals, :labia_specify, :string
+    add_column :externals, :clitoris_specify, :string
+    add_column :externals, :vagina_hymen_specify, :string
+    add_column :externals, :urethral_meatus_specify, :string
+    add_column :externals, :spine_specify, :string
+    add_column :externals, :anus_specify, :string
+    add_column :externals, :extermities_configuration_specify, :string
+    add_column :externals, :joints_specify, :string
+    add_column :externals, :dermatoglyphics_specify, :string
+  end
+end

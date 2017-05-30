@@ -1,0 +1,78 @@
+<p id="notice"><%= notice %></p>
+
+<h2 class="text-center"> Organ weights </h2>
+<hr>
+<div class="row">
+ <div class="col-sm-2"></div>
+ <table class="table-striped col-sm-8 center-table">
+	<tr>
+		<th> </th>
+		<th>Observed</th>
+		<th>Expected</th>
+	</tr>
+	<tr>
+		<td>Brain</td>
+		<td><%= @patient.organ_weight.brain_observed %></td>
+		<td><%= @patient.organ_weight.brain_expected %></td>
+	</tr>
+	<tr>
+                <td>Heart</td>
+                <td><%= @patient.organ_weight.heart_observed %></td>
+                <td><%= @patient.organ_weight.heart_expected %></td>
+	</tr>
+	<tr>
+                <td>Liver</td>
+                <td><%= @patient.organ_weight.liver_observed %></td>
+                <td><%= @patient.organ_weight.liver_expected %></td>
+	</tr>
+	<tr>
+                <td>Left Adrenal</td>
+                <td><%= @patient.organ_weight.lt_adrenal_observed %></td>
+                <td><%= @patient.organ_weight.lt_adrenal_expected %></td>
+	</tr>
+	<tr>
+                <td>Left Kidney</td>
+                <td><%= @patient.organ_weight.lt_kidney_observed %></td>
+                <td><%= @patient.organ_weight.lt_kidney_expected %></td>
+	</tr>
+	<tr>
+                <td>Left Lung</td>
+                <td><%= @patient.organ_weight.lt_lung_observed %></td>
+                <td><%= @patient.organ_weight.lt_lung_expected %></td>
+	</tr>
+	<tr>
+		<td>Right Adrenal</td>
+		<td><%= @patient.organ_weight.rt_adrenal_observed %></td>
+		<td><%= @patient.organ_weight.rt_adrenal_expected %></td>
+	</tr>
+	<tr>
+		<td>Right Kidney</td>
+		<td><%= @patient.organ_weight.rt_kidney_observed %></td>
+		<td><%= @patient.organ_weight.rt_kidney_expected %></td>
+	</tr>
+	<tr>
+		<td>Right Lung</td>
+		<td><%= @patient.organ_weight.rt_lung_observed %></td>
+		<td><%= @patient.organ_weight.rt_lung_expected %></td>
+	</tr>
+	<tr>
+		<td>Spleen</td>
+		<td><%= @patient.organ_weight.spleen_observed %></td>
+		<td><%= @patient.organ_weight.spleen_expected %></td>
+	</tr>
+	<tr>
+		<td>Thymus</td>
+		<td><%= @patient.organ_weight.thymus_observed %></td>
+		<td><%= @patient.organ_weight.thymus_expected %></td>
+	</tr>
+ </table>
+</div>
+  
+<br>
+
+ <% if ! @patient.organ_weight.nil? %>
+  <%=  link_to 'Edit Organ Weight', edit_organ_weight_path(@patient), class: 'btn btn-primary' %> 
+ <% else %>
+  <%=  link_to 'New Organ Weight', new_organ_weight_path, class: 'btn btn-primary' %> 
+ <% end %>
+<%#= link_to 'Back', patients_path, class: 'btn btn-primary' %>

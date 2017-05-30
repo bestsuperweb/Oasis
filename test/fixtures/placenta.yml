@@ -1,0 +1,69 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  weight: 1
+  placental_weight_ratio: 1.5
+  total_length: 1
+  vessels: MyString
+  umbillical_cord_normal: MyString
+  normal_no_funisitis: MyString
+  normal_no_acute_vasculitis: MyString
+  umbillical_cord_normal_no_other: MyString
+  fetal_memberanes_normal: MyString
+  normal_no_acute_chorioamnionitis: MyString
+  normal_no_pigmented_macrophages: MyString
+  fetal_membranes_normal_no_other: MyString
+  chorionic_plate_and_stem_vessels_normal: MyString
+  normal_no_acute_vasculitis: MyString
+  normal_no_thrombosis: MyString
+  normal_no_hemorrhagic_endovasculosis: MyString
+  normal_no_cushion_lesions_with_or_without_fibrin: MyString
+  chorionic_plate_and_stem_vessels_normal_no_other: MyString
+  maturation_appropriate_for_gestational_age: MyString
+  maturation_no_specify: MyString
+  chorionic_villi_and_intervillous_space_normal: MyString
+  chorionic_villi_abnormal_chronic_lymphohistiocytic_villitis: MyString
+  chorionic_villi_abnormal_acute_intervillositis: MyString
+  chorionic_villi_abnormal_avascular_villi: MyString
+  chorionic_villi_abnormal_other: MyString
+  basal_plate_normal: MyString
+  normal_no_maternal_vessels_normal: MyString
+  normal_no_decidua_basalis_normal: MyString
+  normal_no_basalplate_other: MyString
+  normal_no_maternal_vessels_normal_specify: MyString
+  normal_no_decidua_basalis_normal_specify: MyString
+  description_id: 
+
+two:
+  weight: 1
+  placental_weight_ratio: 1.5
+  total_length: 1
+  vessels: MyString
+  umbillical_cord_normal: MyString
+  normal_no_funisitis: MyString
+  normal_no_acute_vasculitis: MyString
+  umbillical_cord_normal_no_other: MyString
+  fetal_memberanes_normal: MyString
+  normal_no_acute_chorioamnionitis: MyString
+  normal_no_pigmented_macrophages: MyString
+  fetal_membranes_normal_no_other: MyString
+  chorionic_plate_and_stem_vessels_normal: MyString
+  normal_no_acute_vasculitis: MyString
+  normal_no_thrombosis: MyString
+  normal_no_hemorrhagic_endovasculosis: MyString
+  normal_no_cushion_lesions_with_or_without_fibrin: MyString
+  chorionic_plate_and_stem_vessels_normal_no_other: MyString
+  maturation_appropriate_for_gestational_age: MyString
+  maturation_no_specify: MyString
+  chorionic_villi_and_intervillous_space_normal: MyString
+  chorionic_villi_abnormal_chronic_lymphohistiocytic_villitis: MyString
+  chorionic_villi_abnormal_acute_intervillositis: MyString
+  chorionic_villi_abnormal_avascular_villi: MyString
+  chorionic_villi_abnormal_other: MyString
+  basal_plate_normal: MyString
+  normal_no_maternal_vessels_normal: MyString
+  normal_no_decidua_basalis_normal: MyString
+  normal_no_basalplate_other: MyString
+  normal_no_maternal_vessels_normal_specify: MyString
+  normal_no_decidua_basalis_normal_specify: MyString
+  description_id: 

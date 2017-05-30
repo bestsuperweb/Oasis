@@ -1,0 +1,190 @@
+<br>
+<br>
+
+<% if @description.patient.nil?
+     @patient = Patient.new
+end %>
+
+   <%= form_for @patient, url: patient_path do |f| %>
+     <% if @patient.errors.any? %>
+       <div id="error_explanation">
+	 <h2><%= pluralize(@patient.errors.count, "error") %> prohibited this patient from being saved:</h2>
+
+	 <ul>
+	   <% @patient.errors.full_messages.each do |message| %>
+	     <li><%= message %></li>
+	   <% end %>
+	 </ul>
+       </div>
+     <% end %>
+
+     <div class="panel panel-patient">
+       <div class="panel-heading panel-heading-patient small-heading">
+	 <span class="fa fa-user pull-left"></span>Details of patient
+       </div>
+       <div class="panel-body panel-body-patient">
+	 <div class="row">
+	   <div class="field col-sm-4">
+	     <%= f.label :name %><br>
+	     <%= f.text_field :name, class: "form-control input-sm" %>
+	   </div>
+
+	   <div class="field col-sm-4">
+	     <%= f.label :date_of_birth%><br>
+	     <div class="controls">
+	       <%= f.text_field :dob, { class: "form-control input-sm date-picker" } %>
+	     </div>
+	   </div>
+
+	   <div class="field col-sm-4">
+	     <%= f.label :time_of_birth ,"Time of birth (Hours : Min)"%><br>
+	     <%= f.text_field :time_of_birth, class: "form-control input-sm" %> 
+	   </div>
+	 </div>
+
+	 <div class="row">
+	   <div class="field col-sm-3">
+	     <%= f.label :age, "Gestational age at delivery: weeks and " %><br>
+	     <%= f.number_field :age, class: "form-control input-sm"%>
+	   </div>
+	   <div class="field col-sm-1">
+	     <%= f.label :day, "days" %><br>
+	     <%= f.number_field :age_day_week, { class: "form-control input-sm" } %>
+	   </div>
+	   <div class="col-sm-4 drop-down">
+	     <%= f.label :race %><br>
+	     <%= f.select :race,[:Asian, :Hispanic, :Caucassian, "Pacific Islander", "Asian Indian" , "Native American", "Other"], {prompt: "Select One"},{ class: "form-control input-sm"} %>
+	   </div>
+	   <div class="field col-sm-4 drop-down">
+	     <%= f.label :sex, "Gender" %><br>
+	     <%= f.select :sex, [:Male, :Female, :Unknown], {prompt: "Select One"} , {class: "form-control input-sm"} %>
+	   </div>
+	 </div>
+	 <div class="row">
+	   <div class="field col-sm-4">
+	     <%= f.label :type_of_gestation, 'Type of gestation:' %><br>
+	     <%= f.select :type_of_gestation, [:Singleton, :Multiple], {prompt: "Select one from drop down menu"}, {class: "form-control input-sm type_of_gestation"}  %>
+	   </div>
+	   <div class="field col-sm-4 specify-field">
+	     <%= f.label :specify_number, 'Specify number:' %><br>
+	     <%= f.select :specify_number, [2, 3, 4, 5, 6, 7, 8, 9, 10], {prompt: "Select one from drop down menu"}, {class: "form-control input-sm"}  %>
+	   </div>
+	   <div class="field col-sm-4">
+	     <%= f.label :restrictions %><br>
+	     <%= f.text_field :restrictions, class: "form-control input-sm"  %>
+	   </div>
+	 </div>
+       </div>
+     </div>
+     <script type="text/javascript">
+	     if( $('.type_of_gestation').val() == 'Singleton' ){
+	     	$('div.specify-field').hide();
+	     }    	
+
+     	$('.type_of_gestation').on('change', function(){
+     		if ($(this).val() == 'Multiple') {
+     			$('div.specify-field').show();
+     		}
+     		if ($(this).val() == 'Singleton'){
+     			$('div.specify-field').hide();
+     			$('div.specify-field select').val('');
+     		}
+     	});
+
+     </script>
+
+     <div class="panel panel-patient">
+       <div class="panel-heading panel-heading-patient small-heading">
+	 <span class="fa fa-user pull-left"></span>Details of Autopsy
+       </div>
+       <div class="panel-body panel-body-patient">
+	 <div class="row">
+	   <div class="field col-sm-4">
+	     <%= f.label :case_number %><br>
+	     <%= f.text_field :case, class: "form-control input-sm" %>
+	   </div>
+	   <div class="field col-sm-4">
+	     <%= f.label :hospital %><br>
+	     <%= f.text_field :hospital, class: "form-control input-sm" %>
+	   </div>
+	   <div class="field col-sm-4">
+	     <%= f.label :date_of_admission %><br>
+	     <%= f.text_field :date_admission , class: "form-control date-picker input-sm" %>
+	   </div>
+	   <div class="field col-sm-4">
+	     <%= f.label :date_autopsy, "Date of autopsy" %><br>
+	     <%= f.text_field :date_autopsy, class: "form-control input-sm date-picker" %>
+	   </div>
+	   <div class="field col-sm-4">
+	     <%= f.label :time_of_autopsy %><br>
+	     <%= f.text_field :time_of_autopsy, { class: "form-control input-sm"} %>
+	   </div>
+	   <%
+	    if ! @description.patient.nil?
+	     if @description.patient.time_of_autopsy.nil? 
+	       toa = "12:00"
+	     elsif @description.patient.time_of_autopsy == "NaN : NaN"
+	       toa = "12:00"
+	     else
+	       toa = @description.patient.time_of_autopsy
+	     end
+
+	     if @description.patient.time_of_birth.nil?
+	       tob = "12:00"
+	     elsif @description.patient.time_of_birth == "NaN : NaN"
+	       tob = "12:00"
+	     else 
+	       tob = @description.patient.time_of_birth
+	     end
+	   else 
+	     toa = "12:00"
+	     tob = "12:00"
+	   end
+
+	   %>
+
+	   <%= javascript_tag do %>
+	     window.time_of_autopsy = '<%= toa %>';
+	     window.time_of_birth = '<%=  tob %>';
+	   <% end %>
+	   <script>
+$('#patient_time_of_autopsy').wickedpicker({twentyFour: true, now: time_of_autopsy, title: 'Pick time'})
+$('#patient_time_of_birth').wickedpicker({twentyFour: true, now: time_of_birth, title: 'Pick time'})
+$('.date-picker').datepicker({ dateFormat: 'mm-dd-yyyy', format: 'mm-dd-yyyy' })
+	   </script>
+
+	   <div class="field col-sm-4">
+	     <%#= f.label :pathologist %>
+	     <%#= f.text_field :pathologist , { class: "form-control input-sm" } %>
+	       <%= label_tag :pathologist, "Assign"%><br>
+	       <%= select_tag "patient[pathologist]" ,
+		   options_for_select( User.where(physician: true).collect{ |u| [u.email, u.id] },
+				      @patient.pathologist) ,
+				      { :prompt => "Select one", class: "form-control input-sm" } %>
+	 </div>
+	 </div>
+	 <div class="row">
+
+	   <div class="field col-sm-4">
+	     <%= f.label :physicians %><br>
+	     <%= f.text_field :physician , class: "form-control input-sm" %>
+	   </div>
+	   <div class="field col-sm-4">
+	     <%= f.label :attendant %><br>
+	     <%= f.text_field :attendant , class: "form-control input-sm" %>
+	   </div>
+	   <div class="field col-sm-4">
+	     <%= f.label :prosector %><br>
+	     <%= f.text_field :prosector , class: "form-control input-sm" %>
+	   </div>
+	 </div>
+       </div>
+     </div>
+
+     <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+       <i class="icon-ok icon-white"></i> Save
+     <% end %>
+     <br>
+     <br>
+     <%= tinymce %>
+   <% end %>

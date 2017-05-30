@@ -1,0 +1,7 @@
+Chorionic villi	maturation_appropriate_for_gestational_age	select	"yes","no"	
+Chorionic villi	maturation_no_specify	select	"accelerated maturation", "immature villi", "distal villous hypoplasia", "uneven maturation", "other"	
+Chorionic villi	chorionic_villi_and_intervillous_space_normal	select	"yes","no"	
+Chorionic villi	chorionic_villi_abnormal_chronic_lymphohistiocytic_villitis	select	"yes","no"	
+Chorionic villi	chorionic_villi_abnormal_acute_intervillositis	text		
+Chorionic villi	chorionic_villi_abnormal_avascular_villi	select	"focal", "diffuse"	
+Chorionic villi	chorionic_villi_abnormal_other	text		

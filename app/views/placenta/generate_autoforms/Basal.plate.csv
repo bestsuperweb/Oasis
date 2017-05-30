@@ -1,0 +1,4 @@
+Basal plate	basal_plate_normal	select	"yes", "no"	
+Basal plate	normal_no_maternal_vessels_normal	select	"yes","no"	no,specify
+Basal plate	normal_no_decidua_basalis_normal	select	"yes","no"	no,specify
+Basal plate	normal_no_basalplate_other	text		

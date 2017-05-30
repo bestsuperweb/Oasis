@@ -1,0 +1,12 @@
+<div>
+  <h3>Abdomen</h3>
+  <table>
+    <%
+      @names_array = ["Configuration","Umbilicus / Abdominal wall","Size of palpable organs","Masses","Other"]
+      @prop_array = ["abdomen_configuration","umbilicus_abdominal_wall","size_of_palpable_organs","masses","abdomen_other"]
+      @specify_array = ["abdomen_configuration_specify","umbilicus_abdominal_wall_specify","size_of_palpable_organs_specify","masses_specify",""]
+    %>
+    <%= render :partial => "external_loop"%>
+</table>
+</div>
+

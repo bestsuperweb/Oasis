@@ -1,0 +1,9 @@
+Peritoneal cavity	peritoneal serosal surfaces	select	"Normal","Abnormal"	Abnormal, specify
+Peritoneal cavity	fluid	text		
+Peritoneal cavity	fluid quantity	number		
+Peritoneal cavity	peritoneal nature of fluid	select	"Clear","Serosanguineous","Bloody","Exudative","Chylous","Other"	Other, specify
+Peritoneal cavity	peritoneal cavity organ relations	select	"Normal","Abnormal"	Abnormal, specify
+Peritoneal cavity	retrroperitoneum	select	"Normal","Abnormal"	Abnormal, specify
+Peritoneal cavity	umbilical vessels	select	"Normal","Abnormal"	Abnormal, specify
+Peritoneal cavity	no of umbilical arteries	select	"1","2"	
+Peritoneal cavity	peritoneal cavity other	text		

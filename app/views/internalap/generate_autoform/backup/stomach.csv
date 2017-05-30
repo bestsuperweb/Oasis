@@ -1,0 +1,6 @@
+stomach and duodenum normal	checkbox			
+stomach size position configuration	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+stomach mucosa and wall	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+stomach and duodenum contents	text			Empty box
+ampulla	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+stomach and duodenum other	text			

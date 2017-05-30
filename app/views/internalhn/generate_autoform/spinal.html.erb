@@ -1,0 +1,42 @@
+   <div class="col-sm-3">
+     <div class="panel panel-internal squarish">
+       <div class="panel-heading panel-heading-internal small-heading squarish">
+         Spinal_cord
+       </div>
+       <div class="panel-body panel-body-internal squarish">
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Extradural_space: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.extradural_space_specify.nil? or @description.internal.extradural_space_specify == "" ) ?  @description.internal.extradural_space :  @description.internal.extradural_space_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Meninges: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.meninges_specify.nil? or @description.internal.meninges_specify == "" ) ?  @description.internal.meninges :  @description.internal.meninges_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Cord_proper: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.cord_proper_specify.nil? or @description.internal.cord_proper_specify == "" ) ?  @description.internal.cord_proper :  @description.internal.cord_proper_specify 
+   	%>  
+         </div> 
+         </div>
+   
+       </div>
+     </div>
+   </div>

@@ -1,0 +1,6 @@
+dura and venous sinuses normal	checkbox			
+epidural space	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+dura falx tentorium	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+subdural epidural	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+venous sinuses	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+sinuses other	text			Empty box

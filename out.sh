@@ -1,0 +1,1 @@
+rails g migration AddDetailsToAncillaryTesting microbiology_specify viral_culture_specify karyotype_requested_specify electron_microscopy_specify

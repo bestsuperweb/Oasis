@@ -1,0 +1,181 @@
+<div class="panel panel-primary">
+        <div class="panel-heading">
+           <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#Left-kidneys-and-ureter">Left-kidneys-and-ureter</a>
+           </h4>
+        </div>
+      <div id="Left-kidneys-and-ureter" class="panel-collapse collapse in"> 
+
+	     <div class="row" style="width:100%">
+		<div class="field col-sm-4">
+		    <%= f.label :left_kidney_weight %><br>
+		<%= f.number_field :left_kidney_weight, class: "form-control" %>
+	     </div> </div>
+<div class="row" style="width:100%">
+		   <div class="col-sm-6 drop-down">
+		      <%= f.label  :left_kidney_configuration_position %><br>
+		      <%= f.select :left_kidney_configuration_position, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+		   </div>
+
+		   <div class="col-sm-6">
+		   <% if !@description.internal.nil?  %>
+		    <% if @description.internal.left_kidney_configuration_position == "Abnormal" %>
+		      <%= f.label  :please_specify, { id:"label_internal_left_kidney_configuration_position_specify" } %><br>
+		      <%= f.text_field :left_kidney_configuration_position_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_left_kidney_configuration_position_specify" } %><br>
+		      <%= f.text_field :left_kidney_configuration_position_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		    <% end %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_left_kidney_configuration_position_specify" } %><br>
+		      <%= f.text_field :left_kidney_configuration_position_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		   <% end %>
+		  </div>
+		</div>
+      
+<div class="row" style="width:100%">
+		   <div class="col-sm-6 drop-down">
+		      <%= f.label  :left_kidney_external_surface %><br>
+		      <%= f.select :left_kidney_external_surface, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+		   </div>
+
+		   <div class="col-sm-6">
+		   <% if !@description.internal.nil?  %>
+		    <% if @description.internal.left_kidney_external_surface == "Abnormal" %>
+		      <%= f.label  :please_specify, { id:"label_internal_left_kidney_external_surface_specify" } %><br>
+		      <%= f.text_field :left_kidney_external_surface_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_left_kidney_external_surface_specify" } %><br>
+		      <%= f.text_field :left_kidney_external_surface_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		    <% end %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_left_kidney_external_surface_specify" } %><br>
+		      <%= f.text_field :left_kidney_external_surface_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		   <% end %>
+		  </div>
+		</div>
+      
+<div class="row" style="width:100%">
+		   <div class="col-sm-6 drop-down">
+		      <%= f.label  :left_kidney_parenchyma_or_cut_surface %><br>
+		      <%= f.select :left_kidney_parenchyma_or_cut_surface, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+		   </div>
+
+		   <div class="col-sm-6">
+		   <% if !@description.internal.nil?  %>
+		    <% if @description.internal.left_kidney_parenchyma_or_cut_surface == "Abnormal" %>
+		      <%= f.label  :please_specify, { id:"label_internal_left_kidney_parenchyma_or_cut_surface_specify" } %><br>
+		      <%= f.text_field :left_kidney_parenchyma_or_cut_surface_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_left_kidney_parenchyma_or_cut_surface_specify" } %><br>
+		      <%= f.text_field :left_kidney_parenchyma_or_cut_surface_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		    <% end %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_left_kidney_parenchyma_or_cut_surface_specify" } %><br>
+		      <%= f.text_field :left_kidney_parenchyma_or_cut_surface_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		   <% end %>
+		  </div>
+		</div>
+      
+
+	     <div class="row" style="width:100%">
+		<div class="field col-sm-4">
+		    <%= f.label :left_kidney_cortical_thickness %><br>
+		<%= f.number_field :left_kidney_cortical_thickness, class: "form-control" %>
+	     </div> </div>
+
+	     <div class="row" style="width:100%">
+		<div class="field col-sm-4">
+		    <%= f.label :left_kidney_medulla_depth %><br>
+		<%= f.number_field :left_kidney_medulla_depth, class: "form-control" %>
+	     </div> </div>
+<div class="row" style="width:100%">
+		   <div class="col-sm-6 drop-down">
+		      <%= f.label  :left_kidney_pelves_and_calyces %><br>
+		      <%= f.select :left_kidney_pelves_and_calyces, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+		   </div>
+
+		   <div class="col-sm-6">
+		   <% if !@description.internal.nil?  %>
+		    <% if @description.internal.left_kidney_pelves_and_calyces == "Abnormal" %>
+		      <%= f.label  :please_specify, { id:"label_internal_left_kidney_pelves_and_calyces_specify" } %><br>
+		      <%= f.text_field :left_kidney_pelves_and_calyces_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_left_kidney_pelves_and_calyces_specify" } %><br>
+		      <%= f.text_field :left_kidney_pelves_and_calyces_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		    <% end %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_left_kidney_pelves_and_calyces_specify" } %><br>
+		      <%= f.text_field :left_kidney_pelves_and_calyces_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		   <% end %>
+		  </div>
+		</div>
+      
+<div class="row" style="width:100%">
+		   <div class="col-sm-6 drop-down">
+		      <%= f.label  :left_kideny_peripelvic_fat_and_lymph_nodes %><br>
+		      <%= f.select :left_kideny_peripelvic_fat_and_lymph_nodes, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+		   </div>
+
+		   <div class="col-sm-6">
+		   <% if !@description.internal.nil?  %>
+		    <% if @description.internal.left_kideny_peripelvic_fat_and_lymph_nodes == "Abnormal" %>
+		      <%= f.label  :please_specify, { id:"label_internal_left_kideny_peripelvic_fat_and_lymph_nodes_specify" } %><br>
+		      <%= f.text_field :left_kideny_peripelvic_fat_and_lymph_nodes_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_left_kideny_peripelvic_fat_and_lymph_nodes_specify" } %><br>
+		      <%= f.text_field :left_kideny_peripelvic_fat_and_lymph_nodes_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		    <% end %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_left_kideny_peripelvic_fat_and_lymph_nodes_specify" } %><br>
+		      <%= f.text_field :left_kideny_peripelvic_fat_and_lymph_nodes_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		   <% end %>
+		  </div>
+		</div>
+      
+<div class="row" style="width:100%">
+		   <div class="col-sm-6 drop-down">
+		      <%= f.label  :left_panel_renal_vessels %><br>
+		      <%= f.select :left_panel_renal_vessels, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+		   </div>
+
+		   <div class="col-sm-6">
+		   <% if !@description.internal.nil?  %>
+		    <% if @description.internal.left_panel_renal_vessels == "Abnormal" %>
+		      <%= f.label  :please_specify, { id:"label_internal_left_panel_renal_vessels_specify" } %><br>
+		      <%= f.text_field :left_panel_renal_vessels_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_left_panel_renal_vessels_specify" } %><br>
+		      <%= f.text_field :left_panel_renal_vessels_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		    <% end %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_left_panel_renal_vessels_specify" } %><br>
+		      <%= f.text_field :left_panel_renal_vessels_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		   <% end %>
+		  </div>
+		</div>
+      
+<div class="row" style="width:100%">
+		   <div class="col-sm-6 drop-down">
+		      <%= f.label  :left_kidney_ureter %><br>
+		      <%= f.select :left_kidney_ureter, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+		   </div>
+
+		   <div class="col-sm-6">
+		   <% if !@description.internal.nil?  %>
+		    <% if @description.internal.left_kidney_ureter == "Abnormal" %>
+		      <%= f.label  :please_specify, { id:"label_internal_left_kidney_ureter_specify" } %><br>
+		      <%= f.text_field :left_kidney_ureter_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_left_kidney_ureter_specify" } %><br>
+		      <%= f.text_field :left_kidney_ureter_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		    <% end %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_left_kidney_ureter_specify" } %><br>
+		      <%= f.text_field :left_kidney_ureter_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		   <% end %>
+		  </div>
+		</div>
+      
+</div>
+</div>

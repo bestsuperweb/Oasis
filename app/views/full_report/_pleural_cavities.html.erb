@@ -1,0 +1,12 @@
+<div>
+  <h3>Pleural cavities</h3>
+  <table>
+    <%
+      @names_array = ["Pleural serosal surfaces","Pneumothorax","Amount of fluid","Nature of fluid","Organ relations","Other","Microscopic description"]
+      @prop_array = ["pleural_serosal_surfaces","pneumothorax","pleural_cavities_amount_of_fluid","pleural_nature_of_fluid","pleural_cavity_organ_relations","pleural_cavities_other","pleural_cavities_md"]
+      @specify_array = ["pleural_serosal_surfaces_specify","pneumothorax_specify","pleural_cavities_amount_of_fluid_specify","pleural_nature_of_fluid_specify","pleural_cavity_organ_relations_specify","",""]
+    %>
+    <%= render :partial => "internal_loop"%>
+</table>
+</div>
+

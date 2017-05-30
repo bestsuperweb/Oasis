@@ -1,0 +1,6 @@
+Heart, general and external	heart position	select	"Normal","Abnormal"	Abnormal, specify
+Heart, general and external	epicardium	select	"Normal","Abnormal"	Abnormal, specify
+Heart, general and external	heart shape	select	"Normal","Abnormal"	Abnormal, specify
+Heart, general and external	heart size	select	"Normal","Abnormal"	Abnormal, specify
+Heart, general and external	heart only weight	number		
+Heart, general and external	combined heart and lungs weight	number		

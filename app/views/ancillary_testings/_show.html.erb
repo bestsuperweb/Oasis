@@ -1,0 +1,69 @@
+<br>
+<div class="panel panel-tests">
+  <div class="panel-heading panel-heading-tests small-heading">
+    <span class="fa fa-user pull-left"></span>Ancilliary tests
+  </div>
+  <div class="panel-body panel-body-tests">
+    <div class="row">
+      <div class="col-sm-4 custom-prop">
+	<strong>Microbiology:
+	</strong>
+      </div>
+      <div class="col-sm-8 custom-val">
+	<%=@description.ancillary_testing.microbiology%>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4 custom-prop"></div>
+      <div class="col-sm-8 custom-val">
+      <%=@description.ancillary_testing.microbiology_specify%>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4 custom-prop">
+	<strong>Viral culture:</strong>
+      </div>
+      <div class="col-sm-8 custom-val">
+	<%=@description.ancillary_testing.viral_culture %>
+      </div>
+    </div>
+    <div class="row">
+    <div class="col-sm-4 custom-prop"></div><div class="col-sm-8 custom-val"><%=@description.ancillary_testing.viral_culture_specify%></div>
+    </div>
+    <div class="row">
+    </div>
+    <div class="row">
+    <div class="col-sm-4 custom-prop"><strong>Karyotype requested:</strong></div><div class="col-sm-8 custom-val"><%=@description.ancillary_testing.karyotype_requested %></div>
+    </div>
+    <div class="row">
+    <div class="col-sm-4 custom-prop"></div><div class="col-sm-8 custom-val"><%=@description.ancillary_testing.karyotype_requested_specify%></div>
+    </div>
+    <div class="row">
+    <div class="col-sm-4 custom-prop"><strong>Electron microscope:</strong></div><div class="col-sm-8 custom-val"><%=@description.ancillary_testing.electron_microscopy%></div>
+    </div>
+    <div class="row">
+    <div class="col-sm-4 custom-prop"></div><div class="col-sm-8 custom-val"><%=@description.ancillary_testing.electron_microscopy_specify%></div>
+    </div>
+    <div class="row">
+    <div class="col-sm-4 custom-prop"><strong>Molecular diangnostic pathology:</strong></div><div class="col-sm-8 custom-val"><%=@description.ancillary_testing.molecular_diagnostic_pathology%></div>
+    </div>
+    <div class="row">
+    </div>
+    <div class="row">
+    <div class="col-sm-4 custom-prop"><strong>Specimens snap frozen:</strong></div><div class="col-sm-8 custom-val"><%=@description.ancillary_testing.specimens_snap_frozen%></div>
+    </div>
+    <div class="row">
+    <div class="col-sm-4 custom-prop"><strong>Post mortem X-rays:</strong></div><div class="col-sm-8 custom-val"><%=@description.ancillary_testing.post_mortem_x_rays%></div>
+    </div>
+    <div class="row">
+    <div class="col-sm-4 custom-prop"><strong>Photographs:</strong></div><div class="col-sm-8 custom-val"><%=@description.ancillary_testing.photographs%></div>
+    </div>
+    <div class="row">
+    <div class="col-sm-4 custom-prop"><strong>Organs for special study:</strong></div><div class="col-sm-8 custom-val"><%=@description.ancillary_testing.organs_for_special_study%></div>
+    </div>
+</div>
+</div>
+
+<% if can? :update, AncillaryTesting %>
+  <%= link_to 'Edit Autopsy Testing Data', edit_ancillary_testing_path(@description), class: 'btn btn-primary' %>
+<% end %>

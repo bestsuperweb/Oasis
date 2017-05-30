@@ -1,0 +1,4 @@
+Stomach and duodenum	stomach size position configuration	select	"Normal","Abnormal"	Abnormal, specify
+Stomach and duodenum	stomach mucosa and wall	select	"Normal","Abnormal"	Abnormal, specify
+Stomach and duodenum	stomach and duodenum contents	text		
+Stomach and duodenum	ampulla	select	"Normal","Abnormal"	Abnormal, specify

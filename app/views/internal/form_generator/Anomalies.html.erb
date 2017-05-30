@@ -1,0 +1,31 @@
+<div class="panel panel-primary">
+        <div class="panel-heading">
+           <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#Anomalies">Anomalies</a>
+           </h4>
+        </div>
+      <div id="Anomalies" class="panel-collapse collapse in"> 
+<div class="row" style="width:100%">
+		   <div class="col-sm-6 drop-down">
+		      <%= f.label  :genitourinary_anomalies %><br>
+		      <%= f.select :genitourinary_anomalies, [:yes, :No], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'yes')"} %> 
+		   </div>
+
+		   <div class="col-sm-6">
+		   <% if !@description.internal.nil?  %>
+		    <% if @description.internal.genitourinary_anomalies == "yes" %>
+		      <%= f.label  :please_specify, { id:"label_internal_genitourinary_anomalies_specify" } %><br>
+		      <%= f.text_field :genitourinary_anomalies_specify, { class: "form-control", placeholder: "If yes, explain" } %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_genitourinary_anomalies_specify" } %><br>
+		      <%= f.text_field :genitourinary_anomalies_specify, { class: "form-control", placeholder: "If yes, explain" , disabled: true } %>
+		    <% end %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_genitourinary_anomalies_specify" } %><br>
+		      <%= f.text_field :genitourinary_anomalies_specify, { class: "form-control", placeholder: "If yes, explain" , disabled: true } %>
+		   <% end %>
+		  </div>
+		</div>
+      
+</div>
+</div>

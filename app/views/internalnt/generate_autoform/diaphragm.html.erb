@@ -1,0 +1,40 @@
+   <div class="col-sm-3">
+     <div class="panel panel-internal squarish">
+       <div class="panel-heading panel-heading-internal small-heading squarish">
+         Diaphragm
+       </div>
+       <div class="panel-body panel-body-internal squarish">
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Diaphragm_position_configuration: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.diaphragm_position_configuration_specify.nil? or @description.internal.diaphragm_position_configuration_specify == "" ) ?  @description.internal.diaphragm_position_configuration :  @description.internal.diaphragm_position_configuration_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Diphragm_defect : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.diphragm_defect%>               
+   	</div>
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Diaphragm_other : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.diaphragm_other%>               
+   	</div>
+         </div>
+   
+       </div>
+     </div>
+   </div>

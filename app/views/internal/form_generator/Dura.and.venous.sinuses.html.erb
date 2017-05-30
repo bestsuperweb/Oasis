@@ -1,0 +1,81 @@
+<div class="panel panel-primary">
+        <div class="panel-heading">
+           <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#Dura-and-venous-sinuses">Dura-and-venous-sinuses</a>
+           </h4>
+        </div>
+      <div id="Dura-and-venous-sinuses" class="panel-collapse collapse in"> 
+<div class="row" style="width:100%">
+		   <div class="col-sm-6 drop-down">
+		      <%= f.label  :dura_falx_tentorium %><br>
+		      <%= f.select :dura_falx_tentorium, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+		   </div>
+
+		   <div class="col-sm-6">
+		   <% if !@description.internal.nil?  %>
+		    <% if @description.internal.dura_falx_tentorium == "Abnormal" %>
+		      <%= f.label  :please_specify, { id:"label_internal_dura_falx_tentorium_specify" } %><br>
+		      <%= f.text_field :dura_falx_tentorium_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_dura_falx_tentorium_specify" } %><br>
+		      <%= f.text_field :dura_falx_tentorium_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		    <% end %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_dura_falx_tentorium_specify" } %><br>
+		      <%= f.text_field :dura_falx_tentorium_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		   <% end %>
+		  </div>
+		</div>
+      
+<div class="row" style="width:100%">
+		   <div class="col-sm-6 drop-down">
+		      <%= f.label  :subdural_epidural %><br>
+		      <%= f.select :subdural_epidural, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+		   </div>
+
+		   <div class="col-sm-6">
+		   <% if !@description.internal.nil?  %>
+		    <% if @description.internal.subdural_epidural == "Abnormal" %>
+		      <%= f.label  :please_specify, { id:"label_internal_subdural_epidural_specify" } %><br>
+		      <%= f.text_field :subdural_epidural_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_subdural_epidural_specify" } %><br>
+		      <%= f.text_field :subdural_epidural_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		    <% end %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_subdural_epidural_specify" } %><br>
+		      <%= f.text_field :subdural_epidural_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		   <% end %>
+		  </div>
+		</div>
+      
+<div class="row" style="width:100%">
+		   <div class="col-sm-6 drop-down">
+		      <%= f.label  :venous_sinuses %><br>
+		      <%= f.select :venous_sinuses, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+		   </div>
+
+		   <div class="col-sm-6">
+		   <% if !@description.internal.nil?  %>
+		    <% if @description.internal.venous_sinuses == "Abnormal" %>
+		      <%= f.label  :please_specify, { id:"label_internal_venous_sinuses_specify" } %><br>
+		      <%= f.text_field :venous_sinuses_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_venous_sinuses_specify" } %><br>
+		      <%= f.text_field :venous_sinuses_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		    <% end %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_venous_sinuses_specify" } %><br>
+		      <%= f.text_field :venous_sinuses_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		   <% end %>
+		  </div>
+		</div>
+      
+
+	     <div class="row" style="width:100%">
+		<div class="field col-sm-4">
+		    <%= f.label :sinuses_other %><br>
+		    <%= f.text_field :sinuses_other, class: "form-control" %>
+	     </div> </div>
+</div>
+</div>

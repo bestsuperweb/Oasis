@@ -1,0 +1,55 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  major_clinical_diagnosis: MyString
+  major_pathologic_diagnosis: MyString
+  clinical_cause_of_death: MyString
+  pathological_cause_of_death: MyString
+  discover_a_discrepancy_between_clinical_and_pathologic_diagnosis: MyString
+  establish_an_unexpected_additional_diagnosis: MyString
+  confirm_the_major_clinical_diagnosis: MyString
+  information_relevant_to_genetic_counselling: MyString
+  information_relevant_to_treatment_effect: MyString
+  information_on_diagnostic_procedures: MyString
+  information_relevant_to_previous_lab_or_anatomic_pathology_data: MyString
+  are_all_parts_of_the_report_complete: MyString
+  are_the_descriptions_clear: MyString
+  are_all_gross_abnormalities_confirmed_microscopically: MyString
+  are_all_appropriate_special_studies_done_and_reported: MyString
+  diagnoses_justified_on_anatomic_evidence_scroll_down_menu_saying: MyString
+  diagnoses_complete: MyString
+  diagnosis_organized_and_sequenced_by_pathogenetic_significance: MyString
+  transcriptional_or_typographical_errors: MyString
+  clinically_relevant_postmortem_findings_addressed_in_cpc: MyString
+  comments_and_recommendations: MyString
+  reviewed_by: MyString
+  date: MyString
+  description_id: 
+  are_all_appropriate_special_studies_done_and_reported_specify: MyString
+
+two:
+  major_clinical_diagnosis: MyString
+  major_pathologic_diagnosis: MyString
+  clinical_cause_of_death: MyString
+  pathological_cause_of_death: MyString
+  discover_a_discrepancy_between_clinical_and_pathologic_diagnosis: MyString
+  establish_an_unexpected_additional_diagnosis: MyString
+  confirm_the_major_clinical_diagnosis: MyString
+  information_relevant_to_genetic_counselling: MyString
+  information_relevant_to_treatment_effect: MyString
+  information_on_diagnostic_procedures: MyString
+  information_relevant_to_previous_lab_or_anatomic_pathology_data: MyString
+  are_all_parts_of_the_report_complete: MyString
+  are_the_descriptions_clear: MyString
+  are_all_gross_abnormalities_confirmed_microscopically: MyString
+  are_all_appropriate_special_studies_done_and_reported: MyString
+  diagnoses_justified_on_anatomic_evidence_scroll_down_menu_saying: MyString
+  diagnoses_complete: MyString
+  diagnosis_organized_and_sequenced_by_pathogenetic_significance: MyString
+  transcriptional_or_typographical_errors: MyString
+  clinically_relevant_postmortem_findings_addressed_in_cpc: MyString
+  comments_and_recommendations: MyString
+  reviewed_by: MyString
+  date: MyString
+  description_id: 
+  are_all_appropriate_special_studies_done_and_reported_specify: MyString

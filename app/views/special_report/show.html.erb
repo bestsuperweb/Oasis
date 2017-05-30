@@ -1,0 +1,101 @@
+<!-- edit special report -->
+<!-- <h1>Show special report</h1>
+ --><div class="special-report-form form-horizontal">
+  <div class="form-group">
+    <label class="control-label col-sm-3" for="email">Title:</label>
+    <div class="col-sm-9">
+      <div class="form-control"><%= @special_report.title %></div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-3" >Final diagnosis:</label>
+    <div class="col-sm-9">
+      <div class="panel"><%= @special_report.final_diagnosis.html_safe %></div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-3" >Gross description:</label>
+    <div class="col-sm-9">
+      <div class="panel"><%= @special_report.gross_description.html_safe %></div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-3" >Block code:</label>
+    <div class="col-sm-9"> 
+       
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-3" >Micropscopic description:</label>
+    <div class="col-sm-9">
+     <div class="panel"><%= @special_report.microscopic_description.html_safe %></div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-3" >Assign to:</label>
+    <div class="col-sm-9"> 
+      <div class="form-control"><%= User.find(@special_report.assign).email %></div>     	
+    </div>
+  </div>
+  <br>
+  <!-- <div class="form-group"> 
+    <div class="col-sm-2 col-sm-offset-8">
+      <% if @special_report.lock.nil? %>
+        <%= link_to ' Edit ', edit_special_report_path(@description.id, @special_report.id), class: 'btn btn-success' %>  
+      <% else %>
+        <a class="btn btn-warning" data-toggle="modal" data-target="#loginModal" > Edit </a> 
+      <% end %>
+    </div>
+    <div class="col-sm-2">
+      <a href="<%= delete_special_report_path(@description.id, @special_report.id) %>" class="btn btn-danger">Delete</a>
+    </div>
+  </div>  --> 
+
+<!-- end form -->
+</div>
+
+<div id="loginModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>        
+                <h4 class="modal-title">Log in for Sign out</h4>
+              </div>
+         <!-- form start -->
+              <%= form_for :sign_out, url: edit_special_report_path(@description.id, @special_report.id), method: :get do |d|%>
+               <div class="modal-body form-horizontal">
+                <div class="form-group">
+                  <label class="control-label col-sm-3" >Email:</label>
+                  <div class="col-sm-9">
+                    <%= d.email_field :email, :class => 'form-control', :required => 'true' %>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-3" >Password:</label>
+                  <div class="col-sm-9">
+                    <%= d.password_field :password, :class => 'form-control', :required => 'true' %>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" >Login</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+              </div>
+              <% end %>
+        <!-- form end -->
+            </div>
+          </div>
+        </div> 
+
+<script type="text/javascript">
+  tinyMCE.init({
+      selector: "textarea.tinymce",
+      theme_advanced_toolbar_location: "top",
+      theme_advanced_toolbar_align: "left",
+      theme_advanced_statusbar_location: "bottom",
+      theme_advanced_buttons3_add: null,
+      toolbar: "bold italic",
+      plugins: "table"
+    });
+</script>

@@ -1,0 +1,10 @@
+subcutaneous galea	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+periosteum	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+sutures fontanelles	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+skull base	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+sella	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+petrous pyramids opened and cultured	select	"yes","no"	yes, specify	If yes is selected, a box will appear saying specify
+ears removed	select	"yes","no"	yes, specify	If yes is selected, a box will appear saying specify
+foramen magnum antero posterior dimension	number			
+foramen magnum antero lateral dimension	number			
+cranium other	text			Empty box

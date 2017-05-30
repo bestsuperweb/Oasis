@@ -1,0 +1,109 @@
+<div class="panel panel-primary">
+        <div class="panel-heading">
+           <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#Heart,-general-and-external">Heart,-general-and-external</a>
+           </h4>
+        </div>
+      <div id="Heart,-general-and-external" class="panel-collapse collapse in"> 
+<div class="row" style="width:100%">
+		   <div class="col-sm-6 drop-down">
+		      <%= f.label  :heart_position %><br>
+		      <%= f.select :heart_position, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+		   </div>
+
+		   <div class="col-sm-6">
+		   <% if !@description.internal.nil?  %>
+		    <% if @description.internal.heart_position == "Abnormal" %>
+		      <%= f.label  :please_specify, { id:"label_internal_heart_position_specify" } %><br>
+		      <%= f.text_field :heart_position_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_heart_position_specify" } %><br>
+		      <%= f.text_field :heart_position_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		    <% end %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_heart_position_specify" } %><br>
+		      <%= f.text_field :heart_position_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		   <% end %>
+		  </div>
+		</div>
+      
+<div class="row" style="width:100%">
+		   <div class="col-sm-6 drop-down">
+		      <%= f.label  :epicardium %><br>
+		      <%= f.select :epicardium, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+		   </div>
+
+		   <div class="col-sm-6">
+		   <% if !@description.internal.nil?  %>
+		    <% if @description.internal.epicardium == "Abnormal" %>
+		      <%= f.label  :please_specify, { id:"label_internal_epicardium_specify" } %><br>
+		      <%= f.text_field :epicardium_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_epicardium_specify" } %><br>
+		      <%= f.text_field :epicardium_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		    <% end %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_epicardium_specify" } %><br>
+		      <%= f.text_field :epicardium_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		   <% end %>
+		  </div>
+		</div>
+      
+<div class="row" style="width:100%">
+		   <div class="col-sm-6 drop-down">
+		      <%= f.label  :heart_shape %><br>
+		      <%= f.select :heart_shape, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+		   </div>
+
+		   <div class="col-sm-6">
+		   <% if !@description.internal.nil?  %>
+		    <% if @description.internal.heart_shape == "Abnormal" %>
+		      <%= f.label  :please_specify, { id:"label_internal_heart_shape_specify" } %><br>
+		      <%= f.text_field :heart_shape_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_heart_shape_specify" } %><br>
+		      <%= f.text_field :heart_shape_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		    <% end %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_heart_shape_specify" } %><br>
+		      <%= f.text_field :heart_shape_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		   <% end %>
+		  </div>
+		</div>
+      
+<div class="row" style="width:100%">
+		   <div class="col-sm-6 drop-down">
+		      <%= f.label  :heart_size %><br>
+		      <%= f.select :heart_size, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+		   </div>
+
+		   <div class="col-sm-6">
+		   <% if !@description.internal.nil?  %>
+		    <% if @description.internal.heart_size == "Abnormal" %>
+		      <%= f.label  :please_specify, { id:"label_internal_heart_size_specify" } %><br>
+		      <%= f.text_field :heart_size_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_heart_size_specify" } %><br>
+		      <%= f.text_field :heart_size_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		    <% end %>
+		    <% else %>
+		      <%= f.label  :please_specify, { id:"label_internal_heart_size_specify" } %><br>
+		      <%= f.text_field :heart_size_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+		   <% end %>
+		  </div>
+		</div>
+      
+
+	     <div class="row" style="width:100%">
+		<div class="field col-sm-4">
+		    <%= f.label :heart_only_weight %><br>
+		<%= f.number_field :heart_only_weight, class: "form-control" %>
+	     </div> </div>
+
+	     <div class="row" style="width:100%">
+		<div class="field col-sm-4">
+		    <%= f.label :combined_heart_and_lungs_weight %><br>
+		<%= f.number_field :combined_heart_and_lungs_weight, class: "form-control" %>
+	     </div> </div>
+</div>
+</div>

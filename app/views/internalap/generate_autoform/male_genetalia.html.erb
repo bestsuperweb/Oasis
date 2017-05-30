@@ -1,0 +1,52 @@
+ <div class="col-sm-3">
+         <div class="panel panel-internal squarish">
+             <div class="panel-heading panel-heading-internal small-heading squarish">
+               Internal_genitalia_male
+             </div>
+         <div class="panel-body panel-body-internal squarish">
+
+            <div class="row">
+               <div class="col-sm-6 custom-prop">
+                  <strong>Prostate: </strong>
+               </div>
+               <div class="col-sm-6 custom-val">
+                  <%= ( @description.internal.prostate_specify.nil? or @description.internal.prostate_specify == "" ) ?  @description.internal.prostate :  @description.internal.prostate_specify 
+                  %>  
+               </div> 
+             </div>
+           
+
+            <div class="row">
+               <div class="col-sm-6 custom-prop">
+                  <strong>Epididymis: </strong>
+               </div>
+               <div class="col-sm-6 custom-val">
+                  <%= ( @description.internal.epididymis_specify.nil? or @description.internal.epididymis_specify == "" ) ?  @description.internal.epididymis :  @description.internal.epididymis_specify 
+                  %>  
+               </div> 
+             </div>
+           
+
+            <div class="row">
+               <div class="col-sm-6 custom-prop">
+                  <strong>Testes: </strong>
+               </div>
+               <div class="col-sm-6 custom-val">
+                  <%= ( @description.internal.testes_specify.nil? or @description.internal.testes_specify == "" ) ?  @description.internal.testes :  @description.internal.testes_specify 
+                  %>  
+               </div> 
+             </div>
+           
+
+            <div class="row">
+              <div class="col-sm-6 custom-prop">
+                <strong>Male_genetalia_other : </strong>
+              </div>
+              <div class="col-sm-6 custom-val">
+                 <%= @description.internal.male_genetalia_other%>               
+              </div>
+	    </div>
+	 
+</div>
+</div>
+</div>

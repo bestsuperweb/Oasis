@@ -1,0 +1,143 @@
+<div>
+  <br>
+  <div class="panel panel-patient">
+    <div class="panel-heading panel-heading-patient">
+      <span class="fa fa-user pull-left"></span>Details of patient
+    </div>
+    <div class="panel-body panel-body-patient">
+      <div class="row">
+	<div class="col-sm-2 custom-prop">
+	  <strong>Name:</strong>
+	</div>
+	<div class="col-sm-2 custom-val">
+	  <%= @patient.name %>
+	</div>
+	<div class="col-sm-2 custom-prop">
+	  <strong>Date of Birth:</strong>
+	</div>
+	<div class="col-sm-2 custom-val">
+	  <td><%= @patient.dob %></td>
+	</div>
+	<div class="col-sm-2 custom-prop">
+	  <strong>Time of Birth:</strong>
+	</div>
+	<div class="col-sm-2 custom-val">
+	  <td><%=@patient.time_of_birth %> (Hours)</td>
+	</div>
+      </div>
+      <div class="row">
+	<div class="col-sm-2 custom-prop">
+	  <strong>Gestational age at delivery: </strong>
+	</div>
+	<div class="col-sm-2 custom-val">
+	  <td><%= "#{@patient.age} weeks #{@patient.age_day_week rescue 0} days" %></td>
+	</div>
+	<div class="col-sm-2 custom-prop">
+	  <strong>Race:</strong>
+	</div>
+	<div class="col-sm-2 custom-val">
+	  <td><%=@patient.race%></td>
+	</div>
+	<div class="col-sm-2 custom-prop">
+	  <strong>Gender:</strong>
+	</div>
+	<div class="col-sm-2 custom-val">
+	  <td><%=@patient.sex%></td>
+	</div>
+      </div>
+    <div class="row">
+		<div class="col-sm-2 custom-prop">
+		  <strong>Type of gestation:</strong>
+		</div>		
+		<div class="col-sm-2 custom-val">
+		  <td><%= @patient.type_of_gestation %></td>
+		</div>
+		<% if @patient.type_of_gestation == 'Multiple' %>		
+		<div class="col-sm-2 custom-prop">
+		  <strong>Specify number:</strong>
+		</div>
+		<div class="col-sm-2 custom-val">
+		  <td><%=@patient.specify_number %></td>
+		</div>
+		<% end %>		
+		<div class="col-sm-2 custom-prop">
+		  <strong>Restrictions:</strong>
+		</div>
+		<div class="col-sm-2 custom-val">
+		  <td><%=@patient.restrictions %></td>
+		</div>
+    </div>
+    </div>
+  </div>
+
+  <div class="panel panel-patient">
+    <div class="panel-heading panel-heading-patient">
+      <span class="fa fa-ambulance pull-left"></span>Details of Autopsy
+    </div>
+    <div class="panel-body panel-body-patient">
+      <div class="row">
+	<div class="col-sm-2 custom-prop">
+	  <strong>Case Number:</strong>
+	</div>
+	<div class="col-sm-2 custom-val">
+	   <%= @patient.case %> 
+	</div>
+	<div class="col-sm-2 custom-prop">
+	  <strong>Hospital:</strong>
+	</div>
+	<div class="col-sm-2 custom-val">
+	   <%= @patient.hospital %> 
+	</div>
+	<div class="col-sm-2 custom-prop">
+	  <strong>Date of Admission:</strong>
+	</div>
+	<div class="col-sm-2 custom-val">
+	  <%= @patient.date_admission %>
+	</div>
+      </div>
+      <div class="row">
+	<div class="col-sm-2 custom-prop">
+	  <strong>Date of Autopsy:</strong>
+	</div>
+	<div class="col-sm-2 custom-val">
+	<%= @patient.date_autopsy %>
+	</div>
+	<div class="col-sm-2 custom-prop">
+	  <strong>Time of Autopsy:</strong>
+	</div>
+	<div class="col-sm-2 custom-val">
+        <%= @patient.time_of_autopsy %>
+	</div>
+	<div class="col-sm-2 custom-prop">
+	  <strong>Pathologist:</strong>
+	</div>
+	<div class="col-sm-2 custom-val">
+	   <%= current_user.email %>
+	</div>
+      </div>
+      <div class="row">
+	<div class="col-sm-2 custom-prop">
+	  <strong>Physicians:</strong>
+	</div>
+	<div class="col-sm-2 custom-val">
+	  <%= @patient.physician %> 
+	</div>
+	<div class="col-sm-2 custom-prop">
+	  <strong>Attendant:</strong>
+	</div>
+	<div class="col-sm-2 custom-val">
+	  <%= @patient.attendant %> 
+	</div>
+	<div class="col-sm-2 custom-prop">
+	  <strong>Prosector:</strong>
+	</div>
+	<div class="col-sm-2 custom-val">
+	  <%= @patient.prosector %> 
+	</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<%= link_to 'Edit Patient Information', edit_patient_path(@description), class: 'btn btn-primary' %> 

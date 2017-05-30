@@ -1,0 +1,12 @@
+<div>
+  <h3>Skeletal Muscle</h3>
+  <table>
+    <%
+      @names_array = ["Color","Consistency","Size","Other","Microscopic description"]
+      @prop_array = ["skeletal_muscle_color","skeletal_muscle_consistency","skeletal_muscle_size","skeletal_muscle_other","skeletal_muscle_md"]
+      @specify_array = ["skeletal_muscle_color_specify","skeletal_muscle_consistency_specify","skeletal_muscle_size_specify","",""]
+    %>
+    <%= render :partial => "internal_loop"%>
+</table>
+</div>
+

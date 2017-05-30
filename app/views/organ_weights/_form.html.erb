@@ -1,0 +1,108 @@
+<%= form_for @organ_weight, url: organ_weight_path  do |f| %>
+ <div class=row>
+  <div class="field col-sm-3">
+    <%= f.label :brain_observed %><br>
+    <%= f.number_field :brain_observed , class: "form-control" %>
+  </div>
+  <div class="field col-sm-3">
+    <%= f.label :brain_expected %><br>
+    <%= f.number_field :brain_expected , class: "form-control" %>
+  </div>
+  <div class="field col-sm-3">
+    <%= f.label :heart_expected %><br>
+    <%= f.number_field :heart_expected , class: "form-control" %>
+  </div>
+  <div class="field col-sm-3">
+    <%= f.label :heart_observed %><br>
+    <%= f.number_field :heart_observed , class: "form-control" %>
+  </div>
+ </div>
+ <div class=row>
+  <div class="field col-sm-3">
+    <%= f.label :liver_expected %><br>
+    <%= f.number_field :liver_expected , class: "form-control" %>
+  </div>
+  <div class="field col-sm-3">
+    <%= f.label :liver_observed %><br>
+    <%= f.number_field :liver_observed , class: "form-control" %>
+  </div>
+  <div class="field col-sm-3">
+    <%= f.label :lt_adrenal_expected %><br>
+    <%= f.number_field :lt_adrenal_expected , class: "form-control" %>
+  </div>
+  <div class="field col-sm-3">
+    <%= f.label :lt_adrenal_observed %><br>
+    <%= f.number_field :lt_adrenal_observed , class: "form-control" %>
+  </div>
+ </div>
+ <div class=row>
+  <div class="field col-sm-3">
+    <%= f.label :lt_kidney_expected %><br>
+    <%= f.number_field :lt_kidney_expected , class: "form-control" %>
+  </div>
+  <div class="field col-sm-3">
+    <%= f.label :lt_kidney_observed %><br>
+    <%= f.number_field :lt_kidney_observed , class: "form-control" %>
+  </div>
+  <div class="field col-sm-3">
+    <%= f.label :lt_lung_expected %><br>
+    <%= f.number_field :lt_lung_expected , class: "form-control" %>
+  </div>
+  <div class="field col-sm-3">
+    <%= f.label :lt_lung_observed %><br>
+    <%= f.number_field :lt_lung_observed , class: "form-control" %>
+  </div>
+ </div>
+ <div class=row>
+  <div class="field col-sm-3">
+    <%= f.label :rt_adrenal_expected %><br>
+    <%= f.number_field :rt_adrenal_expected , class: "form-control" %>
+  </div>
+  <div class="field col-sm-3">
+    <%= f.label :rt_adrenal_observed %><br>
+    <%= f.number_field :rt_adrenal_observed , class: "form-control" %>
+  </div>
+  <div class="field col-sm-3">
+    <%= f.label :rt_kidney_expected %><br>
+    <%= f.number_field :rt_kidney_expected , class: "form-control" %>
+  </div>
+  <div class="field col-sm-3">
+    <%= f.label :rt_kidney_observed %><br>
+    <%= f.number_field :rt_kidney_observed , class: "form-control" %>
+  </div>
+  </div>
+  <div class="row">
+   <div class="field col-sm-3">
+     <%= f.label :rt_lung_expected %><br>
+     <%= f.number_field :rt_lung_expected , class: "form-control" %>
+   </div>
+   <div class="field col-sm-3">
+     <%= f.label :rt_lung_observed %><br>
+     <%= f.number_field :rt_lung_observed , class: "form-control" %>
+   </div>
+   <div class="field col-sm-3">
+     <%= f.label :spleen_expected %><br>
+     <%= f.number_field :spleen_expected , class: "form-control" %>
+   </div>
+   <div class="field col-sm-3">
+     <%= f.label :spleen_observed %><br>
+     <%= f.number_field :spleen_observed , class: "form-control" %>
+   </div>
+  </div>
+  <div class="row">
+   <div class="field col-sm-6">
+    <%= f.label :thymus_expected %><br>
+    <%= f.number_field :thymus_expected , class: "form-control" %>
+   </div>
+   <div class="field col-sm-6">
+    <%= f.label :thymus_observed %><br>
+    <%= f.number_field :thymus_observed , class: "form-control" %>
+   </div>
+  </div>
+  <!-- <div class="actions"> -->
+    <%#= f.submit %>
+    <!-- </div> -->
+  <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+	<i class="icon-ok icon-white"></i> Save
+  <% end %>
+<% end %>

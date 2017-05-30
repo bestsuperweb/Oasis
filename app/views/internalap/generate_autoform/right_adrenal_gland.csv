@@ -1,0 +1,9 @@
+right adrenal gland normal	checkbox			
+right adrenal gland weight	number			Auto calculation: Expected for …. Weeks gestational age.
+right adrenal pos config shape	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+right adrenal gland external surface	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+right adrenal gland parenchyma or cut surface	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+right adrenal cortex	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+right adrenal fetal cortex	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+right adrenal medulla	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+right adrenal other	text			Empty box

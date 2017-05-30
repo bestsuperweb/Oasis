@@ -1,0 +1,17 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+/*.thumbnail{
+	box-shadow: 0 0 3px gray;
+	height: 450px;
+}
+.thumbnail > img, .thumbnail a > img{
+	border-radius: 5px;
+    margin-top: 10px;
+    width: 90%;
+    transition: all 1.5s ease;
+}
+.thumbnail > img:hover, .thumbnail a > img:hover{
+	transform: rotateY(180deg)scale(1.01);
+}*/

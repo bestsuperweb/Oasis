@@ -1,0 +1,63 @@
+<%= form_for @body_measurement, url:body_measurement_path  do |f| %>
+  <% if @body_measurement.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@body_measurement.errors.count, "error") %> prohibited this body_measurement from being saved:</h2>
+
+      <ul>
+      <% @body_measurement.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row">
+	<div class="col-sm-3">
+         <%= f.label :crown_heel %><br>
+         <%= f.number_field :crown_heel, class: "form-control" %>
+	 <br>
+         <%= f.label :crown_rump %><br>
+         <%= f.number_field :crown_rump, class: "form-control" %>
+	</div>
+	<div class="col-sm-3">
+         <%= f.label :head_circumference %><br>
+         <%= f.number_field :head_circumference, class: "form-control"  %>
+	 <br>
+         <%= f.label :chest_circumference %><br>
+         <%= f.number_field :chest_circumference, class: "form-control"  %>
+	 <br>
+         <%= f.label :abdomen_circumference %><br>
+         <%= f.number_field :abdomen_circumference, class: "form-control"  %>
+        </div>
+	<div class="col-sm-3">
+         <%= f.label :weight %><br>
+         <%= f.number_field :weight, class: "form-control"  %>
+	 <br>
+         <%= f.label :birth_weight %><br>
+         <%= f.number_field :birth_weight, class: "form-control"  %>
+	 <br>
+         <%= f.label :intercanthal_distance %><br>
+         <%= f.number_field :intercanthal_distance, class: "form-control"  %>
+	 <br>
+         <%= f.label :interpupillary_distance %><br>
+         <%= f.number_field :interpupillary_distance, class: "form-control"  %>
+        </div>
+	<div class="col-sm-3">
+         <%= f.label :arms %><br>
+         <%= f.number_field :arms , class: "form-control"  %>
+	 <br>
+         <%= f.label :leg %><br>
+         <%= f.number_field :leg , class: "form-control"  %>
+	 <br>
+         <%= f.label :foot_length %><br>
+         <%= f.number_field :foot_length , class: "form-control"  %>
+        </div>
+  </div>
+
+  <br>
+
+  <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+	<i class="icon-ok icon-white"></i> Save
+  <% end %>
+
+<% end %>

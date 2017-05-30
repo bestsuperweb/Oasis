@@ -1,0 +1,4 @@
+pericardial sac normal	checkbox			
+serosal sarfaces	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+pericardial sac contents	select	"Clear","Serosanguineous","Bloody","Exudative","Chylous","Other"	Other, specify	If other is selected, a box will appear saying specify
+pericardial sac amount of fluid	select	"Minimal","More than minimal"	More than minimal, specify	If more than minimal is selected, a box will appear saying ….ml.

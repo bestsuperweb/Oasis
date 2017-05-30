@@ -1,0 +1,45 @@
+          <div class="row" style="width:100%">
+          		   <div class="col-sm-6 drop-down">
+          		      <%= f.label  :neck_configuration %><br>
+          		      <%= f.select :neck_configuration, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+          		   </div>
+          
+          		   <div class="col-sm-6">
+                             <% if !@description.external.nil?  %>
+                              <% if @description.external.neck_configuration == "Abnormal" %>
+          	  	      <%= f.label  :please_specify, { id:"label_external_neck_configuration_specify" } %><br>
+          		      <%= f.text_field :neck_configuration_specify, { class: "form-control", placeholder: "If Abnormal, explain" } %>
+                              <% else %>
+          	  	      <%= f.label  :please_specify, { id:"label_external_neck_configuration_specify" } %><br>
+          		      <%= f.text_field :neck_configuration_specify, { class: "form-control", placeholder: "If Abnormal, explain" , disabled: true } %>
+                              <% end %>
+                             <% end %>
+          		  </div>
+          		</div>
+                
+          <div class="row" style="width:100%">
+          		   <div class="col-sm-6 drop-down">
+          		      <%= f.label  :nodes_masses %><br>
+          		      <%= f.select :nodes_masses, [:Present, :Absent], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Present')"} %> 
+          		   </div>
+          
+          		   <div class="col-sm-6">
+                             <% if !@description.external.nil?  %>
+                              <% if @description.external.nodes_masses == "Present" %>
+          	  	      <%= f.label  :please_specify, { id:"label_external_nodes_masses_specify" } %><br>
+          		      <%= f.text_field :nodes_masses_specify, { class: "form-control", placeholder: "If Present, explain" } %>
+                              <% else %>
+          	  	      <%= f.label  :please_specify, { id:"label_external_nodes_masses_specify" } %><br>
+          		      <%= f.text_field :nodes_masses_specify, { class: "form-control", placeholder: "If Present, explain" , disabled: true } %>
+                              <% end %>
+                             <% end %>
+          		  </div>
+          		</div>
+                
+          
+          	     <div class="row" style="width:100%">
+          		<div class="field col-sm-4">
+          		    <%= f.label :neck_other %><br>
+          		    <%= f.text_field :neck_other, class: "form-control" %>
+          		</div> 
+          	      </div>

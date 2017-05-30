@@ -1,0 +1,5 @@
+internal genitalia male normal	checkbox			
+prostate	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+epididymis	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+testes	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+male genetalia other	text			

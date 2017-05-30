@@ -1,0 +1,488 @@
+<br>
+
+<div class="row" style="width:100%">
+  <div class="col-sm-12">
+    <div class="panel panel-external">
+      <div class="panel-heading panel-heading-external"> 
+	Body Measurements
+      </div>
+      <div class="panel-body panel-body-external"> 
+	<div class="row">
+	  <div class="col-sm-6">
+	    <div class="col-sm-5 custom-prop">
+	    </div>
+	    <div class="col-sm-1 custom-val">
+	    </div> 
+	    <div class="col-sm-6 custom-val">
+	      <i><%= "From Maround et al., for GW" %><strong><%= ": #{weight["gw"]}" %></strong></i>
+	    </div> 
+	  </div> 
+	  <div class="col-sm-6">
+	    <div class="col-sm-5 custom-prop">
+	    </div>
+	    <div class="col-sm-1 custom-val">
+	    </div> 
+	    <div class="col-sm-6 custom-val">
+	      <i><%= "From Maround et al., for GW" %><strong><%= ": #{weight["gw"]}" %></strong></i>
+	    </div> 
+	  </div> 
+	</div> <!-- end row -->
+	<div class="row">
+	  <div class="col-sm-6">
+	    <div class="col-sm-5 custom-prop">
+	      <strong>
+		Birth Weight: 
+	      </strong>
+	    </div>
+	    <div class="col-sm-1 custom-val">
+	      <%= @description.external.birth_weight%>
+	    </div> 
+	    <div class="col-sm-6 custom-val">
+	      <%= "#{weight["bwa"]} ± #{weight["bws"]} grams" %>
+	    </div> 
+	  </div> 
+	  <div class="col-sm-6">
+	    <div class="col-sm-5 custom-prop">
+	      <strong>
+		Weight at autopsy: 
+	      </strong>
+	    </div>
+	    <div class="col-sm-1 custom-val">
+	      <%= @description.external.weight_at_autopsy%>
+	    </div> 
+	    <div class="col-sm-6 custom-val">
+	      <%= "#{weight["bwa"]} ± #{weight["bws"]} grams" %>
+	    </div> 
+	  </div> 
+	</div> <!-- end row -->
+	<div class="row">
+	  <div class="col-sm-6">
+	    <div class="col-sm-5 custom-prop">
+	      <strong>
+		Crown heel length: 
+	      </strong>
+	    </div>
+	    <div class="col-sm-1 custom-val">
+	      <%= @description.external.crown_heel_length%>
+	    </div> 
+	    <div class="col-sm-6 custom-val">
+	      <%= "#{weight["chla"]} ± #{weight["chls"]} cms" %>
+	    </div> 
+	  </div> 
+	  <div class="col-sm-6">
+	    <div class="col-sm-5 custom-prop">
+	      <strong>
+		Crown rump length: 
+	      </strong>
+	    </div>
+	    <div class="col-sm-1 custom-val">
+	      <%= @description.external.crown_rump_length %>
+	    </div> 
+	    <div class="col-sm-6 custom-val">
+	      <%= "#{weight["crla"]} ± #{weight["crls"]} cms" %>
+	    </div>
+	  </div>
+	</div> <!-- end row -->
+	<div class="row">
+	  <div class="col-sm-6">
+	    <div class="col-sm-5 custom-prop">
+	      <strong>
+		Head circumference: 
+	      </strong>
+	    </div>
+	    <div class="col-sm-1 custom-val">
+	      <%= @description.external.head_circumference %>
+	    </div> 
+	    <div class="col-sm-6 custom-val">
+	      <%= "#{weight["hca"]} ± #{weight["hcs"]} cms" %>
+	    </div> 
+	  </div> 
+	  <div class="col-sm-6">
+	    <div class="col-sm-5 custom-prop">
+	      <strong>
+		Foot length: 
+	      </strong>
+	    </div>
+	    <div class="col-sm-1 custom-val">
+	      <%= @description.external.crown_rump_length %>
+	    </div> 
+	    <div class="col-sm-6 custom-val">
+	      <%= "#{weight["fla"]} ± #{weight["fls"]} mm" %>
+	    </div>
+	  </div>
+	</div> <!-- end row -->
+
+	<div class="row">
+	  <div class="col-sm-6">
+	    <div class="col-sm-5 custom-prop">
+	      <strong>
+		Abdomen circumference:
+	      </strong>
+	    </div>
+	    <div class="col-sm-1 custom-val">
+	      <%= @description.external.abdomen_circumference %>
+	    </div> 
+	  </div> 
+	  <div class="col-sm-6">
+	    <div class="col-sm-5 custom-prop">
+	      <strong>
+		Inner intercanthal distance: 
+	      </strong>
+	    </div>
+	    <div class="col-sm-1 custom-val">
+	      <%= @description.external.inner_intercanthal_distance%>
+	    </div> 
+	  </div>
+	</div> <!-- end row -->
+
+	<div class="row">
+	  <div class="col-sm-6">
+	    <div class="col-sm-5 custom-prop">
+	      <strong>
+		Interpupillary distance:
+	      </strong>
+	    </div>
+	    <div class="col-sm-1 custom-val">
+	      <%= @description.external.interpupillary_distance %>
+	    </div> 
+	  </div> 
+	  <div class="col-sm-6">
+	    <div class="col-sm-5 custom-prop">
+	      <strong>
+		Outer intercanthal distance: 
+	      </strong>
+	    </div>
+	    <div class="col-sm-1 custom-val">
+	      <%= @description.external.outer_intercanthal_distance%>
+	    </div> 
+	  </div>
+	</div> <!-- end row -->
+
+	<div class="row">
+	  <div class="col-sm-6">
+	    <div class="col-sm-5 custom-prop">
+	      <strong>
+		Arm length:
+	      </strong>
+	    </div>
+	    <div class="col-sm-1 custom-val">
+	      <%= @description.external.arm_length%>
+	    </div> 
+	  </div> 
+	  <div class="col-sm-6">
+	    <div class="col-sm-5 custom-prop">
+	      <strong>
+		Leg length:
+	      </strong>
+	    </div>
+	    <div class="col-sm-1 custom-val">
+	      <%= @description.external.leg_length %>
+	    </div> 
+	  </div>
+	</div> <!-- end row -->
+
+	<div class="row">
+	  <div class="col-sm-6">
+	    <div class="col-sm-5 custom-prop">
+	      <strong>
+		Chest circumference:
+	      </strong>
+	    </div>
+	    <div class="col-sm-1 custom-val">
+	      <%= @description.external.chest_circumference %>
+	    </div> 
+	  </div> 
+	</div> <!-- end row -->
+      </div>  <!-- end panel body -->
+    </div>  <!-- end panel body -->
+  </div>  <!-- end panel body -->
+</div> <!-- end panel -->
+
+<div class="row" style="width:100%">
+  <div class="col-sm-3">
+    <div class="panel panel-external">
+      <div class="panel-heading panel-heading-external"> 
+	General 
+      </div>
+      <div class="panel-body panel-body-external"> 
+	<div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Degree of Maceration:</strong></div><div class="col-sm-6 custom-val"><%= @description.external.degree_of_maceration      %></div> </div> <div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Development: </strong></div><div class="col-sm-6 custom-val"><%= @description.external.development_habitus       %></div> </div> <div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Nutrition:           </strong></div><div class="col-sm-6 custom-val"><%= @description.external.nutrition                 %></div> </div> <div class="row"> 
+	  <div class="col-sm-6 custom-prop"><strong>Hydration:           </strong></div><div class="col-sm-6 custom-val"><%= @description.external.hydration_including_edema %></div> </div> <div class="row"> 
+	  <div class="col-sm-6 custom-prop"><strong>Facies:              </strong></div><div class="col-sm-6 custom-val"><%= @description.external.facies                    %></div> </div> <div class="row"> 
+	  <div class="col-sm-6 custom-prop"><strong>Emblamed:            </strong></div><div class="col-sm-6 custom-val"><%= @description.external.embalmed                  %></div> </div> <div class="row"> 
+	  <div class="col-sm-6 custom-prop"><strong>Rigor:               </strong></div><div class="col-sm-6 custom-val"><%= @description.external.rigor                     %></div> </div> <div class="row"> 
+	  <div class="col-sm-6 custom-prop"><strong>Livor:               </strong></div><div class="col-sm-6 custom-val"><%= @description.external.livor                     %></div> </div> <div class="row"> 
+	  <div class="col-sm-6 custom-prop"><strong>Cyanosis:            </strong></div><div class="col-sm-6 custom-val"><%= @description.external.cyanosis                  %></div> </div> <div class="row"> 
+	  <div class="col-sm-6 custom-prop"><strong>Icterus:             </strong></div><div class="col-sm-6 custom-val"><%= @description.external.icterus                   %></div> </div> 
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-3">
+    <div class="panel panel-external">
+      <div class="panel-heading panel-heading-external"> 
+	Iatrogenic
+      </div>
+      <div class="panel-body panel-body-external"> 
+	<div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Tubes:        </strong></div><div class="col-sm-6 custom-val"><%= @description.external.tubes_specify.nil?            or @description.external.tubes_specify == ""        ? @description.external.tubes                  :  @description.external.tubes_specify          %>  </div> </div> <div class="row">   
+	  <div class="col-sm-6 custom-prop"><strong>Catheters:    </strong></div><div class="col-sm-6 custom-val"><%= @description.external.catheters_specify.nil?        or @description.external.catheters_specify == ""    ? @description.external.catheters              :  @description.external.catheters_specify      %>  </div> </div> <div class="row">  
+	  <div class="col-sm-6 custom-prop"><strong>Needle Marks: </strong></div><div class="col-sm-6 custom-val"><%= @description.external.needle_marks_specify.nil?     or @description.external.needle_marks_specify == "" ? @description.external.needle_marks           :  @description.external.needle_marks_specify   %>  </div> </div> 
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-3">
+    <div class="panel panel-external">
+      <div class="panel-heading panel-heading-external"> 
+	Skin
+      </div>
+      <div class="panel-body panel-body-external"> 
+	<div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Incisions/Scars:      </strong></div><div class="col-sm-6 custom-val"><%=  @description.external.incisions_scars_specify.nil? or @description.external.incisions_scars_specify == "" ? @description.external.incisions_scars : @description.external.incisions_scars_specify %>  </div> </div> <div class="row"> 
+	  <div class="col-sm-6 custom-prop"><strong>Rash/Excoriation:      </strong></div><div class="col-sm-6 custom-val"><%=  @description.external.rash_excoriation_specify.nil? or @description.external.rash_excoriation_specify == "" ? @description.external.rash_excoriation : @description.external.rash_excoriation_specify %>  </div> </div> <div class="row"> 
+	  <div class="col-sm-6 custom-prop"><strong>Petechiae:   </strong></div><div class="col-sm-6 custom-val"><%=  @description.external.petechiae_specify.nil?        or @description.external.petechiae_specify        == "" ? @description.external.petechiae        : @description.external.petechiae_specify        %>  </div> </div> <div class="row"> 
+	  <div class="col-sm-6 custom-prop"><strong>Ecchymoses:  </strong></div><div class="col-sm-6 custom-val"><%=  @description.external.ecchymoses_specify.nil?       or @description.external.ecchymoses_specify       == "" ? @description.external.ecchymoses       : @description.external.ecchymoses_specify       %>  </div> </div> <div class="row"> 
+	  <div class="col-sm-6 custom-prop"><strong>Nevi/Angiomas:    </strong></div><div class="col-sm-6 custom-val"><%=  @description.external.nevi_angiomas_specify.nil?    or @description.external.nevi_angiomas_specify    == "" ? @description.external.nevi_angiomas    : @description.external.nevi_angiomas_specify    %>  </div> </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-3">
+    <div class="panel panel-external">
+      <div class="panel-heading panel-heading-external"> 
+	Head
+      </div>
+      <div class="panel-body panel-body-external"> 
+	<div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Configuration / Size:         </strong></div><div class="col-sm-6 custom-val"><%= @description.external.configuration_size_specify.nil?  or @description.external.configuration_size_specify  == "" ? @description.external.configuration_size  : @description.external.configuration_size_specify %> </div> </div> <div class="row">
+<!--	  <div class="col-sm-6 custom-prop"><strong>Scalp subcutaneous:  </strong></div><div class="col-sm-6 custom-val"><%= @description.external.scalp_subcutaneous_specify.nil?  or @description.external.scalp_subcutaneous_specify  == "" ? @description.external.scalp_subcutaneous  : @description.external.scalp_subcutaneous_specify %> </div> </div> <div class="row"> 
+<div class="col-sm-6 custom-prop"><strong>Scalp subgaleal:     </strong></div><div class="col-sm-6 custom-val"><%= @description.external.scalp_subgaleal_specify.nil?     or @description.external.scalp_subgaleal_specify     == "" ? @description.external.scalp_subgaleal     : @description.external.scalp_subgaleal_specify    %> </div> </div> <div class="row"> -->
+	  <div class="col-sm-6 custom-prop"><strong>Calvarium and sutures:   </strong></div><div class="col-sm-6 custom-val"><%= @description.external.calvarium_sutures_specify.nil?   or @description.external.calvarium_sutures_specify   == "" ? @description.external.calvarium_sutures   : @description.external.calvarium_sutures_specify  %> </div> </div> <div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Anterior fontanelle: </strong></div><div class="col-sm-6 custom-val"><%= @description.external.anterior_fontanelle_measurement.nil? or @description.external.anterior_fontanelle_measurement == "" ? @description.external.anterior_fontanelle : @description.external.anterior_fontanelle_measurement %> </div></div> <div class="row">  
+	  <div class="col-sm-6 custom-prop"><strong>Hair color:          </strong></div><div class="col-sm-6 custom-val"><%= @description.external.hair_color                       %></div></div> <div class="row">  
+	  <div class="col-sm-6 custom-prop"><strong>Other:               </strong></div><div class="col-sm-6 custom-val"><%= @description.external.head_other                       %></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row" style="width:100%">
+  <div class="col-sm-3">
+    <div class="panel panel-external">
+      <div class="panel-heading panel-heading-external"> 
+	Ears
+      </div>
+      <div class="panel-body panel-body-external"> 
+	<div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Position:               </strong></div><div class="col-sm-6 custom-val"><%= @description.external.position                       %></div> </div> <div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Shape:         </strong></div><div class="col-sm-6 custom-val"><%= @description.external.shape_specify.nil?  or @description.external.shape_specify  == "" ? @description.external.shape  : @description.external.shape_specify %> </div> </div> <div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Canals:         </strong></div><div class="col-sm-6 custom-val"><%= @description.external.canals_specify.nil?  or @description.external.canals_specify  == "" ? @description.external.canals  : @description.external.canals_specify %> </div> </div> <div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Other:               </strong></div><div class="col-sm-6 custom-val"><%= @description.external.ears_other                       %></div></div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-3">
+    <div class="panel panel-external">
+      <div class="panel-heading panel-heading-external"> 
+	Eyes
+      </div>
+      <div class="panel-body panel-body-external"> 
+	<div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Size / Shape / Position:         </strong></div><div class="col-sm-6 custom-val"><%= @description.external.size_shape_position_specify.nil?  or @description.external.size_shape_position_specify  == "" ? @description.external.size_shape_position  : @description.external.size_shape_position_specify %> </div> </div> <div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Lids/Periorbital soft tissue:         </strong></div><div class="col-sm-6 custom-val"><%= @description.external.lids_periorbital_soft_tissue_specify.nil?  or @description.external.lids_periorbital_soft_tissue_specify  == "" ? @description.external.lids_periorbital_soft_tissue  : @description.external.lids_periorbital_soft_tissue_specify %> </div> </div> <div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Conjunctiva:         </strong></div><div class="col-sm-6 custom-val"><%= @description.external.conjunctiva_specify.nil?  or @description.external.conjunctiva_specify  == "" ? @description.external.conjunctiva  : @description.external.conjunctiva_specify %> </div> </div> <div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Sclera / Cornea / Lens:         </strong></div><div class="col-sm-6 custom-val"><%= @description.external.sclera_cornea_lens_specify.nil?  or @description.external.sclera_cornea_lens_specify  == "" ? @description.external.sclera_cornea_lens  : @description.external.sclera_cornea_lens_specify %> </div> </div> <div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Iris color:         </strong></div><div class="col-sm-6 custom-val"><%= @description.external.iris_color_specify.nil?  or @description.external.iris_color_specify  == "" ? @description.external.iris_color  : @description.external.iris_color_specify %> </div> </div> <div class="row">
+	  <!-- Pupil need change -->
+	  <div class="col-sm-6 custom-prop"><strong>Pupils:             </strong></div><div class="col-sm-6 custom-val"><%= @description.external.pupils_specify.nil?  or @description.external.pupils_specify  == "" ? @description.external.pupils  : @description.external.pupils_specify %> </div> </div> <div class="row">
+	  <!-- Pupil need change -->
+	  <div class="col-sm-6 custom-prop"><strong>Eyes removed:               </strong></div><div class="col-sm-6 custom-val"><%= @description.external.eyes_removed                       %></div> </div> <div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Other:               </strong></div><div class="col-sm-6 custom-val"><%= @description.external.eyes_other                       %></div> </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="panel panel-external">
+      <div class="panel-heading panel-heading-external"> 
+	Nose
+      </div>
+      <div class="panel-body panel-body-external"> 
+	<div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Position/shape:         </strong></div><div class="col-sm-6 custom-val"><%= @description.external.position_shape_specify.nil?  or @description.external.position_shape_specify  == "" ? @description.external.position_shape  : @description.external.position_shape_specify %> </div> </div> <div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Nares exudate:         </strong></div><div class="col-sm-6 custom-val"><%= @description.external.nares_exudate_specify.nil?  or @description.external.nares_exudate_specify  == "" ? @description.external.nares_exudate  : @description.external.nares_exudate_specify %> </div> </div> <div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Septum:         </strong></div><div class="col-sm-6 custom-val"><%= @description.external.septum_specify.nil?  or @description.external.septum_specify  == "" ? @description.external.septum  : @description.external.septum_specify %> </div> </div> <div class="row">
+	  <div class="col-sm-6 custom-prop">
+	      <strong>
+		Patency of choanae:    
+	      </strong>
+	  </div>
+	  <div class="col-sm-6 custom-val">
+	    <%= @description.external.patency_of_choanae_specify.nil?  or @description.external.patency_of_choanae_specify  == "" ? @description.external.patency_of_choanae : @description.external.patency_of_choanae_specify %> 
+	  </div> 
+	</div> 
+	<div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Other:               </strong></div><div class="col-sm-6 custom-val"><%= @description.external.nose_other                       %></div></div>
+      </div>
+  </div>
+  </div>
+
+  <div class="col-sm-3">
+    <div class="panel panel-external">
+      <div class="panel-heading panel-heading-external"> 
+	Mouth
+      </div>
+      <div class="panel-body panel-body-external"> 
+	<div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Lips/Mucosa/Gums:         </strong></div><div class="col-sm-6 custom-val"><%= @description.external.lips_mucosa_gums_specify.nil?  or @description.external.lips_mucosa_gums_specify  == "" ? @description.external.lips_mucosa_gums  : @description.external.lips_mucosa_gums_specify %> </div> </div> <div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Tongue:         </strong></div><div class="col-sm-6 custom-val"><%= @description.external.tongue_specify.nil?  or @description.external.tongue_specify  == "" ? @description.external.tongue  : @description.external.tongue_specify %> </div> </div> <div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Palate / Maxilla / Mandible:         </strong></div><div class="col-sm-6 custom-val"><%= @description.external.palate_maxilla_mandible_specify.nil?  or @description.external.palate_maxilla_mandible_specify  == "" ? @description.external.palate_maxilla_mandible  : @description.external.palate_maxilla_mandible_specify %> </div> </div> <div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Tonsils:         </strong></div><div class="col-sm-6 custom-val"><%= @description.external.tonsils_specify.nil?  or @description.external.tonsils_specify  == "" ? @description.external.tonsils  : @description.external.tonsils_specify %> </div> </div> <div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Salivary glands:         </strong></div><div class="col-sm-6 custom-val"><%= @description.external.salivary_glands_specify.nil?  or @description.external.salivary_glands_specify  == "" ? @description.external.salivary_glands  : @description.external.salivary_glands_specify %> </div> </div> <div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Pharynx:         </strong></div><div class="col-sm-6 custom-val"><%= @description.external.pharynx_specify.nil?  or @description.external.pharynx_specify  == "" ? @description.external.pharynx  : @description.external.pharynx_specify %> </div> </div> <div class="row">
+	  <!--	  <div class="col-sm-6 custom-prop"><strong>Teeth upper:               </strong></div><div class="col-sm-6 custom-val"><%= @description.external.teeth_upper                       %></div></div><div class="row">   -->
+	  <!--	  <div class="col-sm-6 custom-prop"><strong>Teeth lower:               </strong></div><div class="col-sm-6 custom-val"><%= @description.external.teeth_lower                       %></div></div><div class="row"> -->
+	  <div class="col-sm-6 custom-prop"><strong>Other:               </strong></div><div class="col-sm-6 custom-val"><%= @description.external.mouth_other                       %></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row" style="width:100%">
+  <div class="col-sm-3">
+    <div class="panel panel-external">
+      <div class="panel-heading panel-heading-external"> 
+	Neck
+      </div>
+      <div class="panel-body panel-body-external"> 
+	<div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Configuration:         </strong></div><div class="col-sm-6 custom-val"><%= @description.external.neck_configuration_specify.nil?  or @description.external.neck_configuration_specify  == "" ? @description.external.neck_configuration  : @description.external.neck_configuration_specify %> </div> </div> <div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Nodes masses:         </strong></div><div class="col-sm-6 custom-val"><%= @description.external.nodes_masses_specify.nil?  or @description.external.nodes_masses_specify  == "" ? @description.external.nodes_masses  : @description.external.nodes_masses_specify %> </div> </div> <div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Other:               </strong></div><div class="col-sm-6 custom-val"><%= @description.external.neck_other                       %></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-3">
+    <div class="panel panel-external">
+      <div class="panel-heading panel-heading-external"> 
+	Chest/Axilla
+      </div>
+      <div class="panel-body panel-body-external"> 
+	<div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Configuration:         </strong></div><div class="col-sm-6 custom-val"><%= @description.external.axilla_configuration_specify.nil?  or @description.external.axilla_configuration_specify  == "" ? @description.external.axilla_configuration  : @description.external.axilla_configuration_specify %> </div> </div> <div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Lymph nodes:         </strong></div><div class="col-sm-6 custom-val"><%= @description.external.axillary_lymph_nodes_specify.nil?  or @description.external.axillary_lymph_nodes_specify  == "" ? @description.external.axillary_lymph_nodes  : @description.external.axillary_lymph_nodes_specify %> </div> </div> <div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Other:               </strong></div><div class="col-sm-6 custom-val"><%= @description.external.chest_other                       %></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-3">
+    <div class="panel panel-external">
+      <div class="panel-heading panel-heading-external"> 
+	Abdomen
+      </div>
+      <div class="panel-body panel-body-external"> 
+	<div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Configuration:         </strong></div><div class="col-sm-6 custom-val"><%= @description.external.abdomen_configuration_specify.nil?  or @description.external.abdomen_configuration_specify  == "" ? @description.external.abdomen_configuration  : @description.external.abdomen_configuration_specify %> </div> </div> <div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Umbilicus / Abdominal wall:         </strong></div><div class="col-sm-6 custom-val"><%= @description.external.umbilicus_abdominal_wall_specify.nil?  or @description.external.umbilicus_abdominal_wall_specify  == "" ? @description.external.umbilicus_abdominal_wall  : @description.external.umbilicus_abdominal_wall_specify %> </div> </div> <div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Size of palpable organs:         </strong></div><div class="col-sm-6 custom-val"><%= @description.external.size_of_palpable_organs_specify.nil?  or @description.external.size_of_palpable_organs_specify  == "" ? @description.external.size_of_palpable_organs  : @description.external.size_of_palpable_organs_specify %> </div> </div> <div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Masses:         </strong></div><div class="col-sm-6 custom-val"><%= @description.external.masses_specify.nil?  or @description.external.masses_specify  == "" ? @description.external.masses  : @description.external.masses_specify %> </div> </div> <div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Other:               </strong></div><div class="col-sm-6 custom-val"><%= @description.external.abdomen_other                       %></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-3">
+    <div class="panel panel-external">
+      <div class="panel-heading panel-heading-external"> 
+	Inguinal Region
+      </div>
+      <div class="panel-body panel-body-external"> 
+	<div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Hernia:         </strong></div><div class="col-sm-6 custom-val"><%= @description.external.hernia_specify.nil?  or @description.external.hernia_specify  == "" ? @description.external.hernia  : @description.external.hernia_specify %> </div> </div> <div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Palpable lymph nodes:         </strong></div><div class="col-sm-6 custom-val"><%= @description.external.palpable_lymph_nodes_specify.nil?  or @description.external.palpable_lymph_nodes_specify  == "" ? @description.external.palpable_lymph_nodes  : @description.external.palpable_lymph_nodes_specify %> </div> </div> <div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Other:               </strong></div><div class="col-sm-6 custom-val"><%= @description.external.inguinal_other                       %></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row" style="width:100%">
+  <% if @description.patient.sex == "Male" %>
+    <div class="col-sm-3">
+      <div class="panel panel-external">
+	<div class="panel-heading panel-heading-external"> 
+	  External Genitalia (Male)
+	</div>
+	<div class="panel-body panel-body-external"> 
+	  <div class="row">
+	    <div class="col-sm-6 custom-prop"><strong>Penis:               </strong></div><div class="col-sm-6 custom-val"><%= @description.external.penis                       %></div></div> <div class="row"> 
+	  <div class="col-sm-6 custom-prop"><strong>Penile length:         </strong></div><div class="col-sm-6 custom-val"><%= @description.external.penile_length_specify.nil?  or @description.external.penile_length_specify  == "" ? @description.external.penile_length  : @description.external.penile_length_specify %> </div> </div> <div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Bilateral testes identified:         </strong></div><div class="col-sm-6 custom-val"><%= @description.external.bilateral_testes_identified_specify.nil?  or @description.external.bilateral_testes_identified_specify  == "" ? @description.external.bilateral_testes_identified  : @description.external.bilateral_testes_identified_specify %> </div> </div> <div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Testes size:         </strong></div><div class="col-sm-6 custom-val"><%= @description.external.testes_size_specify.nil?  or @description.external.testes_size_specify  == "" ? @description.external.testes_size  : @description.external.testes_size_specify %> </div> </div> <div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Testes position:               </strong></div><div class="col-sm-6 custom-val"><%= @description.external.testes_position                       %></div></div>
+      </div>
+    </div>
+    </div>
+  <% end %>
+
+  <% if @description.patient.sex == "Female" %>
+    <div class="col-sm-3">
+      <div class="panel panel-external">
+	<div class="panel-heading panel-heading-external"> 
+	  External Genitalia (Female)
+	</div>
+	<div class="panel-body panel-body-external"> 
+	  <div class="row">
+	    <div class="col-sm-6 custom-prop"><strong>Labia:         </strong></div><div class="col-sm-6 custom-val"><%= @description.external.labia_specify.nil?  or @description.external.labia_specify  == "" ? @description.external.labia  : @description.external.labia_specify %> </div> </div> <div class="row">
+	    <div class="col-sm-6 custom-prop"><strong>Clitoris:         </strong></div><div class="col-sm-6 custom-val"><%= @description.external.clitoris_specify.nil?  or @description.external.clitoris_specify  == "" ? @description.external.clitoris  : @description.external.clitoris_specify %> </div> </div> <div class="row">
+	    <div class="col-sm-6 custom-prop"><strong>Vagina and hymen:         </strong></div><div class="col-sm-6 custom-val"><%= @description.external.vagina_hymen_specify.nil?  or @description.external.vagina_hymen_specify  == "" ? @description.external.vagina_hymen  : @description.external.vagina_hymen_specify %> </div> </div> <div class="row">
+	    <div class="col-sm-6 custom-prop"><strong>Urethral meatus:         </strong></div><div class="col-sm-6 custom-val"><%= @description.external.urethral_meatus_specify.nil?  or @description.external.urethral_meatus_specify  == "" ? @description.external.urethral_meatus  : @description.external.urethral_meatus_specify %> </div> </div> <div class="row">
+	    <div class="col-sm-6 custom-prop"><strong>Other:               </strong></div><div class="col-sm-6 custom-val"><%= @description.external.genitalia_other                       %></div></div>
+	</div>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="col-sm-3">
+    <div class="panel panel-external">
+      <div class="panel-heading panel-heading-external"> 
+	Back
+      </div>
+      <div class="panel-body panel-body-external"> 
+	<div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Spine:         </strong></div><div class="col-sm-6 custom-val"><%= @description.external.spine_specify.nil?  or @description.external.spine_specify  == "" ? @description.external.spine  : @description.external.spine_specify %> </div> </div> <div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Anus:         </strong></div><div class="col-sm-6 custom-val"><%= @description.external.anus_specify.nil?  or @description.external.anus_specify  == "" ? @description.external.anus  : @description.external.anus_specify %> </div> </div> <div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Other:               </strong></div><div class="col-sm-6 custom-val"><%= @description.external.back_other                       %></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-3">
+    <div class="panel panel-external">
+      <div class="panel-heading panel-heading-external"> 
+	Extermities
+      </div>
+      <div class="panel-body panel-body-external"> 
+	<div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Extermities configuration:         </strong></div><div class="col-sm-6 custom-val"><%= @description.external.extermities_configuration_specify.nil?  or @description.external.extermities_configuration_specify  == "" ? @description.external.extermities_configuration  : @description.external.extermities_configuration_specify %> </div> </div> <div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Joints:         </strong></div><div class="col-sm-6 custom-val"><%= @description.external.joints_specify.nil?  or @description.external.joints_specify  == "" ? @description.external.joints  : @description.external.joints_specify %> </div> </div> <div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Dermatoglyphics:         </strong></div><div class="col-sm-6 custom-val"><%= @description.external.dermatoglyphics_specify.nil?  or @description.external.dermatoglyphics_specify  == "" ? @description.external.dermatoglyphics  : @description.external.dermatoglyphics_specify %> </div> </div> <div class="row">
+	  <div class="col-sm-6 custom-prop"><strong>Other:               </strong></div><div class="col-sm-6 custom-val"><%= @description.external.extermities_other                       %></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+<br>
+<br>
+
+<% if can? :update , External %>
+ <%= link_to 'Edit External Organ Data', edit_external_path(@description), class: 'btn btn-primary' %>
+<% end %>

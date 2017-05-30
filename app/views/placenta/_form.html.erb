@@ -1,0 +1,311 @@
+<br>
+<br>
+
+<% if @description.placenta.nil? 
+  @placenta = Placenta.new
+  end %>
+
+<%= form_for @placenta, url: placenta_path do |f| %>
+  <% if @placenta.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@placenta.errors.count, "error") %> prohibited this placenta from being saved:</h2>
+      <ul>
+	<% @placenta.errors.full_messages.each do |message| %>
+	  <li><%= message %></li>
+	<% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <div class="panel panel-placenta">
+      <div class="panel-heading panel-heading-placenta small-heading">
+	<span class="fa fa-user pull-left"></span>Placental disc
+      </div>
+      <div class="panel-body panel-body-placenta">
+      <div class="row">
+      	<% if(@patient.type_of_gestation == 'Multiple') %>
+      		<div class="field col-sm-4">
+				<%= f.label :placentation %><br>
+				<%= f.select :placentation , [	'Monochorionic monoamniotic', 
+												'Monochorionic diamniotic',
+												'Dichorionic diamniotic fused', 
+												'Dichorionic diamniotic separate'
+												], { :prompt => 'Select one from drop down menu' }, { class: "form-control input-sm" } %> 
+	      	</div>
+      		<div class="field col-sm-3">
+				<%= f.label :weight %><br>
+				<%= f.number_field :weight , class: "form-control input-sm", :step => 0.01 %> 
+	      	</div>
+	      	<div class="col-sm-1">
+				<br>   grams
+	      	</div>
+	      	<div class="field col-sm-4">
+				<%= f.label :placental_weight_ratio, "Fetal-Placenta weight ratio" %><br>
+				<%= f.number_field :placental_weight_ratio, class: "form-control input-sm", :step => 'any' %>
+	      	</div>
+      	<% else %>
+      		<div class="field col-sm-4">
+				<%= f.label :weight %><br>
+				<%= f.number_field :weight , class: "form-control input-sm", :step => 0.01 %> 
+	      	</div>
+	      	<div class="col-sm-2">
+				<br>   grams
+	      	</div>
+	      	<div class="field col-sm-6">
+				<%= f.label :placental_weight_ratio, "Fetal-Placenta weight ratio" %><br>
+				<%= f.number_field :placental_weight_ratio, class: "form-control input-sm", :step => 'any' %>
+	      	</div>
+      	<% end %>	      
+	  </div>
+	</div>
+      </div>
+
+    <div class="panel panel-placenta">
+      <div class="panel-heading panel-heading-placenta small-heading">
+	<span class="fa fa-user pull-left"></span>Umbilical Cord
+      </div>
+      <div class="panel-body panel-body-placenta">
+      <div class="row">
+	    
+	    <div class="col-sm-4 drop-down">
+	      <%= f.label  :total_length, 'Length (cm)'%><br>
+	      <%= f.number_field :total_length , 
+		class: "form-control input-sm", :step => 0.01 %>
+	    </div>
+
+	    <div class="col-sm-4 drop-down">
+	      <%= f.label  :vessels %><br>
+	      <%= f.select :vessels, [:"1", :"2", :"3"], { :prompt => "Select One" },{ class: "form-control input-sm"} %>
+	    </div> 
+
+	    <div class="col-sm-4 drop-down">
+	      <%= f.label  :umbillical_cord_normal %><br>
+	      <%= f.select :umbillical_cord_normal, [:yes, :no], { :prompt => "Select One" },{ class: "form-control conditional input-sm" , :when_answer => 'no' , :todisable => ['placenta_normal_no_funisitis','placenta_normal_no_acute_vasculitis']} %>
+	    </div> 
+
+	    <div class="col-sm-4 drop-down">
+	      <%= f.label  :normal_no_funisitis, "Funisitis" %><br>
+	      <%= f.select :normal_no_funisitis, [:yes, :no], { :prompt => "Select One" },{ class: "form-control input-sm"} %>
+	    </div> 
+
+	    <div class="col-sm-4 drop-down">
+	      <%= f.label  :normal_no_acute_vasculitis, "Acute vasculitis" %><br>
+	      <%= f.select :normal_no_acute_vasculitis, [:yes, :no], { :prompt => "Select One" },{ class: "form-control input-sm" } %>
+	    </div> 
+
+	    <div class="col-sm-4 drop-down">
+	      <%= f.label  :umbillical_cord_normal_no_other, "Other microscopic abnormalities" %><br>
+	      <%= f.text_field   :umbillical_cord_normal_no_other, { class: "form-control input-sm"} %>
+	    </div> 
+
+	  </div>
+	</div>
+      </div>
+
+    <div class="panel panel-placenta">
+      <div class="panel-heading panel-heading-placenta small-heading">
+	<span class="fa fa-user pull-left"></span>Fetal membranes
+      </div>
+      <div class="panel-body panel-body-placenta">
+	    <div class="col-sm-3 drop-down">
+	      <%= f.label  :fetal_memberanes_normal, "Normal?" %><br>
+	      <%= f.select :fetal_memberanes_normal, [:yes, :no], { :prompt => "Select One" },{ class: "form-control conditional input-sm", :when_answer => 'no' , :todisable => ['placenta_normal_no_acute_chorioamnionitis','placenta_normal_no_pigmented_macrophages']} %>
+	    </div> 
+	    <div class="col-sm-3 drop-down">
+	      <%= f.label  :normal_no_acute_chorioamnionitis, "Chorioamnionitis" %><br>
+	      <%= f.select :normal_no_acute_chorioamnionitis, [:yes, :no], { :prompt => "Select One" },{ class: "form-control input-sm"} %>
+	    </div> 
+	    <div class="col-sm-3 drop-down">
+	      <%= f.label  :normal_no_pigmented_macrophages, "Pigmented Macrophages" %><br>
+	      <%= f.select :normal_no_pigmented_macrophages, [:yes, :no], { :prompt => "Select One" },{ class: "form-control input-sm"} %>
+	    </div> 
+	    <div class="col-sm-3">
+	      <%= f.label :fetal_membranes_normal_no_other, "Other microscopic abnormalites" %><br>
+	      <%= f.text_field :fetal_membranes_normal_no_other, class: "form-control input-sm" %>
+	    </div> 
+     </div>
+   </div>
+
+    <div class="panel panel-placenta">
+      <div class="panel-heading panel-heading-placenta small-heading">
+	<span class="fa fa-user pull-left"></span>Chorionic plate and stem vessels
+      </div>
+      <div class="panel-body panel-body-placenta">
+       <div class="col-sm-3 drop-down">
+	 <%= f.label  :chorionic_plate_and_stem_vessels_normal, "Normal?" %><br>
+	 <%= f.select :chorionic_plate_and_stem_vessels_normal, [:yes, :no], { :prompt => "Select One" },{ class: "form-control conditional input-sm", :when_answer => 'no' , :todisable => ['placenta_normal_no_acute_vasculitis_2','placenta_normal_no_hemorrhagic_endovasculosis','placenta_normal_no_cushion_lesions_with_or_without_fibrin','placenta_normal_no_thrombosis']} %>
+       </div> 
+       <div class="col-sm-2 drop-down">
+	 <%= f.label  :normal_no_acute_vasculitis, "Acute vasculitis" %><br>
+	 <%= f.select :normal_no_acute_vasculitis, [:yes, :no], { :prompt => "Select One" },{ class: "form-control input-sm", :id => 'placenta_normal_no_acute_vasculitis_2'} %>
+       </div> 
+       <div class="col-sm-1 drop-down">
+	 <%= f.label  :normal_no_thrombosis, "Thrombosis" %><br>
+	 <%= f.select :normal_no_thrombosis, [:yes, :no], { :prompt => "Select One" },{ class: "form-control input-sm"} %>
+       </div> 
+	    <div class="col-sm-3 drop-down">
+	      <%= f.label  :normal_no_hemorrhagic_endovasculosis, "Hemorrhagic endovasculosis" %><br>
+	      <%= f.select :normal_no_hemorrhagic_endovasculosis, [:yes, :no], { :prompt => "Select One" },{ class: "form-control input-sm"} %>
+	    </div> 
+	    <div class="col-sm-3 drop-down">
+	      <%= f.label  :normal_no_cushion_lesions_with_or_without_fibrin, "Cushion lesions" %><br>
+	      <%= f.select :normal_no_cushion_lesions_with_or_without_fibrin, [:yes, :no], { :prompt => "Select One" },{ class: "form-control input-sm"} %>
+	    </div> 
+	    <div class="col-sm-12">
+	      <%= f.label :chorionic_plate_and_stem_vessels_normal_no_other, "Other microscopic abnormalities" %><br>
+	      <%= f.text_field :chorionic_plate_and_stem_vessels_normal_no_other, class: "form-control input-sm" %>
+	    </div>
+     </div>
+   </div>
+
+    <div class="panel panel-placenta">
+      <div class="panel-heading panel-heading-placenta small-heading">
+	<span class="fa fa-user pull-left"></span>Chorionic villi
+      </div>
+      <div class="panel-body panel-body-placenta">
+	    <div class="col-sm-6 drop-down">
+	      <%= f.label  :maturation_appropriate_for_gestational_age, "Maturation appropriate?" %><br>
+	      <%= f.select :maturation_appropriate_for_gestational_age, [:yes, :no], { :prompt => "Select One" },{ class: "form-control conditional input-sm", :when_answer => 'no' , :todisable => ['placenta_maturation_no_specify']} %>
+	    </div> 
+
+	    <div class="col-sm-6 drop-down">
+	      <%= f.label  :maturation_no_specify, "Please specify" %><br>
+	      <%= f.select :maturation_no_specify, [:"accelerated maturation", :" immature villi", :" distal villous hypoplasia", :" uneven maturation", :" other"], { :prompt => "Select One" },{ class: "form-control input-sm"} %>
+	    </div> 
+
+
+	    <div class="col-sm-2 drop-down">
+	      <%= f.label  :chorionic_villi_and_intervillous_space_normal, "Chorionic villi normal?" %><br>
+	      <%= f.select :chorionic_villi_and_intervillous_space_normal, [:yes, :no], { :prompt => "Select One" },{ class: "form-control conditional input-sm", :when_answer => 'no' , :todisable => ['placenta_chorionic_villi_abnormal_chronic_lymphohistiocytic_villitis', 'placenta_chorionic_villi_abnormal_acute_intervillositis','placenta_chorionic_villi_abnormal_avascular_villi']} %>
+	    </div> 
+
+	    <div class="col-sm-3 drop-down">
+	      <%= f.label  :chorionic_villi_abnormal_chronic_lymphohistiocytic_villitis, "Chronic lymphohistiocytic villitis" %><br>
+	      <%= f.select :chorionic_villi_abnormal_chronic_lymphohistiocytic_villitis, [:yes, :no], { :prompt => "Select One" },{ class: "form-control input-sm"} %>
+	    </div> 
+
+	    <div class="field col-sm-2">
+	      <%= f.label :chorionic_villi_abnormal_acute_intervillositis, "Acute intervillositis" %><br>
+	      <%= f.select :chorionic_villi_abnormal_acute_intervillositis,[:yes, :no] , { :prompt => "Select One" }  ,  class: "form-control input-sm" %>
+	    </div>
+
+	    <div class="col-sm-2 drop-down">
+	      <%= f.label  :chorionic_villi_abnormal_avascular_villi, "Avascular villi" %><br>
+	      <%= f.select :chorionic_villi_abnormal_avascular_villi, [:focal, :" diffuse"], { :prompt => "Select One" },{ class: "form-control input-sm"} %>
+	    </div> 
+
+	    <div class="field col-sm-3">
+	      <%= f.label :chorionic_villi_abnormal_other, "Other microscopic abnormalities" %><br>
+	      <%= f.text_field :chorionic_villi_abnormal_other, class: "form-control input-sm" %>
+	    </div>
+	  </div>
+	</div>
+
+    <div class="panel panel-placenta">
+      <div class="panel-heading panel-heading-placenta small-heading">
+	<span class="fa fa-user pull-left"></span>Basal Plate
+      </div>
+      <div class="panel-body panel-body-placenta">
+	    <div class="col-sm-2 drop-down">
+	      <%= f.label  :basal_plate_normal, "Normal?" %><br>
+	      <%= f.select :basal_plate_normal, [:yes, :no], { :prompt => "Select One" },{ class: "form-control conditional input-sm", :when_answer => 'no' , :todisable => ['placenta_normal_no_maternal_vessels_normal','placenta_normal_no_decidua_basalis_normal']} %>
+	    </div> 
+	    <div class="col-sm-3 drop-down">
+	      <%= f.label  :normal_no_maternal_vessels_normal, "Maternal vessels normal?" %><br>
+	      <%= f.select :normal_no_maternal_vessels_normal, [:yes, :no], { :prompt => "Select One" },{ class: "form-control conditional input-sm" , :when_answer => 'no' , :todisable => ['placenta_normal_no_maternal_vessels_normal_specify']} %> 
+	    </div>
+
+	    <div class="col-sm-2">
+	      <%= f.label  :normal_no_maternal_vessels_normal_specify, "Please specify", { id:"label_internal_normal_no_maternal_vessels_normal_specify" } %><br>
+	      <%= f.text_field :normal_no_maternal_vessels_normal_specify, { class: "form-control input-sm", placeholder: "If no, explain" } %>
+	    </div>
+
+	    <div class="col-sm-3 drop-down">
+	      <%= f.label  :normal_no_decidua_basalis_normal, "Decidua basalis normal?" %><br>
+	      <%= f.select :normal_no_decidua_basalis_normal, [:yes, :no], { :prompt => "Select One" },{ class: "form-control conditional input-sm" , :when_answer => 'no' , :todisable => ['placenta_normal_no_decidua_basalis_normal_specify']} %> 
+	    </div>
+	    <div class="col-sm-2">
+	      <%= f.label  :please_specify, { id:"label_internal_normal_no_decidua_basalis_normal_specify" } %><br>
+              <%= f.text_field :normal_no_decidua_basalis_normal_specify, { class: "form-control input-sm", placeholder: "If no, explain" } %>
+	    </div>
+	    <div class="field col-sm-12">
+	      <%= f.label :normal_no_basalplate_other, "Other microscopic abnormalities" %><br>
+	      <%= f.text_field :normal_no_basalplate_other, class: "form-control input-sm" %>
+	    </div> 
+     </div>
+   </div>
+
+   <% if(@patient.type_of_gestation == 'Singleton') %>
+	   <div class="panel panel-placenta">
+	      <div class="panel-heading panel-heading-placenta small-heading">
+			<span class="fa fa-user pull-left"></span>Gross Description
+	      </div>
+	      <div class="panel-body panel-body-placenta">	      
+		    <%= f.text_area :gross_description, :class => 'form-control tinymce', rows: 5 %>
+	      </div>
+	   </div>
+	   <%= tinymce %>
+   <% end %>
+
+ <% if can? :create, Placenta %>
+  <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+    <i class="icon-ok icon-white"></i> Save
+  <% end %>
+ <% end %>
+<br><br>
+  <script>
+    setConditions()
+    calculateFP()
+
+    addEventListener("change", function() {
+      setConditions()
+    });
+
+   document.getElementById("placenta_weight").addEventListener('change',calculateFP)
+
+   function calculateFP(){
+     if($.isNumeric($('#placenta_weight').val())){
+       var patient_weight = parseFloat(<%= @description.external.birth_weight rescue 0 %>)
+       if( patient_weight != 0 ){
+	 placenta_weight = parseFloat($('#placenta_weight').val())
+	 var ratio = (patient_weight/placenta_weight).toFixed(2)
+	 document.getElementById('placenta_placental_weight_ratio').value = ratio
+       }
+     }
+   }
+
+    function setConditions(){
+      var all_class = document.getElementsByClassName('conditional')
+      for( j = 0; j < all_class.length; j++ ){
+       var abc = all_class[j]
+       var when_answer = abc.getAttribute('when_answer')
+       var todisable = abc.getAttribute('todisable')
+       takeAction(abc.value, when_answer, todisable)
+      }
+    }
+
+    function takeAction(given,enable_when,todisable){
+      if (given != enable_when){
+          disableDisplay(todisable)
+      }
+      else {
+          enableDisplay(todisable)
+      }
+    }
+
+    function enableDisplay (inarray){
+      inarray = inarray.split(' ')
+      for(i = 0 ; i < inarray.length ; i++){
+        temp1 = document.getElementById(inarray[i])
+        temp1.removeAttribute('disabled')
+      }
+    }
+    function disableDisplay (inarray){
+      inarray = inarray.split(' ')
+      for(i = 0 ; i < inarray.length ; i++){
+        temp1 = document.getElementById(inarray[i])
+        temp1.setAttribute('disabled','')
+      }
+    }
+  </script>
+<% end %>

@@ -1,0 +1,25 @@
+<div class="col-sm-3">
+  <div class="panel panel-internal squarish">
+    <div class="panel-heading panel-heading-internal small-heading squarish">
+      Temp
+    </div>
+    <div class="panel-body panel-body-internal squarish">
+      <div class="row">
+	<div class="col-sm-6 nopad custom-prop small drop-down">
+	  <%= f.label  :patency_of_choanae, class: "small"%>
+	</div>
+	<div class="col-sm-6 nopad custom-val">
+	  <%= f.select :patency_of_choanae, [:Patent, :"Non patent"], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent temp" , "dependent-selector" => "#patency_of_choanae-dependent", "when-value" => "Non patent", "dependent-action" => "show-hide"} %>
+	</div>
+      </div>
+      <div class="row" id="patency_of_choanae-dependent">
+	<div class="col-sm-6 nopad custom-prop small drop-down">
+	  <%= f.label  :patency_of_choanae_specify, class: "small" %><br>
+	</div>
+	<div class="col-sm-6 nopad custom-val">
+	  <%= f.text_field :patency_of_choanae_specify, { class: "form-control input-sm", placeholder: "If Non patent, explain" } %>
+	</div>
+      </div>
+    </div>
+  </div>
+</div>

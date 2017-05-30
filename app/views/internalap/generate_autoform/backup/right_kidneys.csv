@@ -1,0 +1,12 @@
+right kidney and ureter normal	checkbox			
+right kidney weight	number			Auto calculation: Expected for …. Weeks gestational age.
+right kidney configuration position	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+right kidney external surface	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+right kidney cut surface	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+right kidney cortical thickness	number			
+right kidney medulla depth	number			
+right kidney pelves and calyces	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+right kidney peripelvic fat and lymph nodes	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+right kidney renal vessels	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+right kidney ureter	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+right kidney other	text			

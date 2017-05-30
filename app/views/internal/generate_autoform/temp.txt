@@ -1,0 +1,17 @@
+add_column :internal , :subcutaneous_normal ,:boolean
+add_column :internal , :bones_normal ,:boolean
+add_column :internal , :skeletal_muscle_normal ,:boolean
+add_column :internal , :skeletal_muscle_consistency , :string
+add_column :internal , :lymphnodes_normal ,:boolean
+add_column :internal , :venous_system_normal ,:boolean
+add_column :internal , :venous_system_other , :text
+add_column :internal , :arterial_system_normal ,:boolean
+add_column :internal , :arterial_system_state_of_distension , :string
+add_column :internal , :arterial_system_contents , :string
+add_column :internal , :arterial_system_anomalies , :string
+add_column :internal , :arterial_system_other , :text
+add_column :internal , :lymphatic_system_normal ,:boolean
+add_column :internal , :lymphatic_system_state_of_distension , :string
+add_column :internal , :lymphatic_system_contents , :string
+add_column :internal , :lymphatic_system_anomalies , :string
+add_column :internal , :lymphatic_system_other , :text

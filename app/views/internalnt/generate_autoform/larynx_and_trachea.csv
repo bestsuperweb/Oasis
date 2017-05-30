@@ -1,0 +1,9 @@
+larynx and trachea normal	checkbox			
+epiglottis	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+foreign material in lumen	select	"yes","no"	yes, specify	If yes, a box will appear saying specify
+larynx trachea configuration position	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+vocal cords	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+tracheastomy	select	"yes","no"		
+mucosal surfaces	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+tracheal rings	select	"Present","Absent"		
+larynx other	text			Empty box

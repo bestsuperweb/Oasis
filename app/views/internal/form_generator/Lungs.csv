@@ -1,0 +1,17 @@
+Lungs	right lungs weight	number		
+Lungs	left lung weight	number		
+Lungs	bilateral	number		
+Lungs	combined heart and lungs weight	number		
+Lungs	lung to body weight ratio	number		
+Lungs	lobar pattern	select	"Normal","Abnormal"	Abnormal, specify
+Lungs	state of expansion	select	"Normal","Abnormal"	Abnormal, specify
+Lungs	lungs consistency	select	"Normal","Abnormal"	Abnormal, specify
+Lungs	bronchial tree	select	"Normal","Abnormal"	Abnormal, specify
+Lungs	vessels	select	"Normal","Abnormal"	Abnormal, specify
+Lungs	parenchyma color	select	"Normal","Abnormal"	Abnormal, specify
+Lungs	congestion	select	"yes","no"	
+Lungs	interstitial emphysema	select	"yes","no"	
+Lungs	hilar nodes	select	"Normal","Abnormal"	Abnormal, specify
+Lungs	visceral pleura	select	"Normal","Abnormal"	Abnormal, specify
+Lungs	pleural petechiae	select	"Absent","Few","Greater than 2 per sq cm"	
+Lungs	fixed by perfusion	select	"yes","no"	yes, specify

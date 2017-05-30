@@ -1,0 +1,12 @@
+<div>
+  <h3>Brain preliminary examination</h3>
+  <table>
+    <%
+      @names_array = ["Weight","Configuration / lobar pattern","Consistency","Pachymeninges","Blood vessels","Cranial nerves","Kernicterus","Other","Microscopic description"]
+      @prop_array = ["brain_weight","configuration_lobar_pattern","brain_consistency","pachymeninges","blood_vessels","cranial_nerves","kernicterus","brain_other","brain_md"]
+      @specify_array =  ["","configuration_lobar_pattern_specify","brain_consistency_specify","pachymeninges_specify","blood_vessels_specify","cranial_nerves_specify","kernicterus_specify","",""]
+    %>
+    <%= render :partial => "internal_loop"%>
+</table>
+</div>
+

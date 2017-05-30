@@ -1,0 +1,19 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+
+.hide-element {
+ pointer-events: none;
+ background-color: 000000;
+ color: 000000;
+}
+.hide-element.form-control {
+ pointer-events: none;
+ background-color: 000000;
+ color: 000000;
+}
+.padding-left-10px {
+ margin-left: 40px;
+}
+

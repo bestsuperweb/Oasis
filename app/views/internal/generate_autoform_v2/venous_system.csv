@@ -1,0 +1,5 @@
+venous_system_normal	checkbox		
+venous_system_state of distension	select	"Normal","Abnormal"	Abnormal, specify
+venous_system_contents	select	"Fluid","Clots","Thrombi"	
+venous_system_anomalies	select	"Present","Absent"	Present, specify
+venous_system_other	text		

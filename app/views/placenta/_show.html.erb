@@ -1,0 +1,338 @@
+<br>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="panel panel-placenta">
+            <div class="panel-heading panel-heading-placenta">
+                <div class="fa fa-check-square-o pull-left"></div>
+                Placental disc
+            </div>
+            <div class="panel-body panel-body-placenta">
+                <div class="row">
+                    <% if(@patient.type_of_gestation == 'Multiple') %>                        
+                        <div class="col-sm-3 custom-prop">
+                            <strong>Placentation:</strong>
+                        </div>
+                        <div class="col-sm-3 custom-val">
+                            <%= @description.placenta.placentation %>
+                            <br>
+                        </div>
+                        <div class="col-sm-3 custom-prop">
+                            <strong>Weight:</strong>
+                        </div>
+                        <div class="col-sm-3 custom-val">
+                            <%= "#{@description.placenta.weight}" %> grams
+                            <br>
+                        </div>
+                        <div class="col-sm-3 custom-prop">
+                            <strong>Fetal-Placental weight ratio:</strong>
+                        </div>
+                        <div class="col-sm-3 custom-val">
+                            <%= "#{@description.placenta.placental_weight_ratio}" %>
+                            <br>
+                        </div>
+                    <% else %>
+                        <div class="col-sm-3 custom-prop">
+                            <strong>Weight:</strong>
+                        </div>
+                        <div class="col-sm-3 custom-val">
+                            <%= "#{@description.placenta.weight}" %> grams
+                            <br>
+                        </div>
+                        <div class="col-sm-3 custom-prop">
+                            <strong>Fetal-Placental weight ratio:</strong>
+                        </div>
+                        <div class="col-sm-3 custom-val">
+                            <%= "#{@description.placenta.placental_weight_ratio}" %>
+                            <br>
+                        </div>
+                    <% end %>                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-12">
+        <div class="panel panel-placenta">
+            <div class="panel-heading panel-heading-placenta">
+                <div class="fa fa-check-square-o pull-left"></div>
+                Umbilical Cord
+            </div>
+            <div class="panel-body panel-body-placenta">
+                <div class="row">
+                    <div class="col-sm-2 custom-prop">
+                        <strong>Length :</strong>
+                    </div>
+                    <div class="col-sm-2 custom-val">
+                        <%= "#{@description.placenta.total_length}" %> cm <br>
+                    </div>
+                    <div class="col-sm-2 custom-prop">
+                        <strong>Vessels :</strong>
+                    </div>
+                    <div class="col-sm-2 custom-val">
+                        <%= "#{@description.placenta.vessels}" %> <br>
+                    </div>
+                    <div class="col-sm-2 custom-prop">
+                        <strong>Normal?:</strong>
+                    </div>
+                    <div class="col-sm-2 custom-val">
+                        <%= "#{@description.placenta.umbillical_cord_normal}" %>
+                        <br>
+                    </div>
+                    <% if @description.placenta.umbillical_cord_normal == "no" %>
+                       <div class="col-sm-2 custom-prop">
+                        <strong>Funisitis?:</strong>
+                       </div>
+                       <div class="col-sm-2 custom-val">
+                        <%= "#{@description.placenta.normal_no_funisitis}" %>
+                        <br>
+                       </div>
+                       <div class="col-sm-2 custom-prop">
+                        <strong>Vasculitis?:</strong>
+                       </div>
+                       <div class="col-sm-2 custom-val">
+                        <%= "#{@description.placenta.normal_no_acute_vasculitis}" %> <br>
+                       </div>
+                    <% end %>
+                       <div class="col-sm-2 custom-prop">
+                           <strong>Other microscopic abnormalities:</strong>
+                       </div>
+                       <div class="col-sm-2 custom-val">
+                           <%= "#{@description.placenta.umbillical_cord_normal_no_other}" %>
+                           <br>
+                       </div>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-12">
+        <div class="panel panel-placenta">
+            <div class="panel-heading panel-heading-placenta">
+                <div class="fa fa-check-square-o pull-left"></div>
+                Fetal membranes
+            </div>
+            <div class="panel-body panel-body-placenta">
+                <div class="row">
+                    <div class="col-sm-2 custom-prop">
+                        <strong>Normal? :</strong>
+                    </div>
+                    <div class="col-sm-2 custom-val">
+                        <%= "#{@description.placenta.fetal_memberanes_normal}" %>
+                        <br>
+                    </div>
+                    <% if @description.placenta.fetal_memberanes_normal == "no" %>
+                    <div class="col-sm-2 custom-prop">
+                        <strong>Chorioamnionitis :</strong>
+                    </div>
+                    <div class="col-sm-2 custom-val">
+                        <%= @description.placenta.normal_no_acute_chorioamnionitis %>
+                    </div>
+                    <div class="col-sm-2 custom-prop">
+                        <strong>Pigmented macrophages:</strong>
+                    </div>
+                    <div class="col-sm-2 custom-val">
+                        <%= @description.placenta.normal_no_pigmented_macrophages %>
+                    </div>
+                    <% end %>
+                    <div class="col-sm-2 custom-prop">
+                        <strong>Other microscopic abnormalities:</strong>
+                    </div>
+                    <div class="col-sm-2 custom-val">
+                        <%= @description.placenta.fetal_membranes_normal_no_other%>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-12">
+        <div class="panel panel-placenta">
+            <div class="panel-heading panel-heading-placenta">
+                <div class="fa fa-check-square-o pull-left"></div>
+                Chorionic plate and stem cell vessel
+            </div>
+            <div class="panel-body panel-body-placenta">
+                <div class="row">
+                    <div class="col-sm-2 custom-prop">
+                        <strong>Normal? :</strong>
+                    </div>
+                    <div class="col-sm-2 custom-val">
+                        <%= "#{@description.placenta.chorionic_plate_and_stem_vessels_normal}" %>
+                        <br>
+                    </div>
+                    <% if @description.placenta.chorionic_plate_and_stem_vessels_normal == 'no' %>
+                    <div class="col-sm-2 custom-prop">
+                        <strong>Acute vasculitis :</strong>
+                    </div>
+                    <div class="col-sm-2 custom-val">
+                        <%= @description.placenta.normal_no_acute_vasculitis %>
+                        <br>
+                    </div>
+                    <div class="col-sm-2 custom-prop">
+                        <strong>Thrombosis:</strong>
+                    </div>
+                    <div class="col-sm-2 custom-val">
+                        <%= @description.placenta.normal_no_thrombosis%>
+                        <br>
+                    </div>
+                    <div class="col-sm-2 custom-prop">
+                        <strong>Acute vasculitis :</strong>
+                    </div>
+                    <div class="col-sm-2 custom-val">
+                        <%= @description.placenta.normal_no_thrombosis%>
+                        <br>
+                    </div>
+                    <div class="col-sm-2 custom-prop">
+                        <strong>Endovsculosis:</strong>
+                    </div>
+                    <div class="col-sm-2 custom-val">
+                        <%= @description.placenta.normal_no_hemorrhagic_endovasculosis %>
+                        <br>
+                    </div>
+                    <div class="col-sm-2 custom-prop">
+                        <strong>Cushion lesions:</strong>
+                    </div>
+                    <div class="col-sm-2 custom-val">
+                        <%=@description.placenta.normal_no_cushion_lesions_with_or_without_fibrin %>
+                        <br>
+                    </div>
+                    <% end %>
+                    <div class="col-sm-2 custom-prop">
+                        <strong>Other microscopic abnormalities:</strong>
+                    </div>
+                    <div class="col-sm-2 custom-val">
+                        <%=@description.placenta.chorionic_plate_and_stem_vessels_normal_no_other%>
+                        <br>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-12">
+        <div class="panel panel-placenta">
+            <div class="panel-heading panel-heading-placenta">
+                <div class="fa fa-check-square-o pull-left"></div>
+                Chorionic villi
+            </div>
+            <div class="panel-body panel-body-placenta">
+                <div class="row">
+                    <div class="col-sm-2 custom-prop">
+                        <strong>Maturation appropriate? :</strong>
+                    </div>
+                    <div class="col-sm-2 custom-val">
+                        <% if @description.placenta.maturation_no_specify.nil? or @description.placenta.maturation_no_specify == ""  %>
+                        <%= "#{@description.placenta.maturation_appropriate_for_gestational_age}"  %>
+                    <% else  %>
+                        <%= "#{@description.placenta.maturation_no_specify}" %>
+                        <% end %>
+                    </div>
+                    <div class="col-sm-2 custom-prop">
+                        <strong>Chorionic villi normal? :</strong>
+                    </div>
+                    <div class="col-sm-2 custom-val">
+                        <%= "#{@description.placenta.chorionic_villi_and_intervillous_space_normal}" %>
+                        <br>
+                    </div>
+                    <% if @description.placenta.chorionic_villi_and_intervillous_space_normal == 'no' %>
+                    <div class="col-sm-2 custom-prop">
+                        <strong>Acute intervillositis :</strong>
+                    </div>
+                    <div class="col-sm-2 custom-val">
+                        <%= "#{@description.placenta.chorionic_villi_abnormal_acute_intervillositis}" %>
+                        <br>
+                    </div>
+                    <div class="col-sm-2 custom-prop">
+                        <strong>Acute intervillositis :</strong>
+                    </div>
+                    <div class="col-sm-2 custom-val">
+                        <%= "#{@description.placenta.chorionic_villi_abnormal_acute_intervillositis}" %>
+                        <br>
+                    </div>
+                    <% end %>
+                    <div class="col-sm-2 custom-prop">
+                        <strong>Other microscopic abnormalities :</strong>
+                    </div>
+                    <div class="col-sm-2 custom-val">
+                        <%= "#{@description.placenta.chorionic_villi_abnormal_other}" %>
+                        <br>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-12">
+        <div class="panel panel-placenta">
+            <div class="panel-heading panel-heading-placenta">
+                <div class="fa fa-check-square-o pull-left"></div>
+                Basal plate
+            </div>
+            <div class="panel-body panel-body-placenta">
+                <div class="row">
+                    <div class="col-sm-2 custom-prop">
+                        <strong>Normal?:</strong>
+                    </div>
+                    <div class="col-sm-2 custom-val">
+                        <%= "#{@description.placenta.basal_plate_normal}" %>
+                        <br>
+                    </div>
+                    <% if @description.placenta.basal_plate_normal == "no" %>
+                      <div class="col-sm-2 custom-prop">
+                        <strong>Vessels normal?:</strong>
+                      </div>
+                      <div class="col-sm-2 custom-val">
+                        <% if @description.placenta.normal_no_maternal_vessels_normal_specify.nil? or @description.placenta.normal_no_maternal_vessels_normal_specify == "" %>
+                            <%= "#{@description.placenta.normal_no_maternal_vessels_normal}" %>
+                        <% else %>
+                            <%= "#{@description.placenta.normal_no_maternal_vessels_normal_specify}" %>
+                        <% end %>
+                      </div>
+                      <div class="col-sm-2 custom-prop">
+                        <strong>Decidua basalis normal?:</strong>
+                      </div>
+                      <div class="col-sm-2 custom-val">
+                        <% if @description.placenta.normal_no_decidua_basalis_normal_specify.nil? or  @description.placenta.normal_no_decidua_basalis_normal_specify == ""  %>
+                           <%= "#{@description.placenta.normal_no_decidua_basalis_normal}" %>
+                        <% else %>
+                           <%= "#{@description.placenta.normal_no_decidua_basalis_normal_specify}" %>
+                        <% end %>
+                      </div>
+                    <% end %>
+                      <div class="col-sm-2 custom-prop">
+                        <strong>Other microscopic abnormalities:</strong>
+                      </div>
+                      <div class="col-sm-2 custom-val">
+                        <%= "#{@description.placenta.normal_no_basalplate_other}" %>
+                      </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <% if(@patient.type_of_gestation == 'Singleton') %>
+        <div class="col-sm-12">
+           <div class="panel panel-placenta">
+              <div class="panel-heading panel-heading-placenta small-heading">
+                <div class="fa fa-check-square-o pull-left"></div>Gross Description
+              </div>
+              <div class="panel-body panel-body-placenta">        
+                <%= @description.placenta.gross_description.html_safe %>
+              </div>
+           </div>
+       </div>
+    <% end %>
+    
+</div>
+
+
+
+<% if can? :update, Placenta %>
+<%= link_to 'Edit', edit_placenta_path(@description), class: 'btn btn-primary' %>
+<% end %>

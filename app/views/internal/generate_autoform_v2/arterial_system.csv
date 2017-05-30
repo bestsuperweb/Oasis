@@ -1,0 +1,5 @@
+arterial_system_normal	checkbox			
+arterial_system_state_of_distension	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+arterial_system_contents	select	"Fluid","Clots","Thrombi"		
+arterial_system_anomalies	select	"Present","Absent"	Present, specify	If present is selected, a box will appear saying specify
+arterial_system_other	text			Empty box

@@ -1,0 +1,19 @@
+<br>
+<div class="row">
+  <div class="col-sm-12">
+    <div class="panel panel-provisional">
+      <div class="panel-heading panel-heading-provisional small-heading">
+	<span class="fa fa-user pull-left"></span>Provisional Diagnosis
+      </div>
+      <div class="panel-body panel-body-provisional">
+	<div class="col-sm-12">
+	  <%= @description.provisional_diagnosis.report.html_safe %> 
+	</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% if can? :update , ProvisionalDiagnosis %>
+ <%= link_to 'Edit Summary', edit_provisional_diagnosis_path(@description), class: 'btn btn-primary' %>
+<% end %>

@@ -1,0 +1,7 @@
+large instestine normal	checkbox			
+large intestine size position configuration	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+large intestine mucosa and wall	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+large intestine state of distension	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+large intestine contents	text			Empty box
+large intestine mesentery	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+large intestine other	text			

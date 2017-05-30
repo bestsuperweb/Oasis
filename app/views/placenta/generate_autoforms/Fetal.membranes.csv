@@ -1,0 +1,4 @@
+Fetal membranes	fetal_memberanes_normal	select	"yes","no"	
+Fetal membranes	normal_no_acute_chorioamnionitis	select	"yes","no"	
+Fetal membranes	normal_no_pigmented_macrophages	select	"yes","no"	
+Fetal membranes	fetal_membranes_normal_no_other	text		

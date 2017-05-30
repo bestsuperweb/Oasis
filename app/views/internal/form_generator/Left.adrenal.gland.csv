@@ -1,0 +1,8 @@
+Left adrenal gland	left adrenal gland weight	number		
+Left adrenal gland	left adrenal pos config shape	select	"Normal","Abnormal"	Abnormal, specify
+Left adrenal gland	left adrenal gland external surface	select	"Normal","Abnormal"	Abnormal, specify
+Left adrenal gland	left adrenal gland parenchyma or cut surface	select	"Normal","Abnormal"	Abnormal, specify
+Left adrenal gland	left adrenal cortex	select	"Normal","Abnormal"	Abnormal, specify
+Left adrenal gland	left adrenal fetal cortex	select	"Normal","Abnormal"	Abnormal, specify
+Left adrenal gland	left adrenal medulla	select	"Normal","Abnormal"	Abnormal, specify
+Left adrenal gland	left adrenal other	text		

@@ -1,0 +1,74 @@
+   <div class="col-sm-3">
+     <div class="panel panel-internal squarish">
+       <div class="panel-heading panel-heading-internal small-heading squarish">
+         Pleural_cavities
+       </div>
+       <div class="panel-body panel-body-internal squarish">
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Pleural_serosal_surfaces: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.pleural_serosal_surfaces_specify.nil? or @description.internal.pleural_serosal_surfaces_specify == "" ) ?  @description.internal.pleural_serosal_surfaces :  @description.internal.pleural_serosal_surfaces_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Pneumothorax: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.pneumothorax_specify.nil? or @description.internal.pneumothorax_specify == "" ) ?  @description.internal.pneumothorax :  @description.internal.pneumothorax_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Pleural_cavities_amount_of_fluid: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.pleural_cavities_amount_of_fluid_specify.nil? or @description.internal.pleural_cavities_amount_of_fluid_specify == "" ) ?  @description.internal.pleural_cavities_amount_of_fluid :  @description.internal.pleural_cavities_amount_of_fluid_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Pleural_nature_of_fluid: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.pleural_nature_of_fluid_specify.nil? or @description.internal.pleural_nature_of_fluid_specify == "" ) ?  @description.internal.pleural_nature_of_fluid :  @description.internal.pleural_nature_of_fluid_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Pleural_cavity_organ_relations: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.pleural_cavity_organ_relations_specify.nil? or @description.internal.pleural_cavity_organ_relations_specify == "" ) ?  @description.internal.pleural_cavity_organ_relations :  @description.internal.pleural_cavity_organ_relations_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Pleural_cavities_other : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.pleural_cavities_other%>               
+   	</div>
+         </div>
+   
+       </div>
+     </div>
+   </div>

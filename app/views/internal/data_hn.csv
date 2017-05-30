@@ -1,0 +1,32 @@
+Scalp and cranium	subcutaneous galea				
+Scalp and cranium	periosteum				
+Scalp and cranium	bones	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+Scalp and cranium	sutures fontanelles	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+Scalp and cranium	skull base	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+Scalp and cranium	sella	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+Scalp and cranium	petrous pyramids opened and cultured	select	"yes","no"	yes, specify	If yes is selected, a box will appear saying specify
+Scalp and cranium	ears removed	select	"yes","no"	yes, specify	If yes is selected, a box will appear saying specify
+Scalp and cranium	foramen magnum antero-posterior dimension	number			
+Scalp and cranium	foramen magnum antero-lateral dimension	number			
+Scalp and cranium	cranium other	text			Empty box
+Pituitary	pituitary weight	number			Auto calculation: Expected for …. Weeks gestational age.
+Pituitary	pituitary pos config shape	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+Pituitary	pituitary external surface	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+Pituitary	pituitary parenchyma or cut surface	select	"Normal","Abnormal","Not examined"	Abnormal, specify	If abnormal, a box will appear saying specify
+Pituitary	pituitary other	text			
+Dura and venous sinuses	epideural space	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+Dura and venous sinuses	dura falx tentorium	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+Dura and venous sinuses	subdural epidural	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+Dura and venous sinuses	venous sinuses	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+Dura and venous sinuses	sinuses other	text			Empty box
+Brain, preliminary examination	brain weight	number			Auto calculation: Expected for …. Weeks gestational age.
+Brain, preliminary examination	configuration lobar pattern	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+Brain, preliminary examination	brain consistency	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+Brain, preliminary examination	pachymeninges	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+Brain, preliminary examination	blood vessels	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+Brain, preliminary examination	cranial nerves	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+Brain, preliminary examination	kernicterus	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+Brain, preliminary examination other	brain other	text			
+Spinal cord	extradural space	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+Spinal cord	meninges	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+Spinal cord	cord proper	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify

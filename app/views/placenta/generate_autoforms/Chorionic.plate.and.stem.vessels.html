@@ -1,0 +1,45 @@
+<div class="panel panel-primary">
+        <div class="panel-heading">
+           <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#Chorionic-plate-and-stem-vessels">Chorionic-plate-and-stem-vessels</a>
+           </h4>
+        </div>
+      <div id="Chorionic-plate-and-stem-vessels" class="panel-collapse collapse in"> 
+ <div class="row" style="width:100%">
+		  <div class="col-sm-4 drop-down">
+		     <%= f.label  :chorionic_plate_and_stem_vessels_normal %><br>
+		     <%= f.select :chorionic_plate_and_stem_vessels_normal, [:yes, :no], { :prompt => "Select One" },{ class: "form-control"} %>
+		 </div> 
+		 </div>
+ <div class="row" style="width:100%">
+		  <div class="col-sm-4 drop-down">
+		     <%= f.label  :normal_no_acute_vasculitis %><br>
+		     <%= f.select :normal_no_acute_vasculitis, [:yes, :no], { :prompt => "Select One" },{ class: "form-control"} %>
+		 </div> 
+		 </div>
+ <div class="row" style="width:100%">
+		  <div class="col-sm-4 drop-down">
+		     <%= f.label  :normal_no_thrombosis %><br>
+		     <%= f.select :normal_no_thrombosis, [:yes, :no], { :prompt => "Select One" },{ class: "form-control"} %>
+		 </div> 
+		 </div>
+ <div class="row" style="width:100%">
+		  <div class="col-sm-4 drop-down">
+		     <%= f.label  :normal_no_hemorrhagic_endovasculosis %><br>
+		     <%= f.select :normal_no_hemorrhagic_endovasculosis, [:yes, :no], { :prompt => "Select One" },{ class: "form-control"} %>
+		 </div> 
+		 </div>
+ <div class="row" style="width:100%">
+		  <div class="col-sm-4 drop-down">
+		     <%= f.label  :normal_no_cushion_lesions_with_or_without_fibrin %><br>
+		     <%= f.select :normal_no_cushion_lesions_with_or_without_fibrin, [:yes, :no], { :prompt => "Select One" },{ class: "form-control"} %>
+		 </div> 
+		 </div>
+
+	     <div class="row" style="width:100%">
+		<div class="field col-sm-4">
+		    <%= f.label :chorionic_plate_and_stem_vessels_normal_no_other %><br>
+		    <%= f.text_field :chorionic_plate_and_stem_vessels_normal_no_other, class: "form-control" %>
+	     </div> </div>
+</div>
+</div>

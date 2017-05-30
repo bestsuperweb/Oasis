@@ -1,0 +1,73 @@
+   <div class="col-sm-3">
+     <div class="panel panel-internal squarish">
+       <div class="panel-heading panel-heading-internal small-heading squarish">
+         Thyroid_and_parathyroid
+       </div>
+       <div class="panel-body panel-body-internal squarish">
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Thyroid_weight : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.thyroid_weight%>               
+   	</div>
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Thyroid_pos_config_shape: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.thyroid_pos_config_shape_specify.nil? or @description.internal.thyroid_pos_config_shape_specify == "" ) ?  @description.internal.thyroid_pos_config_shape :  @description.internal.thyroid_pos_config_shape_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Thyroid_external_surface: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.thyroid_external_surface_specify.nil? or @description.internal.thyroid_external_surface_specify == "" ) ?  @description.internal.thyroid_external_surface :  @description.internal.thyroid_external_surface_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Thyroid_parenchyma_or_cut_surface: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.thyroid_parenchyma_or_cut_surface_specify.nil? or @description.internal.thyroid_parenchyma_or_cut_surface_specify == "" ) ?  @description.internal.thyroid_parenchyma_or_cut_surface :  @description.internal.thyroid_parenchyma_or_cut_surface_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Thyroid_other : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.thyroid_other%>               
+   	</div>
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Parathyroid_gland: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.parathyroid_gland_specify.nil? or @description.internal.parathyroid_gland_specify == "" ) ?  @description.internal.parathyroid_gland :  @description.internal.parathyroid_gland_specify 
+   	%>  
+         </div> 
+         </div>
+   
+       </div>
+     </div>
+   </div>

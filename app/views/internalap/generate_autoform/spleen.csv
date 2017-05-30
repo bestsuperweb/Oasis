@@ -1,0 +1,7 @@
+spleen normal	checkbox			
+spleen weight	number			Auto calculation: Expected for …. Weeks gestational age.
+spleen shape position configuration	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+capsular surface	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+spleen consistency	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+spleen cut surface	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+accessory spleens	select	"yes","no"	yes, number	If yes is selected, a box will appear saying specify number, size and location

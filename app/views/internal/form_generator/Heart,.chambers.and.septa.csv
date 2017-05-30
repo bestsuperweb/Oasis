@@ -1,0 +1,9 @@
+Heart, chambers and septa	configuration and contents	select	"Normal","Abnormal"	Abnormal, specify
+Heart, chambers and septa	atrial situs	select	"Normal","Abnormal"	Abnormal, specify
+Heart, chambers and septa	ventricular situs	select	"Normal","Abnormal"	Abnormal, specify
+Heart, chambers and septa	atrial septum	select	"Obliquely probe patent","Closed","Open"	Open, specify
+Heart, chambers and septa	ventricular septum	select	"Normal","Abnormal"	Abnormal, specify
+Heart, chambers and septa	endocardium	select	"Normal","Abnormal"	Abnormal, specify
+Heart, chambers and septa	myocardium	select	"Normal","Abnormal"	Abnormal, specify
+Heart, chambers and septa	right ventricular wall thickness	number		
+Heart, chambers and septa	left ventricular wall thickness	number		

@@ -1,0 +1,962 @@
+<%= form_for @external, url: external_path do |f| %>
+  <% if @external.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@external.errors.count, "error") %> prohibited this external from being saved:</h2>
+
+      <ul>
+      <% @external.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+ <div class="row" style="width:50%">
+                  <div class="col-sm-12 drop-down">
+                     <%= f.label  :development_habitus %><br>
+                     <%= f.select :development_habitus, [:AGA, :SGA, :LGA], { :prompt => "Select One" },{ class: "form-control"} %>
+                 </div> 
+	         </div>
+ <div class="row" style="width:50%">
+                  <div class="col-sm-12 drop-down">
+                     <%= f.label  :nutrition %><br>
+                     <%= f.select :nutrition, [:normal, :undernourished, :overnourished, :"not applicable"], { :prompt => "Select One" },{ class: "form-control"} %>
+                 </div> 
+	         </div>
+ <div class="row" style="width:50%">
+                  <div class="col-sm-12 drop-down">
+                     <%= f.label  :hydration_including_edema %><br>
+                     <%= f.select :hydration_including_edema, [:normal, :hydrops], { :prompt => "Select One" },{ class: "form-control"} %>
+                 </div> 
+	         </div>
+ <div class="row" style="width:50%">
+                  <div class="col-sm-12 drop-down">
+                     <%= f.label  :facies %><br>
+                     <%= f.select :facies, [:normal, :dysmorphism], { :prompt => "Select One" },{ class: "form-control"} %>
+                 </div> 
+	         </div>
+ <div class="row" style="width:50%">
+                  <div class="col-sm-12 drop-down">
+                     <%= f.label  :embalmed %><br>
+                     <%= f.select :embalmed, [:yes, :no], { :prompt => "Select One" },{ class: "form-control"} %>
+                 </div> 
+	         </div>
+ <div class="row" style="width:50%">
+                  <div class="col-sm-12 drop-down">
+                     <%= f.label  :rigor %><br>
+                     <%= f.select :rigor, [:yes, :no], { :prompt => "Select One" },{ class: "form-control"} %>
+                 </div> 
+	         </div>
+ <div class="row" style="width:50%">
+                  <div class="col-sm-12 drop-down">
+                     <%= f.label  :livor %><br>
+                     <%= f.select :livor, [:yes, :no], { :prompt => "Select One" },{ class: "form-control"} %>
+                 </div> 
+	         </div>
+ <div class="row" style="width:50%">
+                  <div class="col-sm-12 drop-down">
+                     <%= f.label  :cyanosis %><br>
+                     <%= f.select :cyanosis, [:yes, :no], { :prompt => "Select One" },{ class: "form-control"} %>
+                 </div> 
+	         </div>
+ <div class="row" style="width:50%">
+                  <div class="col-sm-12 drop-down">
+                     <%= f.label  :icterus %><br>
+                     <%= f.select :icterus, [:yes, :no], { :prompt => "Select One" },{ class: "form-control"} %>
+                 </div> 
+	         </div>
+
+
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :tubes %><br>
+		      <%= f.select :tubes, [:yes, :no], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'yes')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:50%">
+		   <div class="col-sm-12">
+		      <% if !@description.external.nil?  %>
+		       <% if @description.external.tubes == "yes" %>
+		        <%= f.label  :please_specify, { id: "label_external_tubes_specify" } %><br>
+		        <%= f.text_field :tubes_specify, { class: "form-control" } %>
+		       <% end %>
+	              <% else %>
+		       <%= f.label  :please_specify, { class: "hide-element", id:"label_external_tubes_specify" } %><br>
+		       <%= f.text_field :tubes_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+	              <% end%>
+                   </div>
+                </div>
+	   
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :catheters %><br>
+		      <%= f.select :catheters, [:yes, :no], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'yes')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:50%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_catheters_specify" } %><br>
+		   <%= f.text_field :catheters_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :needle_marks %><br>
+		      <%= f.select :needle_marks, [:yes, :no], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'yes')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:50%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_needle_marks_specify" } %><br>
+		   <%= f.text_field :needle_marks_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :incisions_scars %><br>
+		      <%= f.select :incisions_scars, [:yes, :no], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'yes')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:50%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_incisions_scars_specify" } %><br>
+		   <%= f.text_field :incisions_scars_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :rash_excoriation %><br>
+		      <%= f.select :rash_excoriation, [:yes, :no], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'yes')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:50%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_rash_excoriation_specify" } %><br>
+		   <%= f.text_field :rash_excoriation_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :petechiae %><br>
+		      <%= f.select :petechiae, [:yes, :no], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'yes')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:40%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_petechiae_specify" } %><br>
+		   <%= f.text_field :petechiae_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :ecchymoses %><br>
+		      <%= f.select :ecchymoses, [:yes, :no], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'yes')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:40%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_ecchymoses_specify" } %><br>
+		   <%= f.text_field :ecchymoses_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :nevi_angiomas %><br>
+		      <%= f.select :nevi_angiomas, [:yes, :no], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'yes')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:40%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_nevi_angiomas_specify" } %><br>
+		   <%= f.text_field :nevi_angiomas_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :configuration_size %><br>
+		      <%= f.select :configuration_size, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:40%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_configuration_size_specify" } %><br>
+		   <%= f.text_field :configuration_size_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+ <div class="row" style="width:50%">
+                  <div class="col-sm-12 drop-down">
+                     <%= f.label  :hair_color %><br>
+                     <%= f.select :hair_color, [:Brown, :Black, :Blond, :"not applicable"], { :prompt => "Select One" },{ class: "form-control"} %>
+                 </div> 
+	         </div>
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :scalp_subcutaneous %><br>
+		      <%= f.select :scalp_subcutaneous, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:40%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_scalp_subcutaneous_specify" } %><br>
+		   <%= f.text_field :scalp_subcutaneous_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :scalp_subgaleal %><br>
+		      <%= f.select :scalp_subgaleal, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:40%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_scalp_subgaleal_specify" } %><br>
+		   <%= f.text_field :scalp_subgaleal_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :calvarium_sutures %><br>
+		      <%= f.select :calvarium_sutures, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:40%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_calvarium_sutures_specify" } %><br>
+		   <%= f.text_field :calvarium_sutures_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :anterior_fontanelle %><br>
+		      <%= f.select :anterior_fontanelle, [:Closed, :Open], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Open')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:40%">
+		   <div class="col-sm-12">
+		   <%#= f.label  :please_specify, { class: "hide-element", id:"label_external_anterior_fontanelle_specify" } %><br>
+		   <%#= f.text_field :anterior_fontanelle_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+
+	     <div class="row" style="width:50%">
+	        <div class="field col-sm-12">
+		    <%= f.label :head_other %><br>
+		    <%= f.text_field :head_other, class: "form-control" %>
+	     </div> </div>
+ <div class="row" style="width:50%">
+                  <div class="col-sm-12 drop-down">
+                     <%= f.label  :position %><br>
+                     <%= f.select :position, [:Normal, :"Low set"], { :prompt => "Select One" },{ class: "form-control"} %>
+                 </div> 
+	         </div>
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :shape %><br>
+		      <%= f.select :shape, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:40%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_shape_specify" } %><br>
+		   <%= f.text_field :shape_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :canals %><br>
+		      <%= f.select :canals, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:40%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_canals_specify" } %><br>
+		   <%= f.text_field :canals_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+
+	     <div class="row" style="width:50%">
+	        <div class="field col-sm-12">
+		    <%= f.label :ears_other %><br>
+		    <%= f.text_field :ears_other, class: "form-control" %>
+	     </div> </div>
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :size_shape_position %><br>
+		      <%= f.select :size_shape_position, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:40%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_size_shape_position_specify" } %><br>
+		   <%= f.text_field :size_shape_position_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :lids_periorbital_soft_tissue %><br>
+		      <%= f.select :lids_periorbital_soft_tissue, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:40%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_lids_periorbital_soft_tissue_specify" } %><br>
+		   <%= f.text_field :lids_periorbital_soft_tissue_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :conjunctiva %><br>
+		      <%= f.select :conjunctiva, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:40%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_conjunctiva_specify" } %><br>
+		   <%= f.text_field :conjunctiva_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :sclera_cornea_lens %><br>
+		      <%= f.select :sclera_cornea_lens, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:40%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_sclera_cornea_lens_specify" } %><br>
+		   <%= f.text_field :sclera_cornea_lens_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :iris_color %><br>
+		      <%= f.select :iris_color, [:Black, :Blue, :Grey, :Green, :Brown, :Other], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Other')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:40%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_iris_color_specify" } %><br>
+		   <%= f.text_field :iris_color_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+ <div class="row" style="width:50%">
+                  <div class="col-sm-12 drop-down">
+                     <%= f.label  :pupils %><br>
+                     <%= f.select :pupils, [:Right, :Left], { :prompt => "Select One" },{ class: "form-control"} %>
+                 </div> 
+	         </div>
+ <div class="row" style="width:50%">
+                  <div class="col-sm-12 drop-down">
+                     <%= f.label  :eyes_removed %><br>
+                     <%= f.select :eyes_removed, [:yes, :no], { :prompt => "Select One" },{ class: "form-control"} %>
+                 </div> 
+	         </div>
+
+	     <div class="row" style="width:50%">
+	        <div class="field col-sm-12">
+		    <%= f.label :eyes_other %><br>
+		    <%= f.text_field :eyes_other, class: "form-control" %>
+	     </div> </div>
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :position_shape %><br>
+		      <%= f.select :position_shape, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:40%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_position_shape_specify" } %><br>
+		   <%= f.text_field :position_shape_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :nares_exudate %><br>
+		      <%= f.select :nares_exudate, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:40%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_nares_exudate_specify" } %><br>
+		   <%= f.text_field :nares_exudate_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+ <div class="row" style="width:50%">
+                  <div class="col-sm-12 drop-down">
+                     <%= f.label  :patency_of_choanae %><br>
+                     <%= f.select :patency_of_choanae, [:Patent, :"Non patent"], { :prompt => "Select One" },{ class: "form-control"} %>
+                 </div> 
+	         </div>
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :septum %><br>
+		      <%= f.select :septum, [:Normal, :Abnormal, :"Not examined"], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:40%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_septum_specify" } %><br>
+		   <%= f.text_field :septum_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+
+	     <div class="row" style="width:50%">
+	        <div class="field col-sm-12">
+		    <%= f.label :nose_other %><br>
+		    <%= f.text_field :nose_other, class: "form-control" %>
+	     </div> </div>
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :lips_mucosa_gums %><br>
+		      <%= f.select :lips_mucosa_gums, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:40%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_lips_mucosa_gums_specify" } %><br>
+		   <%= f.text_field :lips_mucosa_gums_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :tongue %><br>
+		      <%= f.select :tongue, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:40%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_tongue_specify" } %><br>
+		   <%= f.text_field :tongue_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :palate_maxilla_mandible %><br>
+		      <%= f.select :palate_maxilla_mandible, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:40%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_palate_maxilla_mandible_specify" } %><br>
+		   <%= f.text_field :palate_maxilla_mandible_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+
+	     <div class="row" style="width:50%">
+	        <div class="field col-sm-12">
+		    <%= f.label :teeth_upper %><br>
+		<%= f.number_field :teeth_upper, class: "form-control" %>
+	     </div> </div>
+
+	     <div class="row" style="width:50%">
+	        <div class="field col-sm-12">
+		    <%= f.label :teeth_lower %><br>
+		<%= f.number_field :teeth_lower, class: "form-control" %>
+	     </div> </div>
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :tonsils %><br>
+		      <%= f.select :tonsils, [:Normal, :Abnormal, :"Not examined"], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:40%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_tonsils_specify" } %><br>
+		   <%= f.text_field :tonsils_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :salivary_glands %><br>
+		      <%= f.select :salivary_glands, [:Normal, :Abnormal, :"Not examined"], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:40%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_salivary_glands_specify" } %><br>
+		   <%= f.text_field :salivary_glands_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :pharynx %><br>
+		      <%= f.select :pharynx, [:Normal, :Abnormal, :"Not examined"], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:40%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_pharynx_specify" } %><br>
+		   <%= f.text_field :pharynx_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+
+	     <div class="row" style="width:50%">
+	        <div class="field col-sm-12">
+		    <%= f.label :mouth_other %><br>
+		    <%= f.text_field :mouth_other, class: "form-control" %>
+	     </div> </div>
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :neck_configuration %><br>
+		      <%= f.select :neck_configuration, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:40%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_neck_configuration_specify" } %><br>
+		   <%= f.text_field :neck_configuration_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :nodes_masses %><br>
+		      <%= f.select :nodes_masses, [:Present, :Absent], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Present')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:40%">
+		   <div class="col-sm-12">
+		   <%#= f.label  :please_specify, { class: "hide-element", id:"label_external_nodes_masses_specify" } %><br>
+		   <%#= f.text_field :nodes_masses_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+
+	     <div class="row" style="width:50%">
+	        <div class="field col-sm-12">
+		    <%= f.label :neck_other %><br>
+		    <%= f.text_field :neck_other, class: "form-control" %>
+	     </div> </div>
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :axilla_configuration %><br>
+		      <%= f.select :axilla_configuration, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:40%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_axilla_configuration_specify" } %><br>
+		   <%= f.text_field :axilla_configuration_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :axillary_lymph_nodes %><br>
+		      <%= f.select :axillary_lymph_nodes, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:40%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_axillary_lymph_nodes_specify" } %><br>
+		   <%= f.text_field :axillary_lymph_nodes_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+
+	     <div class="row" style="width:50%">
+	        <div class="field col-sm-12">
+		    <%= f.label :chest_other %><br>
+		    <%= f.text_field :chest_other, class: "form-control" %>
+	     </div> </div>
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :abdomen_configuration %><br>
+		      <%= f.select :abdomen_configuration, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:40%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_abdomen_configuration_specify" } %><br>
+		   <%= f.text_field :abdomen_configuration_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :umbilicus_abdominal_wall %><br>
+		      <%= f.select :umbilicus_abdominal_wall, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:40%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_umbilicus_abdominal_wall_specify" } %><br>
+		   <%= f.text_field :umbilicus_abdominal_wall_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :size_of_palpable_organs %><br>
+		      <%= f.select :size_of_palpable_organs, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:40%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_size_of_palpable_organs_specify" } %><br>
+		   <%= f.text_field :size_of_palpable_organs_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :masses %><br>
+		      <%= f.select :masses, [:Present, :Absent], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Present')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:40%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_masses_specify" } %><br>
+		   <%= f.text_field :masses_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+
+	     <div class="row" style="width:50%">
+	        <div class="field col-sm-12">
+		    <%= f.label :abdomen_other %><br>
+		    <%= f.text_field :abdomen_other, class: "form-control" %>
+	     </div> </div>
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :hernia %><br>
+		      <%= f.select :hernia, [:Yes, :No, :"Not examined"], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Yes')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:40%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_hernia_specify" } %><br>
+		   <%= f.text_field :hernia_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :palpable_lymph_nodes %><br>
+		      <%= f.select :palpable_lymph_nodes, [:Present, :Absent, :"Not examined"], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Present')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:40%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_palpable_lymph_nodes_specify" } %><br>
+		   <%= f.text_field :palpable_lymph_nodes_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+
+	     <div class="row" style="width:50%">
+	        <div class="field col-sm-12">
+		    <%= f.label :inguinal_other %><br>
+		    <%= f.text_field :inguinal_other, class: "form-control" %>
+	     </div> </div>
+ <div class="row" style="width:50%">
+                  <div class="col-sm-12 drop-down">
+                     <%= f.label  :penis %><br>
+                     <%= f.select :penis, [:Circumscribed, :"Non circumscribed"], { :prompt => "Select One" },{ class: "form-control"} %>
+                 </div> 
+	         </div>
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :penile_length %><br>
+		      <%= f.select :penile_length, [:Present, :Absent, :"Not examined"], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:40%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_penile_length_specify" } %><br>
+		   <%= f.text_field :penile_length_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :scrotum %><br>
+		      <%= f.select :scrotum, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:40%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_scrotum_specify" } %><br>
+		   <%= f.text_field :scrotum_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :bilateral_testes_identified %><br>
+		      <%= f.select :bilateral_testes_identified, [:Yes, :No], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'No')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:40%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_bilateral_testes_identified_specify" } %><br>
+		   <%= f.text_field :bilateral_testes_identified_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :testes_size %><br>
+		      <%= f.select :testes_size, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:40%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_testes_size_specify" } %><br>
+		   <%= f.text_field :testes_size_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+ <div class="row" style="width:50%">
+                  <div class="col-sm-12 drop-down">
+                     <%= f.label  :testes_position %><br>
+                     <%= f.select :testes_position, [:Scrotal, :"Inguinal canal", :Pelvic, :Abdominal], { :prompt => "Select One" },{ class: "form-control"} %>
+                 </div> 
+	         </div>
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :labia %><br>
+		      <%= f.select :labia, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:40%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_labia_specify" } %><br>
+		   <%= f.text_field :labia_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :clitoris %><br>
+		      <%= f.select :clitoris, [:Normal, :Abnormal, :"Not examined"], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:40%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_clitoris_specify" } %><br>
+		   <%= f.text_field :clitoris_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :vagina_hymen %><br>
+		      <%= f.select :vagina_hymen, [:Normal, :Abnormal, :"Not examined"], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:40%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_vagina_hymen_specify" } %><br>
+		   <%= f.text_field :vagina_hymen_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :urethral_meatus %><br>
+		      <%= f.select :urethral_meatus, [:Normal, :Abnormal, :"Not examined"], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:40%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_urethral_meatus_specify" } %><br>
+		   <%= f.text_field :urethral_meatus_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+
+	     <div class="row" style="width:50%">
+	        <div class="field col-sm-12">
+		    <%= f.label :genitalia_other %><br>
+		    <%= f.text_field :genitalia_other, class: "form-control" %>
+	     </div> </div>
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :spine %><br>
+		      <%= f.select :spine, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:40%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_spine_specify" } %><br>
+		   <%= f.text_field :spine_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :anus %><br>
+		      <%= f.select :anus, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:40%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_anus_specify" } %><br>
+		   <%= f.text_field :anus_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+
+	     <div class="row" style="width:50%">
+	        <div class="field col-sm-12">
+		    <%= f.label :back_other %><br>
+		    <%= f.text_field :back_other, class: "form-control" %>
+	     </div> </div>
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :extermities_configuration %><br>
+		      <%= f.select :extermities_configuration, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:40%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_extermities_configuration_specify" } %><br>
+		   <%= f.text_field :extermities_configuration_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :joints %><br>
+		      <%= f.select :joints, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:40%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_joints_specify" } %><br>
+		   <%= f.text_field :joints_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+<div class="row" style="width:50%">
+		   <div class="col-sm-12 drop-down">
+		      <%= f.label  :dermatoglyphics %><br>
+		      <%= f.select :dermatoglyphics, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'Abnormal')"} %> 
+                   </div>
+		</div>
+		
+                <div class="row" style="width:40%">
+		   <div class="col-sm-12">
+		   <%= f.label  :please_specify, { class: "hide-element", id:"label_external_dermatoglyphics_specify" } %><br>
+		   <%= f.text_field :dermatoglyphics_specify, { class: "hide-element form-control", placeholder: "Please Provide Details" } %>
+                   </div>
+                </div>
+	   
+
+	     <div class="row" style="width:50%">
+	        <div class="field col-sm-12">
+		    <%= f.label :extermities_other %><br>
+		    <%= f.text_field :extermities_other, class: "form-control" %>
+	     </div> </div>
+
+	       <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+		               <i class="icon-ok icon-white"></i> Save
+			         <% end %>
+
+
+	     <script>
+		     function myFunction(item,match_string) {
+			     var id = $(item).attr("id")
+			     var target_id = id + "_specify"
+			     var label_id = "label_" + id + "_specify"
+
+			     if(item.value == match_string){
+				     select_this = document.getElementById(target_id)
+				     select_this.classList.remove("hide-element") 
+				     select_this = document.getElementById(label_id)
+				     select_this.classList.remove("hide-element") 
+			     }
+			     else{
+				     select_this = document.getElementById(target_id)
+				     select_this.classList.add("hide-element") 
+
+				     select_this = document.getElementById(label_id)
+				     select_this.classList.add("hide-element") 
+		             }
+	             }
+	    </script>
+
+
+
+  <% end %>

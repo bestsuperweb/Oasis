@@ -1,0 +1,5 @@
+Thyroid	thyroid weight	number		
+Thyroid	thyroid pos config shape	select	"Normal","Abnormal"	Abnormal, specify
+Thyroid	thyroid external surface	select	"Normal","Abnormal"	Abnormal, specify
+Thyroid	thyroid parenchyma or cut surface	select	"Normal","Abnormal"	Abnormal, specify
+Thyroid	thyroid other	text		

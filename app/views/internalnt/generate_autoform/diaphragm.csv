@@ -1,0 +1,4 @@
+diaphragm normal	checkbox			
+diaphragm position configuration	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+diphragm defect	select	"Normal","Abnormal"		
+diaphragm other	text			

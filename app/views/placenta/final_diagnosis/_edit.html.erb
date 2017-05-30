@@ -1,0 +1,285 @@
+<br>
+
+<% 
+      @singleton_expect = { 
+            '8'     =>    1.6,
+            '9'     =>    15.2,
+            '10'    =>    28.8,
+            '11'    =>    42.4,
+            '12'    =>    56.1,
+            '13'    =>    69.7,
+            '14'    =>    83.3,
+            '15'    =>    96.9,
+            '16'    =>    110.5,
+            '17'    =>    124.2,
+            '18'    =>    137.8,
+            '19'    =>    150,
+            '20'    =>    163,
+            '21'    =>    176,
+            '22'    =>    189,
+            '23'    =>    190,
+            '24'    =>    190,
+            '25'    =>    197,
+            '26'    =>    226,
+            '27'    =>    240,
+            '28'    =>    223,
+            '29'    =>    269,
+            '30'    =>    324,
+            '31'    =>    314,
+            '32'    =>    325,
+            '33'    =>    351,
+            '34'    =>    381,
+            '35'    =>    411,
+            '36'    =>    447,
+            '37'    =>    467,
+            '38'    =>    493,
+            '39'    =>    500,
+            '40'    =>    510,
+            '41'    =>    524,
+            '42'    =>    532
+      }
+
+      @multiple_expect = {
+            '19'    =>     106,
+            '20'    =>     109,
+            '21'    =>     115.5,
+            '22'    =>     125.5,
+            '23'    =>     138,
+            '24'    =>     153.5,
+            '25'    =>     170.5,
+            '26'    =>     190,
+            '27'    =>     210.5,
+            '28'    =>     232,
+            '29'    =>     254.5,
+            '30'    =>     277,
+            '31'    =>     300,
+            '32'    =>     322,
+            '33'    =>     343.5,
+            '34'    =>     363.5,
+            '35'    =>     382,
+            '36'    =>     399,
+            '37'    =>     413.5,
+            '38'    =>     425,
+            '39'    =>     434,
+            '40'    =>     439.5,
+            '41'    =>     441
+      }
+
+      @ratio_expect = {
+            '22'    =>    2.9,
+            '23'    =>    3.3,
+            '24'    =>    3.4,
+            '25'    =>    4,
+            '26'    =>    4.1,
+            '27'    =>    4.5,
+            '28'    =>    4.8,
+            '29'    =>    5.2,
+            '30'    =>    5.2,
+            '31'    =>    5.5,
+            '32'    =>    5.9,
+            '33'    =>    6,
+            '34'    =>    6.2,
+            '35'    =>    6.4,
+            '36'    =>    6.6,
+            '37'    =>    6.8,
+            '38'    =>    6.9,
+            '39'    =>    7.1,
+            '40'    =>    7.2,
+            '41'    =>    7.2,
+            '42'    =>    7.1
+      }
+
+      @type_of_delivery = @description.mother_datum.nil? ? '...' : final_diagnosis( @description.mother_datum.type_of_delivery )
+      @week             = @patient.nil? ? '...' : final_diagnosis( @patient.age )
+      @day              = @patient.nil? ? '...' : final_diagnosis( @patient.age_day_week )
+      @weight           = @description.placenta.nil? ? '...' : final_diagnosis(@description.placenta.weight)
+      @singleton_weight = @patient.nil? ? '...' : @singleton_expect[@patient.age.to_s]
+      @multiple_weight  = @patient.nil? ? '...' : @multiple_expect[@patient.age.to_s]
+      @ratio            = @description.placenta.nil? ? '...' : final_diagnosis(@description.placenta.placental_weight_ratio)
+      @expect_ratio     = @patient.nil? ? '...' : @ratio_expect[@patient.age.to_s]
+      @length           = @description.placenta.nil? ? '...' : final_diagnosis(@description.placenta.total_length)
+      @vessels          = @description.placenta.nil? ? '...' : final_diagnosis(@description.placenta.vessels)
+      @placentation     = @description.placenta.nil? ? '...' : final_diagnosis(@description.placenta.placentation)
+      @umbilical_normal = '...'
+      @fetal_normal     = '...'
+      @chorionic_normal = '...'
+      @villi_normal     = '...'
+      @basal_normal     = '...'
+
+      unless @description.placenta.nil?
+            
+            if @description.placenta.umbillical_cord_normal == 'yes'
+                  @umbilical_normal = 'no pathologic abnormality'                                           
+            end
+
+            if @description.placenta.fetal_memberanes_normal == 'yes'
+                  @fetal_normal = 'no pathologic abnormality'
+            end
+
+            if @description.placenta.chorionic_plate_and_stem_vessels_normal == 'yes'
+                  @chorionic_normal = 'no pathologic abnormality'
+            end
+
+            if @description.placenta.chorionic_villi_and_intervillous_space_normal == 'yes'
+                  @villi_normal     = 'no pathologic abnormality'
+            end
+
+            if @description.placenta.basal_plate_normal == 'yes'
+                  @basal_normal     = 'no pathologic abnormality'
+            end
+
+      end
+
+      if @description.patient.nil?
+            @specify_number = '...'
+      else
+            if @description.patient.specify_number.nil?
+                  @specify_number = '...'
+            else
+                 case @description.patient.specify_number
+                        when '2'
+                              @specify_number = 'Twin'
+                        when '3'
+                              @specify_number = 'Triplet'
+                        when '4'
+                              @specify_number = 'Quadruplet'
+                        when '5'
+                              @specify_number = 'Quintuplet'
+                        when '6'
+                              @specify_number = 'Sextuplet'
+                        when '7'
+                              @specify_number = 'Septuplet'
+                        when '8'
+                              @specify_number = 'Octuplet'
+                        when '9'
+                              @specify_number = 'Nonuplet'
+                        when '10'
+                              @specify_number = 'Decuplet'                                        
+                  end
+            end                            
+      end
+
+      if @patient.type_of_gestation == 'Multiple'
+            @autofill = " #{@specify_number} Gestation, #{@type_of_delivery} delivery, #{@week} weeks #{@day} days gestation: <br> #{@placentation} placenta with:
+                              <ul style='list-style: decimal; line-height: 35px;'>
+                                    <li> #{@weight} gm ( #{@multiple_weight} expected)</li>
+                                    <li> Umbilical cord, #{@length} cm, #{@vessels} vessels, #{@umbilical_normal} </li>
+                                    <li> Fetal membranes, #{@fetal_normal}</li>
+                                    <li> Chorionic plate and stem vessels, #{@chorionic_normal}</li>
+                                    <li> Chorionic villi, #{@villi_normal} </li>
+                                    <li> Basal plate, #{@basal_normal}</li>
+                              </ul>"
+      end
+
+      if @patient.type_of_gestation == 'Singleton'
+            @autofill = "Placenta, #{@type_of_delivery} delivery,  #{@week} weeks #{@day} days gestation:
+                        <ul style='list-style: decimal; line-height: 35px;'>
+                              <li> #{@weight} gm ( #{@singleton_weight} expected); fetal placenta weight ratio #{@ratio} ( #{@expect_ratio} expected)</li>
+                              <li> Umbilical cord, #{@length} cm, #{@vessels} vessels, #{@umbilical_normal} </li>
+                              <li> Fetal membranes, #{@fetal_normal} </li>
+                              <li> Chorionic plate and stem vessels, #{@chorionic_normal} </li>
+                              <li> Chorionic villi, #{@villi_normal} </li>
+                              <li> Basal plate, #{@basal_normal} </li>
+                        </ul>"      
+      end
+
+%>
+
+<div class="panel panel-placenta">
+    <div class="panel-heading panel-heading-placenta small-heading">
+		<span class="fa fa-user pull-left"></span>Placenta Final Diagnosis
+    </div>
+
+<%= form_tag(update_final_report_path, method: "patch") do %>
+  <input type="hidden" name="final_report[flag]" value="1">
+    <div class="panel-body panel-body-placenta">
+      <div class="row">      	
+      	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="line-height: 35px;">
+                  <%= text_area_tag 'final_report[report]', @autofill, { class: "form-control tinymce" , rows: 25 } %>                		   
+		</div>      		      
+	  </div>
+	</div>
+</div>
+
+<div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <b>Assign to:</b>
+            <%=  select_tag "final_report[assign]" , 
+                 options_for_select( User.all.collect{ |u| [u.email, u.id] }, @description.final_report.assign ), 
+                 { :prompt => "Select one", class: "cform-control input-sm" } 
+                 %>
+      </div>      
+</div>
+<br>
+<div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 final-report-operation">
+            <input type="submit" class="btn btn-primary" value="Save and Exit" >&nbsp;&nbsp;&nbsp;
+            <a href="#" class="btn btn-success" data-dismiss="modal" data-toggle="modal" data-target="#alertModal1">Sign Out</a>                        
+      </div>
+</div>
+<% end %>
+
+<div id="alertModal1" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Sign out</h4>
+      </div>
+      <div class="modal-body">
+        <p>"This action will finalize the Placenta Final Report in its present form and you will not be allowed to make any changes to it. You can continue to make changes to the remainder of the autopsy report. Do you want to continue?"</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#loginModal1">Yes</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="loginModal1" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>        
+        <h4 class="modal-title">Log in for Sign out</h4>
+      </div>
+ <!-- form start -->
+      <%= form_for :sign_out, url: signout_final_report_path(@description.id), remote: true, method: :post do |d|%>
+       <div class="modal-body form-horizontal">
+        <div class="form-group">
+          <label class="control-label col-sm-3" >Email:</label>
+          <div class="col-sm-9">
+            <%= d.email_field :email, :class => 'form-control', :required => 'true' %>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-3" >Password:</label>
+          <div class="col-sm-9">
+            <%= d.password_field :password, :class => 'form-control', :required => 'true' %>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-primary" >Login</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+      </div>
+      <% end %>
+<!-- form end -->
+    </div>
+  </div>
+</div>
+
+<div id="resultModal1" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-sm">
+    <!-- Modal content-->
+    <div class="modal-content">      
+      <div class="modal-body">
+        <p class="signout-result"></p>
+      </div>
+    </div>
+  </div>
+</div>

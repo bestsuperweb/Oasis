@@ -1,0 +1,74 @@
+ <div class="col-sm-3">
+         <div class="panel panel-internal squarish">
+             <div class="panel-heading panel-heading-internal small-heading squarish">
+               Bladder_and_urethra
+             </div>
+         <div class="panel-body panel-body-internal squarish">
+
+            <div class="row">
+               <div class="col-sm-6 custom-prop">
+                  <strong>Size_and_configuration: </strong>
+               </div>
+               <div class="col-sm-6 custom-val">
+                  <%= ( @description.internal.size_and_configuration_specify.nil? or @description.internal.size_and_configuration_specify == "" ) ?  @description.internal.size_and_configuration :  @description.internal.size_and_configuration_specify 
+                  %>  
+               </div> 
+             </div>
+           
+
+            <div class="row">
+               <div class="col-sm-6 custom-prop">
+                  <strong>Wall_and_mucosa: </strong>
+               </div>
+               <div class="col-sm-6 custom-val">
+                  <%= ( @description.internal.wall_and_mucosa_specify.nil? or @description.internal.wall_and_mucosa_specify == "" ) ?  @description.internal.wall_and_mucosa :  @description.internal.wall_and_mucosa_specify 
+                  %>  
+               </div> 
+             </div>
+           
+
+            <div class="row">
+               <div class="col-sm-6 custom-prop">
+                  <strong>Perivesical_tissue: </strong>
+               </div>
+               <div class="col-sm-6 custom-val">
+                  <%= ( @description.internal.perivesical_tissue_specify.nil? or @description.internal.perivesical_tissue_specify == "" ) ?  @description.internal.perivesical_tissue :  @description.internal.perivesical_tissue_specify 
+                  %>  
+               </div> 
+             </div>
+           
+
+            <div class="row">
+               <div class="col-sm-6 custom-prop">
+                  <strong>Bladder_contents: </strong>
+               </div>
+               <div class="col-sm-6 custom-val">
+                  <%= ( @description.internal.bladder_contents_specify.nil? or @description.internal.bladder_contents_specify == "" ) ?  @description.internal.bladder_contents :  @description.internal.bladder_contents_specify 
+                  %>  
+               </div> 
+             </div>
+           
+
+            <div class="row">
+               <div class="col-sm-6 custom-prop">
+                  <strong>Urethra: </strong>
+               </div>
+               <div class="col-sm-6 custom-val">
+                  <%= ( @description.internal.urethra_specify.nil? or @description.internal.urethra_specify == "" ) ?  @description.internal.urethra :  @description.internal.urethra_specify 
+                  %>  
+               </div> 
+             </div>
+           
+
+            <div class="row">
+              <div class="col-sm-6 custom-prop">
+                <strong>Bladder_and_urethra_other : </strong>
+              </div>
+              <div class="col-sm-6 custom-val">
+                 <%= @description.internal.bladder_and_urethra_other%>               
+              </div>
+	    </div>
+	 
+</div>
+</div>
+</div>

@@ -1,0 +1,3 @@
+Pericardial sac	serosal sarfaces	select	"Normal","Abnormal"	Abnormal, specify
+Pericardial sac	pericardial sac contents	select	"Clear","Serosanguineous","Bloody","Exudative","Chylous","Other"	Other, specify
+Pericardial sac	pericardial sac amount of fluid	select	"Minimal","More than minimal"	More than minimal, specify

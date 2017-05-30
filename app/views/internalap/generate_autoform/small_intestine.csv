@@ -1,0 +1,8 @@
+small intestine normal	checkbox			
+small intestine size position configuration	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+small intestine mucosa and wall	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+small intestine state of distension	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+small intestine contents	text			Empty box
+meckel diverticulum	select	"yes","no"	yes, size	
+small intestine mesentery	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+small intestine other	text			

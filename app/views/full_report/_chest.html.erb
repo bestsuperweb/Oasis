@@ -1,0 +1,12 @@
+<div>
+  <h3>Chest/Axilla</h3>
+  <table>
+    <%
+      @names_array = ["Configuration","Lymph nodes","Other"]
+      @prop_array = ["axilla_configuration","axillary_lymph_nodes","chest_other"]
+      @specify_array = ["axilla_configuration_specify","axillary_lymph_nodes_specify",""]
+    %>
+    <%= render :partial => "external_loop"%>
+</table>
+</div>
+

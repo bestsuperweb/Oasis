@@ -1,0 +1,18 @@
+<div>
+  <h2 style="text-align:center">Body measurements</h2>
+  <table style="width:100%">
+    <tr><td style="width:50%"><strong>Birth Weight:               </strong> </td><td style="width:50%"><%= @description.external.birth_weight%>               (<%= "#{weight["bwa"]} ± #{weight["bws"]} grams" %>)</td></tr>
+    <tr><td><strong>Weight at autopsy:          </strong> </td><td><%= @description.external.weight_at_autopsy%>          (<%= "#{weight["bwa"]} ± #{weight["bws"]} grams" %>)</td></tr>
+    <tr><td><strong>Crown heel length:          </strong> </td><td><%= @description.external.crown_heel_length%>          (<%= "#{weight["chla"]} ± #{weight["chls"]} cms" %>)</td></tr>
+    <tr><td><strong>Crown rump length:          </strong> </td><td><%= @description.external.crown_rump_length %>         (<%= "#{weight["crla"]} ± #{weight["crls"]} cms" %>)</td></tr>
+    <tr><td><strong>Head circumference:         </strong> </td><td><%= @description.external.head_circumference %>        (<%= "#{weight["hca"]} ± #{weight["hcs"]} cms" %>)</td></tr>
+    <tr><td><strong>Foot length:                </strong> </td><td><%= @description.external.crown_rump_length %>         (<%= "#{weight["fla"]} ± #{weight["fls"]} mm" %>)</td></tr>
+    <tr><td><strong>Abdomen circumference:      </strong> </td><td><%= @description.external.abdomen_circumference %> </td></tr>
+    <tr><td><strong>Inner intercanthal distance:</strong> </td><td><%= @description.external.inner_intercanthal_distance%></td></tr>
+    <tr><td><strong>Interpupillary distance:    </strong> </td><td><%= @description.external.interpupillary_distance %></td></tr>
+    <tr><td><strong>Outer intercanthal distance:</strong> </td><td><%= @description.external.outer_intercanthal_distance%></td> </tr>
+    <tr><td><strong>Arm length:                 </strong> </td><td><%= @description.external.arm_length%> </td></tr>
+    <tr><td><strong>Leg length:                 </strong> </td><td><%= @description.external.leg_length %></td></tr>
+    <tr><td><strong>Chest circumference:        </strong> </td><td><%= @description.external.chest_circumference %></td></tr>
+  </table>
+</div>

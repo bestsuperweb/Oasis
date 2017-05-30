@@ -1,0 +1,5 @@
+mediastinum normal	checkbox			
+mediastinum position configuration	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+mediastinum nodes masses	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+pneumomediastinum	select	"yes","no"		
+mediastinum other	text			Empty box

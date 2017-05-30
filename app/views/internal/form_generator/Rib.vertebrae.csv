@@ -1,0 +1,4 @@
+Rib vertebrae	hardness	select	"Normal","Abnormal"	Abnormal, specify
+Rib vertebrae	bone anomalies	select	"Normal","Abnormal"	Abnormal, specify
+Rib vertebrae	marrow	select	"Normal","Abnormal"	Abnormal, specify
+Rib vertebrae	bones other	text		

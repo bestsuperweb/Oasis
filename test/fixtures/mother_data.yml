@@ -1,0 +1,61 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  mother_age: 1
+  gestational_age: 1
+  prenatal_care: MyString
+  gravida: 1
+  para: 1
+  abortus: 1
+  term: 1
+  pre_pregnancy_weight: 1
+  delivery_weight: 1
+  blood_type: MyString
+  antibody_screen: MyString
+  rpr: MyString
+  hepatitis_b: MyString
+  rubella: MyString
+  HIV: MyString
+  diabetes: MyString
+  GBS: MyString
+  amniocentesis: MyString
+  previous_pregnancy_summary: MyText
+  present_pregnancy_summary: MyText
+  ultrasound_finding: MyText
+  birth_weight: 1
+  maceration_degree: MyString
+  gross_appearance: MyString
+  placenta_available_for_examination: MyString
+  amniotic_fluid: MyString
+  mother_medical_history: MyText
+  description_id: 
+
+two:
+  mother_age: 1
+  gestational_age: 1
+  prenatal_care: MyString
+  gravida: 1
+  para: 1
+  abortus: 1
+  term: 1
+  pre_pregnancy_weight: 1
+  delivery_weight: 1
+  blood_type: MyString
+  antibody_screen: MyString
+  rpr: MyString
+  hepatitis_b: MyString
+  rubella: MyString
+  HIV: MyString
+  diabetes: MyString
+  GBS: MyString
+  amniocentesis: MyString
+  previous_pregnancy_summary: MyText
+  present_pregnancy_summary: MyText
+  ultrasound_finding: MyText
+  birth_weight: 1
+  maceration_degree: MyString
+  gross_appearance: MyString
+  placenta_available_for_examination: MyString
+  amniotic_fluid: MyString
+  mother_medical_history: MyText
+  description_id: 

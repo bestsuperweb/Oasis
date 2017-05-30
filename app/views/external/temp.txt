@@ -1,0 +1,116 @@
+            <div class="row">
+		<div class="col-sm-6 nopad custom-prop small drop-down">
+                    <%= f.label  :size_shape_position, class: "small"%>
+		</div>
+		<div class="col-sm-6 nopad custom-val">
+	          <%= f.select :size_shape_position, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent" , "dependent-selector" => "#size_shape_position-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+                </div>
+            </div>
+	    <div class="row" id="size_shape_position-dependent">
+	        <div class="col-sm-6 nopad custom-prop small drop-down">
+	             <%= f.label  :size_shape_position_specify %><br>
+                </div>
+                <div class="col-sm-6 nopad custom-val">
+                     <%= f.text_field :size_shape_position_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+                </div>
+            </div> 
+         
+
+            <div class="row">
+		<div class="col-sm-6 nopad custom-prop small drop-down">
+                    <%= f.label  :lids_periorbital_soft_tissue, class: "small"%>
+		</div>
+		<div class="col-sm-6 nopad custom-val">
+	          <%= f.select :lids_periorbital_soft_tissue, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent" , "dependent-selector" => "#lids_periorbital_soft_tissue-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+                </div>
+            </div>
+	    <div class="row" id="lids_periorbital_soft_tissue-dependent">
+	        <div class="col-sm-6 nopad custom-prop small drop-down">
+	             <%= f.label  :lids_periorbital_soft_tissue_specify %><br>
+                </div>
+                <div class="col-sm-6 nopad custom-val">
+                     <%= f.text_field :lids_periorbital_soft_tissue_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+                </div>
+            </div> 
+         
+
+            <div class="row">
+		<div class="col-sm-6 nopad custom-prop small drop-down">
+                    <%= f.label  :conjunctiva, class: "small"%>
+		</div>
+		<div class="col-sm-6 nopad custom-val">
+	          <%= f.select :conjunctiva, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent" , "dependent-selector" => "#conjunctiva-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+                </div>
+            </div>
+	    <div class="row" id="conjunctiva-dependent">
+	        <div class="col-sm-6 nopad custom-prop small drop-down">
+	             <%= f.label  :conjunctiva_specify %><br>
+                </div>
+                <div class="col-sm-6 nopad custom-val">
+                     <%= f.text_field :conjunctiva_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+                </div>
+            </div> 
+         
+
+            <div class="row">
+		<div class="col-sm-6 nopad custom-prop small drop-down">
+                    <%= f.label  :sclera_cornea_lens, class: "small"%>
+		</div>
+		<div class="col-sm-6 nopad custom-val">
+	          <%= f.select :sclera_cornea_lens, [:Normal, :Abnormal], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent" , "dependent-selector" => "#sclera_cornea_lens-dependent", "when-value" => "Abnormal", "dependent-action" => "show-hide"} %>
+                </div>
+            </div>
+	    <div class="row" id="sclera_cornea_lens-dependent">
+	        <div class="col-sm-6 nopad custom-prop small drop-down">
+	             <%= f.label  :sclera_cornea_lens_specify %><br>
+                </div>
+                <div class="col-sm-6 nopad custom-val">
+                     <%= f.text_field :sclera_cornea_lens_specify, { class: "form-control input-sm", placeholder: "If Abnormal, explain" } %>
+                </div>
+            </div> 
+         
+
+            <div class="row">
+		<div class="col-sm-6 nopad custom-prop small drop-down">
+                    <%= f.label  :iris_color, class: "small"%>
+		</div>
+		<div class="col-sm-6 nopad custom-val">
+	          <%= f.select :iris_color, [:Black, :Blue, :Grey, :Green, :Brown, :Other], { :prompt => "Select One" },{ class: "form-control input-sm has-dependent" , "dependent-selector" => "#iris_color-dependent", "when-value" => "Other", "dependent-action" => "show-hide"} %>
+                </div>
+            </div>
+	    <div class="row" id="iris_color-dependent">
+	        <div class="col-sm-6 nopad custom-prop small drop-down">
+	             <%= f.label  :iris_color_specify %><br>
+                </div>
+                <div class="col-sm-6 nopad custom-val">
+                     <%= f.text_field :iris_color_specify, { class: "form-control input-sm", placeholder: "If Other, explain" } %>
+                </div>
+            </div> 
+         
+ 
+	     <div class="row">
+		<div class="col-sm-6 nopad custom-prop small drop-down">
+		     <%= f.label  :pupils, class: "small" %><br>
+		</div> 
+		<div class="col-sm-6 nopad custom-val">
+		     <%= f.select :pupils, [:Right, :Left], { :prompt => "Select One" },{ class: "form-control input-sm"} %>
+		</div> 
+	     </div>
+ 
+	     <div class="row">
+		<div class="col-sm-6 nopad custom-prop small drop-down">
+		     <%= f.label  :eyes_removed, class: "small" %><br>
+		</div> 
+		<div class="col-sm-6 nopad custom-val">
+		     <%= f.select :eyes_removed, [:yes, :no], { :prompt => "Select One" },{ class: "form-control input-sm"} %>
+		</div> 
+	     </div>
+
+	     <div class="row">
+		<div class="col-sm-6 nopad custom-prop small">
+		    <%= f.label :eyes_other , class: "small" %>
+		</div> 
+		<div class="col-sm-6 nopad custom-val">
+		    <%= f.text_field :eyes_other, class: "form-control input-sm" %>
+		</div> 
+	     </div>

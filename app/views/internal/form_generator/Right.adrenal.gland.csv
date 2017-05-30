@@ -1,0 +1,8 @@
+Right adrenal gland	right adrenal gland weight	number		
+Right adrenal gland	right adrenal pos config shape	select	"Normal","Abnormal"	Abnormal, specify
+Right adrenal gland	right adrenal gland external surface	select	"Normal","Abnormal"	Abnormal, specify
+Right adrenal gland	right adrenal gland parenchyma or cut surface	select	"Normal","Abnormal"	Abnormal, specify
+Right adrenal gland	right adrenal cortex	select	"Normal","Abnormal"	Abnormal, specify
+Right adrenal gland	right adrenal fetal cortex	select	"Normal","Abnormal"	Abnormal, specify
+Right adrenal gland	right adrenal medulla	select	"Normal","Abnormal"	Abnormal, specify
+Right adrenal gland	right adrenal other	text		

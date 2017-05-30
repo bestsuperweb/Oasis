@@ -1,0 +1,4 @@
+Dura and venous sinuses	dura falx tentorium	select	"Normal","Abnormal"	Abnormal, specify
+Dura and venous sinuses	subdural epidural	select	"Normal","Abnormal"	Abnormal, specify
+Dura and venous sinuses	venous sinuses	select	"Normal","Abnormal"	Abnormal, specify
+Dura and venous sinuses	sinuses other	text		

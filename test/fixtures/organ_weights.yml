@@ -1,0 +1,51 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  brain_expected: 1
+  brain_observed: 1
+  heart_expected: 1
+  heart_observed: 1
+  liver_expected: 1
+  liver_observed: 1
+  lt_adrenal_expected: 1
+  lt_adrenal_observed: 1
+  lt_kidney_expected: 1
+  lt_kidney_observed: 1
+  lt_lung_expected: 1
+  lt_lung_observed: 1
+  rt_adrenal_expected: 1
+  rt_adrenal_observed: 1
+  rt_kidney_expected: 1
+  rt_kidney_observed: 1
+  rt_lung_expected: 1
+  rt_lung_observed: 1
+  spleen_expected: 1
+  spleen_observed: 1
+  thymus_expected: 1
+  thymus_observed: 1
+  patient_id: 
+
+two:
+  brain_expected: 1
+  brain_observed: 1
+  heart_expected: 1
+  heart_observed: 1
+  liver_expected: 1
+  liver_observed: 1
+  lt_adrenal_expected: 1
+  lt_adrenal_observed: 1
+  lt_kidney_expected: 1
+  lt_kidney_observed: 1
+  lt_lung_expected: 1
+  lt_lung_observed: 1
+  rt_adrenal_expected: 1
+  rt_adrenal_observed: 1
+  rt_kidney_expected: 1
+  rt_kidney_observed: 1
+  rt_lung_expected: 1
+  rt_lung_observed: 1
+  spleen_expected: 1
+  spleen_observed: 1
+  thymus_expected: 1
+  thymus_observed: 1
+  patient_id: 

@@ -1,0 +1,9 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+.well-custom {
+ background-color: #68B0AB;
+ color: #fbfbfb;
+ font-weight: 200;
+ }

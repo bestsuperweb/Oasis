@@ -1,0 +1,116 @@
+   <div class="col-sm-3">
+     <div class="panel panel-internal squarish">
+       <div class="panel-heading panel-heading-internal small-heading squarish">
+         Scalp and cranium
+       </div>
+       <div class="panel-body panel-body-internal squarish">
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Subcutaneous_galea: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.subcutaneous_galea_specify.nil? or @description.internal.subcutaneous_galea_specify == "" ) ?  @description.internal.subcutaneous_galea :  @description.internal.subcutaneous_galea_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Periosteum: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.periosteum_specify.nil? or @description.internal.periosteum_specify == "" ) ?  @description.internal.periosteum :  @description.internal.periosteum_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Sutures_fontanelles: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.sutures_fontanelles_specify.nil? or @description.internal.sutures_fontanelles_specify == "" ) ?  @description.internal.sutures_fontanelles :  @description.internal.sutures_fontanelles_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Skull_base: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.skull_base_specify.nil? or @description.internal.skull_base_specify == "" ) ?  @description.internal.skull_base :  @description.internal.skull_base_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Sella: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.sella_specify.nil? or @description.internal.sella_specify == "" ) ?  @description.internal.sella :  @description.internal.sella_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Petrous_pyramids_opened_and_cultured: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.petrous_pyramids_opened_and_cultured_specify.nil? or @description.internal.petrous_pyramids_opened_and_cultured_specify == "" ) ?  @description.internal.petrous_pyramids_opened_and_cultured :  @description.internal.petrous_pyramids_opened_and_cultured_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Ears_removed: </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= ( @description.internal.ears_removed_specify.nil? or @description.internal.ears_removed_specify == "" ) ?  @description.internal.ears_removed :  @description.internal.ears_removed_specify 
+   	%>  
+         </div> 
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Foramen_magnum_antero-posterior_dimension : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.foramen_magnum_antero-posterior_dimension%>               
+   	</div>
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Foramen_magnum_antero-lateral_dimension : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.foramen_magnum_antero-lateral_dimension%>               
+   	</div>
+         </div>
+   
+   
+         <div class="row">
+   	<div class="col-sm-6 custom-prop">
+   	  <strong>Cranium_other : </strong>
+   	</div>
+   	<div class="col-sm-6 custom-val">
+   	  <%= @description.internal.cranium_other%>               
+   	</div>
+         </div>
+   
+       </div>
+     </div>
+   </div>

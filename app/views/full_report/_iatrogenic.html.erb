@@ -1,0 +1,11 @@
+<div>
+  <h3>Iatrogenic</h3>
+  <table>
+    <%
+    @names_array = ["Tubes", "Catheters", "Needle Marks"]
+    @prop_array = ["tubes","catheters","needle_marks"]
+    @specify_array = ["tubes_specify","catheters_specify","needle_marks_specify"]
+  %>
+    <%= render :partial => "external_loop"%>
+</table>
+</div>

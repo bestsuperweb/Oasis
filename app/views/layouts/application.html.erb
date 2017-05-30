@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AutopsyReportV2</title>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+
+    <div id="main-container" class="container">
+      <div class="row">
+	<div class="navbar navbar-default navbar-static-top">
+	    <div class="navbar-collapse collapse">
+	      <ul class="nav navbar-nav">
+		<li class="active"><a href="/selector">Home</a></li>
+		<li><a href="#">Education</a></li>
+		<li><a href="#">Team</a></li>
+		<li><a href="#">Contact</a></li>
+	      </ul>
+	      <p class="navbar-text pull-right">
+	      <% if user_signed_in? %>
+		Logged in as <strong><%= current_user.email %></strong>.
+		<%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+		<%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+	      <% else %>
+		<%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+		<%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+	      <% end %>
+	  </div>
+	</div>
+      </div>
+
+      <div class="row">
+	<% if notice %>
+	  <p class="alert alert-success"><%= notice %></p>
+	<% end %>
+	<% if alert %>
+	  <p class="alert alert-danger"><%= alert %></p>
+	<% end %>
+	<%= yield %>
+      </div>
+
+    </div>
+
+    <div id="footer-container" class="container-fluid">
+      <div class="row">
+	<div class="col-sm-12 footer">
+	  <hr>
+	  <p>
+	  <i class="fa fa-copyright" aria-hidden="true"> </i>Copyright Baylor College of Medicine, the year of inception through the current year, All rights reserved
+	  </p>
+	</div>
+      </div>
+    </div>
+
+  </body>
+
+</html>

@@ -1,0 +1,12 @@
+<div>
+  <h3>Thyroid and parathyroid</h3>
+  <table>
+    <%
+      @names_array = ["Thyroid weight","Thyroid position configuration","Thyroid external surface","Thyroid parenchyma or cut surface","Other","Parathyroid gland","Microscopic description"]
+      @prop_array = ["thyroid_weight","thyroid_pos_config_shape","thyroid_external_surface","thyroid_parenchyma_or_cut_surface","thyroid_other","parathyroid_gland","thyroid_pt_md"]
+      @specify_array =  ["","thyroid_pos_config_shape_specify","thyroid_external_surface_specify","thyroid_parenchyma_or_cut_surface_specify","","parathyroid_gland_specify",""]
+    %>
+    <%= render :partial => "internal_loop"%>
+</table>
+</div>
+

@@ -1,0 +1,74 @@
+ <div class="col-sm-3">
+         <div class="panel panel-internal squarish">
+             <div class="panel-heading panel-heading-internal small-heading squarish">
+               Spleen
+             </div>
+         <div class="panel-body panel-body-internal squarish">
+
+            <div class="row">
+              <div class="col-sm-6 custom-prop">
+                <strong>Spleen_weight : </strong>
+              </div>
+              <div class="col-sm-6 custom-val">
+                 <%= @description.internal.spleen_weight%>               
+              </div>
+	    </div>
+         
+
+            <div class="row">
+               <div class="col-sm-6 custom-prop">
+                  <strong>Spleen_shape_position_configuration: </strong>
+               </div>
+               <div class="col-sm-6 custom-val">
+                  <%= ( @description.internal.spleen_shape_position_configuration_specify.nil? or @description.internal.spleen_shape_position_configuration_specify == "" ) ?  @description.internal.spleen_shape_position_configuration :  @description.internal.spleen_shape_position_configuration_specify 
+                  %>  
+               </div> 
+             </div>
+           
+
+            <div class="row">
+               <div class="col-sm-6 custom-prop">
+                  <strong>Capsular_surface: </strong>
+               </div>
+               <div class="col-sm-6 custom-val">
+                  <%= ( @description.internal.capsular_surface_specify.nil? or @description.internal.capsular_surface_specify == "" ) ?  @description.internal.capsular_surface :  @description.internal.capsular_surface_specify 
+                  %>  
+               </div> 
+             </div>
+           
+
+            <div class="row">
+               <div class="col-sm-6 custom-prop">
+                  <strong>Spleen_consistency: </strong>
+               </div>
+               <div class="col-sm-6 custom-val">
+                  <%= ( @description.internal.spleen_consistency_specify.nil? or @description.internal.spleen_consistency_specify == "" ) ?  @description.internal.spleen_consistency :  @description.internal.spleen_consistency_specify 
+                  %>  
+               </div> 
+             </div>
+           
+
+            <div class="row">
+               <div class="col-sm-6 custom-prop">
+                  <strong>Spleen_cut_surface: </strong>
+               </div>
+               <div class="col-sm-6 custom-val">
+                  <%= ( @description.internal.spleen_cut_surface_specify.nil? or @description.internal.spleen_cut_surface_specify == "" ) ?  @description.internal.spleen_cut_surface :  @description.internal.spleen_cut_surface_specify 
+                  %>  
+               </div> 
+             </div>
+           
+
+            <div class="row">
+               <div class="col-sm-6 custom-prop">
+                  <strong>Accessory_spleens: </strong>
+               </div>
+               <div class="col-sm-6 custom-val">
+                  <%= ( @description.internal.accessory_spleens_specify.nil? or @description.internal.accessory_spleens_specify == "" ) ?  @description.internal.accessory_spleens :  @description.internal.accessory_spleens_specify 
+                  %>  
+               </div> 
+             </div>
+           
+</div>
+</div>
+</div>

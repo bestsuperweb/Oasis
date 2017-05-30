@@ -1,0 +1,39 @@
+<div class="panel panel-primary">
+        <div class="panel-heading">
+           <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#Umbilical-cord">Umbilical-cord</a>
+           </h4>
+        </div>
+      <div id="Umbilical-cord" class="panel-collapse collapse in"> 
+ <div class="row" style="width:100%">
+		  <div class="col-sm-4 drop-down">
+		     <%= f.label  :vessels %><br>
+		     <%= f.select :vessels, [:"1", :"2", :"3"], { :prompt => "Select One" },{ class: "form-control"} %>
+		 </div> 
+		 </div>
+ <div class="row" style="width:100%">
+		  <div class="col-sm-4 drop-down">
+		     <%= f.label  :umbillical_cord_normal %><br>
+		     <%= f.select :umbillical_cord_normal, [:yes, :no], { :prompt => "Select One" },{ class: "form-control"} %>
+		 </div> 
+		 </div>
+ <div class="row" style="width:100%">
+		  <div class="col-sm-4 drop-down">
+		     <%= f.label  :normal_no_funisitis %><br>
+		     <%= f.select :normal_no_funisitis, [:yes, :no], { :prompt => "Select One" },{ class: "form-control"} %>
+		 </div> 
+		 </div>
+ <div class="row" style="width:100%">
+		  <div class="col-sm-4 drop-down">
+		     <%= f.label  :normal_no_acute_vasculitis %><br>
+		     <%= f.select :normal_no_acute_vasculitis, [:yes, :no], { :prompt => "Select One" },{ class: "form-control"} %>
+		 </div> 
+		 </div>
+ <div class="row" style="width:100%">
+		  <div class="col-sm-4 drop-down">
+		     <%= f.label  :umbillical_cord_normal_no_other %><br>
+		     <%= f.select :umbillical_cord_normal_no_other, [:yes, :no], { :prompt => "Select One" },{ class: "form-control"} %>
+		 </div> 
+		 </div>
+</div>
+</div>

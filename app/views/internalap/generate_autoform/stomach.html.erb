@@ -1,0 +1,62 @@
+ <div class="col-sm-3">
+         <div class="panel panel-internal squarish">
+             <div class="panel-heading panel-heading-internal small-heading squarish">
+               Stomach_and_duodenum
+             </div>
+         <div class="panel-body panel-body-internal squarish">
+
+            <div class="row">
+               <div class="col-sm-6 custom-prop">
+                  <strong>Stomach_size_position_configuration: </strong>
+               </div>
+               <div class="col-sm-6 custom-val">
+                  <%= ( @description.internal.stomach_size_position_configuration_specify.nil? or @description.internal.stomach_size_position_configuration_specify == "" ) ?  @description.internal.stomach_size_position_configuration :  @description.internal.stomach_size_position_configuration_specify 
+                  %>  
+               </div> 
+             </div>
+           
+
+            <div class="row">
+               <div class="col-sm-6 custom-prop">
+                  <strong>Stomach_mucosa_and_wall: </strong>
+               </div>
+               <div class="col-sm-6 custom-val">
+                  <%= ( @description.internal.stomach_mucosa_and_wall_specify.nil? or @description.internal.stomach_mucosa_and_wall_specify == "" ) ?  @description.internal.stomach_mucosa_and_wall :  @description.internal.stomach_mucosa_and_wall_specify 
+                  %>  
+               </div> 
+             </div>
+           
+
+            <div class="row">
+              <div class="col-sm-6 custom-prop">
+                <strong>Stomach_and_duodenum_contents : </strong>
+              </div>
+              <div class="col-sm-6 custom-val">
+                 <%= @description.internal.stomach_and_duodenum_contents%>               
+              </div>
+	    </div>
+	 
+
+            <div class="row">
+               <div class="col-sm-6 custom-prop">
+                  <strong>Ampulla: </strong>
+               </div>
+               <div class="col-sm-6 custom-val">
+                  <%= ( @description.internal.ampulla_specify.nil? or @description.internal.ampulla_specify == "" ) ?  @description.internal.ampulla :  @description.internal.ampulla_specify 
+                  %>  
+               </div> 
+             </div>
+           
+
+            <div class="row">
+              <div class="col-sm-6 custom-prop">
+                <strong>Stomach_and_duodenum_other : </strong>
+              </div>
+              <div class="col-sm-6 custom-val">
+                 <%= @description.internal.stomach_and_duodenum_other%>               
+              </div>
+	    </div>
+	 
+</div>
+</div>
+</div>

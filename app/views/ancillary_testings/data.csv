@@ -1,0 +1,10 @@
+ancillary testing	Microbiology	select	"yes","no"	yes, specify
+ancillary testing	Viral culture	select	"yes","no"	yes, specify
+ancillary testing	Karyotype requested	select	"yes","no"	yes, specify
+ancillary testing	Electron microscopy	select	"yes","no"	yes, specify
+ancillary testing	Molecular diagnostic pathology	text		
+ancillary testing	Specimens snap frozen	text		
+ancillary testing	Post mortem X rays	text		
+ancillary testing	Photographs	text		
+ancillary testing	Organs for special study	text		
+ancillary testing	Other	text		

@@ -1,0 +1,8 @@
+Valves	tricuspid valve	select	"Normal","Abnormal"	Abnormal, specify
+Valves	tricuspid valve circumference	number		
+Valves	pulmonic valve	select	"Normal","Abnormal"	Abnormal, specify
+Valves	pulmonic valave circumference	number		
+Valves	mitral valve	select	"Normal","Abnormal"	Abnormal, specify
+Valves	mitral valve circumference	number		
+Valves	aortic valve	select	"Normal","Abnormal"	Abnormal, specify
+Valves	aortic valve circumference	number		

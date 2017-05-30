@@ -1,0 +1,6 @@
+Small intestine	small intestine size position configuration	select	"Normal","Abnormal"	Abnormal, specify
+Small intestine	small intestine rotation	select	"Normal","Abnormal"	Abnormal, specify
+Small intestine	small intestine mucosa and wall	select	"Normal","Abnormal"	Abnormal, specify
+Small intestine	small intestine state of distension	select	"Normal","Abnormal"	Abnormal, specify
+Small intestine	small intestine contents	text		
+Small intestine	mecekel diverticulum	select	"yes","no"	yes, size

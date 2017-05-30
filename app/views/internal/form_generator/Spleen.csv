@@ -1,0 +1,7 @@
+Spleen	spleen weight	number		
+Spleen	spleen shape position configuration	select	"Normal","Abnormal"	Abnormal, specify
+Spleen	capsular surface	select	"Normal","Abnormal"	Abnormal, specify
+Spleen	spleen consistency	select	"Normal","Abnormal"	Abnormal, specify
+Spleen	spleen parenchyma or cut surface	select	"Normal","Abnormal"	Abnormal, specify
+Spleen	accessory spleens	select	"yes","no"	yes, number
+Spleen	spleen other	text		

@@ -1,0 +1,99 @@
+<!-- Show full report -->
+<textarea class="tinymce" style="height:1000px;font-family:'Times New Roman'">
+  <%= render :partial => "hospital_logo" %>
+  <br>
+  <%= render :partial => "patient_info" %>
+  <br>
+  <%= render :partial => "clinical_diagnosis" %>
+  <br>
+  <%= render :partial => "final_diagnosis" %>
+  <br>
+  <%= render :partial => "special_reports" %>
+  <br>
+  <%= render :partial => "body_measurements" %>
+  <br>
+  <%= render :partial => "external_examination" %>
+  <br>
+  <%= render :partial => "iatrogenic" %>
+  <%= render :partial => "skin" %>
+  <%= render :partial => "head" %>
+  <%= render :partial => "ears" %>
+  <%= render :partial => "eyes" %>
+  <%= render :partial => "nose" %>
+  <%= render :partial => "mouth" %>
+  <%= render :partial => "neck" %>
+  <%= render :partial => "chest" %>
+  <%= render :partial => "abdomen" %>
+  <%= render :partial => "inguinal" %>
+  <% if @description.patient.sex == "Male" %>
+    <%= render :partial => "male_genetalia" %>
+  <% end %>
+  <% if @description.patient.sex == "Female" %>
+    <%= render :partial => "female_genetalia" %>
+  <% end %>
+  <%= render :partial => "back" %>
+  <%= render :partial => "extermities" %>
+  <br>
+  <%= render :partial => "internal_examination" %>
+  <%= render :partial => "subcutaneous" %>
+  <%= render :partial => "bones" %>
+  <%= render :partial => "skeletal_muscle" %>
+  <%= render :partial => "lymph_nodes" %>
+  <%= render :partial => "venous_system" %>
+  <%= render :partial => "arterial_system" %>
+  <%= render :partial => "lymphatic_system" %>
+  <%= render :partial => "pns" %>
+  <%= render :partial => "scalp" %>
+  <%= render :partial => "pituitary" %>
+  <%= render :partial => "dura" %>
+  <%= render :partial => "brain_pre" %>
+  <%= render :partial => "spinal_cord" %>
+  <%= render :partial => "larynx" %>
+  <%= render :partial => "pleural_cavities" %>
+  <%= render :partial => "mediastinum" %>
+  <%= render :partial => "lungs" %>
+  <%= render :partial => "pericardial_sac" %>
+  <%= render :partial => "thyroid_and_parathyroid" %>
+  <%= render :partial => "esophagus" %>
+  <%= render :partial => "heart_general" %>
+  <%= render :partial => "chambers_and_septae" %>
+</textarea>
+
+<style>
+.navbar.navbar-default.navbar-static-top, #footer-container {
+ display: none;
+}
+.patient-table > tbody > tr > td {
+ border-top: 0px solid black;
+ padding-top: 1px;
+ padding-bottom: 1px;
+ font-size: 10px;
+}
+.custom-prop {
+ padding-right: 5px;
+}
+.strong {
+  font-weight: bold;
+}
+#main-container, .row {
+  width:600px; 
+  margin:auto;
+}
+
+
+</style>
+
+<%= tinymce %>
+
+<script type="text/javascript">
+tinyMCE.init({
+  selector: "textarea.tinymce",
+  theme_advanced_toolbar_location: "top",
+  theme_advanced_toolbar_align: "left",
+  theme_advanced_statusbar_location: "bottom",
+  theme_advanced_buttons3_add: null,
+  toolbar: "bold italic | fontselect",
+  plugins: "table",
+  height: 2000
+});
+</script>

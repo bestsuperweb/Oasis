@@ -1,0 +1,5 @@
+bones_normal	checkbox			
+hardness	select	"Normal","Abnormal","Not examined"	Abnormal, specify	If abnormal, a box will appear saying specify
+bone_anomalies	select	"Normal","Abnormal"	Abnormal, specify	If abnormal, a box will appear saying specify
+marrow	select	"Normal","Abnormal","Not examined"	Abnormal, specify	If abnormal, a box will appear saying specify
+bones_other	text			Empty box

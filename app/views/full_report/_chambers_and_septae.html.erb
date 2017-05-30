@@ -1,0 +1,12 @@
+<div>
+  <h3>Chambers and septae</h3>
+  <table>
+    <%
+      @names_array = ["Atrial situs","Ventricular situs","Atrial septum","Ventricular septum","Endocardium","Myocardium","Right ventricular wall thickness","Left ventricular wall thickness","Microscopic description"]
+      @prop_array = ["atrial_situs","ventricular_situs","atrial_septum","ventricular_septum","endocardium","myocardium","right_ventricular_wall_thickness","left_ventricular_wall_thickness","chambers_and_septae_md"]
+      @specify_array = ["atrial_situs_specify","ventricular_situs_specify","atrial_septum_specify","ventricular_septum_specify","endocardium_specify","myocardium_specify","","",""] 
+    %>
+    <%= render :partial => "internal_loop"%>
+</table>
+</div>
+

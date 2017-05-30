@@ -1,0 +1,23 @@
+General	Major clinical diagnosis	text		
+General	Major pathologic diagnosis	text		
+General	Clinical Cause of death	text		
+General	pathological cause of death	text		
+General	Discover a discrepancy between clinical and pathologic diagnosis	select	"yes","no"	
+General	Establish an unexpected additional diagnosis	select	"yes","no"	
+General	Confirm the major clinical diagnosis	select	"yes","no"	
+General	information relevant to genetic counselling	select	"yes","no","not applicable"	
+General	information relevant to treatment effect	select	"yes","no","not applicable"	
+General	information on diagnostic procedures	select	"yes","no","not applicable"	
+General	information relevant to previous lab or anatomic pathology data	select	"yes","no","not applicable"	
+General	Are all parts of the report complete	select	"yes","no"	
+General	Are the descriptions clear	select	"yes","no"	
+General	Are all gross abnormalities confirmed microscopically	select	"yes","no"	
+General	Are all appropriate special studies done and reported	select	"yes","no","not applicable"	no, specify
+General	Diagnoses justified on anatomic evidence scroll down menu saying	select	"yes","no"	
+General	Diagnoses complete	select	"yes","no"	
+General	Diagnosis organized and sequenced by pathogenetic significance	select	"yes","no"	
+General	Transcriptional or typographical errors	select	"yes","no"	
+General	Clinically relevant postmortem findings addressed in CPC	select	"yes","no"	
+General	Comments and recommendations	text		
+General	Reviewed by	text		
+General	Date	text		

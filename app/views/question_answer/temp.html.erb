@@ -1,0 +1,153 @@
+    <div class="row" style="width:100%">
+      <div class="field col-sm-4">
+	<%= f.label :major_clinical_diagnosis %><br>
+	<%= f.text_field :major_clinical_diagnosis, class: "form-control" %>
+    </div> </div>
+
+    <div class="row" style="width:100%">
+      <div class="field col-sm-4">
+	<%= f.label :major_pathologic_diagnosis %><br>
+	<%= f.text_field :major_pathologic_diagnosis, class: "form-control" %>
+    </div> </div>
+
+    <div class="row" style="width:100%">
+      <div class="field col-sm-4">
+	<%= f.label :clinical_cause_of_death %><br>
+	<%= f.text_field :clinical_cause_of_death, class: "form-control" %>
+    </div> </div>
+
+    <div class="row" style="width:100%">
+      <div class="field col-sm-4">
+	<%= f.label :pathological_cause_of_death %><br>
+	<%= f.text_field :pathological_cause_of_death, class: "form-control" %>
+    </div> </div>
+    <div class="row" style="width:100%">
+      <div class="col-sm-4 drop-down">
+	<%= f.label  :discover_a_discrepancy_between_clinical_and_pathologic_diagnosis %><br>
+	<%= f.select :discover_a_discrepancy_between_clinical_and_pathologic_diagnosis, [:yes, :no], { :prompt => "Select One" },{ class: "form-control"} %>
+      </div> 
+    </div>
+    <div class="row" style="width:100%">
+      <div class="col-sm-4 drop-down">
+	<%= f.label  :establish_an_unexpected_additional_diagnosis %><br>
+	<%= f.select :establish_an_unexpected_additional_diagnosis, [:yes, :no], { :prompt => "Select One" },{ class: "form-control"} %>
+      </div> 
+    </div>
+    <div class="row" style="width:100%">
+      <div class="col-sm-4 drop-down">
+	<%= f.label  :confirm_the_major_clinical_diagnosis %><br>
+	<%= f.select :confirm_the_major_clinical_diagnosis, [:yes, :no], { :prompt => "Select One" },{ class: "form-control"} %>
+      </div> 
+    </div>
+    <div class="row" style="width:100%">
+      <div class="col-sm-4 drop-down">
+	<%= f.label  :information_relevant_to_genetic_counselling %><br>
+	<%= f.select :information_relevant_to_genetic_counselling, [:yes, :no, :"not applicable"], { :prompt => "Select One" },{ class: "form-control"} %>
+      </div> 
+    </div>
+    <div class="row" style="width:100%">
+      <div class="col-sm-4 drop-down">
+	<%= f.label  :information_relevant_to_treatment_effect %><br>
+	<%= f.select :information_relevant_to_treatment_effect, [:yes, :no, :"not applicable"], { :prompt => "Select One" },{ class: "form-control"} %>
+      </div> 
+    </div>
+    <div class="row" style="width:100%">
+      <div class="col-sm-4 drop-down">
+	<%= f.label  :information_on_diagnostic_procedures %><br>
+	<%= f.select :information_on_diagnostic_procedures, [:yes, :no, :"not applicable"], { :prompt => "Select One" },{ class: "form-control"} %>
+      </div> 
+    </div>
+    <div class="row" style="width:100%">
+      <div class="col-sm-4 drop-down">
+	<%= f.label  :information_relevant_to_previous_lab_or_anatomic_pathology_data %><br>
+	<%= f.select :information_relevant_to_previous_lab_or_anatomic_pathology_data, [:yes, :no, :"not applicable"], { :prompt => "Select One" },{ class: "form-control"} %>
+      </div> 
+    </div>
+    <div class="row" style="width:100%">
+      <div class="col-sm-4 drop-down">
+	<%= f.label  :are_all_parts_of_the_report_complete %><br>
+	<%= f.select :are_all_parts_of_the_report_complete, [:yes, :no], { :prompt => "Select One" },{ class: "form-control"} %>
+      </div> 
+    </div>
+    <div class="row" style="width:100%">
+      <div class="col-sm-4 drop-down">
+	<%= f.label  :are_the_descriptions_clear %><br>
+	<%= f.select :are_the_descriptions_clear, [:yes, :no], { :prompt => "Select One" },{ class: "form-control"} %>
+      </div> 
+    </div>
+    <div class="row" style="width:100%">
+      <div class="col-sm-4 drop-down">
+	<%= f.label  :are_all_gross_abnormalities_confirmed_microscopically %><br>
+	<%= f.select :are_all_gross_abnormalities_confirmed_microscopically, [:yes, :no], { :prompt => "Select One" },{ class: "form-control"} %>
+      </div> 
+    </div>
+    <div class="row" style="width:100%">
+      <div class="col-sm-6 drop-down">
+	<%= f.label  :are_all_appropriate_special_studies_done_and_reported %><br>
+	<%= f.select :are_all_appropriate_special_studies_done_and_reported, [:yes, :no, :"not applicable"], { :prompt => "Select One" },{ class: "form-control" , onchange: "myFunction(this,'no')"} %> 
+      </div>
+
+      <div class="col-sm-6">
+	<% if !@description.internal.nil?  %>
+	  <% if @description.internal.are_all_appropriate_special_studies_done_and_reported == "no" %>
+	    <%= f.label  :please_specify, { id:"label_internal_are_all_appropriate_special_studies_done_and_reported_specify" } %><br>
+	    <%= f.text_field :are_all_appropriate_special_studies_done_and_reported_specify, { class: "form-control", placeholder: "If no, explain" } %>
+	  <% else %>
+	    <%= f.label  :please_specify, { id:"label_internal_are_all_appropriate_special_studies_done_and_reported_specify" } %><br>
+	    <%= f.text_field :are_all_appropriate_special_studies_done_and_reported_specify, { class: "form-control", placeholder: "If no, explain" , disabled: true } %>
+	  <% end %>
+	<% else %>
+	  <%= f.label  :please_specify, { id:"label_internal_are_all_appropriate_special_studies_done_and_reported_specify" } %><br>
+	  <%= f.text_field :are_all_appropriate_special_studies_done_and_reported_specify, { class: "form-control", placeholder: "If no, explain" , disabled: true } %>
+	<% end %>
+      </div>
+    </div>
+
+    <div class="row" style="width:100%">
+      <div class="col-sm-4 drop-down">
+	<%= f.label  :diagnoses_justified_on_anatomic_evidence_scroll_down_menu_saying %><br>
+	<%= f.select :diagnoses_justified_on_anatomic_evidence_scroll_down_menu_saying, [:yes, :no], { :prompt => "Select One" },{ class: "form-control"} %>
+      </div> 
+    </div>
+    <div class="row" style="width:100%">
+      <div class="col-sm-4 drop-down">
+	<%= f.label  :diagnoses_complete %><br>
+	<%= f.select :diagnoses_complete, [:yes, :no], { :prompt => "Select One" },{ class: "form-control"} %>
+      </div> 
+    </div>
+    <div class="row" style="width:100%">
+      <div class="col-sm-4 drop-down">
+	<%= f.label  :diagnosis_organized_and_sequenced_by_pathogenetic_significance %><br>
+	<%= f.select :diagnosis_organized_and_sequenced_by_pathogenetic_significance, [:yes, :no], { :prompt => "Select One" },{ class: "form-control"} %>
+      </div> 
+    </div>
+    <div class="row" style="width:100%">
+      <div class="col-sm-4 drop-down">
+	<%= f.label  :transcriptional_or_typographical_errors %><br>
+	<%= f.select :transcriptional_or_typographical_errors, [:yes, :no], { :prompt => "Select One" },{ class: "form-control"} %>
+      </div> 
+    </div>
+    <div class="row" style="width:100%">
+      <div class="col-sm-4 drop-down">
+	<%= f.label  :clinically_relevant_postmortem_findings_addressed_in_cpc %><br>
+	<%= f.select :clinically_relevant_postmortem_findings_addressed_in_cpc, [:yes, :no], { :prompt => "Select One" },{ class: "form-control"} %>
+      </div> 
+    </div>
+
+    <div class="row" style="width:100%">
+      <div class="field col-sm-4">
+	<%= f.label :comments_and_recommendations %><br>
+	<%= f.text_field :comments_and_recommendations, class: "form-control" %>
+    </div> </div>
+
+    <div class="row" style="width:100%">
+      <div class="field col-sm-4">
+	<%= f.label :reviewed_by %><br>
+	<%= f.text_field :reviewed_by, class: "form-control" %>
+    </div> </div>
+
+    <div class="row" style="width:100%">
+      <div class="field col-sm-4">
+	<%= f.label :date %><br>
+	<%= f.text_field :date, class: "form-control" %>
+    </div> </div>

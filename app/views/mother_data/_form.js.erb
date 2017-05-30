@@ -1,0 +1,71 @@
+addEventListener("change", function() {
+ setConditions()
+ whatDoesCheckBoxSay()
+});
+
+addEventListener("load", function() {
+ setConditions()
+ whatDoesCheckBoxSay()
+});
+
+function whatDoesCheckBoxSay() {
+  var checkBoxValue = document.getElementById('fp-finding')
+  console.log(checkBoxValue)
+  var attributeSelector = checkBoxValue.getAttribute('please_show_type')
+  var targetText = checkBoxValue.getAttribute('please_show_names')
+  var indComp1 = $( "input[name='mother_datum[feto_placental_findings_at_the_time_of_delivery]']")[0]
+  var indComp2 = $( "input[name='mother_datum[feto_placental_findings_at_the_time_of_delivery]']")[1]
+  console.log(indComp1)
+  console.log(indComp2)
+  if(attributeSelector == 'class'){ 
+   if(indComp1.checked == true) {
+     var all_class = document.getElementsByClassName(targetText)
+     for( j = 0; j < all_class.length; j++ ){
+      var abc = all_class[j]
+      abc.style.display = 'inherit'
+      console.log('done')
+     }
+    }
+   else {
+    var all_class = document.getElementsByClassName(targetText)
+    for( j = 0; j < all_class.length; j++ ){
+       var abc = all_class[j]
+       abc.style.display = 'none'
+    }
+   }
+  }
+  }
+
+  function setConditions(){
+  var all_class = document.getElementsByClassName('conditional')
+  for( j = 0; j < all_class.length; j++ ){
+  var abc = all_class[j]
+  var when_answer = abc.getAttribute('when_answer')
+  var todisable = abc.getAttribute('todisable')
+  takeAction(abc.value, when_answer, todisable)
+  }
+  }
+
+  function takeAction(given,enable_when,todisable){
+  if (given != enable_when){
+  disableDisplay(todisable)
+  }
+  else {
+  enableDisplay(todisable)
+  }
+  }
+
+  function enableDisplay (inarray){
+  inarray = inarray.split(' ')
+  for(i = 0 ; i < inarray.length ; i++){
+  temp1 = document.getElementById(inarray[i])
+  temp1.removeAttribute('disabled')
+  }
+  }
+  function disableDisplay (inarray){
+  inarray = inarray.split(' ')
+  for(i = 0 ; i < inarray.length ; i++){
+  temp1 = document.getElementById(inarray[i])
+  temp1.setAttribute('disabled','')
+  }
+  }

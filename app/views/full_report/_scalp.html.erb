@@ -1,0 +1,12 @@
+<div>
+  <h3>Scalp and cranium</h3>
+  <table>
+    <%
+      @names_array = ["Subcutaneous galea","Periosteum","Sutures fontanelles","Skull base","Sella","Petrous pyramids opened and cultured","Ears removed","Foramen magnum antero posterior dimension","Foramen magnum antero lateral dimension","Other","Microscopic description"]
+      @prop_array = ["subcutaneous_galea","periosteum","sutures_fontanelles","skull_base","sella","petrous_pyramids_opened_and_cultured","ears_removed","foramen_magnum_antero_posterior_dimension","foramen_magnum_antero_lateral_dimension","cranium_other","cranium_md"]
+      @specify_array = ["subcutaneous_galea_specify","periosteum_specify","sutures_fontanelles_specify","skull_base_specify","sella_specify","petrous_pyramids_opened_and_cultured_specify","ears_removed_specify","","","",""]
+    %>
+    <%= render :partial => "internal_loop"%>
+</table>
+</div>
+

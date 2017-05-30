@@ -1,0 +1,233 @@
+fat	select	"Normal","Increased","Decreased","Not examined"	
+hydration	select	"Normal","Edema","Dehydration"	
+subcutaneous other	text		
+peritoneal serosal surfaces	select	"Normal","Abnormal"	Abnormal, specify
+fluid	text		
+fluid quantity	number		
+peritoneal nature of fluid	select	"Clear","Serosanguineous","Bloody","Exudative","Chylous","Other"	Other, specify
+peritoneal cavity organ relations	select	"Normal","Abnormal"	Abnormal, specify
+retrroperitoneum	select	"Normal","Abnormal"	Abnormal, specify
+umbilical vessels	select	"Normal","Abnormal"	Abnormal, specify
+no of umbilical arteries	select	"1","2"	
+peritoneal cavity other	text		
+pleural serosal surfaces	select	"Normal","Abnormal"	Abnormal, specify
+pneumothorax	select	"yes","no"	yes, specify
+pleural cavities amount of fluid	select	"Minimal","More than minimal"	More than minimal, specify
+pleural nature of fluid	select	"Clear","Serosanguineous","Bloody","Exudative","Chylous","Other"	Other, specify
+pleural cavity organ relations	select	"Normal","Abnormal"	Abnormal, specify
+diaphragm	select	"Normal","Abnormal"	Abnormal, specify
+pleural cavities other	text		
+mediastinum position configuration	select	"Normal","Abnormal"	Abnormal, specify
+mediastinum nodes masses	select	"Normal","Abnormal"	Abnormal, specify
+pneumomediastinum	select	"yes","no"	
+mediastinum other	text		
+serosal sarfaces	select	"Normal","Abnormal"	Abnormal, specify
+pericardial sac contents	select	"Clear","Serosanguineous","Bloody","Exudative","Chylous","Other"	Other, specify
+pericardial sac amount of fluid	select	"Minimal","More than minimal"	More than minimal, specify
+heart position	select	"Normal","Abnormal"	Abnormal, specify
+epicardium	select	"Normal","Abnormal"	Abnormal, specify
+heart shape	select	"Normal","Abnormal"	Abnormal, specify
+heart size	select	"Normal","Abnormal"	Abnormal, specify
+heart only weight	number		
+combined heart and lungs weight	number		
+configuration and contents	select	"Normal","Abnormal"	Abnormal, specify
+atrial situs	select	"Normal","Abnormal"	Abnormal, specify
+ventricular situs	select	"Normal","Abnormal"	Abnormal, specify
+atrial septum	select	"Obliquely probe patent","Closed","Open"	Open, specify
+ventricular septum	select	"Normal","Abnormal"	Abnormal, specify
+endocardium	select	"Normal","Abnormal"	Abnormal, specify
+myocardium	select	"Normal","Abnormal"	Abnormal, specify
+right ventricular wall thickness	number		
+left ventricular wall thickness	number		
+tricuspid valve	select	"Normal","Abnormal"	Abnormal, specify
+tricuspid valve circumference	number		
+pulmonic valve	select	"Normal","Abnormal"	Abnormal, specify
+pulmonic valave circumference	number		
+mitral valve	select	"Normal","Abnormal"	Abnormal, specify
+mitral valve circumference	number		
+aortic valve	select	"Normal","Abnormal"	Abnormal, specify
+aortic valve circumference	number		
+origins of aorta and pulmonary artery	select	"Normal","Abnormal"	Abnormal, specify
+arch configuartion	select	"Normal","Abnormal"	Abnormal, specify
+coronary arteries	select	"Normal","Abnormal"	Abnormal, specify
+arch branches	select	"Normal","Abnormal"	Abnormal, specify
+thoracic and abdominal branches	select	"Normal","Abnormal"	Abnormal, specify
+intima and wall	select	"Normal","Abnormal"	Abnormal, specify
+pulmonary arteries	select	"Normal","Abnormal"	Abnormal, specify
+ductus	select	"Closed","Open"	Open, specify
+venous system anomalies	select	"Present","Absent"	Present, specify
+venous system state of distension	select	"Normal","Abnormal"	Abnormal, specify
+venous system contents	select	"Fluid","Clots","Thrombi"	
+cardiovascular other	text		
+epiglottis	select	"Normal","Abnormal"	Abnormal, specify
+foreign material in lumen	select	"yes","no"	yes, specify
+larynx trachea configuration position	select	"Normal","Abnormal"	Abnormal, specify
+vocal cords	select	"Normal","Abnormal"	Abnormal, specify
+tracheastomy	select	"yes","no"	
+mucosal surfaces	select	"Normal","Abnormal"	Abnormal, specify
+tracheal rings	select	"Present","Absent"	
+larynx other	text		
+right lungs weight	number		
+left lung weight	number		
+bilateral	number		
+combined heart and lungs weight	number		
+lung to body weight ratio	number		
+lobar pattern	select	"Normal","Abnormal"	Abnormal, specify
+state of expansion	select	"Normal","Abnormal"	Abnormal, specify
+lungs consistency	select	"Normal","Abnormal"	Abnormal, specify
+bronchial tree	select	"Normal","Abnormal"	Abnormal, specify
+vessels	select	"Normal","Abnormal"	Abnormal, specify
+parenchyma color	select	"Normal","Abnormal"	Abnormal, specify
+congestion	select	"yes","no"	
+interstitial emphysema	select	"yes","no"	
+hilar nodes	select	"Normal","Abnormal"	Abnormal, specify
+visceral pleura	select	"Normal","Abnormal"	Abnormal, specify
+pleural petechiae	select	"Absent","Few","Greater than 2 per sq cm"	
+fixed by perfusion	select	"yes","no"	yes, specify
+esophagus size position configuration	select	"Normal","Abnormal"	Abnormal, specify
+esophagus mucosa and wall	select	"Normal","Abnormal"	Abnormal, specify
+stomach size position configuration	select	"Normal","Abnormal"	Abnormal, specify
+stomach mucosa and wall	select	"Normal","Abnormal"	Abnormal, specify
+stomach and duodenum contents	text		
+ampulla	select	"Normal","Abnormal"	Abnormal, specify
+small intestine size position configuration	select	"Normal","Abnormal"	Abnormal, specify
+small intestine rotation	select	"Normal","Abnormal"	Abnormal, specify
+small intestine mucosa and wall	select	"Normal","Abnormal"	Abnormal, specify
+small intestine state of distension	select	"Normal","Abnormal"	Abnormal, specify
+small intestine contents	text		
+mecekel diverticulum	select	"yes","no"	yes, size
+large intestine size position configuration	select	"Normal","Abnormal"	Abnormal, specify
+large intestine rotation	select	"Normal","Abnormal"	Abnormal, specify
+large intestine mucosa and wall	select	"Normal","Abnormal"	Abnormal, specify
+large intestine state of distension	select	"Normal","Abnormal"	Abnormal, specify
+large intestine contents	text		
+configuration	select	"Normal","Abnormal"	Abnormal, specify
+liver weight	number		
+liver size shape	select	"Normal","Abnormal"	Abnormal, specify
+liver and billiary system external surface	select	"Normal","Abnormal"	Abnormal, specify
+cut surface	select	"Normal","Abnormal"	Abnormal, specify
+gallbladder	select	"Normal","Abnormal","Absent"	Abnormal, specify
+bile ducts	select	"Normal","Abnormal","Absent"	Abnormal, specify
+bile	select	"Colorless","Golden","Green","Other"	Other, specify
+stones	select	"Present","Absent"	Present, specify
+vessels portal vein hepatic artery	select	"Normal","Abnormal"	Abnormal, specify
+pancreas weight	number		
+size configuration	select	"Normal","Abnormal"	Abnormal, specify
+pancreas parenchyma or cut surface	select	"Normal","Abnormal"	Abnormal, specify
+ducts	select	"Normal","Abnormal"	Abnormal, specify
+genitourinary anomalies	select	"yes","No"	yes, specify
+right kidnes weight	number		
+right kidney configuration position	select	"Normal","Abnormal"	Abnormal, specify
+right kidney external surface	select	"Normal","Abnormal"	Abnormal, specify
+right kidney parenchyma or cut surface	select	"Normal","Abnormal"	Abnormal, specify
+right kidney cortical thickness	number		
+right kidney medulla depth	number		
+right kidney pelves and calyces	select	"Normal","Abnormal"	Abnormal, specify
+right kidney peripelvic fat and lymph nodes	select	"Normal","Abnormal"	Abnormal, specify
+right kidney renal vessels	select	"Normal","Abnormal"	Abnormal, specify
+right kidney ureter	select	"Normal","Abnormal"	Abnormal, specify
+left kidney weight	number		
+left kidney configuration position	select	"Normal","Abnormal"	Abnormal, specify
+left kidney external surface	select	"Normal","Abnormal"	Abnormal, specify
+left kidney parenchyma or cut surface	select	"Normal","Abnormal"	Abnormal, specify
+left kidney cortical thickness	number		
+left kidney medulla depth	number		
+left kidney pelves and calyces	select	"Normal","Abnormal"	Abnormal, specify
+left kideny peripelvic fat and lymph nodes	select	"Normal","Abnormal"	Abnormal, specify
+left panel renal vessels	select	"Normal","Abnormal"	Abnormal, specify
+left kidney ureter	select	"Normal","Abnormal"	Abnormal, specify
+size and configuration	select	"Normal","Abnormal"	Abnormal, specify
+wall and mucosa	select	"Normal","Abnormal"	Abnormal, specify
+perivesical tissue	select	"Normal","Abnormal"	Abnormal, specify
+bladder contents	select	"Present","Absent"	Present, specify
+urethra	select	"Normal","Abnormal","Not examined"	Abnormal, specify
+prostate	select	"Normal","Abnormal"	Abnormal, specify
+epididymis	select	"Normal","Abnormal"	Abnormal, specify
+testes	select	"Normal","Abnormal"	Abnormal, specify
+male genetalia other	text		
+vagina	select	"Normal","Abnormal"	Abnormal, specify
+uterus	select	"Normal","Abnormal"	Abnormal, specify
+right fallopian tubes	select	"Normal","Abnormal"	Abnormal, specify
+right ovary	select	"Normal","Abnormal"	Abnormal, specify
+left fallopian tube	select	"Normal","Abnormal"	Abnormal, specify
+left ovary	select	"Normal","Abnormal"	Abnormal, specify
+female genetalia other	text		
+right adrenal gland weight	number		
+right adrenal pos config shape	select	"Normal","Abnormal"	Abnormal, specify
+right adrenal gland external surface	select	"Normal","Abnormal"	Abnormal, specify
+right adrenal gland parenchyma or cut surface	select	"Normal","Abnormal"	Abnormal, specify
+right adrenal cortex	select	"Normal","Abnormal"	Abnormal, specify
+right adrenal fetal cortex	select	"Normal","Abnormal"	Abnormal, specify
+right adrenal medulla	select	"Normal","Abnormal"	Abnormal, specify
+right adrenal other	text		
+left adrenal gland weight	number		
+left adrenal pos config shape	select	"Normal","Abnormal"	Abnormal, specify
+left adrenal gland external surface	select	"Normal","Abnormal"	Abnormal, specify
+left adrenal gland parenchyma or cut surface	select	"Normal","Abnormal"	Abnormal, specify
+left adrenal cortex	select	"Normal","Abnormal"	Abnormal, specify
+left adrenal fetal cortex	select	"Normal","Abnormal"	Abnormal, specify
+left adrenal medulla	select	"Normal","Abnormal"	Abnormal, specify
+left adrenal other	text		
+thyroid weight	number		
+thyroid pos config shape	select	"Normal","Abnormal"	Abnormal, specify
+thyroid external surface	select	"Normal","Abnormal"	Abnormal, specify
+thyroid parenchyma or cut surface	select	"Normal","Abnormal"	Abnormal, specify
+thyroid other	text		
+pituitary weight	number		
+pituitary pos config shape	select	"Normal","Abnormal"	Abnormal, specify
+pituitary external surface	select	"Normal","Abnormal"	Abnormal, specify
+pituitary parenchyma or cut surface	select	"Normal","Abnormal","Not examined"	Abnormal, specify
+parathyroid gland	select	"Identified","Not identified"	
+weight	number		
+thymus pos config shape	select	"Normal","Abnormal"	Abnormal, specify
+petechiae on external surface	select	"None","Few","Many (greater than 2 per sq cm)"	
+thymus parenchyma or cut surface	select	"Normal","Abnormal"	Abnormal, specify
+thymus other	text		
+spleen weight	number		
+spleen shape position configuration	select	"Normal","Abnormal"	Abnormal, specify
+capsular surface	select	"Normal","Abnormal"	Abnormal, specify
+spleen consistency	select	"Normal","Abnormal"	Abnormal, specify
+spleen parenchyma or cut surface	select	"Normal","Abnormal"	Abnormal, specify
+accessory spleens	select	"yes","no"	yes, number
+spleen other	text		
+cervical	text		
+axillary	text		
+mediastinal	text		
+hilar	text		
+celiac peripancreatic	text		
+mesenteric	text		
+periaortic	text		
+iliac	text		
+inguinal	text		
+lymph nodes other	text		
+hardness	select	"Normal","Abnormal"	Abnormal, specify
+bone anomalies	select	"Normal","Abnormal"	Abnormal, specify
+marrow	select	"Normal","Abnormal"	Abnormal, specify
+bones other	text		
+skeletal muscle color consistency	select	"Normal","Abnormal"	Abnormal, specify
+skeletal muscle size	select	"Normal","Abnormal"	Abnormal, specify
+skeletal muscle other	text		
+bones	select	"Normal","Abnormal"	Abnormal, specify
+sutures fontanelles	select	"Normal","Abnormal"	Abnormal, specify
+skull base	select	"Normal","Abnormal"	Abnormal, specify
+sella	select	"Normal","Abnormal"	Abnormal, specify
+petrous pyramids opened and cultured	select	"yes","no"	yes, specify
+ears removed	select	"yes","no"	yes, specify
+foramen magnum antero posterior dimension	number		
+foramen magnum antero lateral dimension	number		
+cranium other	text		
+dura falx tentorium	select	"Normal","Abnormal"	Abnormal, specify
+subdural epidural	select	"Normal","Abnormal"	Abnormal, specify
+venous sinuses	select	"Normal","Abnormal"	Abnormal, specify
+sinuses other	text		
+brain weight	number		
+configuration lobar pattern	select	"Normal","Abnormal"	Abnormal, specify
+brain consistency	select	"Normal","Abnormal"	Abnormal, specify
+pachymeninges	select	"Normal","Abnormal"	Abnormal, specify
+blood vessels	select	"Normal","Abnormal"	Abnormal, specify
+cranial nerves	select	"Normal","Abnormal"	Abnormal, specify
+kernicterus	select	"Normal","Abnormal"	Abnormal, specify
+extradural space	select	"Normal","Abnormal"	Abnormal, specify
+meninges	select	"Normal","Abnormal"	Abnormal, specify
+cord proper	select	"Normal","Abnormal"	Abnormal, specify
+peripheral nervous system	select	"Normal","Abnormal","Not examined"	
